@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中悦松TOWER GEO 行銷優化策略計畫</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+:root {
+  --eb:#1B3A8C;--eb2:#254BAD;--eb3:#0D2568;
+  --ed:#0A1628;--ed2:#1A2B3C;
+  --el:#A8C8F8;--el2:#4A90D9;
+  --em:#C5D5F0;--elt:#F0F5FF;--emut:#5C7AA8;
+  --red:#C0392B;--grn:#1A7A44;--org:#C75000;--teal:#0E6A7C;
+  --navy:#1B3A8C;--light:#F0F5FF;--mid:#C5D5F0;
+  --text:#1A2B3C;--muted:#5C7AA8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);font-size:13px;line-height:1.65;}
+@media print{
+  body{background:white;font-size:11px;}
+  .page{box-shadow:none!important;margin-bottom:0!important;page-break-after:always;border-radius:0!important;}
+  .page:last-child{page-break-after:avoid;}
+}
+.wrap{max-width:900px;margin:0 auto;padding:20px 14px 40px;}
+.page{background:white;border-radius:8px;box-shadow:0 3px 20px rgba(0,0,0,.09);margin-bottom:28px;overflow:hidden;}
+.cv-stripe{background:var(--eb);height:8px;}
+.cv-hero{background:white;padding:40px 52px 32px;display:flex;align-items:flex-start;justify-content:space-between;gap:32px;}
+.cv-rule{width:48px;height:4px;background:var(--eb);border-radius:2px;margin-bottom:14px;}
+.cv-eye{color:var(--eb);font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;}
+.cv-h1{color:var(--ed);font-size:26px;font-weight:900;line-height:1.2;margin-bottom:10px;}
+.cv-h1 span{color:var(--eb);}
+.cv-sub{color:var(--emut);font-size:12.5px;line-height:1.7;}
+.cv-la{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0;}
+.cv-la img{width:88px;border-radius:6px;}
+.cv-lt{font-size:9px;color:var(--emut);text-align:right;}
+.cv-band{background:var(--eb);padding:20px 52px;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;}
+.cv-st{text-align:center;padding:10px 4px;border-right:1px solid rgba(255,255,255,.15);}
+.cv-st:last-child{border-right:none;}
+.stn{font-size:22px;font-weight:900;color:white;line-height:1;}
+.stu{font-size:9px;color:rgba(255,255,255,.7);}
+.stl{font-size:9px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4;}
+.cv-meta{background:var(--elt);padding:18px 52px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;border-top:1px solid var(--em);}
+.cv-mi{font-size:11px;color:var(--emut);}
+.cv-mi b{color:var(--ed2);display:block;font-size:11.5px;margin-top:2px;}
+.cv-foot{background:var(--eb);padding:11px 52px;display:flex;justify-content:space-between;align-items:center;}
+.cv-foot p{font-size:10px;color:rgba(255,255,255,.4);}
+.ph{background:var(--eb);padding:9px 28px;display:flex;justify-content:space-between;align-items:center;}
+.ph span{font-size:10px;color:rgba(255,255,255,.55);}
+.pf{background:var(--elt);border-top:1px solid var(--em);padding:7px 28px;text-align:center;font-size:10px;color:var(--muted);}
+.sec{background:var(--eb);border-left:5px solid var(--el2);padding:13px 24px;}
+.sec h2{color:white;font-size:14px;font-weight:700;}
+.pc{padding:22px 28px;}
+h3.sh{font-size:12.5px;font-weight:700;color:var(--navy);border-left:3px solid var(--el2);padding-left:9px;margin:16px 0 7px;}
+h4.sh4{font-size:11.5px;font-weight:700;color:var(--teal);margin:13px 0 5px;}
+p.bt{font-size:12.5px;line-height:1.8;color:var(--text);margin-bottom:10px;}
+.b{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;white-space:nowrap;}
+.br{background:#FADBD8;color:var(--red);} .bo{background:#FDEBD0;color:var(--org);}
+.bg{background:#D5F5E3;color:var(--grn);} .bt2{background:#D1ECF1;color:var(--teal);}
+.bb{background:var(--eb);color:white;} .bl{background:#D6E6FF;color:var(--eb3);}
+.ib{padding:9px 13px;border-radius:0 5px 5px 0;margin-bottom:13px;font-size:11.5px;}
+.ir{background:#FEF0EF;border-left:4px solid var(--red);}
+.io{background:#FFF8F0;border-left:4px solid var(--org);}
+.ig{background:#F0FAF4;border-left:4px solid var(--grn);}
+.ii{background:#EEF4FF;border-left:4px solid var(--el2);}
+.dt{width:100%;border-collapse:collapse;margin:7px 0 14px;font-size:11.5px;}
+.dt th{background:var(--eb);color:white;font-weight:700;padding:7px 10px;text-align:left;font-size:11px;}
+.dt td{padding:6px 10px;border-bottom:1px solid var(--mid);vertical-align:top;line-height:1.55;}
+.dt tr:nth-child(even) td{background:var(--light);}
+.dt tr.hl td{background:var(--eb);color:white;font-weight:700;}
+.dt tr.hl td b{color:#A8C8F8;}
+.dt tr.sr td{background:#EDF2F7;font-weight:700;color:var(--eb3);font-size:11px;}
+.rl{list-style:none;margin:7px 0 13px;}
+.rl li{display:flex;gap:9px;padding:7px 11px;background:var(--light);border-radius:5px;margin-bottom:5px;font-size:12px;line-height:1.6;border-left:3px solid var(--el2);}
+.rl .rn{font-weight:900;color:var(--el2);min-width:16px;}
+.pri{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;color:white;}
+.pc3{background:#922B21;} .ph2{background:var(--org);} .pm{background:var(--teal);} .pl2{background:var(--grn);}
+.kw-wrap{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 14px;}
+.kw{background:var(--light);border:1px solid var(--mid);border-radius:20px;padding:3px 11px;font-size:11px;color:var(--ed2);font-weight:500;}
+.kw.core{background:var(--eb);color:white;border-color:var(--eb2);}
+.kw.hi{background:#D6E6FF;color:var(--eb3);border-color:var(--el2);}
+.kw.mid2{background:#D1ECF1;color:var(--teal);border-color:var(--teal);}
+.paa{background:var(--light);border-radius:6px;padding:13px 15px;margin:6px 0 11px;border-left:3px solid var(--teal);}
+.paa .q{font-size:11.5px;font-weight:700;color:var(--teal);margin-bottom:4px;}
+.paa .a{font-size:11px;color:var(--text);line-height:1.65;}
+.paa .a b{color:var(--eb3);}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:10px 0 15px;}
+.ccard{border:1px solid var(--mid);border-radius:7px;overflow:hidden;}
+.chead{padding:8px 12px;font-weight:700;font-size:11px;color:white;}
+.cbody{padding:9px 12px;background:white;}
+.cbody ul{list-style:none;}
+.cbody ul li{padding:3px 0 3px 12px;font-size:10.5px;color:var(--text);border-bottom:1px solid var(--light);position:relative;line-height:1.45;}
+.cbody ul li::before{content:'▸';color:var(--el2);position:absolute;left:0;font-size:9px;top:5px;}
+.cbody .rate{margin-top:6px;font-size:10px;color:var(--muted);font-style:italic;}
+.sop-step{display:flex;gap:0;border:1px solid var(--mid);border-radius:6px;overflow:hidden;margin-bottom:8px;}
+.sop-num{background:var(--eb);color:var(--el2);font-size:20px;font-weight:900;min-width:52px;display:flex;align-items:center;justify-content:center;}
+.sop-body{padding:10px 14px;flex:1;}
+.sop-body h5{font-size:12px;font-weight:700;color:var(--ed2);margin-bottom:4px;}
+.sop-body p{font-size:11.5px;color:var(--text);line-height:1.6;}
+.sop-body .out{font-size:10.5px;color:var(--teal);margin-top:4px;font-weight:600;}
+.gang{overflow-x:auto;margin:10px 0 15px;}
+.gantt{width:100%;border-collapse:collapse;font-size:11px;min-width:680px;}
+.gantt th{background:var(--eb3);color:white;padding:7px 8px;text-align:center;font-size:10.5px;font-weight:700;border:1px solid var(--eb);}
+.gantt td{padding:6px 9px;border:1px solid var(--mid);vertical-align:middle;}
+.gantt tr:nth-child(even) td{background:var(--light);}
+.gbar{display:block;height:10px;border-radius:5px;background:var(--el2);}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.agsig{display:flex;align-items:center;justify-content:center;gap:18px;padding:14px;background:var(--eb);border-radius:6px;margin-top:10px;}
+hr.dv{border:none;border-top:1px solid var(--mid);margin:14px 0;}
+.clp{font-size:11px;color:var(--muted);line-height:1.8;margin-bottom:10px;}
+code{background:#F0F5FF;padding:1px 5px;border-radius:3px;font-size:10.5px;color:var(--eb3);font-family:monospace;}
+/* 行銷漏斗視覺 */
+.funnel-row{display:flex;align-items:center;margin-bottom:6px;gap:10px;}
+.funnel-label{font-size:10.5px;font-weight:700;color:white;padding:7px 14px;border-radius:5px;min-width:130px;text-align:center;}
+.funnel-arrow{color:var(--mid);font-size:18px;}
+.funnel-desc{flex:1;font-size:11px;color:var(--text);background:var(--light);padding:7px 12px;border-radius:5px;border-left:3px solid var(--em);}
+/* 行銷策略排序卡 */
+.strategy-card{border:1px solid var(--mid);border-radius:8px;overflow:hidden;margin-bottom:10px;}
+.sc-head{display:flex;align-items:center;gap:12px;padding:10px 16px;}
+.sc-rank{font-size:24px;font-weight:900;color:white;min-width:36px;text-align:center;}
+.sc-title{font-weight:700;font-size:13px;color:white;}
+.sc-tag{font-size:10px;color:rgba(255,255,255,.7);margin-top:2px;}
+.sc-body{padding:11px 16px;background:white;}
+.sc-body p{font-size:11.5px;color:var(--text);line-height:1.65;margin-bottom:6px;}
+.sc-body p:last-child{margin-bottom:0;}
+</style>
+<meta name="report-client" content="中悦松TOWER">
+<meta name="report-score" content="">
+<meta name="report-desc" content="GEO 行銷優化策略計畫。聚焦商業地產品牌信號建立、主題叢集架構與 AI 引用能見度三期 Roadmap。">
+<meta name="report-tags" content="商業地產,辦公大樓,B2B,策略計畫">
+<meta name="report-type" content="plan">
+<meta name="report-date" content="2026-03-27">
+</head>
+<body>
+<div class="wrap">
+
+<!-- ══════════════════ COVER ══════════════════ -->
+<div class="page">
+  <div class="cv-stripe"></div>
+  <div class="cv-hero">
+    <div>
+      <div class="cv-rule"></div>
+      <div class="cv-eye">GEO Marketing Strategy · 2026</div>
+      <div class="cv-h1">中悦松TOWER<br><span>GEO 行銷優化</span><br>策略計畫報告</div>
+      <div class="cv-sub">
+        joyes-pinetower.com.tw｜新北市新莊副都心頂級商辦<br>
+        涵蓋：產業 GEO 適性評估 × TA 資訊接觸路徑分析 × 行銷管道優先序<br>
+        × GEO 技術修復計畫 × 內容策略 × 六個月執行路線圖
+      </div>
+    </div>
+    <div class="cv-la">
+      <img src="data:image/png;base64,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" style="width:88px;border-radius:6px;">
+      <div class="cv-lt">確認鍵智創科技股份有限公司<br>Enter Internet Marketing CO., LTD.</div>
+    </div>
+  </div>
+  <div class="cv-band">
+    <div class="cv-st"><div class="stn">3</div><div class="stu">大 TA 群體</div><div class="stl">企業主 / 投資者 / 法人</div></div>
+    <div class="cv-st"><div class="stn">4</div><div class="stu">大行銷管道</div><div class="stl">媒體PR / YT / FB / GEO</div></div>
+    <div class="cv-st"><div class="stn">18</div><div class="stu">篇 GEO 內容</div><div class="stl">6 個月執行計畫</div></div>
+    <div class="cv-st"><div class="stn">34→72</div><div class="stu">分提升目標</div><div class="stl">GEO 健檢分數軌跡</div></div>
+    <div class="cv-st"><div class="stn">6</div><div class="stu">個月週期</div><div class="stl">完整執行路線圖</div></div>
+  </div>
+  <div class="cv-meta">
+    <div class="cv-mi">受評客戶<b>中悦松TOWER（joyes-pinetower.com.tw）</b></div>
+    <div class="cv-mi">產業定位<b>新北市新莊副都心頂級商辦預售 / 招租</b></div>
+    <div class="cv-mi">報告日期<b>2026 年 3 月 26 日</b></div>
+    <div class="cv-mi">製作單位<b>確認鍵智創科技股份有限公司</b></div>
+  </div>
+  <div class="cv-foot">
+    <p>本計畫整合 GEO 健檢結果、產業 TA 研究、行銷管道分析，提供完整執行策略建議</p>
+    <p>© 2026 Enter Internet Marketing CO., LTD.</p>
+  </div>
+</div>
+
+<!-- ══════════════════ P1：目錄 ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>目錄 · Table of Contents</span><img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>📋 報告目錄</h2></div>
+  <div class="pc">
+    <div class="ib ii">
+      <strong>報告定位</strong>：本報告以 GEO 健檢結果（34/100 分）為起點，整合商辦不動產產業特性、三大 TA 群體的資訊接觸路徑，提出行銷管道優先序與 GEO 優化執行計畫。目標是讓松TOWER 在企業主、高資產投資者做決策研究時，能夠在 AI 引擎與各接觸點出現，強化品牌信任、縮短決策週期。
+    </div>
+    <table class="dt">
+      <tr><th style="width:6%">章</th><th style="width:46%">主題</th><th style="width:28%">核心內容</th><th style="width:20%">頁次重點</th></tr>
+      <tr><td>一</td><td>產業 GEO 適性評估</td><td>商辦預售產業值不值得做 GEO？</td><td>機會與限制並存</td></tr>
+      <tr><td>二</td><td>三大 TA 群體 × 資訊接觸路徑</td><td>企業主 / 投資者 / 法人各自如何找資訊</td><td>精準接觸策略基礎</td></tr>
+      <tr><td>三</td><td>行銷管道優先序總覽</td><td>一句話總結 + 四大管道深度分析</td><td>資源配置決策依據</td></tr>
+      <tr><td>四</td><td>GEO 在行銷組合中的角色</td><td>GEO 不是獲客武器，是品牌信任基礎建設</td><td>定位釐清</td></tr>
+      <tr><td>五</td><td>GEO 關鍵字矩陣 × PAA 問題庫</td><td>核心詞 / 長尾詞 / AI 問答語型 × 10 題 PAA</td><td>內容生產依據</td></tr>
+      <tr><td>六</td><td>18 篇 GEO 內容計畫</td><td>比較型 / 指南型 / FAQ / 定義型配比與規格</td><td>六個月內容路線圖</td></tr>
+      <tr><td>七</td><td>官網 × 外站整合矩陣</td><td>官網內容 → 外站佐證 → AI 引用效益</td><td>在站 + 離站雙軌</td></tr>
+      <tr><td>八</td><td>六個月甘特圖 × SOP × KPI</td><td>執行時序 + 生產流程 + 追蹤指標</td><td>落地執行依據</td></tr>
+    </table>
+  </div>
+  <div class="pf">確認鍵智創科技｜松TOWER GEO 行銷優化策略｜2026.03.26</div>
+</div>
+
+<!-- ══════════════════ P2：產業適性評估 ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>章一：產業 GEO 適性評估</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>🏗️ 章一：商辦預售產業值不值得做 GEO？</h2></div>
+  <div class="pc">
+
+    <div class="ib ig"><strong>核心結論</strong>：商辦預售案值得做 GEO，但 GEO 不是主力獲客武器，而是「品牌信任前置」的基礎建設。在客單價動輒數千萬、決策週期 3–12 個月的產業中，GEO 的角色是讓 TA 在被業務觸及前，已對品牌有正面認知。</div>
+
+    <h3 class="sh">✅ 值得做 GEO 的三大理由</h3>
+    <div class="three-col" style="margin-bottom:14px;">
+      <div style="border:1px solid var(--mid);border-radius:7px;overflow:hidden;">
+        <div style="background:var(--eb);padding:9px 13px;"><div style="color:white;font-size:11px;font-weight:700;">① 決策前期深度研究行為</div></div>
+        <div style="padding:10px 13px;background:white;font-size:11px;line-height:1.65;">企業主與高資產投資者在決策前會大量查找資料，包括問 ChatGPT「新莊副都心值得買嗎」、用 Perplexity 查「商辦投資報酬率比較」。GEO 讓松TOWER 在這個研究階段出現在 AI 答案框架裡，植入品牌信任。</div>
+      </div>
+      <div style="border:1px solid var(--mid);border-radius:7px;overflow:hidden;">
+        <div style="background:var(--teal);padding:9px 13px;"><div style="color:white;font-size:11px;font-weight:700;">② 長決策週期創造多次接觸</div></div>
+        <div style="padding:10px 13px;background:white;font-size:11px;line-height:1.65;">商辦購買週期長（3–12 個月），TA 在整個過程中會反覆查閱資訊。GEO 成本遠低於廣告，卻能在決策漏斗早期持續佔據心智，建立「新莊副都心 = 松TOWER」的認知連結。</div>
+      </div>
+      <div style="border:1px solid var(--mid);border-radius:7px;overflow:hidden;">
+        <div style="background:#7B2D8B;padding:9px 13px;"><div style="color:white;font-size:11px;font-weight:700;">③ 品牌媒體基礎已具備</div></div>
+        <div style="padding:10px 13px;background:white;font-size:11px;line-height:1.65;">工商時報、聯合新聞網、商業周刊等主流媒體已有大量報導，這是 AI 引用的核心外站信號。GEO 的工作是把這些媒體資產「結構化」，讓 AI 引擎能正確識別並引用，放大既有公關投資效益。</div>
+      </div>
+    </div>
+
+    <h3 class="sh">⚠️ GEO 的天花板與限制</h3>
+    <div class="ib io">商辦不動產是高度在地化、高度人際驅動的產業。Ahrefs 分析確認品牌提及是 AI 引用第一大因素，但 <strong>最終成交 80% 仍靠仲介帶看、接待中心、口碑介紹</strong>。GEO 幾乎不可能直接 drive 帶看預約，更不能取代業務。</div>
+
+    <h3 class="sh">GEO 適性評估矩陣</h3>
+    <table class="dt">
+      <tr><th>評估維度</th><th>商辦預售特性</th><th>GEO 效益評估</th><th>評級</th></tr>
+      <tr><td><strong>決策複雜度</strong></td><td>高，涉及財務、交通、ESG、投報率多維度評估</td><td>高：TA 大量問 AI 輔助決策，品牌資訊需出現</td><td><span class="b bg">高效益</span></td></tr>
+      <tr><td><strong>決策週期長度</strong></td><td>3–12 個月，反覆研究</td><td>高：長週期讓 GEO 的複利效應有足夠發揮時間</td><td><span class="b bg">高效益</span></td></tr>
+      <tr><td><strong>客單價</strong></td><td>數千萬～億元</td><td>高：每一個 AI 引用等同高價值接觸點，ROI 極高</td><td><span class="b bg">高效益</span></td></tr>
+      <tr><td><strong>在地化程度</strong></td><td>極高（新莊副都心特定區域）</td><td>中：地理性限制 AI 引用的全國觸及，但精準反而是優勢</td><td><span class="b bt2">中效益</span></td></tr>
+      <tr><td><strong>直接轉換可能</strong></td><td>低，需人際介入完成交易</td><td>低：GEO 無法直接促成帶看，需搭配業務流程</td><td><span class="b bo">輔助定位</span></td></tr>
+      <tr><td><strong>競品 GEO 成熟度</strong></td><td>商辦建商整體 GEO 意識仍低</td><td>高：現在佈局可建立先行優勢，競品尚未追上</td><td><span class="b bg">先行優勢</span></td></tr>
+    </table>
+
+  </div>
+  <div class="pf">確認鍵智創科技｜松TOWER GEO 行銷優化策略｜2026.03.26</div>
+</div>
+
+<!-- ══════════════════ P3：三大 TA ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>章二：三大 TA 群體 × 資訊接觸路徑</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>👥 章二：三大 TA 群體 × 資訊接觸路徑分析</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">TA 群體一：企業主（自用型）— 主要成交來源</h3>
+    <div class="ib ii">典型輪廓：台北市商辦租戶，感受到租金高漲 + 老舊空間壓力，員工超過 100 人，考慮「廠辦分離」或「總部升級」。夏姿、儒鴻、佳能、四零四科技、勤誠興業均為此類。</div>
+    <table class="dt">
+      <tr><th style="width:28%">資訊接觸管道</th><th style="width:40%">具體行為</th><th style="width:32%">GEO / 行銷介入機會</th></tr>
+      <tr><td>🗞️ 財經媒體（被動接收）</td><td>在商業周刊、工商時報看到報導後產生初步印象</td><td>公關稿 GEO 結構化 → AI 引用放大曝光</td></tr>
+      <tr><td>🤝 同業口碑 / 業務邀約</td><td>接到中悦業務邀請參觀接待中心，或聽同業提及</td><td>業務前置：GEO 讓對方提前認識品牌</td></tr>
+      <tr><td>🔍 搜尋引擎補課</td><td>被觸及後 Google「新莊副都心商辦」「松TOWER 評價」</td><td>SEO + GEO 雙軌：在搜尋結果與 AI 摘要同時出現</td></tr>
+      <tr><td>🤖 AI 引擎問答</td><td>問 ChatGPT「新莊副都心商辦哪裡好」「ESG 商辦推薦」</td><td><strong>GEO 核心戰場</strong>：FAQ Schema + 比較型內容</td></tr>
+    </table>
+
+    <h3 class="sh">TA 群體二：高資產個人投資者（置產型）— 行銷最敏感群體</h3>
+    <div class="ib ig">典型輪廓：股市獲利後尋找穩定標的，看準「政府打房不打商辦」政策，投資報酬率思維驅動。這群人是三個群體中對行銷最敏感、最容易被內容說服的對象。</div>
+    <table class="dt">
+      <tr><th style="width:28%">資訊接觸管道</th><th style="width:40%">具體行為</th><th style="width:32%">GEO / 行銷介入機會</th></tr>
+      <tr><td>📱 591 新建案 / 樂居</td><td>主動搜尋新北市商辦建案，看實價登錄、格局規劃</td><td>591 刊登優化 + 外站引流回官網</td></tr>
+      <tr><td>🎬 YouTube 理財 KOL</td><td>觀看「商辦投資指南」「新莊副都心分析」類影片</td><td><strong>YouTube 品牌頻道</strong>是最高優先外站佈局</td></tr>
+      <tr><td>💬 LINE 投資群組 / FB 社團</td><td>在商辦投資社群詢問口碑，或看廣告觸及</td><td>Facebook 精準廣告 + LINE 官方帳號</td></tr>
+      <tr><td>🏢 甲山林 / 房展中心</td><td>實地比較多個建案後決策</td><td>線下接觸前的 AI 品牌認知建立（GEO）</td></tr>
+    </table>
+
+    <h3 class="sh">TA 群體三：金融機構 / 上市櫃法人（店面 / 整層投資）</h3>
+    <div class="ib io">典型輪廓：第一銀行、渣打、國泰世華等已進駐。此類客戶走法人評估流程，由內部研究部門主導，不是行銷漏斗驅動的。<strong>對 GEO 效益最低，建議資源集中在前兩個 TA。</strong></div>
+    <table class="dt">
+      <tr><th>資訊來源</th><th>特性</th><th>建議作法</th></tr>
+      <tr><td>內部研究報告 / 仲介簡報</td><td>高度封閉，行銷難以介入</td><td>維持媒體公關高能見度，作為研究報告的引用來源</td></tr>
+      <tr><td>同業觀察（其他銀行已進駐）</td><td>跟風效應強，口碑是關鍵信號</td><td>進駐企業案例頁 + 媒體報導聚焦「金融機構認可」</td></tr>
+    </table>
+
+  </div>
+  <div class="pf">確認鍵智創科技｜松TOWER GEO 行銷優化策略｜2026.03.26</div>
+</div>
+
+<!-- ══════════════════ P4：行銷管道優先序 ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>章三：行銷管道優先序總覽</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>🎯 章三：行銷管道優先序 × 一句話總結</h2></div>
+  <div class="pc">
+
+    <!-- 一句話總結 Banner -->
+    <div style="background:var(--eb);border-radius:8px;padding:18px 24px;margin-bottom:20px;text-align:center;">
+      <div style="color:var(--el);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">行銷管道一句話總結</div>
+      <div style="color:white;font-size:15px;font-weight:900;line-height:1.5;">「媒體公關 + YouTube」觸達決策者 →「Facebook 精準廣告」產生帶看意圖<br>→「591 / 房展」完成比較 →「GEO」在每一個環節守住品牌信任</div>
+      <div style="color:rgba(255,255,255,.55);font-size:10.5px;margin-top:8px;">GEO 是貫穿整條漏斗的信任基礎建設，不是單一入口，不能取代業務，但缺少它整條漏斗的說服力都會漏</div>
+    </div>
+
+    <h3 class="sh">四大管道深度分析</h3>
+
+    <div class="strategy-card">
+      <div class="sc-head" style="background:var(--eb);">
+        <div class="sc-rank">1</div>
+        <div><div class="sc-title">媒體公關 + 新聞聯播網</div><div class="sc-tag">最高效 · 立即執行 · 品牌聲量 × AI 信號雙效</div></div>
+        <div style="margin-left:auto;"><span class="pri pc3">立即</span></div>
+      </div>
+      <div class="sc-body">
+        <p>松TOWER 在工商時報、聯合新聞網、商業周刊、中國時報、中央社均已有品牌報導，這是最強的 AI 引用外站信號（Ahrefs 確認品牌提及是 AI 引用第一大因素）。但現有稿件缺乏「GEO 可引用結構」——數字散落、無比較表格、無 Answer-First 段落，AI 即使讀到也難以擷取。</p>
+        <p><strong>建議：</strong>每季至少 2 篇媒體稿，撰寫時融入 GEO 結構（具體數字 + 可引用句 + 比較描述），搭配新聞聯播網（Yahoo、LINE Today 等 12 網）放大覆蓋面，同步在官網建立媒體報導彙整頁供 AI 索引。</p>
+      </div>
+    </div>
+
+    <div class="strategy-card">
+      <div class="sc-head" style="background:#1A6E3C;">
+        <div class="sc-rank">2</div>
+        <div><div class="sc-title">YouTube 品牌頻道</div><div class="sc-tag">高效 · 三個月內建立 · 跨 AI 平台引用效益最高</div></div>
+        <div style="margin-left:auto;"><span class="pri ph2">高</span></div>
+      </div>
+      <div class="sc-body">
+        <p>YouTube 在 AI 跨平台引用中的佔比異常高，且企業主與投資者 TA 大量使用 YouTube 查閱「新莊副都心發展前景」「商辦投資分析」類內容。目前中悦松TOWER 無品牌 YouTube 頻道，是最大的外站缺口。</p>
+        <p><strong>建議內容方向：</strong>① 松TOWER 實地導覽影片（空間感、公設、陽台設計）② 新莊副都心投資環境分析（附數據）③ 「為什麼企業選擇新莊而非台北市？」比較型影片。每支影片腳本同步 GEO 結構化，影片說明欄嵌入關鍵字段落。</p>
+      </div>
+    </div>
+
+    <div class="strategy-card">
+      <div class="sc-head" style="background:var(--org);">
+        <div class="sc-rank">3</div>
+        <div><div class="sc-title">Facebook 精準廣告 × 官方帳號內容</div><div class="sc-tag">中效 · 持續投放 · 投資者 TA 最精準觸達</div></div>
+        <div style="margin-left:auto;"><span class="pri pm">中</span></div>
+      </div>
+      <div class="sc-body">
+        <p>Facebook 粉絲頁目前僅 1,498 讚，遠低於產品客單價應有的品牌積累。廣告精準度是優勢：可鎖定「桃園 / 新莊 / 林口 / 新竹企業主 + 財務 / 投資興趣 + 年收入信號」的精準受眾，也適合觸達看過工商時報報導的再行銷受眾。</p>
+        <p><strong>建議：</strong>廣告素材以「企業痛點導向」切入（「你的台北市辦公室租金，是新莊的幾倍？」），頻道日常內容以 Reels 格式產出 30 秒進駐案例分享，維持每週 2–3 則，建立品牌親近感。</p>
+      </div>
+    </div>
+
+    <div class="strategy-card">
+      <div class="sc-head" style="background:var(--teal);">
+        <div class="sc-rank">4</div>
+        <div><div class="sc-title">GEO 官網優化 × 外站品牌引用</div><div class="sc-tag">輔助定位 · 貫穿全漏斗 · 品牌信任守門員</div></div>
+        <div style="margin-left:auto;"><span class="pri pm">基礎建設</span></div>
+      </div>
+      <div class="sc-body">
+        <p>GEO 的角色不是獲客，而是「確保 TA 被任何管道觸及後，在 AI 引擎做功課時都能找到正確的松TOWER 資訊」。現有官網 GEO 健檢 34/100 分，主要缺口是：無 Schema、無 Answer-First 內容、無多頁架構、llms.txt 缺失。</p>
+        <p><strong>建議：</strong>GEO 優化依本報告第四至六章執行，技術修復優先（30 天），FAQ 內容頁與 Pillar Page 其次（60 天），外站 Wikipedia + PTT 論壇佈局長期推進（90+ 天）。</p>
+      </div>
+    </div>
+
+    <h3 class="sh">管道效益對照表</h3>
+    <table class="dt">
+      <tr><th>管道</th><th>主要觸達 TA</th><th>對 GEO 的貢獻</th><th>見效時程</th><th>推薦投入比重</th></tr>
+      <tr><td>媒體公關 + 聯播網</td><td>企業主 ★★★</td><td>最強外站品牌信號</td><td>2–4 週（媒體發布後）</td><td><span class="b bb">35%</span></td></tr>
+      <tr><td>YouTube 頻道</td><td>投資者 ★★★ / 企業主 ★★</td><td>跨平台 AI 引用效益高</td><td>3–6 個月</td><td><span class="b bg">25%</span></td></tr>
+      <tr><td>Facebook 廣告</td><td>投資者 ★★★</td><td>間接（提升品牌搜尋量）</td><td>1–3 個月</td><td><span class="b bo">25%</span></td></tr>
+      <tr><td>GEO + 官網優化</td><td>所有 TA（補強層）</td><td>直接（在站 + 外站 Schema）</td><td>4–12 週</td><td><span class="b bt2">15%</span></td></tr>
+    </table>
+
+  </div>
+  <div class="pf">確認鍵智創科技｜松TOWER GEO 行銷優化策略｜2026.03.26</div>
+</div>
+
+<!-- ══════════════════ P5：GEO 定位 + 關鍵字矩陣 ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>章四五：GEO 定位 × 關鍵字矩陣</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>🗝️ 章四：GEO 在行銷組合中的角色 × 章五：關鍵字矩陣</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">GEO 在松TOWER 行銷漏斗中的定位</h3>
+    <div class="funnel-row">
+      <div class="funnel-label" style="background:var(--eb);">認知階段</div>
+      <div class="funnel-arrow">→</div>
+      <div class="funnel-desc">媒體報導 / YouTube / Facebook 廣告 → 首次聽聞松TOWER<br><span style="color:var(--teal);font-weight:700;">GEO 角色：確保報導稿件結構可被 AI 引用，放大媒體觸及</span></div>
+    </div>
+    <div class="funnel-row">
+      <div class="funnel-label" style="background:var(--el2);">研究階段</div>
+      <div class="funnel-arrow">→</div>
+      <div class="funnel-desc">Google 搜尋 / ChatGPT 問答 / Perplexity 查詢 → 主動做功課<br><span style="color:var(--teal);font-weight:700;">GEO 核心戰場：FAQ 頁、比較型內容、Pillar Page 在 AI 答案中出現</span></div>
+    </div>
+    <div class="funnel-row">
+      <div class="funnel-label" style="background:var(--teal);">比較階段</div>
+      <div class="funnel-arrow">→</div>
+      <div class="funnel-desc">591 / 樂居比較建案 / 接受業務簡報 / 前往接待中心<br><span style="color:var(--teal);font-weight:700;">GEO 角色：確保第三方平台資料正確，進駐企業案例頁強化信任</span></div>
+    </div>
+    <div class="funnel-row">
+      <div class="funnel-label" style="background:var(--grn);">決策成交</div>
+      <div class="funnel-arrow">→</div>
+      <div class="funnel-desc">接待中心帶看 → 業務跟進 → 簽約<br><span style="color:var(--muted);">此階段由業務主導，GEO 退場</span></div>
+    </div>
+
+    <hr class="dv">
+
+    <h3 class="sh">關鍵字矩陣：松TOWER × 新莊副都心商辦</h3>
+    <h4 class="sh4">■ 核心詞（Pillar 錨點）— AI 引用目標主題</h4>
+    <div class="kw-wrap">
+      <span class="kw core">新莊副都心商辦</span>
+      <span class="kw core">中悦松TOWER</span>
+      <span class="kw core">頂級商辦 新北</span>
+      <span class="kw core">ESG 商辦 台灣</span>
+      <span class="kw core">企業總部 新莊</span>
+    </div>
+    <h4 class="sh4">■ 長尾詞（Cluster 主題群）— 決策研究期搜尋詞</h4>
+    <div class="kw-wrap">
+      <span class="kw hi">新莊副都心商辦值得買嗎</span>
+      <span class="kw hi">商辦 vs 住宅投資比較</span>
+      <span class="kw hi">新莊 台北市 辦公室租金比較</span>
+      <span class="kw hi">松TOWER 坪數規劃</span>
+      <span class="kw hi">廠辦分離 企業升級</span>
+      <span class="kw hi">機捷 A4 站商辦</span>
+      <span class="kw hi">SC 鋼骨商辦 台灣</span>
+      <span class="kw hi">商辦節稅 企業主</span>
+      <span class="kw hi">新莊副都心發展前景 2025</span>
+      <span class="kw hi">松匯28 共享辦公室</span>
+    </div>
+    <h4 class="sh4">■ GEO 語意群（AI 問答語型）— 直接模擬用戶問 AI 的句型</h4>
+    <div class="kw-wrap">
+      <span class="kw mid2">新莊副都心哪裡有好的商辦大樓？</span>
+      <span class="kw mid2">ESG 商辦台灣有哪些選擇？</span>
+      <span class="kw mid2">企業總部設在新莊副都心有什麼優勢？</span>
+      <span class="kw mid2">新莊和台北市商辦哪個比較划算？</span>
+      <span class="kw mid2">中悦建設最近有哪些商辦案？</span>
+      <span class="kw mid2">新莊副都心 2026 年發展規劃</span>
+    </div>
+  </div>
+  <div class="pf">確認鍵智創科技｜松TOWER GEO 行銷優化策略｜2026.03.26</div>
+</div>
+
+<!-- ══════════════════ P6：PAA 問題庫 ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>章五（續）：PAA 問題庫</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>❓ 章五（續）：PAA 問題庫 × Citation Block 答案示範</h2></div>
+  <div class="pc">
+    <div class="ib ii">以下 10 題模擬 TA 問 AI 的高頻提問，每題配備「Citation Block 格式」答案示範——即 <strong>直接答案（1句）→ 說明（1–2句）→ 具體規格數字（1句）→ 品牌植入</strong>。建議將這些問答製作為官網 FAQ 頁面並部署 FAQPage Schema，AI 引用率可從 15% 提升至 41%。</div>
+
+    <div class="paa">
+      <div class="q">Q：新莊副都心有哪些頂級商辦大樓推薦？</div>
+      <div class="a">新莊副都心目前最具代表性的頂級商辦聚落由中悦建設機構主導開發，包含松TOWER、栢TOWER、悦TOWER 等五大指標建案。<b>中悦在副都心已完工近 6 萬坪商辦</b>，坪數選擇從 98 坪到 642 坪，吸引玉山、永豐、渣打、第一銀行等 8 家金融機構進駐，是北台灣商辦密度最高的新興聚落。</div>
+    </div>
+    <div class="paa">
+      <div class="q">Q：松TOWER 是什麼樣的建築？有哪些特色？</div>
+      <div class="a">松TOWER 是位於新北市新莊區中平路與榮華路二段的頂級 SC 鋼骨商辦大樓，地上 <b>29 層、基地近 2,000 坪</b>，以「會呼吸的商辦」為設計核心，全台商辦罕見的多功能生活陽台配置，融入 ESG 永續理念，並提供健身房、瑜伽室、共享會議室等飯店級公設。</div>
+    </div>
+    <div class="paa">
+      <div class="q">Q：企業把總部設在新莊副都心，交通方便嗎？</div>
+      <div class="a">新莊副都心擁有三座捷運站，從副都心站搭機場捷運至桃園機場僅 <b>26 分鐘</b>，至台北車站 <b>8 分鐘</b>，信義計畫區 <b>20 分鐘</b>，南港經貿園區 <b>25 分鐘</b>（依機場捷運官方時刻表）。對需要接待國際商務夥伴、多點通勤的企業而言，是大台北地區交通效率最高的辦公選址之一。</div>
+    </div>
+    <div class="paa">
+      <div class="q">Q：新莊商辦和台北市商辦相比，哪個更划算？</div>
+      <div class="a">新莊副都心商辦每坪售價約 <b>65–70 萬元</b>，相較台北市信義區 A 辦每坪 100 萬元以上，總價差距顯著，且政府在副都心持續投入公共建設（合署大樓、國家電影中心、五泰輕軌），未來增值潛力受市場看好；中悦松TOWER 入駐後即有第一銀行購入店面，渣打、國泰世華承租，為投資信心提供具體佐證。</div>
+    </div>
+    <div class="paa">
+      <div class="q">Q：台灣哪些商辦符合 ESG 永續標準？</div>
+      <div class="a">台灣 ESG 商辦市場正快速成長，松TOWER 是新莊副都心代表性 ESG 頂辦，採 SC 鋼骨結構搭配大面玻璃帷幕開窗設計，<b>50% 綠化覆蓋率</b>符合新莊副都心都市規劃要求，並以「會呼吸的商辦」理念在設計端降低能源消耗，滿足企業 ESG 供應鏈揭露的辦公環境要求。</div>
+    </div>
+    <div class="paa">
+      <div class="q">Q：中小企業租用共享辦公室，新莊有選擇嗎？</div>
+      <div class="a">松TOWER 28 樓設有「松匯.28」商務中心共享辦公室，提供 <b>2～8 人獨立辦公室</b>與彈性共享工作區，導入智能服務與社群機制，並提供地址登記、代接電話、財稅法務顧問等加值服務，適合新創團隊、自由工作者或需要副都心地址的企業。</div>
+    </div>
+    <div class="paa">
+      <div class="q">Q：買商辦可以幫企業節稅嗎？怎麼做？</div>
+      <div class="a">企業自用商辦可透過折舊費用抵扣應稅所得，並以公司名義持有資產，達到合法節稅與資金靈活調度的效果。相較住宅，商辦不受《平均地權條例》限制，貸款條件也較為寬鬆；購入松TOWER 後，企業可同時享有資產增值、租金收益（空置樓層出租）及節稅三重效益，具體方案建議諮詢稅務顧問。</div>
+    </div>
+    <div class="paa">
+      <div class="q">Q：新莊副都心未來還有哪些重大建設？</div>
+      <div class="a">根據新北市政府規劃，新莊副都心未來將完成五泰輕軌通車、溪北轉運站 BOT、塭仔圳重劃區開發，並有中悦建設在機捷 A3 站旁預計 2025 年動工的 <b>41 層、6.5 萬坪</b>超高頂級商辦地標，屆時副都心商業機能將全面升級，區域人口與企業密度持續提升。</div>
+    </div>
+    <div class="paa">
+      <div class="q">Q：哪些知名企業已經在新莊副都心設立總部？</div>
+      <div class="a">夏姿、儒鴻、佳能、四零四科技、勤誠興業等知名企業已在新莊副都心設立總部，金融機構方面有玉山銀行、永豐銀行、渣打、國泰世華等 <b>8 家銀行</b>進駐中悦商辦，另有宏匯廣場、凱悅嘉軒酒店等服務業指標品牌，形成完整商業生態鏈。</div>
+    </div>
+    <div class="paa">
+      <div class="q">Q：如何預約參觀松TOWER 接待會館？</div>
+      <div class="a">松TOWER 接待會館位於新北市新莊區中平路 437 號，預約專線為 <b>02-8522-1234</b>，亦可透過官方網站 joyes-pinetower.com.tw 填寫預約表單，或加入官方 LINE（lin.ee/LLJmnKt）與 Facebook 粉絲頁聯絡，提供外部簡報與現場參觀兩種服務形式。</div>
+    </div>
+  </div>
+  <div class="pf">確認鍵智創科技｜松TOWER GEO 行銷優化策略｜2026.03.26</div>
+</div>
+
+<!-- ══════════════════ P7：18 篇內容計畫 ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>章六：18 篇 GEO 內容計畫</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>📝 章六：18 篇 GEO 內容計畫（六個月）</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">內容類型配比</h3>
+    <div class="cgrid">
+      <div class="ccard">
+        <div class="chead" style="background:var(--eb);">A 類：比較型清單文（6 篇）</div>
+        <div class="cbody">
+          <div class="rate">AI 引用佔比 32.5%｜最高單一格式</div>
+          <ul>
+            <li>新莊 vs 台北市商辦：10 大差異比較</li>
+            <li>SC 鋼骨 vs RC 結構商辦差異解析</li>
+            <li>新莊副都心 5 大商辦建案完整比較</li>
+            <li>ESG 認證商辦 vs 一般商辦：值得溢價嗎</li>
+            <li>企業自用 vs 投資置產：商辦買法大不同</li>
+            <li>共享辦公室 vs 自購商辦：中小企業如何選</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ccard">
+        <div class="chead" style="background:var(--teal);">B 類：綜合指南型（4 篇）</div>
+        <div class="cbody">
+          <div class="rate">AI 引用率 67%｜含數據表格最高</div>
+          <ul>
+            <li>新莊副都心頂級商辦完整選購指南（2026）</li>
+            <li>企業總部選址決策指南：5 大評估維度</li>
+            <li>商辦投資完整入門：節稅×貸款×投報試算</li>
+            <li>新莊副都心城市發展報告（附重大建設時程）</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ccard">
+        <div class="chead" style="background:#7B2D8B;">C/D/E 類：FAQ/定義/操作（8 篇）</div>
+        <div class="cbody">
+          <div class="rate">FAQ Schema 引用率 41%（×3.2 提升）</div>
+          <ul>
+            <li>FAQ：松TOWER 常見問題完整解答</li>
+            <li>定義：什麼是 ESG 商辦？</li>
+            <li>定義：SC 鋼骨結構是什麼？</li>
+            <li>操作：企業申請商辦貸款 SOP</li>
+            <li>操作：商辦過戶節稅完整流程</li>
+            <li>定義：什麼是副都心 CBD？</li>
+            <li>FAQ：機場捷運沿線商辦完整指南</li>
+            <li>操作：如何評估商辦租金投報率</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sh">18 篇完整規格表</h3>
+    <table class="dt" style="font-size:10.5px;">
+      <tr><th>#</th><th>標題</th><th>類型</th><th>Schema</th><th>字數</th><th>月份</th><th>優先</th></tr>
+      <tr class="sr"><td colspan="7">▌ M1–M2（第 1–2 個月）— 技術地基 + 核心 FAQ</td></tr>
+      <tr><td>1</td><td>松TOWER 常見問題完整解答（FAQ 10 題）</td><td><span class="b bt2">FAQ</span></td><td>FAQPage</td><td>2,500</td><td>M1</td><td><span class="pri pc3">立即</span></td></tr>
+      <tr><td>2</td><td>什麼是 ESG 商辦？定義、標準與台灣案例</td><td><span class="b bb">定義</span></td><td>Article</td><td>2,000</td><td>M1</td><td><span class="pri pc3">立即</span></td></tr>
+      <tr><td>3</td><td>新莊副都心頂級商辦完整選購指南（2026）</td><td><span class="b bg">指南</span></td><td>Article+FAQ</td><td>4,000</td><td>M2</td><td><span class="pri pc3">立即</span></td></tr>
+      <tr><td>4</td><td>新莊 vs 台北市商辦：10 大差異完整比較</td><td><span class="b br">比較</span></td><td>Article</td><td>3,000</td><td>M2</td><td><span class="pri pc3">立即</span></td></tr>
+      <tr class="sr"><td colspan="7">▌ M2–M3（第 2–3 個月）— 主題叢集擴展</td></tr>
+      <tr><td>5</td><td>企業總部選址決策指南：5 大評估維度</td><td><span class="b bg">指南</span></td><td>HowTo+FAQ</td><td>3,500</td><td>M2</td><td><span class="pri ph2">高</span></td></tr>
+      <tr><td>6</td><td>SC 鋼骨 vs RC 結構商辦：結構強度差異解析</td><td><span class="b br">比較</span></td><td>Article</td><td>2,500</td><td>M3</td><td><span class="pri ph2">高</span></td></tr>
+      <tr><td>7</td><td>新莊副都心 5 大商辦建案完整比較（2026）</td><td><span class="b br">比較</span></td><td>Article</td><td>3,000</td><td>M3</td><td><span class="pri ph2">高</span></td></tr>
+      <tr><td>8</td><td>企業申請商辦貸款 SOP：條件、流程、注意事項</td><td><span class="b bo">操作</span></td><td>HowTo</td><td>2,500</td><td>M3</td><td><span class="pri ph2">高</span></td></tr>
+      <tr class="sr"><td colspan="7">▌ M3–M4（第 3–4 個月）— 可信度 + 數據強化</td></tr>
+      <tr><td>9</td><td>新莊副都心城市發展報告：2026 重大建設時程表</td><td><span class="b bg">指南</span></td><td>Article</td><td>3,500</td><td>M3</td><td><span class="pri pm">中</span></td></tr>
+      <tr><td>10</td><td>商辦投資完整入門：節稅 × 貸款 × 投報率試算</td><td><span class="b bg">指南</span></td><td>Article+FAQ</td><td>4,000</td><td>M4</td><td><span class="pri pm">中</span></td></tr>
+      <tr><td>11</td><td>ESG 認證商辦 vs 一般商辦：溢價值得嗎？</td><td><span class="b br">比較</span></td><td>Article</td><td>2,500</td><td>M4</td><td><span class="pri pm">中</span></td></tr>
+      <tr><td>12</td><td>什麼是副都心 CBD？新莊副都心定位解析</td><td><span class="b bb">定義</span></td><td>Article</td><td>2,000</td><td>M4</td><td><span class="pri pm">中</span></td></tr>
+      <tr class="sr"><td colspan="7">▌ M4–M5（第 4–5 個月）— 外站強化 + 長尾覆蓋</td></tr>
+      <tr><td>13</td><td>企業自用 vs 投資置產：商辦買法完整比較</td><td><span class="b br">比較</span></td><td>Article</td><td>2,500</td><td>M4</td><td><span class="pri pm">中</span></td></tr>
+      <tr><td>14</td><td>SC 鋼骨結構是什麼？商辦選購必知術語</td><td><span class="b bb">定義</span></td><td>Article</td><td>1,800</td><td>M5</td><td><span class="pri pm">中</span></td></tr>
+      <tr><td>15</td><td>如何評估商辦租金投報率？完整計算公式教學</td><td><span class="b bo">操作</span></td><td>HowTo</td><td>2,000</td><td>M5</td><td><span class="pri pm">中</span></td></tr>
+      <tr><td>16</td><td>機場捷運沿線商辦完整指南：A3、A4、A5 站比較</td><td><span class="b bt2">FAQ</span></td><td>FAQPage</td><td>2,500</td><td>M5</td><td><span class="pri pl2">低</span></td></tr>
+      <tr class="sr"><td colspan="7">▌ M5–M6（第 5–6 個月）— 長尾完整 + 品牌深度</td></tr>
+      <tr><td>17</td><td>共享辦公室 vs 自購商辦：中小企業如何選擇</td><td><span class="b br">比較</span></td><td>Article</td><td>2,500</td><td>M6</td><td><span class="pri pl2">低</span></td></tr>
+      <tr><td>18</td><td>商辦過戶節稅完整流程：企業主實操指南</td><td><span class="b bo">操作</span></td><td>HowTo+FAQ</td><td>2,500</td><td>M6</td><td><span class="pri pl2">低</span></td></tr>
+      <tr class="hl"><td colspan="3"><b>合計</b></td><td><b>6 種 Schema 類型</b></td><td><b>約 50,300 字</b></td><td><b>M1–M6</b></td><td><b>18 篇</b></td></tr>
+    </table>
+  </div>
+  <div class="pf">確認鍵智創科技｜松TOWER GEO 行銷優化策略｜2026.03.26</div>
+</div>
+
+<!-- ══════════════════ P8：外站整合矩陣 ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>章七：官網 × 外站整合矩陣</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>🔗 章七：官網 × 外站整合矩陣</h2></div>
+  <div class="pc">
+    <div class="ib ii">研究確認：82–89% 的 AI 引用來自第三方 Earned Media，而非品牌官網。官網 GEO 優化與外站品牌佈局必須同步推進，才能形成 AI 引用的完整閉環。</div>
+
+    <h3 class="sh">官網內容 × 外站佐證 × GEO 效益對照</h3>
+    <table class="dt">
+      <tr><th>官網內容頁</th><th>對應外站佐證來源</th><th>GEO 效益</th></tr>
+      <tr><td>商辦完整選購指南（Pillar Page）</td><td>工商時報報導、聯合新聞網投資分析</td><td>Google AIO 主要引用候選</td></tr>
+      <tr><td>FAQ：松TOWER 常見問題</td><td>591 建案頁、樂居社區頁</td><td>FAQPage Schema → AI 引用率 ×3.2</td></tr>
+      <tr><td>新莊 vs 台北市商辦比較文</td><td>商業周刊頂辦聚落報導、甲山林商辦分析</td><td>ChatGPT Search 最愛比較型格式</td></tr>
+      <tr><td>進駐企業案例頁</td><td>第一銀行新聞稿、企業公告（儒鴻、佳能）</td><td>品牌實體驗證 → Google Knowledge Graph</td></tr>
+      <tr><td>ESG 商辦定義頁</td><td>新北市政府永續建築規範、業界媒體</td><td>Perplexity 喜歡「定義型 + 數據來源」</td></tr>
+    </table>
+
+    <h3 class="sh">外站佈局優先序</h3>
+    <table class="dt">
+      <tr><th>平台</th><th>內容策略</th><th>AI 影響機制</th><th>優先度</th></tr>
+      <tr class="sr"><td colspan="4">▌ 立即執行（M1–M2）</td></tr>
+      <tr><td>工商時報 / 聯合新聞網</td><td>GEO 結構化新聞稿（含數字、比較、可引用句）</td><td>ChatGPT + Perplexity 最信任媒體來源</td><td><span class="pri pc3">立即</span></td></tr>
+      <tr><td>591 新建案頁</td><td>完整更新建案說明、坪數規格、聯絡資訊</td><td>AI 引用房產目錄頁為輔助來源</td><td><span class="pri pc3">立即</span></td></tr>
+      <tr class="sr"><td colspan="4">▌ 一季內（M2–M3）</td></tr>
+      <tr><td>YouTube 品牌頻道</td><td>松TOWER 導覽影片 + 副都心分析影片</td><td>跨 AI 平台引用效益最高，Perplexity 常引用</td><td><span class="pri ph2">高</span></td></tr>
+      <tr><td>新聞聯播網</td><td>Yahoo、LINE Today 等 12 網發稿</td><td>增加外部品牌提及密度</td><td><span class="pri ph2">高</span></td></tr>
+      <tr><td>Facebook 粉絲頁</td><td>每週 2–3 則進駐案例 + ESG 內容</td><td>間接提升品牌搜尋量，支援 ChatGPT 提及率</td><td><span class="pri ph2">高</span></td></tr>
+      <tr class="sr"><td colspan="4">▌ 長期佈局（M4–M6）</td></tr>
+      <tr><td>Wikipedia</td><td>補充中悦建設機構條目，提及松TOWER</td><td>ChatGPT 最信任的單一來源，提及品牌頻率 ×3.2</td><td><span class="pri pm">中</span></td></tr>
+      <tr><td>PTT 房版 / Facebook 商辦社團</td><td>問答形式品牌植入（真實評論）</td><td>ChatGPT 社群信號，Quora/PTT 引用率 30–45%</td><td><span class="pri pm">中</span></td></tr>
+      <tr><td>方格子 / 商辦部落格</td><td>投資分析類 SEO 文章</td><td>Perplexity 外部引用密度提升</td><td><span class="pri pl2">低</span></td></tr>
+    </table>
+  </div>
+  <div class="pf">確認鍵智創科技｜松TOWER GEO 行銷優化策略｜2026.03.26</div>
+</div>
+
+<!-- ══════════════════ P9：甘特圖 + SOP + KPI ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>章八：六個月甘特圖 × SOP × KPI</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>📅 章八：六個月執行甘特圖 × GEO 生產 SOP × KPI 框架</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">六個月執行甘特圖</h3>
+    <div class="gang">
+    <table class="gantt">
+      <tr>
+        <th style="width:26%;text-align:left;padding-left:8px;">執行項目</th>
+        <th style="width:12%">M1</th><th style="width:12%">M2</th><th style="width:12%">M3</th>
+        <th style="width:12%">M4</th><th style="width:12%">M5</th><th style="width:12%">M6</th>
+      </tr>
+      <tr><td>🔧 技術地基（llms.txt / Schema / Bing）</td><td><div class="gbar" style="background:var(--red)"></div></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>📄 FAQ 頁 + FAQPage Schema 部署</td><td><div class="gbar" style="background:var(--red)"></div></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>📰 媒體公關稿（GEO 結構化）</td><td><div class="gbar"></div></td><td><div class="gbar"></div></td><td><div class="gbar"></div></td><td><div class="gbar"></div></td><td><div class="gbar"></div></td><td><div class="gbar"></div></td></tr>
+      <tr><td>✍️ GEO 內容生產（每月 3 篇）</td><td><div class="gbar" style="background:var(--teal)"></div></td><td><div class="gbar" style="background:var(--teal)"></div></td><td><div class="gbar" style="background:var(--teal)"></div></td><td><div class="gbar" style="background:var(--teal)"></div></td><td><div class="gbar" style="background:var(--teal)"></div></td><td><div class="gbar" style="background:var(--teal)"></div></td></tr>
+      <tr><td>🎬 YouTube 頻道建立 + 首批影片</td><td></td><td><div class="gbar" style="background:#7B2D8B"></div></td><td><div class="gbar" style="background:#7B2D8B"></div></td><td><div class="gbar" style="background:#7B2D8B"></div></td><td></td><td></td></tr>
+      <tr><td>📱 Facebook 廣告 + 內容經營</td><td><div class="gbar" style="background:var(--org)"></div></td><td><div class="gbar" style="background:var(--org)"></div></td><td><div class="gbar" style="background:var(--org)"></div></td><td><div class="gbar" style="background:var(--org)"></div></td><td><div class="gbar" style="background:var(--org)"></div></td><td><div class="gbar" style="background:var(--org)"></div></td></tr>
+      <tr><td>🗞️ 新聞聯播網發稿</td><td></td><td><div class="gbar"></div></td><td></td><td><div class="gbar"></div></td><td></td><td><div class="gbar"></div></td></tr>
+      <tr><td>🌐 外站佈局（PTT / 方格子 / Wiki）</td><td></td><td></td><td><div class="gbar" style="background:var(--grn)"></div></td><td><div class="gbar" style="background:var(--grn)"></div></td><td><div class="gbar" style="background:var(--grn)"></div></td><td><div class="gbar" style="background:var(--grn)"></div></td></tr>
+      <tr><td>📊 GEO 月成效報告</td><td></td><td><div class="gbar" style="background:var(--grn)"></div></td><td><div class="gbar" style="background:var(--grn)"></div></td><td><div class="gbar" style="background:var(--grn)"></div></td><td><div class="gbar" style="background:var(--grn)"></div></td><td><div class="gbar" style="background:var(--grn)"></div></td></tr>
+    </table>
+    </div>
+
+    <h3 class="sh">GEO 內容生產 SOP（每篇標準流程）</h3>
+    <div class="sop-step">
+      <div class="sop-num">1</div>
+      <div class="sop-body"><h5>題目確認與 AI 問答意圖分析</h5><p>確認目標關鍵字，用 ChatGPT / Perplexity 測試目前答案，找出品牌缺席的問題點</p><div class="out">📦 產出：關鍵字清單 + 競品內容差距分析表</div></div>
+    </div>
+    <div class="sop-step">
+      <div class="sop-num">2</div>
+      <div class="sop-body"><h5>GEO 結構撰寫（Answer-First）</h5><p>每個 H2 第一句直接給答案，每段 40–60 字自給自足，含至少 1 個具體數字，附來源標注</p><div class="out">📦 產出：完整稿件（含 TL;DR 摘要區塊）</div></div>
+    </div>
+    <div class="sop-step">
+      <div class="sop-num">3</div>
+      <div class="sop-body"><h5>Schema JSON-LD 部署</h5><p>依內容類型部署對應 Schema（FAQPage / HowTo / Article），加入 dateModified 時間戳</p><div class="out">📦 產出：Schema 程式碼 + 驗證截圖</div></div>
+    </div>
+    <div class="sop-step">
+      <div class="sop-num">4</div>
+      <div class="sop-body"><h5>發布 + IndexNow 通知</h5><p>代上稿並執行 GEO 排版，發布後立即觸發 IndexNow API 通知 Bing / Yandex 即時索引</p><div class="out">📦 產出：發布頁面 URL + IndexNow 回應截圖</div></div>
+    </div>
+
+    <h3 class="sh">KPI 框架（核心 GEO 追蹤指標）</h3>
+    <table class="dt">
+      <tr><th>指標類型</th><th>指標名稱</th><th>追蹤工具</th><th>3 個月目標</th><th>6 個月目標</th></tr>
+      <tr class="sr"><td colspan="5">▌ 核心 GEO 指標</td></tr>
+      <tr><td>AI 能見度</td><td>AI Share of Voice（副都心商辦主題）</td><td>Profound / 手動測試</td><td>目標 Prompt 被引用 3/20 題</td><td>10/20 題</td></tr>
+      <tr><td>引用頻率</td><td>Citation Frequency（跨平台累計）</td><td>BrandMentions</td><td>首次偵測到 ChatGPT 引用</td><td>月均 5 次以上</td></tr>
+      <tr><td>AI 流量</td><td>AI Referral Traffic（GA4）</td><td>GA4 Referral 報告</td><td>建立追蹤機制 + 基準值</td><td>月均 50 次 AI 導入</td></tr>
+      <tr class="sr"><td colspan="5">▌ 技術 + 內容支撐指標</td></tr>
+      <tr><td>技術分數</td><td>GEO 健檢總分</td><td>確認鍵月報</td><td>50 / 100</td><td>70 / 100</td></tr>
+      <tr><td>內容覆蓋</td><td>GEO 文章累計篇數</td><td>內部追蹤</td><td>9 篇完成</td><td>18 篇完成</td></tr>
+      <tr><td>搜尋排名</td><td>Bing Top 10 關鍵字數（影響 ChatGPT）</td><td>Ahrefs / SEMrush</td><td>3 個核心詞進入 Top 20</td><td>5 個核心詞 Top 10</td></tr>
+    </table>
+
+    <hr class="dv">
+    <p class="clp">本計畫以「媒體公關 + YouTube 觸達決策者 → Facebook 廣告產生帶看意圖 → GEO 在研究階段守住品牌信任」為核心策略邏輯。GEO 不是松TOWER 的主力獲客渠道，但它是整條行銷漏斗中最難被競品複製的護城河——當買家在 ChatGPT 問「新莊副都心商辦哪裡好」，松TOWER 出現在答案裡，就是確認鍵 GEO 優化工作最直接的成果體現。</p>
+    <div class="agsig">
+      <img src="data:image/png;base64,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" style="height:44px;border-radius:6px;flex-shrink:0;">
+      <div>
+        <div style="color:white;font-size:12px;font-weight:700;">確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.</div>
+        <div style="color:rgba(255,255,255,.5);font-size:10.5px;margin-top:4px;">enterimc.com　｜　報告日期：2026年3月26日　｜　本文件內容為確認鍵智創科技智慧財產，僅供客戶參考</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════ P10：服務規格與報價 ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>服務規格與報價</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>💰 中悦松TOWER GEO 行銷優化服務規格與報價</h2></div>
+  <div class="pc">
+    <div class="ib ii">本報價依松TOWER 官網 GEO 健檢結果（34/100 分）及本報告行銷策略建議量身規劃，分四層服務結構逐步建立 AI 品牌引用能見度。所有單次專案項目建議於第一階段（M1）優先執行，月費服務於技術地基完成後啟動。</div>
+
+    <h3 class="sh">第一層：GEO 技術基礎建設（一次性）</h3>
+    <table class="dt">
+      <tr><th style="width:5%">#</th><th style="width:26%">服務項目</th><th style="width:38%">規格說明</th><th style="width:10%">單價</th><th style="width:10%">計費</th><th style="width:11%">GEO 層級</th></tr>
+      <tr>
+        <td>1</td>
+        <td><strong>AI 爬蟲可訪問性設定</strong></td>
+        <td>robots.txt 確認未封鎖 GPTBot / ClaudeBot / PerplexityBot；llms.txt 建置（AI 網站結構授權導引）；IndexNow 協定設定（新內容即時通知 Bing）；Bing Webmaster Tools 驗證</td>
+        <td><strong>$20,000</strong></td>
+        <td>單次</td>
+        <td><span class="b bb">第一層</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Core Web Vitals 與技術 SEO 健檢</strong></td>
+        <td>全站 HTTPS 確認；RWD 行動裝置檢測；載入速度 &lt;1.8 秒優化建議；robots/noindex 設定審查；健檢報告書交付</td>
+        <td><strong>$30,000</strong></td>
+        <td>單次</td>
+        <td><span class="b bb">第一層</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>語意結構標記 (Schema) 全面部署</strong></td>
+        <td>FAQPage / HowTo / Article Schema；Organization + sameAs Schema（品牌實體識別）；Person Schema（作者頁）；BreadcrumbList Schema</td>
+        <td><strong>$35,000</strong></td>
+        <td>單次</td>
+        <td><span class="b bb">第二層</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>主題叢集 (Topic Cluster) 架構規劃</strong></td>
+        <td>Pillar Page 核心定義頁規劃（2,000–3,000 字）；Cluster Page 清單（≥10 篇子頁規劃）；比較頁 / FAQ 頁 / Glossary 規劃；PAA + AI 問題採集工作流執行；內容缺口分析報告</td>
+        <td><strong>$45,000</strong></td>
+        <td>單次</td>
+        <td><span class="b bb">第三層</span></td>
+      </tr>
+      <tr class="sr"><td colspan="4">小計</td><td colspan="2"><strong>$130,000</strong></td></tr>
+    </table>
+
+    <h3 class="sh">第二層：GEO 內容策略規劃（依篇計費）</h3>
+    <table class="dt">
+      <tr><th style="width:5%">#</th><th style="width:26%">服務項目</th><th style="width:38%">規格說明</th><th style="width:10%">單價</th><th style="width:10%">計費</th><th style="width:11%">AI 引用率</th></tr>
+      <tr>
+        <td>5</td>
+        <td><strong>GEO 內容撰寫｜A 類：比較型清單文</strong></td>
+        <td>Answer-First 結構；強制含比較表格（HTML table）；每個選項固定格式：名稱→優勢→適合對象→評語；每維度含具體數字；約 1,500–2,000 字，含 FAQPage Schema</td>
+        <td><strong>$8,000</strong></td>
+        <td>單篇</td>
+        <td><span class="b bg">32.5%</span></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>GEO 內容撰寫｜B 類：綜合指南 / 數據報告</strong></td>
+        <td>TL;DR 摘要區塊（頁首）；每 H2 開頭 40–60 字 Citation Block；每段至少 3 個可驗證具體數字；引用來源具名標示；約 2,000 字以上，含 Article Schema</td>
+        <td><strong>$12,000</strong></td>
+        <td>單篇</td>
+        <td><span class="b bg">67%</span></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>GEO 內容撰寫｜C/D/E 類：操作 / 定義 / FAQ</strong></td>
+        <td>C 類 How-to：步驟編號，搭配 HowTo Schema；D 類定義頁：頁首 2–3 句規範定義，涵蓋 who/what/where/why；E 類 FAQ：75–150 字/題，5 種問題類型，FAQPage Schema；約 800–1,500 字</td>
+        <td><strong>$6,000</strong></td>
+        <td>單篇</td>
+        <td><span class="b bg">41–54%</span></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>既有文章 GEO 結構重構</strong></td>
+        <td>改寫為 Answer-First / 倒金字塔結構；加入 Citation Block；補充具體數字與具名來源；新增 TL;DR 摘要；部署對應 Schema</td>
+        <td><strong>$3,000</strong></td>
+        <td>單篇</td>
+        <td><span class="b bt2">大幅提升</span></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><strong>CMS 文章代上架 &amp; GEO 排版</strong></td>
+        <td>文章上架至 WordPress / Wix / 其他 CMS；H1/H2/H3 標籤設定；圖片 Alt 標籤；內部連結建置（2–3 個雙向關聯頁）；Schema JSON-LD 嵌入；Meta Title / Description 設定；GSC 索引狀態確認</td>
+        <td><strong>$1,200</strong></td>
+        <td>單篇</td>
+        <td><span class="b bl">技術確保</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">第三層：品牌信號與外站佈局（月費）</h3>
+    <table class="dt">
+      <tr><th style="width:5%">#</th><th style="width:26%">服務項目</th><th style="width:38%">規格說明</th><th style="width:10%">單價</th><th style="width:10%">計費</th><th style="width:11%">AI 效益</th></tr>
+      <tr>
+        <td>10</td>
+        <td><strong>社群論壇口碑操作<br><small>(Dcard / PTT / Mobile01)</small></strong></td>
+        <td>口碑調研（競品分析、消費者痛點、切入角度）；每月 3 篇口碑論壇開文（詢問文/選手文/開箱文）；自然帶出品牌/PAA 相關關鍵字；互動與回文管理</td>
+        <td><strong>$30,000</strong></td>
+        <td>每月</td>
+        <td><span class="b bg">外站信號 #1</span></td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><strong>新聞聯播網發稿</strong></td>
+        <td>撰寫含具體數字、專家引述的新聞稿（600–1,000 字）；發佈至 Yahoo 新聞 / LINE Today / PChome 新聞等新聞聯播網（12 網）</td>
+        <td><strong>$40,000</strong></td>
+        <td>12網/檔</td>
+        <td><span class="b bg">媒體引用持續數月</span></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><strong>方格子 (vocus) 深度文章</strong></td>
+        <td>每月 2 篇深度觀點文章（1,500–3,000 字）；Answer-First 結構 + Citation Block；關鍵字佈局（長尾問題型，對應 AI 問答場景）；每篇發布後同步至 Threads 導流；月度成效追蹤</td>
+        <td><strong>$20,000</strong></td>
+        <td>每月</td>
+        <td><span class="b bt2">DR≈76 高權重</span></td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td><strong>Google 我的商家 (GBP) 優化</strong></td>
+        <td>完整欄位填寫；Q&amp;A 區主動新增 10+ 常見問題與回答；每月 4 篇貼文（活動/優惠/新服務）；每月 4 則素人五星評論（素材品牌方提供）；評論回覆管理</td>
+        <td><strong>$15,000</strong></td>
+        <td>每月</td>
+        <td><span class="b bt2">本地 AIO 直接引用</span></td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td><strong>維基百科 (Wikipedia) 條目建立</strong></td>
+        <td>品牌可引用性評估（需有 3 篇以上獨立媒體報導）；現有媒體報導盤點；中文維基百科品牌條目撰寫（符合 NPOV 中立觀點原則）；引用來源整理（5–8 個可靠第三方來源）；提交後監控</td>
+        <td><strong>$60,000</strong></td>
+        <td>單次</td>
+        <td><span class="b bg">ChatGPT 最信任來源</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">第四層：GEO 顧問與成效追蹤（月費）</h3>
+    <table class="dt">
+      <tr><th style="width:5%">#</th><th style="width:26%">服務項目</th><th style="width:38%">規格說明</th><th style="width:10%">單價</th><th style="width:10%">計費</th><th style="width:11%">產出物</th></tr>
+      <tr>
+        <td>15</td>
+        <td><strong>GEO 月成效報告</strong></td>
+        <td>AI Share of Voice 追蹤（Profound / Rankscale.AI）；Citation Frequency 跨平台統計；Prompt Coverage Rate 測試（每主題 20–30 題）；競品 Citation Gap 分析；月度優化建議書</td>
+        <td><strong>$30,000</strong></td>
+        <td>每月</td>
+        <td><span class="b bl">月報 + 優化建議</span></td>
+      </tr>
+    </table>
+  </div>
+  <div class="pf">確認鍵智創科技｜松TOWER GEO 行銷優化策略｜2026.03.26</div>
+</div>
+
+<!-- ══════════════════ P11：包套方案 + 市場行情 + 總計 ══════════════════ -->
+<div class="page">
+  <div class="ph"><span>包套方案與市場行情</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>📦 包套組合方案 × 市場行情對標 × 松TOWER 建議方案</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">四大包套組合方案</h3>
+    <table class="dt">
+      <tr><th style="width:24%">方案名稱</th><th style="width:36%">包含服務項目</th><th style="width:14%">原價</th><th style="width:14%">優惠價</th><th style="width:12%">適合情境</th></tr>
+      <tr>
+        <td><span class="b bb">🚀 GEO 快速啟動</span><br><small>一次性專案</small></td>
+        <td>① AI 爬蟲可訪問性設定 ($20,000)<br>② Core Web Vitals 健檢 ($30,000)<br>③ Schema 全面部署 ($35,000)<br>④ 主題叢集架構規劃 ($45,000)</td>
+        <td>$130,000</td>
+        <td><strong style="color:var(--grn)">$120,000</strong></td>
+        <td>剛開始導入 GEO、技術地基 + 內容策略全面建置</td>
+      </tr>
+      <tr>
+        <td><span class="b bt2">📝 GEO 內容月方案</span><br><small>每月持續服務</small></td>
+        <td>① GEO 文章撰寫 A 類 × 2 篇 ($16,000)<br>② GEO 文章撰寫 C/D/E 類 × 2 篇 ($12,000)<br>③ 月成效報告 ($30,000)</td>
+        <td>$58,000/月</td>
+        <td><strong style="color:var(--grn)">$54,000/月（季約）<br>$50,000/月（半年約）</strong></td>
+        <td>技術基礎已完成、需要持續產出 GEO 內容並追蹤成效</td>
+      </tr>
+      <tr>
+        <td><span class="b bg">🌐 GEO 品牌外站聲量</span><br><small>每月持續服務</small></td>
+        <td>① 論壇口碑操作 ($30,000)<br>② GBP 優化維護 ($15,000)<br>③ 月成效報告 ($30,000)</td>
+        <td>$75,000/月</td>
+        <td><strong style="color:var(--grn)">$65,000/月</strong></td>
+        <td>官網內容已完善、需要強化外站品牌信號以提升 ChatGPT/Perplexity 引用</td>
+      </tr>
+      <tr>
+        <td><span class="b bo">🏆 GEO 全方位整合</span><br><small>一條龍代上稿</small></td>
+        <td>① GEO 文章撰寫 A 類 × 2 篇 ($16,000)<br>② GEO 文章撰寫 C/D/E 類 × 2 篇 ($12,000)<br>③ 社群論壇口碑操作 ($30,000)<br>④ GBP 維護 ($15,000)<br>⑤ 月成效報告 ($30,000)</td>
+        <td>$103,000/月</td>
+        <td><strong style="color:var(--grn)">$80,000/月（季約）</strong></td>
+        <td>完全無內部行銷或工程資源、需要一條龍全代操服務</td>
+      </tr>
+    </table>
+
+    <h3 class="sh">台灣 GEO / SEO 市場行情對標（2025–2026 年）</h3>
+    <div class="ib ii">以下數據來源：台灣主流 SEO/GEO 公司公開報價（2025–2026 年），供客戶評估確認鍵服務定位參考。</div>
+    <table class="dt">
+      <tr><th>服務類型</th><th>市場最低價</th><th style="color:var(--el2);">確認鍵 EnterIMC</th><th>市場最高價</th><th>說明</th></tr>
+      <tr><td>GEO/AI SEO 整合月費</td><td>$30,000/月</td><td><strong>$60,000–90,000/月</strong></td><td>$150,000+/月</td><td>新興服務，含 GEO 技術設定、內容產製、成效追蹤</td></tr>
+      <tr><td>GEO 文章撰寫（含 Schema）</td><td>$3,000/篇</td><td><strong>$6,000–12,000/篇</strong></td><td>$20,000+/篇</td><td>需符合 Answer-First 結構、Citation Block、具體數據、Schema 部署</td></tr>
+      <tr><td>SEO 專案型（一次性）</td><td>$50,000</td><td><strong>$50,000–130,000</strong></td><td>$200,000+</td><td>含技術優化、關鍵字研究、內容規劃；一次性交付</td></tr>
+      <tr><td>論壇口碑操作（月費）</td><td>$15,000/月</td><td><strong>$30,000+/月</strong></td><td>$60,000+/月</td><td>依操作平台數量、文章篇數與互動維護程度而定</td></tr>
+      <tr><td>業界媒體新聞稿發佈</td><td>$20,000/次</td><td><strong>$40,000–60,000/次</strong></td><td>$100,000+/次</td><td>含撰稿費與發稿費；依媒體等級與曝光量而定</td></tr>
+      <tr><td>Google 我的商家代操（月費）</td><td>$8,000/月</td><td><strong>$15,000+/月</strong></td><td>$30,000+/月</td><td>含貼文維護、Q&A 管理、評論回覆</td></tr>
+      <tr><td>文章代上稿（技術排版）</td><td>$500/篇</td><td><strong>$1,200/篇</strong></td><td>$1,500+/篇</td><td>含 H 標籤、Alt 標籤、內部連結、Schema 嵌入、Meta 設定</td></tr>
+    </table>
+
+    <h3 class="sh">⭐ 松TOWER 建議方案組合（依行銷策略優先序）</h3>
+    <table class="dt">
+      <tr><th>執行時程</th><th>建議採購項目</th><th>預估費用</th><th>對應策略目標</th></tr>
+      <tr class="sr"><td colspan="4">▌ 第一階段（M1，立即執行）— 解除技術封鎖 + 建立 GEO 基礎</td></tr>
+      <tr>
+        <td>月份 1</td>
+        <td>🚀 GEO 快速啟動方案（AI 爬蟲設定 + 健檢 + Schema + 主題叢集）<br>+ GEO 月成效報告 × 1 個月</td>
+        <td><strong>$150,000</strong></td>
+        <td>技術封鎖解除，建立 AI 爬取基礎，Perplexity/ChatGPT 引用機率立即提升</td>
+      </tr>
+      <tr class="sr"><td colspan="4">▌ 第二階段（M2–M4，持續執行）— 內容生產 + 外站品牌信號</td></tr>
+      <tr>
+        <td>月份 2–4</td>
+        <td>📝 GEO 內容月方案（4 篇文章 + 月報）× 3 個月（季約）<br>+ 新聞聯播網發稿 × 1 檔</td>
+        <td><strong>$202,000</strong><br><small>($54,000×3 + $40,000)</small></td>
+        <td>18 篇內容計畫啟動，媒體公關 GEO 結構化，主題叢集開始建立</td>
+      </tr>
+      <tr class="sr"><td colspan="4">▌ 第三階段（M5–M6，持續執行）— 外站聲量 + 長期 ChatGPT 引用</td></tr>
+      <tr>
+        <td>月份 5–6</td>
+        <td>🌐 GEO 品牌外站聲量方案（論壇 + GBP + 月報）× 2 個月<br>+ Wikipedia 條目建立評估（視媒體報導積累狀況啟動）</td>
+        <td><strong>$130,000–190,000</strong><br><small>($65,000×2 + Wikipedia 選配 $60,000)</small></td>
+        <td>外站品牌信號累積，ChatGPT 提及品牌頻率持續提升，品牌護城河建立</td>
+      </tr>
+      <tr class="hl"><td colspan="2"><b>六個月預估總費用（不含 Wikipedia）</b></td><td><b>約 $482,000</b></td><td><b style="color:var(--el)">GEO 健檢分數目標：34 → 72 分</b></td></tr>
+    </table>
+
+    <h3 class="sh">報價注意事項</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span>代上稿服務需客戶提供 CMS 後台帳號密碼，或由客戶自行建立協作帳號</li>
+      <li><span class="rn">②</span>技術代操服務需客戶提供主機/DNS 管理權限或相關存取授權</li>
+      <li><span class="rn">③</span>廣告投放費用（Facebook / Google Ads）另計，不含於本報價</li>
+      <li><span class="rn">④</span>Wikipedia 建立服務需前置評估（確認符合收錄標準），建議媒體報導累積 3 篇以上後啟動</li>
+      <li><span class="rn">⑤</span>本報價單自出具日起 30 日內有效；正式簽約並收到頭期款（50%）後開始執行</li>
+    </ul>
+
+    <div class="ib io" style="margin-top:4px;"><strong>智慧財產聲明</strong>：本提案內容（包含策略規劃、關鍵字矩陣、PAA 問題庫等）為確認鍵智創科技股份有限公司智慧財產，未經授權不得轉載或供第三方使用。</div>
+
+    <div class="agsig">
+      <img src="data:image/png;base64,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" style="height:44px;border-radius:6px;flex-shrink:0;">
+      <div>
+        <div style="color:white;font-size:12px;font-weight:700;">確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.</div>
+        <div style="color:rgba(255,255,255,.5);font-size:10.5px;margin-top:4px;">enterimc.com　｜　報告日期：2026年3月26日　｜　本文件內容為確認鍵智創科技智慧財產，僅供客戶參考</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
