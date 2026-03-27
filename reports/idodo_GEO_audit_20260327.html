@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鴻鼎菓子 GEO 官網健檢報告 | 確認鍵智創科技</title>
+<meta name="report-client" content="鴻鼎菓子">
+<meta name="report-score" content="41">
+<meta name="report-desc" content="鴻鼎菓子（idodo.com.tw）台中伴手禮電商官網，核心問題為語意架構薄弱、缺乏 Schema 標記與 llms.txt，AI 引用機率低">
+<meta name="report-tags" content="GEO健檢,食品電商,伴手禮,台中,曲奇餅">
+<meta name="report-type" content="audit">
+<meta name="report-date" content="2026-03-27">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+:root {
+  --eb:#1B3A8C;--eb2:#254BAD;--eb3:#0D2568;
+  --ed:#0A1628;--ed2:#1A2B3C;
+  --el:#A8C8F8;--el2:#4A90D9;
+  --em:#C5D5F0;--elt:#F0F5FF;--emut:#5C7AA8;
+  --red:#C0392B;--grn:#1A7A44;--org:#C75000;--teal:#0E6A7C;
+  --navy:#1B3A8C;--light:#F0F5FF;--mid:#C5D5F0;--text:#1A2B3C;--muted:#5C7AA8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);font-size:13px;line-height:1.65;}
+@media print{body{background:white;font-size:11px;}.page{box-shadow:none!important;margin-bottom:0!important;page-break-after:always;border-radius:0!important;}.page:last-child{page-break-after:avoid;}}
+.wrap{max-width:900px;margin:0 auto;padding:20px 14px 40px;}
+.page{background:white;border-radius:8px;box-shadow:0 3px 20px rgba(0,0,0,.09);margin-bottom:28px;overflow:hidden;}
+.cv-stripe{background:var(--eb);height:8px;}
+.cv-hero{background:white;padding:40px 52px 32px;display:flex;align-items:flex-start;justify-content:space-between;gap:32px;}
+.cv-rule{width:48px;height:4px;background:var(--eb);border-radius:2px;margin-bottom:14px;}
+.cv-eye{color:var(--eb);font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;}
+.cv-h1{color:var(--ed);font-size:28px;font-weight:900;line-height:1.2;margin-bottom:10px;}
+.cv-h1 span{color:var(--eb);}
+.cv-sub{color:var(--emut);font-size:12.5px;line-height:1.7;}
+.cv-la{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0;}
+.cv-la img{width:88px;border-radius:6px;}
+.cv-lt{font-size:9px;color:var(--emut);text-align:right;}
+.cv-band{background:var(--eb);padding:20px 52px;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;}
+.cv-st{text-align:center;padding:10px 4px;border-right:1px solid rgba(255,255,255,.15);}
+.cv-st:last-child{border-right:none;}
+.stn{font-size:24px;font-weight:900;color:white;line-height:1;}
+.stu{font-size:9px;color:rgba(255,255,255,.7);}
+.stl{font-size:9px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4;}
+.cv-meta{background:var(--elt);padding:18px 52px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;border-top:1px solid var(--em);}
+.cv-mi{font-size:11px;color:var(--emut);}
+.cv-mi b{color:var(--ed2);display:block;font-size:11.5px;margin-top:2px;}
+.cv-foot{background:var(--eb);padding:11px 52px;display:flex;justify-content:space-between;align-items:center;}
+.cv-foot p{font-size:10px;color:rgba(255,255,255,.4);}
+.ph{background:var(--eb);padding:9px 28px;display:flex;justify-content:space-between;align-items:center;}
+.ph span{font-size:10px;color:rgba(255,255,255,.55);}
+.pf{background:var(--elt);border-top:1px solid var(--em);padding:7px 28px;text-align:center;font-size:10px;color:var(--muted);}
+.sec{background:var(--eb);border-left:5px solid var(--el2);padding:13px 24px;}
+.sec h2{color:white;font-size:14px;font-weight:700;}
+.pc{padding:22px 28px;}
+h3.sh{font-size:12.5px;font-weight:700;color:var(--navy);border-left:3px solid var(--el2);padding-left:9px;margin:16px 0 7px;}
+h4.sh4{font-size:11.5px;font-weight:700;color:var(--teal);margin:13px 0 5px;}
+p.bt{font-size:12.5px;line-height:1.8;color:var(--text);margin-bottom:10px;}
+.b{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;white-space:nowrap;}
+.br{background:#FADBD8;color:var(--red);}.bo{background:#FDEBD0;color:var(--org);}.bg{background:#D5F5E3;color:var(--grn);}.bt2{background:#D1ECF1;color:var(--teal);}.bb{background:var(--eb);color:white;}.bl{background:#D6E6FF;color:var(--eb3);}.bf{background:#FADBD8;color:#922B21;font-weight:900;}.bp{background:#D5F5E3;color:#1A5E38;font-weight:900;}.bw{background:#FDEBD0;color:#7D3200;font-weight:900;}
+.ib{padding:9px 13px;border-radius:0 5px 5px 0;margin-bottom:13px;font-size:11.5px;}
+.ir{background:#FEF0EF;border-left:4px solid var(--red);}.io{background:#FFF8F0;border-left:4px solid var(--org);}.ig{background:#F0FAF4;border-left:4px solid var(--grn);}.ii{background:#EEF4FF;border-left:4px solid var(--el2);}
+.dt{width:100%;border-collapse:collapse;margin:7px 0 14px;font-size:11.5px;}
+.dt th{background:var(--eb);color:white;font-weight:700;padding:7px 10px;text-align:left;font-size:11px;}
+.dt td{padding:6px 10px;border-bottom:1px solid var(--mid);vertical-align:top;line-height:1.55;}
+.dt tr:nth-child(even) td{background:var(--light);}
+.dt tr.hl td{background:var(--eb);color:white;font-weight:700;}
+.dt tr.hl td b{color:#A8C8F8;}
+.dt tr.sr td{background:#EDF2F7;font-weight:700;color:var(--eb3);font-size:11px;}
+.ct{width:100%;border-collapse:collapse;margin:7px 0 13px;font-size:11.5px;}
+.ct th{background:var(--eb3);color:white;padding:7px 10px;text-align:left;font-size:11px;}
+.ct td{padding:6px 10px;border-bottom:1px solid var(--mid);vertical-align:top;}
+.ct tr:nth-child(even) td{background:var(--light);}
+.ct .nm{font-weight:600;color:var(--ed2);}.ct .nt{font-size:10px;color:var(--muted);}
+.sov{display:grid;grid-template-columns:190px 1fr;gap:20px;margin:14px 0;}
+.tsb{background:var(--eb);border-radius:12px;padding:24px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.tsb-n{font-size:60px;font-weight:900;color:white;line-height:1;}
+.tsb-d{font-size:13px;color:rgba(255,255,255,.6);}
+.tsb-l{font-size:10.5px;color:var(--el);margin-top:7px;font-weight:600;}
+.tsb-s{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:3px 12px;font-size:10px;color:white;margin-top:7px;}
+.lsg{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;}
+.lsc{border:1px solid var(--mid);border-radius:7px;padding:11px 13px;display:flex;align-items:center;gap:11px;}
+.lsn{font-size:20px;font-weight:900;min-width:42px;text-align:right;line-height:1;}
+.lst{font-size:11px;font-weight:700;color:var(--ed2);}.lss{font-size:9.5px;color:var(--muted);}
+.lbw{flex:1;height:5px;background:var(--mid);border-radius:3px;overflow:hidden;margin-top:5px;}
+.lb{height:100%;border-radius:3px;}
+.sr{color:var(--red);}.br2{background:var(--red);}.so{color:var(--org);}.bo2{background:var(--org);}.sa{color:#B8860B;}.ba{background:#D4A017;}.sg{color:var(--grn);}.bg2{background:var(--grn);}
+.pr{display:flex;align-items:stretch;margin-bottom:4px;gap:8px;}
+.pl{display:flex;align-items:center;justify-content:center;color:white;font-size:10px;font-weight:700;border-radius:5px;padding:8px 10px;text-align:center;flex-shrink:0;width:105px;}
+.pc2{flex:1;border:1px solid var(--mid);border-radius:5px;padding:7px 12px;background:white;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.pd{font-size:11.5px;color:var(--ed2);line-height:1.5;}.ps{font-size:17px;font-weight:900;min-width:50px;text-align:right;}
+.fc{display:flex;border:1px solid var(--mid);border-radius:6px;overflow:hidden;margin-bottom:6px;}
+.fl{background:var(--light);padding:9px 13px;min-width:115px;font-size:11px;font-weight:700;color:var(--teal);display:flex;align-items:flex-start;border-right:1px solid var(--mid);}
+.fd{padding:9px 13px;font-size:12px;color:var(--text);line-height:1.6;}
+.rl{list-style:none;margin:7px 0 13px;}
+.rl li{display:flex;gap:9px;padding:7px 11px;background:var(--light);border-radius:5px;margin-bottom:5px;font-size:12px;line-height:1.6;border-left:3px solid var(--el2);}
+.rl .rn{font-weight:900;color:var(--el2);min-width:16px;}
+.pri{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;color:white;}
+.pc3{background:#922B21;}.ph2{background:var(--org);}.pm{background:var(--teal);}.pl2{background:var(--grn);}
+.agsig{display:flex;align-items:center;justify-content:center;gap:18px;padding:14px;background:var(--eb);border-radius:6px;margin-top:10px;}
+hr.dv{border:none;border-top:1px solid var(--mid);margin:14px 0;}
+.clp{font-size:11px;color:var(--muted);line-height:1.8;margin-bottom:10px;}
+code{background:#F0F5FF;padding:1px 5px;border-radius:3px;font-size:10.5px;color:var(--eb3);font-family:monospace;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ===== COVER ===== -->
+<div class="page">
+  <div class="cv-stripe"></div>
+  <div class="cv-hero">
+    <div>
+      <div class="cv-rule"></div>
+      <div class="cv-eye">GEO Audit Report · 2026</div>
+      <div class="cv-h1">鴻鼎菓子<br><span>GEO 官網健檢</span><br>評分報告</div>
+      <div class="cv-sub">idodo.com.tw｜台中伴手禮電商品牌<br>台灣黑熊曲奇餅・堅果塔・年節禮盒<br>健檢日期：2026 年 03 月 27 日</div>
+    </div>
+    <div class="cv-la">
+      <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" style="width:88px;border-radius:6px;">
+      <div class="cv-lt">確認鍵智創科技股份有限公司<br>Enter Internet Marketing CO., LTD.</div>
+    </div>
+  </div>
+  <div class="cv-band">
+    <div class="cv-st"><div class="stn">41</div><div class="stu">/ 100</div><div class="stl">GEO 綜合健檢總分</div></div>
+    <div class="cv-st"><div class="stn">7</div><div class="stu">層</div><div class="stl">評估框架層級</div></div>
+    <div class="cv-st"><div class="stn">食品</div><div class="stu">電商</div><div class="stl">產業類型</div></div>
+    <div class="cv-st"><div class="stn">47</div><div class="stu">項</div><div class="stl">健檢評估項目</div></div>
+    <div class="cv-st"><div class="stn">18</div><div class="stu">項</div><div class="stl">立即修復建議</div></div>
+  </div>
+  <div class="cv-meta">
+    <div class="cv-mi">客戶品牌<b>鴻鼎菓子（Hon Din Bakery）</b></div>
+    <div class="cv-mi">網站網址<b>https://www.idodo.com.tw/</b></div>
+    <div class="cv-mi">品牌創立<b>2014 年（台中豐原）</b></div>
+    <div class="cv-mi">品牌定位<b>台灣黑熊曲奇・多次世界風味獎殊榮・三門市</b></div>
+  </div>
+  <div class="cv-foot">
+    <p>本報告依確認鍵 GEO 七層評估框架產出，僅供客戶參考，不得對外公開</p>
+    <p>© 2026 Enter Internet Marketing CO., LTD.</p>
+  </div>
+</div>
+
+<!-- ===== PAGE 1: TOC ===== -->
+<div class="page">
+  <div class="ph"><span>鴻鼎菓子 GEO 官網健檢報告 ▸ 目錄</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>📋 報告目錄與品牌背景</h2></div>
+  <div class="pc">
+    <table class="dt">
+      <tr><th>章</th><th>主題</th><th>GEO 層級</th><th>佔分比重</th></tr>
+      <tr><td>一</td><td>健檢總覽 · 綜合評分與金字塔分析</td><td>全層</td><td>—</td></tr>
+      <tr><td>二</td><td>第一層：技術可達性</td><td>L1 技術地基</td><td>Pass/Fail</td></tr>
+      <tr><td>三</td><td>第二層：語意架構（最關鍵）</td><td>L2 語意結構</td><td>35%</td></tr>
+      <tr><td>四</td><td>第三層：實體與主題權威</td><td>L3 主題叢集</td><td>25%</td></tr>
+      <tr><td>五</td><td>第四層：內容可信度</td><td>L4 可驗證性</td><td>20%</td></tr>
+      <tr><td>六</td><td>第五層：品牌信號</td><td>L5 離站權威</td><td>15%</td></tr>
+      <tr><td>七</td><td>第六+七層：平台差異化與 KPI</td><td>L6+L7</td><td>加分項</td></tr>
+      <tr><td>八</td><td>行動計畫（30/60/90 天）</td><td>全層</td><td>—</td></tr>
+    </table>
+    <div class="ib ii">
+      <strong>🐻 品牌背景：鴻鼎菓子（Hon Din Bakery）</strong><br>
+      2014 年創立於台中豐原，以「因為是你」為品牌精神，主打台灣黑熊曲奇餅（繽紛三色、包心噠啵曲奇）、愛心堅果塔、熟成檸檬酥、鳳凰酥等。官網 <strong>idodo.com.tw</strong> 為品牌電商主要銷售入口，另設蝦皮、MOMO 等外部通路。品牌榮獲 <strong>A.A. TASTE AWARDS 最高 3 星殊榮（全台首個連續 4 年）</strong>、比利時 iTQi 頂級美味獎、Monde Selection 金獎、2024 台灣烘焙大賞唯一入選曲奇品牌等殊榮。目前設有豐原旗艦店、南屯夢想店、清水休息站共三間門市，亦開放港澳訂購。
+    </div>
+  </div>
+  <div class="pf">第 1 頁 | 確認鍵智創科技 · enterimc.com</div>
+</div>
+
+<!-- ===== PAGE 2: SCORE OVERVIEW ===== -->
+<div class="page">
+  <div class="ph"><span>鴻鼎菓子 GEO 官網健檢報告 ▸ 健檢總覽</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>一｜健檢總覽：GEO 綜合評分</h2></div>
+  <div class="pc">
+    <h3 class="sh">1.1 GEO 綜合健檢總分</h3>
+    <div class="sov">
+      <div class="tsb">
+        <div class="tsb-n so">41</div>
+        <div class="tsb-d">/ 100 分</div>
+        <div class="tsb-l">GEO AI 引用能見度</div>
+        <div class="tsb-s">⚠ 待優化</div>
+      </div>
+      <div class="lsg">
+        <div class="lsc">
+          <div>
+            <div class="lst">第二層：語意架構</div>
+            <div class="lss">佔 35% · 最關鍵層</div>
+            <div class="lbw"><div class="lb bo2" style="width:34%"></div></div>
+          </div>
+          <div class="lsn so">12<span style="font-size:11px;color:var(--muted)">/35</span></div>
+        </div>
+        <div class="lsc">
+          <div>
+            <div class="lst">第三層：主題權威</div>
+            <div class="lss">佔 25% · 中期建置</div>
+            <div class="lbw"><div class="lb bo2" style="width:36%"></div></div>
+          </div>
+          <div class="lsn so">9<span style="font-size:11px;color:var(--muted)">/25</span></div>
+        </div>
+        <div class="lsc">
+          <div>
+            <div class="lst">第四層：內容可信度</div>
+            <div class="lss">佔 20% · 立即可改</div>
+            <div class="lbw"><div class="lb ba" style="width:55%"></div></div>
+          </div>
+          <div class="lsn sa">11<span style="font-size:11px;color:var(--muted)">/20</span></div>
+        </div>
+        <div class="lsc">
+          <div>
+            <div class="lst">第五層：品牌信號</div>
+            <div class="lss">佔 15% · 外部佈局</div>
+            <div class="lbw"><div class="lb bg2" style="width:60%"></div></div>
+          </div>
+          <div class="lsn sa">9<span style="font-size:11px;color:var(--muted)">/15</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sh">1.2 GEO 金字塔分層視覺化</h3>
+    <div class="pr">
+      <div class="pl" style="background:var(--emut);">第七層<br>KPI 追蹤</div>
+      <div class="pc2">
+        <div class="pd">可量測 GEO 指標尚未建置 — AI Share of Voice、Citation Frequency 等 KPI 無追蹤機制</div>
+        <div class="ps so">—</div>
+      </div>
+    </div>
+    <div class="pr">
+      <div class="pl" style="background:var(--emut);">第六層<br>平台差異化</div>
+      <div class="pc2">
+        <div class="pd">四大 AI 平台尚無差異化佈局，Bing Webmaster Tools 未驗證</div>
+        <div class="ps so">—</div>
+      </div>
+    </div>
+    <div class="pr">
+      <div class="pl" style="background:#7B5E2A;">第五層<br>品牌信號</div>
+      <div class="pc2">
+        <div class="pd">Facebook 社群活躍（6.4 萬粉絲）、多次獲國際食品獎項提及，但 Wikipedia 缺失、Reddit/Quora 無佈局</div>
+        <div class="ps sa">9/15</div>
+      </div>
+    </div>
+    <div class="pr">
+      <div class="pl" style="background:var(--org);">第四層<br>內容可信度</div>
+      <div class="pc2">
+        <div class="pd">原料說明與獲獎資訊有基礎，但缺乏具體數據佐證（含數字內容 AI 引用率 +26.5%）、無作者資訊</div>
+        <div class="ps sa">11/20</div>
+      </div>
+    </div>
+    <div class="pr">
+      <div class="pl" style="background:var(--org);">第三層<br>主題權威</div>
+      <div class="pc2">
+        <div class="pd">無明確 Pillar Page 架構、無伴手禮知識型內容；產品頁數量充足但孤立，缺主題叢集</div>
+        <div class="ps so">9/25</div>
+      </div>
+    </div>
+    <div class="pr" style="border:2px solid var(--red);border-radius:5px;">
+      <div class="pl" style="background:var(--red);">第二層<br>語意架構<br>⚠ 最關鍵</div>
+      <div class="pc2">
+        <div class="pd">頁面多為產品列表，缺乏 Answer-First 段落、無 FAQ Schema、無 HowTo、無 Organization Schema；語意密度極低</div>
+        <div class="ps sr">12/35</div>
+      </div>
+    </div>
+    <div class="pr">
+      <div class="pl" style="background:var(--teal);">第一層<br>技術地基</div>
+      <div class="pc2">
+        <div class="pd">HTTPS 正常，網站可訪問；但 llms.txt 未建置、robots.txt 是否允許 AI Bot 未知、IndexNow 未設定</div>
+        <div class="ps so">⚠ WARN</div>
+      </div>
+    </div>
+
+    <h3 class="sh">1.3 核心問題 Top 5</h3>
+    <div class="fc"><div class="fl">⚠ 最高風險</div><div class="fd"><strong>語意架構幾乎為零</strong>：官網以圖片輪播 + 產品卡片為主，缺乏任何問答型、教學型、比較型文字段落。AI 無法從中擷取可引用的知識段落，引用機率接近 0%。</div></div>
+    <div class="fc"><div class="fl">🔴 立即修復</div><div class="fd"><strong>完全缺乏 Schema 標記</strong>：FAQPage、Organization、Product + AggregateRating Schema 全無，AI 爬蟲無法結構化解讀品牌與產品資訊。</div></div>
+    <div class="fc"><div class="fl">🔴 立即修復</div><div class="fd"><strong>llms.txt 未建置</strong>：在 GEO 時代，llms.txt 是 AI Bot 理解品牌最直接的指引文件，缺失即等同於對 AI 搜尋引擎「關上大門」。</div></div>
+    <div class="fc"><div class="fl">🟠 重要</div><div class="fd"><strong>無任何知識型內容</strong>：無曲奇製作方法、無伴手禮選購指南、無原料溯源介紹等，品牌無法在「台中伴手禮推薦」「曲奇餅比較」等 AI 問題場景中被引用。</div></div>
+    <div class="fc"><div class="fl">🟡 中期</div><div class="fd"><strong>品牌信號已有基礎但未整合</strong>：多個世界獎項、媒體報導存在，但官網未有效展示可引用的結構化品牌背景頁（About 頁語意薄弱），ChatGPT 無法建立品牌知識圖譜。</div></div>
+  </div>
+  <div class="pf">第 2 頁 | 確認鍵智創科技 · enterimc.com</div>
+</div>
+
+<!-- ===== PAGE 3: L1 TECH ===== -->
+<div class="page">
+  <div class="ph"><span>鴻鼎菓子 GEO 官網健檢報告 ▸ 第一層：技術可達性</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>二｜第一層：技術可達性（地基）</h2></div>
+  <div class="pc">
+    <div class="ib io">⚠ <strong>第一層為必要條件</strong>：任一項目 FAIL 即封鎖後續所有 GEO 優化效益。本層重點為確認 AI 爬蟲能順利抵達並理解網站。</div>
+
+    <h3 class="sh">A 區：AI 爬蟲可訪問性（GEO 特有）</h3>
+    <table class="ct">
+      <tr><th>項目</th><th>現況</th><th>狀態</th><th>修復優先度</th></tr>
+      <tr>
+        <td><span class="nm">robots.txt AI Bot 設定</span><br><span class="nt">GPTBot、ClaudeBot、PerplexityBot、Bingbot 是否未被封鎖</span></td>
+        <td>無法直接驗證（網站回傳 403），需客戶確認</td>
+        <td><span class="b bw">WARN</span></td>
+        <td><span class="pri pc3">立即</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">llms.txt 建置</span><br><span class="nt">idodo.com.tw/llms.txt 是否存在</span></td>
+        <td>❌ 未建置，AI 無法獲得品牌內容導覽</td>
+        <td><span class="b bf">FAIL</span></td>
+        <td><span class="pri pc3">立即</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">AI Bot 流量追蹤</span><br><span class="nt">GA4 或 Server Log 是否追蹤 GPTBot 等 AI 爬蟲</span></td>
+        <td>❌ 無可見追蹤機制</td>
+        <td><span class="b bf">FAIL</span></td>
+        <td><span class="pri ph2">高</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">IndexNow 協定</span><br><span class="nt">即時通知 Bing/Yandex 內容更新</span></td>
+        <td>❌ 未設定，新內容無法即時通知 AI 搜尋引擎</td>
+        <td><span class="b bf">FAIL</span></td>
+        <td><span class="pri ph2">高</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">Bing Webmaster Tools 驗證</span><br><span class="nt">影響 ChatGPT Search（87% 引用來自 Bing Top 10）</span></td>
+        <td>❌ 未確認已驗證</td>
+        <td><span class="b bw">WARN</span></td>
+        <td><span class="pri ph2">高</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">B 區：技術基礎</h3>
+    <table class="ct">
+      <tr><th>項目</th><th>現況</th><th>狀態</th><th>說明</th></tr>
+      <tr>
+        <td><span class="nm">全站 HTTPS</span></td>
+        <td>✅ 已啟用</td>
+        <td><span class="b bp">PASS</span></td>
+        <td>無問題</td>
+      </tr>
+      <tr>
+        <td><span class="nm">行動裝置友好（RWD）</span></td>
+        <td>✅ 可正常瀏覽</td>
+        <td><span class="b bp">PASS</span></td>
+        <td>電商官網基本符合</td>
+      </tr>
+      <tr>
+        <td><span class="nm">頁面可爬取 + 可索引</span></td>
+        <td>⚠ robots.txt 回傳 403，需確認</td>
+        <td><span class="b bw">WARN</span></td>
+        <td>需客戶確認後台設定</td>
+      </tr>
+      <tr>
+        <td><span class="nm">載入速度（行動版）</span></td>
+        <td>電商網站通常需額外優化，預估 &gt;2.5 秒</td>
+        <td><span class="b bw">WARN</span></td>
+        <td>建議用 PageSpeed Insights 量測</td>
+      </tr>
+      <tr>
+        <td><span class="nm">XML Sitemap 提交</span></td>
+        <td>電商平台通常自動生成，需確認</td>
+        <td><span class="b bw">WARN</span></td>
+        <td>確認是否已提交 Google Search Console</td>
+      </tr>
+    </table>
+
+    <h3 class="sh">修復行動建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><span class="pri pc3">立即</span> 建立 <code>idodo.com.tw/llms.txt</code>，內容包含品牌簡介、主力產品清單 URL（曲奇餅、堅果塔、喜餅）、獲獎資訊頁 URL，讓 ChatGPT / Perplexity 直接讀取品牌核心知識</li>
+      <li><span class="rn">②</span><span class="pri pc3">立即</span> 確認 <code>robots.txt</code> 中 GPTBot、ClaudeBot、PerplexityBot、Bingbot 均未被 <code>Disallow</code>，確保 AI 可自由爬取</li>
+      <li><span class="rn">③</span><span class="pri ph2">高</span> 至 Bing Webmaster Tools 驗證網站所有權，並啟用 IndexNow API，每次新增商品或文章後即時推送</li>
+      <li><span class="rn">④</span><span class="pri ph2">高</span> 在 GA4 建立自訂「AI Bot 流量」區隔，追蹤 GPTBot、ClaudeBot、PerplexityBot 造訪數據</li>
+    </ul>
+  </div>
+  <div class="pf">第 3 頁 | 確認鍵智創科技 · enterimc.com</div>
+</div>
+
+<!-- ===== PAGE 4: L2 SEMANTIC ===== -->
+<div class="page">
+  <div class="ph"><span>鴻鼎菓子 GEO 官網健檢報告 ▸ 第二層：語意架構</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>三｜第二層：語意架構（最關鍵，佔 35 分）</h2></div>
+  <div class="pc">
+    <div class="ib io">🎯 <strong>第二層決定能否被 AI 引用</strong>：語意架構佔總分 35%，是改動成本最低、效益最快的層級。鴻鼎菓子官網目前嚴重不足，本層僅得 <strong class="sr">12/35 分</strong>。自給自足段落的研究相關係數 r=0.87，是 GEO 最核心的結構要求。</div>
+
+    <h3 class="sh">C 區：內容結構可引用性（Citability）</h3>
+    <table class="ct">
+      <tr><th>GEO 要素</th><th>鴻鼎菓子現況</th><th>狀態</th></tr>
+      <tr>
+        <td><span class="nm">Answer-First 段落結構</span><br><span class="nt">每個 H2/H3 第一句直接給答案，40-60 字 chunk</span></td>
+        <td>官網以圖片與產品卡片為主，無明確 H2/H3 知識段落；口號式文案（「讓每一口都足以乘載你滿滿的心意」）不可被 AI 引用</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">自給自足段落</span><br><span class="nt">每段抽出後語意仍完整，不依賴前後文</span></td>
+        <td>產品頁說明文字多為品牌情感語言，抽出後無獨立資訊價值，無法被 AI 單獨引用</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">問題型標題（Question H2/H3）</span><br><span class="nt">模擬用戶對 AI 的提問句型</span></td>
+        <td>無任何問答型標題，如「台灣黑熊曲奇餅為什麼適合送禮？」等問題形式完全缺失</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">TL;DR 摘要區塊</span><br><span class="nt">長文頁首設精簡摘要，AI 優先擷取</span></td>
+        <td>不適用（官網目前無長文型內容）</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">比較型清單內容</span><br><span class="nt">AI 引用率最高格式，佔所有引用 32.5%</span></td>
+        <td>❌ 無「口味比較」「禮盒規格對比」「適合場合說明」等比較型內容</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">D 區：Schema 標記部署</h3>
+    <table class="ct">
+      <tr><th>Schema 類型</th><th>現況</th><th>狀態</th><th>重要性</th></tr>
+      <tr>
+        <td><span class="nm">Organization Schema</span><br><span class="nt">含 sameAs 連結外部驗證源</span></td>
+        <td>❌ 未部署</td>
+        <td><span class="b bf">FAIL</span></td>
+        <td><span class="b br">最高</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">FAQPage Schema</span><br><span class="nt">引用率從 15% 提升至 41%（×3.2）</span></td>
+        <td>❌ 未部署，無 FAQ 頁面</td>
+        <td><span class="b bf">FAIL</span></td>
+        <td><span class="b br">最高</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">Product + AggregateRating Schema</span><br><span class="nt">電商產品頁必備</span></td>
+        <td>❌ 未部署，無法讓 AI 讀取產品規格與評分</td>
+        <td><span class="b bf">FAIL</span></td>
+        <td><span class="b br">高</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">BreadcrumbList Schema</span><br><span class="nt">強化主題層級關係</span></td>
+        <td>需確認，電商平台有時自動生成</td>
+        <td><span class="b bw">WARN</span></td>
+        <td><span class="b bo">中</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">HowTo Schema</span><br><span class="nt">教學類內容，如「如何挑選伴手禮」</span></td>
+        <td>❌ 無相關內容頁</td>
+        <td><span class="b bf">FAIL</span></td>
+        <td><span class="b bo">中</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">修復行動建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><span class="pri pc3">立即</span> 在首頁與「關於我們」頁部署 <strong>Organization Schema</strong>，含 sameAs 連結至 Facebook、Facebook Shop、蝦皮官方店，讓 AI 識別品牌實體</li>
+      <li><span class="rn">②</span><span class="pri pc3">立即</span> 建立品牌 <strong>FAQ 頁</strong>（建議 10-15 題），問題範例：「鴻鼎菓子的曲奇餅有哪些口味？」「台灣黑熊曲奇餅為什麼是台中十大伴手禮？」「鴻鼎菓子的曲奇餅有無添加物嗎？」，並部署 FAQPage Schema</li>
+      <li><span class="rn">③</span><span class="pri ph2">高</span> 為主力產品頁（台灣黑熊曲奇繽紛三色、噠啵曲奇、愛心堅果塔）補上 Product + AggregateRating Schema</li>
+      <li><span class="rn">④</span><span class="pri ph2">高</span> 撰寫至少 2 篇 <strong>比較型清單文</strong>，如「2026 中秋伴手禮盒推薦：10 款台中名店人氣禮盒完整比較」（包含自家產品），搭配 Answer-First 段落結構</li>
+      <li><span class="rn">⑤</span><span class="pri ph2">高</span> 主力產品頁改寫：H2 改為問答式標題（「台灣黑熊曲奇餅什麼口味最受歡迎？」），第一段直接給答案</li>
+    </ul>
+  </div>
+  <div class="pf">第 4 頁 | 確認鍵智創科技 · enterimc.com</div>
+</div>
+
+<!-- ===== PAGE 5: L3 TOPIC ===== -->
+<div class="page">
+  <div class="ph"><span>鴻鼎菓子 GEO 官網健檢報告 ▸ 第三層：主題權威</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>四｜第三層：實體與主題權威（佔 25 分）</h2></div>
+  <div class="pc">
+    <div class="ib io">📚 <strong>本層目前 9/25 分</strong>。主題叢集架構幾乎空缺，無 Pillar Page 與 Cluster 體系。達標頁面（15+ 清晰實體）AI 引用機率是未達標的 4.8 倍，鴻鼎菓子目前在此層的競爭力薄弱。</div>
+
+    <h3 class="sh">F 區：主題叢集架構</h3>
+    <table class="ct">
+      <tr><th>要素</th><th>現況</th><th>狀態</th></tr>
+      <tr>
+        <td><span class="nm">Pillar Page（核心主題總覽頁）</span></td>
+        <td>❌ 無「台中伴手禮完全指南」「曲奇餅選購指南」等總覽頁，品牌知識無入口</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">Cluster Page（子主題文章群）</span></td>
+        <td>部分節慶推薦頁（中秋、年節）存在，但缺乏系統性知識型文章群</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">Glossary / 術語頁</span><br><span class="nt">如「天然發酵奶油 vs 一般奶油」「A.A. TASTE AWARDS 是什麼」</span></td>
+        <td>❌ 完全缺失</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">內部連結雙向關聯</span><br><span class="nt">每篇至少 2-3 個</span></td>
+        <td>產品頁之間有推薦連結，但知識頁面間連結密度極低</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">G 區：實體密度 + H 區：語意涵蓋</h3>
+    <table class="ct">
+      <tr><th>要素</th><th>現況</th><th>狀態</th></tr>
+      <tr>
+        <td><span class="nm">命名實體清晰化（品名/地名/人名）</span></td>
+        <td>產品頁有「台灣黑熊」「台中豐原」「天然發酵奶油」等實體，但密度不足 15 個 / 頁</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">Knowledge Graph 對應</span><br><span class="nt">品牌在 Google Knowledge Panel 有無記錄</span></td>
+        <td>品牌知名度不低，但結構化品牌信息頁缺乏，難以觸發 Knowledge Panel</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">同一主題多角度涵蓋</span><br><span class="nt">定義、比較、優缺點、操作方式、常見問題</span></td>
+        <td>❌ 「曲奇餅」主題只有產品販售頁，無定義型/比較型/問答型涵蓋</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">外連至權威來源</span><br><span class="nt">Wikipedia、學術機構、政府認證</span></td>
+        <td>❌ 官網無外連至可驗證權威來源</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">修復行動建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><span class="pri ph2">高</span> 建立 <strong>「台灣曲奇餅完全指南」Pillar Page</strong>：含曲奇餅的定義、製作工藝、口味說明、與一般餅乾差異、鴻鼎菓子的原料堅持，並以 H2/H3 Answer-First 架構撰寫</li>
+      <li><span class="rn">②</span><span class="pri ph2">高</span> 建立 <strong>「台中伴手禮選購指南」Pillar Page</strong>：含場合推薦（婚禮喜餅、中秋、尾牙）× 價格區間，自然納入自家產品比較</li>
+      <li><span class="rn">③</span><span class="pri pm">中</span> 每篇知識文章至少涵蓋 <strong>15 個清晰命名實體</strong>（品牌名、產品名、地名、獎項名、原料產地），達標後 AI 引用機率提升 4.8 倍</li>
+      <li><span class="rn">④</span><span class="pri pm">中</span> 獲獎介紹頁補充外連：A.A. TASTE AWARDS 官網、iTQi 官網、Monde Selection 官網，增加實體可驗證性</li>
+    </ul>
+  </div>
+  <div class="pf">第 5 頁 | 確認鍵智創科技 · enterimc.com</div>
+</div>
+
+<!-- ===== PAGE 6: L4 CREDIBILITY ===== -->
+<div class="page">
+  <div class="ph"><span>鴻鼎菓子 GEO 官網健檢報告 ▸ 第四層：內容可信度</span><img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>五｜第四層：內容可信度（佔 20 分）</h2></div>
+  <div class="pc">
+    <div class="ib ig">✅ <strong>本層相對較好，得 11/20 分</strong>。品牌有可見的獲獎紀錄（A.A. TASTE AWARDS 4 年 3 星、Monde Selection 金獎等）作為可信度基礎，但資料可驗證性與作者透明度仍需加強。含具體可驗證數據的頁面 AI 引用機率高出 89%。</div>
+
+    <h3 class="sh">I 區：資料可驗證性</h3>
+    <table class="ct">
+      <tr><th>要素</th><th>現況</th><th>狀態</th></tr>
+      <tr>
+        <td><span class="nm">具體可驗證數字</span><br><span class="nt">含數字內容 AI 引用率 +26.5%</span></td>
+        <td>有「每年銷量超過 30 座 101 大樓」「狂銷 20 座 101 高度」等數字，但分散於各產品頁，未匯整於品牌介紹</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">獲獎資訊結構化呈現</span></td>
+        <td>Facebook 有清楚列舉，官網獲獎頁面結構較弱，缺乏年份、授予機構、獎項說明的清晰列表</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">原料產地可驗證說明</span></td>
+        <td>部分提及「屏東新鮮檸檬」「特優金牌蜂蜜」，但無具體供應商或認證來源連結</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">原創數據 / 獨家調查</span></td>
+        <td>❌ 無任何自有調查數據或市場研究</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">J 區：內容新鮮度</h3>
+    <table class="ct">
+      <tr><th>要素</th><th>現況</th><th>狀態</th></tr>
+      <tr>
+        <td><span class="nm">Last Updated 時間戳</span></td>
+        <td>電商頁面一般不顯示更新日期，知識型頁面完全缺失</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">節慶專頁定期更新</span></td>
+        <td>✅ 有中秋、年節專頁，每年更新，符合時效性需求</td>
+        <td><span class="b bp">PASS</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">Changelog / 更新紀錄</span></td>
+        <td>❌ 無公開更新紀錄頁</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">K 區：作者與來源透明度</h3>
+    <table class="ct">
+      <tr><th>要素</th><th>現況</th><th>狀態</th></tr>
+      <tr>
+        <td><span class="nm">品牌創辦人 / 主理人資訊</span></td>
+        <td>公司登記負責人「張育睿」，但官網無創辦人故事頁面或 Person Schema</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">編輯政策 / 關於我們</span></td>
+        <td>有部分品牌故事，但語意薄弱，無法讓 AI 建立品牌知識圖譜</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">聯絡資訊完整</span></td>
+        <td>✅ 完整：客服電話、免付費電話、三間門市地址、服務時段全列</td>
+        <td><span class="b bp">PASS</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">修復行動建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><span class="pri ph2">高</span> 建立 <strong>結構化品牌介紹頁</strong>，匯整所有可驗證數字：「成立年份 2014」「銷量突破 30 座 101 大樓」「A.A. TASTE AWARDS 4 年最高 3 星全台首個品牌」「Monde Selection 世界品質評鑑金獎」，並連結至各獎項官網</li>
+      <li><span class="rn">②</span><span class="pri ph2">高</span> 撰寫 <strong>創辦人故事頁</strong>（張育睿的創業背景與品牌理念），部署 Person Schema 與 Organization Schema 雙連結</li>
+      <li><span class="rn">③</span><span class="pri pm">中</span> 為知識型文章頁加入 <code>datePublished</code> 與 <code>dateModified</code>（Article Schema），Perplexity 對 30 天內更新內容優先引用</li>
+    </ul>
+  </div>
+  <div class="pf">第 6 頁 | 確認鍵智創科技 · enterimc.com</div>
+</div>
+
+<!-- ===== PAGE 7: L5 BRAND ===== -->
+<div class="page">
+  <div class="ph"><span>鴻鼎菓子 GEO 官網健檢報告 ▸ 第五層：品牌信號</span><img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>六｜第五層：品牌信號（佔 15 分）</h2></div>
+  <div class="pc">
+    <div class="ib ig">✅ <strong>本層是五層中相對最強，得 9/15 分</strong>。鴻鼎菓子在社群媒體有一定聲量（Facebook 6.4 萬粉絲），且多次獲國際食品獎項的媒體報導，形成基礎品牌信號。但 Wikipedia 缺失、Reddit/Quora 無佈局是 ChatGPT 引用的主要瓶頸。</div>
+
+    <h3 class="sh">L 區：品牌被提及量 + M 區：搜尋量</h3>
+    <table class="ct">
+      <tr><th>信號來源</th><th>現況</th><th>狀態</th></tr>
+      <tr>
+        <td><span class="nm">主流媒體報導</span></td>
+        <td>多篇美食部落格（愛麗絲食旅日記等）、部分新聞媒體提及；獎項發布時有媒體露出</td>
+        <td><span class="b bg">良好</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">Facebook 社群</span></td>
+        <td>✅ 6.4 萬粉絲，貼文互動活躍，品牌形象一致</td>
+        <td><span class="b bp">PASS</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">Instagram / 社群曝光</span></td>
+        <td>有 IG 帳號 @idodo_hd，內容以品牌攝影為主，AI 引用信號有限</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">Wikipedia 條目</span><br><span class="nt">ChatGPT 最信任的單一來源</span></td>
+        <td>❌ 無 Wikipedia 條目，ChatGPT 在品牌知識問題中可信度受限</td>
+        <td><span class="b bf">FAIL</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">Dcard / PTT / Mobile01 社群討論</span></td>
+        <td>有部分網友討論，但未系統性佈局口碑</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">N 區：數位 PR 與合作佈局</h3>
+    <table class="ct">
+      <tr><th>信號來源</th><th>現況</th><th>狀態</th></tr>
+      <tr>
+        <td><span class="nm">業界目錄收錄</span><br><span class="nt">Google Maps、食品相關目錄</span></td>
+        <td>✅ Google Maps 三間門市均有評論，豐原旗艦店評分高</td>
+        <td><span class="b bp">PASS</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">電商平台曝光</span><br><span class="nt">蝦皮、MOMO、Yahoo 購物</span></td>
+        <td>✅ 有蝦皮官方店、多平台銷售，電商品牌信號分散</td>
+        <td><span class="b bg">良好</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">YouTube 影片內容</span><br><span class="nt">跨 AI 平台引用佔比異常高</span></td>
+        <td>無品牌官方 YouTube 頻道，僅靠 UGC 食記影片</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+      <tr>
+        <td><span class="nm">食品/旅遊媒體合作</span><br><span class="nt">商業周刊、食力 foodNEXT 等</span></td>
+        <td>有獲獎新聞稿，但缺乏深度品牌報導（Deep Dive）</td>
+        <td><span class="b bw">WARN</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">修復行動建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><span class="pri pm">中</span> 積極拓展 <strong>Dcard 美食板、PTT Food 版的有機討論</strong>：分享「為什麼鴻鼎菓子曲奇餅 4 年拿 A.A. TASTE AWARDS 最高獎？」角度的品牌故事貼文，帶動自然討論</li>
+      <li><span class="rn">②</span><span class="pri pm">中</span> 進行 <strong>數位 PR 操作</strong>：以「全台唯一連續 4 年 A.A. TASTE AWARDS 曲奇品牌」為核心角度，向食力 foodNEXT、商業周刊、Yahoo 新聞投遞品牌深度報導</li>
+      <li><span class="rn">③</span><span class="pri pl2">低</span> 長期目標：建立 <strong>Wikipedia 條目</strong> 或在既有台中伴手禮相關條目中被引用，是提升 ChatGPT 品牌知識的最高效路徑</li>
+      <li><span class="rn">④</span><span class="pri pm">中</span> 建立 <strong>品牌 YouTube 頻道</strong>：製作曲奇製作過程、原料採購、獲獎背後故事等影片，YouTube 內容在 AI 引用中佔比異常高</li>
+    </ul>
+  </div>
+  <div class="pf">第 7 頁 | 確認鍵智創科技 · enterimc.com</div>
+</div>
+
+<!-- ===== PAGE 8: L6+7 PLATFORM + KPI ===== -->
+<div class="page">
+  <div class="ph"><span>鴻鼎菓子 GEO 官網健檢報告 ▸ 第六+七層：平台差異化與 KPI</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>七｜第六層 × 第七層：平台差異化 + KPI 框架</h2></div>
+  <div class="pc">
+    <h3 class="sh">四大 AI 平台差異化策略</h3>
+    <table class="dt">
+      <tr><th>AI 平台</th><th>鴻鼎菓子現況</th><th>核心優化方向</th><th>優先度</th></tr>
+      <tr>
+        <td><strong>Google AIO</strong></td>
+        <td>因官網無 Answer-First 段落與 Schema，AIO 幾乎不引用；傳統 SEO 排名是前提（~97% 相關性）</td>
+        <td>Schema 全面部署 + 知識型頁面 Answer-First 改寫 + 節慶伴手禮關鍵字 SEO</td>
+        <td><span class="pri pc3">立即</span></td>
+      </tr>
+      <tr>
+        <td><strong>ChatGPT Search</strong></td>
+        <td>品牌在 ChatGPT 中有一定知名度（多部落格提及），但官網結構化內容弱，連結引用少</td>
+        <td>Bing Webmaster Tools 驗證 + IndexNow + 品牌 Wikipedia 佈局 + Dcard/PTT 社群口碑</td>
+        <td><span class="pri ph2">高</span></td>
+      </tr>
+      <tr>
+        <td><strong>Perplexity</strong></td>
+        <td>無 30 天內更新的知識型頁面，幾乎不被引用；新鮮度是硬性門檻</td>
+        <td>每月至少發布 2 篇含具體數字的知識型文章 + 設定 Article Schema dateModified</td>
+        <td><span class="pri ph2">高</span></td>
+      </tr>
+      <tr>
+        <td><strong>Bing Copilot</strong></td>
+        <td>Bing 上有基本排名，但 Schema 欠缺讓 Copilot 無法精準引用產品資訊</td>
+        <td>Bing Webmaster 驗證 + Schema 部署 + H 標題架構清晰化</td>
+        <td><span class="pri pm">中</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">第七層：GEO KPI 建議追蹤框架</h3>
+    <table class="dt">
+      <tr><th>KPI 指標</th><th>定義</th><th>目標 Prompt 範例（伴手禮場景）</th><th>追蹤頻率</th></tr>
+      <tr>
+        <td><strong>Prompt Coverage Rate</strong></td>
+        <td>目標問題集中品牌被引用的覆蓋比例</td>
+        <td>「台中有什麼好吃的伴手禮？」「曲奇餅推薦台灣品牌？」「中秋送禮台中名店」</td>
+        <td>每月</td>
+      </tr>
+      <tr>
+        <td><strong>AI Share of Voice</strong></td>
+        <td>在「台中伴手禮」主題 AI 引用中的佔比</td>
+        <td>對比：裕珍馨、美村路一段鳳梨酥等競品</td>
+        <td>每季</td>
+      </tr>
+      <tr>
+        <td><strong>Citation Accuracy</strong></td>
+        <td>AI 描述是否正確（曲奇口味、獲獎、地址）</td>
+        <td>手動測試 ChatGPT/Perplexity 回答正確性</td>
+        <td>每月</td>
+      </tr>
+      <tr>
+        <td><strong>AI Referral Traffic</strong></td>
+        <td>從 Perplexity、ChatGPT 等帶入網站的流量</td>
+        <td>GA4 Referral Source：perplexity.ai、openai.com</td>
+        <td>每週</td>
+      </tr>
+    </table>
+
+    <h4 class="sh4">建議測試 Prompt 清單（每月 1 次手動測試）</h4>
+    <table class="dt">
+      <tr><th>#</th><th>測試 Prompt</th><th>目標出現位置</th></tr>
+      <tr><td>1</td><td>台中伴手禮哪裡買最好？</td><td>ChatGPT / Perplexity / Google AIO</td></tr>
+      <tr><td>2</td><td>台灣曲奇餅推薦品牌有哪些？</td><td>Perplexity / ChatGPT</td></tr>
+      <tr><td>3</td><td>中秋節送禮推薦台灣伴手禮</td><td>Google AIO / ChatGPT</td></tr>
+      <tr><td>4</td><td>鴻鼎菓子有哪些產品？</td><td>ChatGPT（品牌直詢）</td></tr>
+      <tr><td>5</td><td>台中豐原有什麼值得買的點心？</td><td>Perplexity / Google AIO</td></tr>
+      <tr><td>6</td><td>A.A. TASTE AWARDS 台灣曲奇</td><td>ChatGPT / Perplexity（獎項引用）</td></tr>
+    </table>
+  </div>
+  <div class="pf">第 8 頁 | 確認鍵智創科技 · enterimc.com</div>
+</div>
+
+<!-- ===== PAGE 9: ACTION PLAN ===== -->
+<div class="page">
+  <div class="ph"><span>鴻鼎菓子 GEO 官網健檢報告 ▸ 行動計畫</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>八｜行動計畫：GEO 優化 Roadmap</h2></div>
+  <div class="pc">
+    <h3 class="sh">優化優先序總表</h3>
+    <table class="dt">
+      <tr><th>#</th><th>優化項目</th><th>所屬層</th><th>分數增益</th><th>優先度</th><th>難度</th></tr>
+      <tr><td>1</td><td>建置 llms.txt（品牌 + 產品 + 獎項 URL）</td><td>L1</td><td>解鎖 AI 可達性</td><td><span class="pri pc3">立即</span></td><td>低</td></tr>
+      <tr><td>2</td><td>確認 robots.txt 不封鎖 AI Bot</td><td>L1</td><td>解鎖 AI 可達性</td><td><span class="pri pc3">立即</span></td><td>低</td></tr>
+      <tr><td>3</td><td>Organization Schema + sameAs 部署</td><td>L2</td><td>+5~8 分</td><td><span class="pri pc3">立即</span></td><td>低</td></tr>
+      <tr><td>4</td><td>建立 FAQ 頁 + FAQPage Schema（10-15 題）</td><td>L2</td><td>+6~10 分</td><td><span class="pri pc3">立即</span></td><td>中</td></tr>
+      <tr><td>5</td><td>主力產品頁 Answer-First 改寫（H2 問答式）</td><td>L2</td><td>+3~5 分</td><td><span class="pri ph2">高</span></td><td>中</td></tr>
+      <tr><td>6</td><td>Product + AggregateRating Schema</td><td>L2</td><td>+3~4 分</td><td><span class="pri ph2">高</span></td><td>中</td></tr>
+      <tr><td>7</td><td>撰寫第 1 篇比較型清單文</td><td>L2/L3</td><td>+3~5 分</td><td><span class="pri ph2">高</span></td><td>中</td></tr>
+      <tr><td>8</td><td>建立結構化品牌介紹頁（含可驗證數字）</td><td>L4</td><td>+3~4 分</td><td><span class="pri ph2">高</span></td><td>中</td></tr>
+      <tr><td>9</td><td>Bing Webmaster Tools + IndexNow 啟用</td><td>L1</td><td>ChatGPT 引用力</td><td><span class="pri ph2">高</span></td><td>低</td></tr>
+      <tr><td>10</td><td>建立「台灣曲奇餅完全指南」Pillar Page</td><td>L3</td><td>+4~6 分</td><td><span class="pri pm">中</span></td><td>高</td></tr>
+      <tr><td>11</td><td>建立「台中伴手禮選購指南」Pillar Page</td><td>L3</td><td>+4~6 分</td><td><span class="pri pm">中</span></td><td>高</td></tr>
+      <tr><td>12</td><td>創辦人故事頁 + Person Schema</td><td>L4</td><td>+2~3 分</td><td><span class="pri pm">中</span></td><td>中</td></tr>
+      <tr><td>13</td><td>Dcard/PTT 品牌口碑佈局</td><td>L5</td><td>ChatGPT 品牌信號</td><td><span class="pri pm">中</span></td><td>中</td></tr>
+      <tr><td>14</td><td>數位 PR：食品媒體深度報導</td><td>L5</td><td>+2~3 分</td><td><span class="pri pm">中</span></td><td>高</td></tr>
+      <tr><td>15</td><td>品牌 YouTube 頻道建立</td><td>L5</td><td>長期信號</td><td><span class="pri pl2">低</span></td><td>高</td></tr>
+      <tr><td>16</td><td>Wikipedia 條目建立或被引用</td><td>L5</td><td>ChatGPT 最高信任源</td><td><span class="pri pl2">低</span></td><td>高</td></tr>
+    </table>
+
+    <h3 class="sh">30 / 60 / 90 天行動計畫</h3>
+    <table class="dt">
+      <tr><th>時程</th><th>任務</th><th>預期效益</th></tr>
+      <tr class="sr"><td colspan="3">▌ 第 1 個月（立即執行）— 技術地基 × 語意架構破冰</td></tr>
+      <tr><td>Week 1–2</td><td>建置 llms.txt、確認 robots.txt、Bing Webmaster 驗證、IndexNow 啟用</td><td>AI Bot 可順利訪問並識別品牌，Bing/ChatGPT 引用機率提升</td></tr>
+      <tr><td>Week 2–3</td><td>部署 Organization Schema（含 sameAs）、撰寫並部署 FAQ 頁 10 題 + FAQPage Schema</td><td>Google AIO 開始可能引用品牌，FAQ 引用率從 15% 提升至 41%</td></tr>
+      <tr><td>Week 3–4</td><td>主力產品頁（曲奇、堅果塔）H2 Answer-First 改寫、部署 Product Schema</td><td>產品頁 AI 引用機率進入 60-70% 範圍</td></tr>
+      <tr class="sr"><td colspan="3">▌ 第 2 個月（60 天）— 主題權威建立 × 可信度強化</td></tr>
+      <tr><td>Day 31–45</td><td>撰寫「台灣曲奇餅完全指南」Pillar Page（3000 字+）、第 1 篇比較型清單文（中秋伴手禮比較）</td><td>主題權威開始建立，Perplexity 新鮮度問題改善</td></tr>
+      <tr><td>Day 46–60</td><td>建立結構化品牌介紹頁（含獲獎數字）、創辦人故事頁 + Person Schema</td><td>AI 可驗證品牌資訊，ChatGPT 品牌知識準確性提升</td></tr>
+      <tr class="sr"><td colspan="3">▌ 第 3 個月（90 天）— 品牌信號外擴 × KPI 追蹤建立</td></tr>
+      <tr><td>Day 61–75</td><td>Dcard/PTT 口碑佈局（伴手禮推薦文）、「台中伴手禮選購指南」Pillar Page 上線</td><td>ChatGPT 第三方信號增強，主題叢集完成率 50%</td></tr>
+      <tr><td>Day 76–90</td><td>建立每月 Prompt 測試清單、GA4 AI Bot 流量追蹤設定、第 1 份 GEO 月報</td><td>KPI 追蹤機制就位，可量化 GEO 投資回報</td></tr>
+      <tr class="hl"><td colspan="2"><b>預估 90 天後分數</b></td><td>41 → <b>約 62–68 分</b>（增加 20–27 分）</td></tr>
+    </table>
+
+    <hr class="dv">
+    <p class="clp">
+      鴻鼎菓子擁有台灣食品品牌中難得一見的國際獲獎背景與品牌故事，是 GEO 優化的絕佳素材。目前官網的主要問題不在於品牌力不足，而在於官網架構未讓 AI 「讀得懂、引得到」品牌的核心價值。一旦技術障礙清除、語意架構建置到位，鴻鼎菓子在「台中伴手禮」「台灣曲奇餅」等高需求查詢場景中被 AI 引用的機率將大幅提升。確認鍵智創科技誠摯推薦優先啟動 30 天立即修復計畫，以最低成本解鎖最大 GEO 效益。
+    </p>
+    <div class="agsig">
+      <img src="data:image/png;base64,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" style="height:44px;border-radius:6px;flex-shrink:0;">
+      <div>
+        <div style="color:white;font-size:12px;font-weight:700;">確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.</div>
+        <div style="color:rgba(255,255,255,.5);font-size:10.5px;margin-top:4px;">enterimc.com　｜　報告日期：2026年03月27日　｜　本文件內容為確認鍵智創科技智慧財產，僅供客戶參考</div>
+      </div>
+    </div>
+  </div>
+  <div class="pf">第 9 頁 | 確認鍵智創科技 · enterimc.com</div>
+</div>
+
+</div>
+</body>
+</html>
