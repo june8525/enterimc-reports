@@ -15,20 +15,14 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);min-height:100vh;}
-
-/* Header */
-.header{background:var(--eb);padding:0;box-shadow:0 3px 16px rgba(0,0,0,.2);}
+.header{background:var(--eb);box-shadow:0 3px 16px rgba(0,0,0,.2);}
 .header-inner{max-width:1100px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
 .header img{height:36px;border-radius:4px;}
 .header-title{color:rgba(255,255,255,.55);font-size:11px;letter-spacing:2px;text-transform:uppercase;}
-
-/* Hero */
 .hero{background:linear-gradient(135deg,var(--eb3) 0%,var(--eb) 60%,var(--eb2) 100%);padding:52px 32px 44px;text-align:center;}
 .hero h1{color:white;font-size:26px;font-weight:900;margin-bottom:8px;}
 .hero h1 span{color:var(--el);}
 .hero p{color:rgba(255,255,255,.6);font-size:12.5px;}
-
-/* Stats bar */
 .stats{background:white;border-bottom:2px solid var(--mid);}
 .stats-inner{max-width:1100px;margin:0 auto;padding:14px 32px;display:flex;gap:32px;align-items:center;}
 .stat{text-align:center;}
@@ -38,48 +32,31 @@ body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);
 .search-wrap{flex:1;display:flex;justify-content:flex-end;}
 .search-wrap input{width:240px;padding:7px 14px;border:1.5px solid var(--mid);border-radius:20px;font-family:inherit;font-size:12px;color:var(--text);outline:none;transition:border .2s;}
 .search-wrap input:focus{border-color:var(--el2);}
-
-/* Main */
 .main{max-width:1100px;margin:0 auto;padding:32px;}
-
-/* Filter tabs */
 .filters{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;}
 .ftab{padding:5px 16px;border-radius:20px;font-size:11.5px;font-weight:600;cursor:pointer;border:1.5px solid var(--mid);background:white;color:var(--emut);transition:all .15s;}
 .ftab.active,.ftab:hover{background:var(--eb);color:white;border-color:var(--eb);}
-
-/* Grid */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
-
-/* Card */
 .card{background:white;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.07);overflow:hidden;transition:transform .15s,box-shadow .15s;text-decoration:none;display:block;}
 .card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(0,0,0,.12);}
-.card-stripe{height:5px;background:var(--eb);}
+.card-stripe{height:5px;}
 .card-head{padding:18px 20px 12px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
 .card-icon{width:44px;height:44px;border-radius:8px;background:var(--elt);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .card-meta{flex:1;}
 .card-client{font-size:14px;font-weight:900;color:var(--eb3);line-height:1.2;margin-bottom:3px;}
 .card-type{font-size:10px;color:var(--emut);font-weight:500;}
-.card-score{font-size:22px;font-weight:900;line-height:1;}
-.card-score-l{font-size:9px;color:var(--emut);}
+.card-badge{font-size:11px;font-weight:700;padding:2px 10px;border-radius:20px;white-space:nowrap;}
 .card-body{padding:0 20px 16px;}
 .card-desc{font-size:11.5px;color:var(--emut);line-height:1.6;margin-bottom:10px;}
-.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:4px;}
 .tag{padding:2px 9px;border-radius:20px;font-size:10px;font-weight:600;background:var(--elt);color:var(--eb);border:1px solid var(--mid);}
 .card-foot{padding:10px 20px;background:var(--elt);border-top:1px solid var(--mid);display:flex;justify-content:space-between;align-items:center;}
 .card-date{font-size:10px;color:var(--emut);}
 .card-cta{font-size:10.5px;font-weight:700;color:var(--el2);}
-
-/* Score color */
-.score-r{color:var(--red);} .score-o{color:var(--org);} .score-a{color:#B8860B;} .score-g{color:var(--grn);}
-.stripe-r{background:var(--red);} .stripe-o{background:var(--org);} .stripe-a{background:#D4A017;} .stripe-g{background:var(--grn);}
-
-/* Empty */
-.empty{text-align:center;padding:60px 20px;color:var(--emut);font-size:13px;}
-
-/* Footer */
+.loading{text-align:center;padding:60px 20px;color:var(--emut);font-size:13px;}
+.empty{text-align:center;padding:60px 20px;color:var(--emut);font-size:13px;display:none;}
 .footer{background:var(--eb);margin-top:60px;padding:20px 32px;text-align:center;}
 .footer p{font-size:10px;color:rgba(255,255,255,.4);}
-
 @media(max-width:600px){
   .header-inner{padding:14px 20px;}
   .hero{padding:36px 20px 30px;}
@@ -104,13 +81,13 @@ body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);
 
 <div class="stats">
   <div class="stats-inner">
-    <div class="stat"><div class="stat-n" id="totalCount">1</div><div class="stat-l">報告總數</div></div>
+    <div class="stat"><div class="stat-n" id="totalCount">—</div><div class="stat-l">報告總數</div></div>
     <div class="stats-div"></div>
-    <div class="stat"><div class="stat-n" id="clientCount">1</div><div class="stat-l">客戶數</div></div>
+    <div class="stat"><div class="stat-n" id="clientCount">—</div><div class="stat-l">客戶數</div></div>
     <div class="stats-div"></div>
     <div class="stat"><div class="stat-n">GEO</div><div class="stat-l">主力服務</div></div>
     <div class="search-wrap">
-      <input type="text" id="searchInput" placeholder="搜尋客戶或報告類型…" oninput="filterCards()">
+      <input type="text" id="searchInput" placeholder="搜尋客戶或報告類型…" oninput="renderCards()">
     </div>
   </div>
 </div>
@@ -118,55 +95,14 @@ body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);
 <div class="main">
   <div class="filters">
     <div class="ftab active" onclick="setFilter('all',this)">全部</div>
-    <div class="ftab" onclick="setFilter('geo',this)">GEO 健檢</div>
+    <div class="ftab" onclick="setFilter('audit',this)">GEO 健檢</div>
     <div class="ftab" onclick="setFilter('plan',this)">策略計畫</div>
     <div class="ftab" onclick="setFilter('quote',this)">報價</div>
   </div>
-
   <div class="grid" id="cardGrid">
-
-    <!-- ── FansFeed ── -->
-    <a class="card" href="reports/FansFeed_GEO_audit_20260327.html" target="_blank"
-       data-type="geo" data-client="fansfeed" data-keywords="fansfeed 整合行銷 社群代管 geo健檢">
-      <div class="card-stripe stripe-o"></div>
-      <div class="card-head">
-        <div class="card-icon">📊</div>
-        <div class="card-meta">
-          <div class="card-client">FansFeed</div>
-          <div class="card-type">GEO 官網健檢報告</div>
-        </div>
-        <div style="text-align:right;">
-          <div class="card-score score-o">41</div>
-          <div class="card-score-l">/ 100 分</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-desc">整合行銷 × 社群代管服務商。技術層多項 FAIL（llms.txt 缺失、全站零 Schema），內容基礎佳但 AI 引用架構待建立。</div>
-        <div class="card-tags">
-          <span class="tag">整合行銷</span>
-          <span class="tag">社群代管</span>
-          <span class="tag">B2B</span>
-          <span class="tag">風向專欄</span>
-        </div>
-      </div>
-      <div class="card-foot">
-        <div class="card-date">2026.03.27</div>
-        <div class="card-cta">開啟報告 →</div>
-      </div>
-    </a>
-
-    <!-- ── 未來新報告在此插入 ── -->
-    <div class="card" style="border:2px dashed var(--mid);box-shadow:none;background:transparent;cursor:default;"
-         data-type="placeholder" data-client="" data-keywords="">
-      <div style="padding:40px 20px;text-align:center;">
-        <div style="font-size:32px;margin-bottom:10px;">＋</div>
-        <div style="font-size:12px;color:var(--emut);line-height:1.7;">下一份客戶報告<br>完成後加入此處</div>
-      </div>
-    </div>
-
+    <div class="loading" id="loadingMsg">⏳ 載入報告清單中…</div>
   </div>
-
-  <div class="empty" id="emptyMsg" style="display:none;">找不到符合的報告 🔍</div>
+  <div class="empty" id="emptyMsg">找不到符合的報告 🔍</div>
 </div>
 
 <div class="footer">
@@ -174,38 +110,141 @@ body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);
 </div>
 
 <script>
+// ── 設定：請填入你的 GitHub 帳號與 repo 名稱 ──
+const GITHUB_USER = 'june8525';
+const GITHUB_REPO = 'enterimc-reports';
+
+// ── 類型對照表 ──
+const TYPE_MAP = {
+  audit: { label: 'GEO 健檢報告', icon: '📊', stripe: '#C75000', badge: '#FDEBD0', badgeText: '#C75000' },
+  plan:  { label: 'AIO/AEO/GEO 策略計畫', icon: '📋', stripe: '#0E6A7C', badge: '#D1ECF1', badgeText: '#0E6A7C' },
+  quote: { label: '服務報價單', icon: '💰', stripe: '#1A7A44', badge: '#D5F5E3', badgeText: '#1A7A44' },
+  other: { label: '其他文件', icon: '📄', stripe: '#1B3A8C', badge: '#D6E6FF', badgeText: '#1B3A8C' },
+};
+
+// ── 從檔名解析報告資訊 ──
+// 格式：{客戶名}_{類型}_{日期}.html
+// 例：FansFeed_GEO_audit_20260327.html
+function parseFilename(filename) {
+  const name = filename.replace('.html', '');
+  const parts = name.split('_');
+
+  // 找類型關鍵字位置
+  const typeKeys = Object.keys(TYPE_MAP);
+  let typeIndex = -1;
+  let typeKey = 'other';
+  for (let i = 0; i < parts.length; i++) {
+    if (typeKeys.includes(parts[i].toLowerCase())) {
+      typeIndex = i;
+      typeKey = parts[i].toLowerCase();
+      break;
+    }
+  }
+
+  // 最後一段若是 8 位數字則為日期
+  const lastPart = parts[parts.length - 1];
+  const isDate = /^\d{8}$/.test(lastPart);
+  const dateStr = isDate ? lastPart : '';
+  const dateFormatted = dateStr
+    ? 
+    : '';
+
+  // 客戶名 = 類型前的所有 parts 組合（去掉 GEO/AIO/AEO 等前綴詞）
+  const skipWords = ['GEO','AIO','AEO','SEO','DA','TW'];
+  const clientParts = typeIndex > 0
+    ? parts.slice(0, typeIndex).filter(p => !skipWords.includes(p.toUpperCase()))
+    : parts.slice(0, Math.max(1, parts.length - (isDate?1:0) - 1));
+  const clientName = clientParts.join(' ') || name;
+
+  return { clientName, typeKey, dateFormatted, filename };
+}
+
+// ── 生成卡片 HTML ──
+function makeCard(info) {
+  const t = TYPE_MAP[info.typeKey] || TYPE_MAP.other;
+  const keywords = (info.clientName + ' ' + info.typeKey + ' ' + t.label).toLowerCase();
+  return `
+    <a class="card" href="reports/${info.filename}" target="_blank"
+       data-type="${info.typeKey}" data-keywords="${keywords}">
+      <div class="card-stripe" style="background:${t.stripe};"></div>
+      <div class="card-head">
+        <div class="card-icon">${t.icon}</div>
+        <div class="card-meta">
+          <div class="card-client">${info.clientName}</div>
+          <div class="card-type">${t.label}</div>
+        </div>
+        <div>
+          <span class="card-badge" style="background:${t.badge};color:${t.badgeText};">${info.typeKey.toUpperCase()}</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="tag">${info.clientName}</span>
+          <span class="tag">${t.label}</span>
+        </div>
+      </div>
+      <div class="card-foot">
+        <div class="card-date">${info.dateFormatted}</div>
+        <div class="card-cta">開啟報告 →</div>
+      </div>
+    </a>`;
+}
+
+// ── 狀態 ──
+let allReports = [];
 let currentFilter = 'all';
 
 function setFilter(type, el) {
   currentFilter = type;
   document.querySelectorAll('.ftab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
-  filterCards();
+  renderCards();
 }
 
-function filterCards() {
+function renderCards() {
   const q = document.getElementById('searchInput').value.toLowerCase();
-  const cards = document.querySelectorAll('#cardGrid .card[data-client]');
-  let visible = 0;
-  cards.forEach(card => {
-    if (card.dataset.client === '') return; // placeholder
-    const matchType = currentFilter === 'all' || card.dataset.type === currentFilter;
-    const matchSearch = !q || card.dataset.keywords.includes(q) || card.dataset.client.includes(q);
-    const show = matchType && matchSearch;
-    card.style.display = show ? '' : 'none';
-    if (show) visible++;
+  const grid = document.getElementById('cardGrid');
+  const filtered = allReports.filter(r => {
+    const matchType = currentFilter === 'all' || r.typeKey === currentFilter;
+    const matchSearch = !q || r.clientName.toLowerCase().includes(q) ||
+      (TYPE_MAP[r.typeKey]?.label || '').includes(q) || r.typeKey.includes(q);
+    return matchType && matchSearch;
   });
-  // placeholder visibility
-  document.querySelectorAll('#cardGrid .card[data-client=""]').forEach(p => {
-    p.style.display = currentFilter === 'all' && !q ? '' : 'none';
-  });
-  document.getElementById('emptyMsg').style.display = visible === 0 ? '' : 'none';
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    document.getElementById('emptyMsg').style.display = 'block';
+  } else {
+    grid.innerHTML = filtered.map(makeCard).join('');
+    document.getElementById('emptyMsg').style.display = 'none';
+  }
+
+  // 更新統計（全部報告，不受篩選影響）
+  const clients = new Set(allReports.map(r => r.clientName));
+  document.getElementById('totalCount').textContent = allReports.length;
+  document.getElementById('clientCount').textContent = clients.size;
 }
 
-// Update counts
-const realCards = document.querySelectorAll('#cardGrid .card[data-client]:not([data-client=""])').length;
-document.getElementById('totalCount').textContent = realCards;
-document.getElementById('clientCount').textContent = realCards;
+// ── 從 GitHub API 抓 reports/ 資料夾檔案清單 ──
+async function loadReports() {
+  const api = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/reports`;
+  try {
+    const res = await fetch(api);
+    if (!res.ok) throw new Error('API error ' + res.status);
+    const files = await res.json();
+    allReports = files
+      .filter(f => f.name.endsWith('.html'))
+      .map(f => parseFilename(f.name))
+      .sort((a, b) => b.dateFormatted.localeCompare(a.dateFormatted)); // 新→舊
+    document.getElementById('loadingMsg')?.remove();
+    renderCards();
+  } catch (e) {
+    document.getElementById('loadingMsg').textContent = '⚠️ 無法載入報告清單，請確認 repo 設定是否正確。';
+    console.error(e);
+  }
+}
+
+loadReports();
 </script>
 </body>
 </html>
