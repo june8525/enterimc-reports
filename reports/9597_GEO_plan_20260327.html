@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>貸霸資訊 AIO／AEO／GEO 品牌引用策略計畫｜確認鍵智創科技</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+:root {
+  /* ── 確認鍵 Enter IMC 品牌色 ── */
+  --enter-blue:    #1B3A8C;   /* 主品牌藍（logo底色） */
+  --enter-blue2:   #254BAD;   /* 亮一階藍 */
+  --enter-blue3:   #0D2568;   /* 深一階藍 */
+  --enter-dark:    #0A1628;   /* 近黑深背景 */
+  --enter-dark2:   #1A2B3C;   /* 深色文字底 */
+  --enter-lime:    #A8C8F8;   /* logo白字近冰藍（accent）*/
+  --enter-lime2:   #4A90D9;   /* 亮藍accent */
+  --enter-white:   #FFFFFF;
+  --enter-offwhite:#EFF4FF;   /* 淡藍白背景 */
+  --enter-mid:     #C5D5F0;   /* 中間藍灰邊框 */
+  --enter-light:   #F0F5FF;   /* 最淡背景 */
+  --enter-muted:   #5C7AA8;   /* 次要文字 */
+  --enter-red:     #C0392B;
+  --enter-green:   #1A7A44;
+  --enter-orange:  #C75000;
+  --enter-teal:    #0E6A7C;
+  --enter-teal2:   #0A4F5E;
+  /* 舊變數對應新品牌色（避免其他元素壞掉） */
+  --navy:   var(--enter-blue);
+  --navy2:  var(--enter-blue2);
+  --navy3:  var(--enter-blue3);
+  --amber:  #4A90D9;
+  --amber2: #2A70B9;
+  --teal:   var(--enter-teal);
+  --teal2:  var(--enter-teal2);
+  --light:  var(--enter-light);
+  --mid:    var(--enter-mid);
+  --red:    var(--enter-red);
+  --green:  var(--enter-green);
+  --orange: var(--enter-orange);
+  --white:  var(--enter-white);
+  --text:   var(--enter-dark2);
+  --muted:  var(--enter-muted);
+  --border: var(--enter-mid);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: #D8E4F5;
+  color: var(--text);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+@media print {
+  body { background: white; font-size: 11px; }
+  .no-print { display: none !important; }
+  .page { box-shadow: none !important; margin-bottom: 0 !important; page-break-after: always; border-radius: 0 !important; }
+  .page:last-child { page-break-after: avoid; }
+  .cover { min-height: auto; }
+}
+
+
+
+/* ── WRAP ── */
+.report-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 14px 40px;
+}
+
+.page {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.09);
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+/* ── COVER ── */
+.cover {
+  background: white;
+  position: relative;
+  padding: 0;
+}
+
+/* Top accent bar */
+.cover-top-stripe {
+  background: var(--enter-blue);
+  height: 8px;
+}
+
+/* White hero area */
+.cover-hero {
+  background: white;
+  padding: 44px 52px 36px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.cover-hero-left {
+  flex: 1;
+}
+
+.cover-logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cover-logo-area img {
+  width: 88px;
+  border-radius: 6px;
+}
+
+.cover-logo-tagline {
+  font-size: 9.5px;
+  color: var(--enter-muted);
+  text-align: right;
+  letter-spacing: 0.5px;
+}
+
+.cover-rule {
+  width: 48px; height: 4px;
+  background: var(--enter-blue);
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.cover-eyebrow {
+  color: var(--enter-blue);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.cover-h1 {
+  color: var(--enter-dark);
+  font-size: 32px; font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.cover-h1 span { color: var(--enter-blue); }
+
+.cover-sub {
+  color: var(--enter-muted);
+  font-size: 13.5px;
+  margin-bottom: 0;
+}
+
+/* Blue divider band */
+.cover-blue-band {
+  background: var(--enter-blue);
+  padding: 22px 52px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+
+.cover-stat {
+  text-align: center;
+  padding: 10px 6px;
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+.cover-stat:last-child { border-right: none; }
+
+.cc-num {
+  font-size: 30px; font-weight: 900;
+  color: white; line-height: 1;
+}
+
+.cc-unit { font-size: 11px; color: rgba(255,255,255,0.7); }
+
+.cc-label {
+  font-size: 10px; color: rgba(255,255,255,0.55);
+  margin-top: 5px; line-height: 1.4;
+}
+
+/* White meta area */
+.cover-meta-area {
+  background: var(--enter-light);
+  padding: 24px 52px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 32px;
+  border-top: 1px solid var(--enter-mid);
+}
+
+.cover-meta-item {
+  font-size: 12px;
+  color: var(--enter-muted);
+}
+.cover-meta-item b {
+  color: var(--enter-dark2);
+  display: block;
+  font-size: 12.5px;
+  margin-top: 2px;
+}
+
+.cover-foot {
+  background: var(--enter-blue);
+  padding: 12px 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cover-foot p { font-size: 10px; color: rgba(255,255,255,0.45); }
+
+/* ── PAGE HEADER / FOOTER ── */
+.ph {
+  background: var(--navy);
+  padding: 9px 28px;
+  display: flex; justify-content: space-between;
+}
+.ph span { font-size: 10px; color: rgba(255,255,255,0.55); }
+
+.pf {
+  background: var(--light);
+  border-top: 1px solid var(--mid);
+  padding: 7px 28px;
+  text-align: center;
+  font-size: 10px; color: var(--muted);
+}
+
+/* ── SECTION BANNER ── */
+.sec-banner {
+  background: var(--navy);
+  border-left: 5px solid var(--amber);
+  padding: 14px 24px;
+  display: flex; align-items: center; gap: 10px;
+}
+.sec-banner h2 {
+  color: white; font-size: 14px; font-weight: 700;
+}
+
+/* ── CONTENT PADDING ── */
+.pc { padding: 24px 28px; }
+
+/* ── HEADINGS ── */
+h3.sh {
+  font-size: 12.5px; font-weight: 700;
+  color: var(--navy);
+  border-left: 3px solid var(--amber);
+  padding-left: 9px;
+  margin: 18px 0 8px;
+}
+h4.sh4 {
+  font-size: 11.5px; font-weight: 700;
+  color: var(--teal);
+  margin: 14px 0 6px;
+}
+
+p.bt {
+  font-size: 12.5px; line-height: 1.8;
+  color: var(--text); margin-bottom: 10px;
+}
+
+/* ── BADGE ── */
+.bdg {
+  display: inline-block; padding: 2px 8px;
+  border-radius: 20px; font-size: 10px; font-weight: 700;
+  white-space: nowrap;
+}
+.bdg-red    { background: #FADBD8; color: var(--red); }
+.bdg-org    { background: #FDEBD0; color: var(--orange); }
+.bdg-grn    { background: #D5F5E3; color: var(--green); }
+.bdg-teal   { background: #D1ECF1; color: var(--teal2); }
+.bdg-navy   { background: var(--enter-blue); color: white; }
+.bdg-amber  { background: #D6E6FF; color: var(--enter-blue3); }
+
+/* ── TABLE ── */
+.dt {
+  width: 100%; border-collapse: collapse;
+  margin: 8px 0 16px; font-size: 11.5px;
+}
+.dt th {
+  background: var(--navy); color: white;
+  font-weight: 700; padding: 8px 11px;
+  text-align: left; font-size: 11px;
+}
+.dt td {
+  padding: 7px 11px;
+  border-bottom: 1px solid var(--mid);
+  vertical-align: top; line-height: 1.55;
+}
+.dt tr:nth-child(even) td { background: var(--light); }
+.dt tr:hover td { background: #E5EEF7; }
+.dt tr.hl td {
+  background: var(--navy); color: var(--amber);
+  font-weight: 700;
+}
+.dt tr.sec-row td {
+  background: #EDF2F7; font-weight: 700;
+  color: var(--navy2); font-size: 11px;
+}
+
+/* ── KW MATRIX PILLS ── */
+.kw-grid {
+  display: flex; flex-wrap: wrap; gap: 7px;
+  margin: 8px 0 14px;
+}
+.kw-pill {
+  background: var(--light);
+  border: 1px solid var(--mid);
+  border-radius: 20px;
+  padding: 3px 11px;
+  font-size: 11px; color: var(--navy2);
+  font-weight: 500;
+}
+.kw-pill.core {
+  background: var(--enter-blue); color: white;
+  border-color: var(--enter-blue2);
+}
+.kw-pill.high {
+  background: #D6E6FF; color: var(--enter-blue3);
+  border-color: var(--enter-blue2);
+}
+.kw-pill.mid {
+  background: #D1ECF1; color: var(--teal2);
+  border-color: var(--teal);
+}
+
+/* ── PAA BLOCK ── */
+.paa-block {
+  background: var(--light);
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin: 6px 0 12px;
+  border-left: 3px solid var(--teal);
+}
+.paa-block .q {
+  font-size: 12px; font-weight: 700;
+  color: var(--teal2); margin-bottom: 4px;
+}
+.paa-block .a {
+  font-size: 11.5px; color: var(--text); line-height: 1.65;
+}
+.paa-block .a b { color: var(--enter-blue3); }
+
+/* ── CONTENT CARD GRID ── */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 10px 0 16px;
+}
+.c-card {
+  border: 1px solid var(--mid);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.c-card-head {
+  padding: 9px 13px;
+  font-weight: 700; font-size: 11px; color: white;
+}
+.bg-a { background: var(--red); }
+.bg-b { background: var(--orange); }
+.bg-c { background: var(--teal); }
+.bg-d { background: var(--green); }
+.bg-e { background: var(--navy); }
+.bg-f { background: var(--enter-blue3); }
+
+.c-card-body {
+  padding: 10px 13px; background: white;
+}
+.c-card-body ul {
+  list-style: none; padding: 0;
+}
+.c-card-body ul li {
+  padding: 3px 0;
+  font-size: 11px; color: var(--text);
+  border-bottom: 1px solid var(--light);
+  padding-left: 12px; position: relative;
+  line-height: 1.45;
+}
+.c-card-body ul li::before {
+  content: '▸'; color: var(--amber);
+  position: absolute; left: 0; font-size: 9px;
+  top: 5px;
+}
+.c-card-body .rate {
+  margin-top: 6px; font-size: 10px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ── ROADMAP / GANTT ── */
+.gantt-wrap {
+  overflow-x: auto;
+  margin: 10px 0 16px;
+}
+.gantt {
+  width: 100%; border-collapse: collapse;
+  font-size: 11px; min-width: 700px;
+}
+.gantt th {
+  background: var(--navy2); color: white;
+  padding: 7px 8px; text-align: center;
+  font-size: 10.5px; font-weight: 700;
+  border: 1px solid var(--navy3);
+}
+.gantt td {
+  padding: 6px 9px;
+  border: 1px solid var(--mid);
+  vertical-align: middle;
+}
+.gantt tr:nth-child(even) td { background: var(--light); }
+.g-bar {
+  display: block;
+  height: 10px; border-radius: 5px;
+  background: var(--amber);
+}
+.g-bar.doing { background: var(--teal); }
+.g-bar.done  { background: var(--green); }
+.g-empty { color: var(--mid); font-size: 10px; text-align: center; }
+
+/* ── SOP STEPS ── */
+.sop-step {
+  display: flex; gap: 0;
+  border: 1px solid var(--mid);
+  border-radius: 6px; overflow: hidden;
+  margin-bottom: 8px;
+}
+.sop-num {
+  background: var(--navy);
+  color: var(--amber);
+  font-size: 20px; font-weight: 900;
+  min-width: 52px; display: flex;
+  align-items: center; justify-content: center;
+}
+.sop-content {
+  padding: 10px 14px; flex: 1;
+}
+.sop-content h5 {
+  font-size: 12px; font-weight: 700;
+  color: var(--navy2); margin-bottom: 4px;
+}
+.sop-content p {
+  font-size: 11.5px; color: var(--text);
+  line-height: 1.6;
+}
+.sop-content .sop-out {
+  font-size: 10.5px; color: var(--teal2);
+  margin-top: 4px; font-weight: 600;
+}
+
+/* ── PLAN CARDS ── */
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px; margin: 10px 0 16px;
+}
+.plan-card { border-radius: 7px; overflow: hidden; border: 1px solid var(--mid); }
+.plan-head {
+  padding: 9px 14px;
+  color: white; font-size: 11.5px; font-weight: 700;
+}
+.ph1 { background: var(--red); }
+.ph2 { background: var(--orange); }
+.ph3 { background: var(--teal); }
+.ph4 { background: var(--green); }
+.ph5 { background: var(--navy); }
+.ph6 { background: var(--enter-blue3); }
+
+.plan-body { padding: 10px 14px; background: white; }
+.plan-body ul { list-style: none; }
+.plan-body ul li {
+  padding: 3px 0 3px 14px;
+  font-size: 11px; color: var(--text);
+  border-bottom: 1px solid var(--light);
+  position: relative; line-height: 1.5;
+}
+.plan-body ul li::before {
+  content: '▸'; color: var(--amber);
+  position: absolute; left: 0; font-size: 9px; top: 5px;
+}
+.plan-body .eff {
+  margin-top: 7px; font-size: 10px;
+  color: var(--muted); font-style: italic;
+}
+
+/* ── TWO COL ── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+/* ── REC LIST ── */
+.rec-list { list-style: none; margin: 8px 0 14px; }
+.rec-list li {
+  display: flex; gap: 9px;
+  padding: 7px 12px;
+  background: var(--light); border-radius: 5px;
+  margin-bottom: 5px; font-size: 12px; line-height: 1.6;
+  border-left: 3px solid var(--amber);
+}
+.rec-list .rn { font-weight: 900; color: var(--amber); min-width: 16px; }
+
+/* ── DIVIDER ── */
+hr.dv { border: none; border-top: 1px solid var(--mid); margin: 16px 0; }
+
+/* ── AGENCY SIG ── */
+.agency-sig {
+  text-align: center; padding: 14px;
+  background: var(--navy); border-radius: 6px;
+  color: var(--amber); font-size: 12px; font-weight: 700;
+  margin-top: 10px;
+}
+.agency-sig span {
+  color: rgba(255,255,255,0.45); font-size: 10.5px;
+  font-weight: 400; display: block; margin-top: 4px;
+}
+
+.tag-row { display: flex; gap: 7px; flex-wrap: wrap; margin: 6px 0 14px; }
+
+.closing-p { font-size: 11px; color: var(--muted); line-height: 1.8; margin-bottom: 10px; }
+
+/* ── SCORE SUMMARY ── */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; margin: 10px 0 16px;
+}
+.kpi-box {
+  background: var(--navy);
+  border-radius: 7px; padding: 14px 12px;
+  text-align: center; border-top: 3px solid var(--amber);
+}
+.kpi-box .kn {
+  font-size: 22px; font-weight: 900;
+  color: var(--enter-lime2); line-height: 1;
+}
+.kpi-box .kl {
+  font-size: 10px; color: rgba(255,255,255,0.5);
+  margin-top: 5px; line-height: 1.4;
+}
+</style>
+<meta name="report-client" content="貸霸資訊">
+<meta name="report-score" content="">
+<meta name="report-desc" content="AIO/AEO/GEO 品牌引用策略計畫。聚焦金融 YMYL 信任建立、法規內容補強與媒體提及三期 Roadmap。">
+<meta name="report-tags" content="金融借貸,YMYL,AIO/AEO/GEO,策略計畫">
+<meta name="report-type" content="plan">
+<meta name="report-date" content="2026-03-27">
+</head>
+<body>
+
+
+<div class="report-wrap">
+
+<!-- ══ COVER ══════════════════════════════════════════ -->
+<div class="page cover">
+  <div class="cover-top-stripe"></div>
+
+  <div class="cover-hero">
+    <div class="cover-hero-left">
+      <div class="cover-rule"></div>
+      <div class="cover-eyebrow">AIO / AEO / GEO 品牌引用策略計畫</div>
+      <div class="cover-h1">貸霸資訊<br><span>AI 搜尋引用</span>全方位<br>策略執行計畫</div>
+      <div class="cover-sub">9597借錢網 ／ 5197借錢網　半年期品牌 GEO 優化專案</div>
+    </div>
+    <div class="cover-logo-area">
+      <img src="data:image/png;base64,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" alt="確認鍵智創科技">
+      <div class="cover-logo-tagline">確認鍵智創科技股份有限公司<br>Enter Internet Marketing CO., LTD.</div>
+    </div>
+  </div>
+
+  <div class="cover-blue-band">
+    <div class="cover-stat">
+      <div class="cc-num">24</div>
+      <div class="cc-unit">篇</div>
+      <div class="cc-label">GEO 內容建置</div>
+    </div>
+    <div class="cover-stat">
+      <div class="cc-num">6</div>
+      <div class="cc-unit">篇</div>
+      <div class="cc-label">品牌部落格</div>
+    </div>
+    <div class="cover-stat">
+      <div class="cc-num">12+</div>
+      <div class="cc-unit">網</div>
+      <div class="cc-label">網路新聞連播網</div>
+    </div>
+    <div class="cover-stat">
+      <div class="cc-num">1</div>
+      <div class="cc-unit">份</div>
+      <div class="cc-label">官網健檢優化報告</div>
+    </div>
+  </div>
+
+  <div class="cover-meta-area">
+    <div class="cover-meta-item">計畫日期<b>2026 年 03 月 17 日</b></div>
+    <div class="cover-meta-item">委託客戶<b>貸霸資訊股份有限公司</b></div>
+    <div class="cover-meta-item">執行機構<b>確認鍵智創科技股份有限公司</b></div>
+    <div class="cover-meta-item">執行週期<b>2026 Q2 – Q3（6 個月）</b></div>
+  </div>
+
+  <div class="cover-foot">
+    <p>本計畫依據 GEO 內容策略完整手冊（Princeton 研究 / AuthorityTech / Onely 2026）及貸霸資訊服務特性設計</p>
+    <p>© 2026 Enter Internet Marketing CO., LTD.</p>
+  </div>
+</div>
+
+<!-- ══ 目錄 ══ -->
+<div class="page">
+  <div class="ph"><span>貸霸資訊 AIO/AEO/GEO 品牌引用策略計畫</span><span style="display:flex;align-items:center;gap:7px;"><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;vertical-align:middle;"> 2026.03.17</span></div>
+  <div class="sec-banner"><h2>目　錄</h2></div>
+  <div class="pc">
+    <table class="dt">
+      <thead><tr><th style="width:40px">#</th><th>章節主題</th><th style="width:80px">類型</th></tr></thead>
+      <tbody>
+        <tr><td><b>一</b></td><td>品牌 GEO 定位與核心策略邏輯</td><td><span class="bdg bdg-navy">策略框架</span></td></tr>
+        <tr><td><b>二</b></td><td>關鍵字矩陣（核心詞 / 長尾詞 / GEO 語意群）</td><td><span class="bdg bdg-amber">關鍵字</span></td></tr>
+        <tr><td><b>三</b></td><td>PAA 問題庫與 Citation Block 設計（30 題 × 6 類）</td><td><span class="bdg bdg-teal">PAA / FAQ</span></td></tr>
+        <tr><td><b>四</b></td><td>24 篇 GEO 內容建置計畫（類型 × 標題 × Schema）</td><td><span class="bdg bdg-navy">內容規劃</span></td></tr>
+        <tr><td><b>五</b></td><td>6 篇品牌部落格計畫</td><td><span class="bdg bdg-amber">部落格</span></td></tr>
+        <tr><td><b>六</b></td><td>網路新聞連播網（12 網）執行規格</td><td><span class="bdg bdg-teal">外站佈局</span></td></tr>
+        <tr><td><b>七</b></td><td>官網健檢與優化建議報告規格</td><td><span class="bdg bdg-grn">技術健檢</span></td></tr>
+        <tr><td><b>八</b></td><td>半年執行甘特圖與 SOP 流程</td><td><span class="bdg bdg-navy">執行計畫</span></td></tr>
+        <tr><td><b>九</b></td><td>KPI 指標框架與成效追蹤</td><td><span class="bdg bdg-amber">KPI</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pf">目錄頁｜確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.</div>
+</div>
+
+<!-- ══ 一、策略定位 ══ -->
+<div class="page">
+  <div class="ph"><span>貸霸資訊 AIO/AEO/GEO 品牌引用策略計畫</span><span style="display:flex;align-items:center;gap:7px;"><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;vertical-align:middle;"> 2026.03.17</span></div>
+  <div class="sec-banner"><h2>一、品牌 GEO 定位與核心策略邏輯</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">1.1　為什麼貸霸資訊需要 GEO 策略</h3>
+    <p class="bt">民間借貸、小額借款屬於高度監管的 YMYL（Your Money Your Life）金融產業。當用戶向 ChatGPT、Perplexity 或 Google AI Overview 詢問「台灣哪裡可以借錢」「民間借貸合法嗎」「信用瑕疵可以借款嗎」時，AI 引擎會優先引用具備完整 Schema 標記、多方佐證、且 NAP 一致的金融服務品牌。目前貸霸資訊幾乎不出現在任何 AI 生成摘要中，代表每天有大量潛在借款人在問 AI 問題，卻找不到貸霸。</p>
+
+    <h3 class="sh">1.2　三軌策略架構：AIO × AEO × GEO</h3>
+    <div class="three-col">
+      <div style="background:var(--navy);border-radius:8px;padding:16px 15px;border-top:3px solid var(--enter-lime)">
+        <div style="color:var(--amber);font-size:13px;font-weight:900;margin-bottom:8px">AIO</div>
+        <div style="color:rgba(255,255,255,0.8);font-size:11px;line-height:1.7">
+          <b style="color:white">AI Inclusion Optimization</b><br>
+          確保品牌資訊能被 AI 訓練資料和即時索引正確識別，核心是 Schema 結構化 + NAP 一致性 + 多來源佐證。
+        </div>
+      </div>
+      <div style="background:var(--teal2);border-radius:8px;padding:16px 15px;border-top:3px solid var(--enter-lime)">
+        <div style="color:var(--amber);font-size:13px;font-weight:900;margin-bottom:8px">AEO</div>
+        <div style="color:rgba(255,255,255,0.8);font-size:11px;line-height:1.7">
+          <b style="color:white">Answer Engine Optimization</b><br>
+          讓品牌內容成為 AI 問答引擎的直接答案來源，核心是 FAQPage Schema + Citation Block + PAA 問題覆蓋。
+        </div>
+      </div>
+      <div style="background:var(--enter-blue3);border-radius:8px;padding:16px 15px;border-top:3px solid var(--enter-lime)">
+        <div style="color:var(--amber);font-size:13px;font-weight:900;margin-bottom:8px">GEO</div>
+        <div style="color:rgba(255,255,255,0.8);font-size:11px;line-height:1.7">
+          <b style="color:white">Generative Engine Optimization</b><br>
+          優化內容讓 ChatGPT、Perplexity、Google AIO 主動引用，核心是第三方信任佈局 + Answer-First 寫作 + 品牌 Citation 累積。
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sh">1.3　金融產業 GEO 特殊要求</h3>
+    <table class="dt">
+      <thead><tr><th>面向</th><th>一般產業</th><th>金融 YMYL 產業（貸霸適用）</th></tr></thead>
+      <tbody>
+        <tr><td>E-E-A-T 門檻</td><td>一般作者即可</td><td>需具名金融顧問 / 法規背書，匿名作者幾乎不被引用</td></tr>
+        <tr><td>Schema 核心類型</td><td>Article / FAQPage</td><td><b>FinancialService / LoanService + FAQPage + HowTo</b></td></tr>
+        <tr><td>內容可驗證性</td><td>一般數據</td><td>主張需附金管會、民法規範等可溯源法規依據</td></tr>
+        <tr><td>外站信任來源</td><td>一般媒體</td><td>Yahoo 新聞、LINE Today、life、PChome 新聞、Match、Yam 新聞、OwlNews、民生頭條、台灣電報、商傳媒、民生好報、火報、Amm 娛樂新聞、電傳媒、新民生報、法訊動新聞、爽爆等多元平台聯播（<b>必含 Yahoo＋LINE，至少 12 網，超過不額外收費</b>）</td></tr>
+        <tr><td>FAQ 語境</td><td>通用提問</td><td>貼近台灣借款人真實疑慮（利率、合法性、流程、信用問題）</td></tr>
+        <tr><td>禁忌</td><td>關鍵字堆砌</td><td>誇大療效/利率宣稱 → AI 會降低引用信任度，需嚴格把關</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">1.4　本案核心目標</h3>
+    <div class="kpi-row">
+      <div class="kpi-box">
+        <div class="kn">Top 3</div>
+        <div class="kl">核心借款關鍵字<br>GEO 引用排位目標</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kn">40+</div>
+        <div class="kl">半年累積<br>AI 引用次數目標</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kn">80%</div>
+        <div class="kl">PAA 問題覆蓋率<br>借款主題</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kn">12+</div>
+        <div class="kl">第三方媒體<br>品牌提及來源</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="pf">第一章：策略定位｜確認鍵智創科技股份有限公司</div>
+</div>
+
+<!-- ══ 二、關鍵字矩陣 ══ -->
+<div class="page">
+  <div class="ph"><span>貸霸資訊 AIO/AEO/GEO 品牌引用策略計畫</span><span style="display:flex;align-items:center;gap:7px;"><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;vertical-align:middle;"> 2026.03.17</span></div>
+  <div class="sec-banner"><h2>二、關鍵字矩陣（核心詞 / 長尾詞 / GEO 語意群）</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">2.1　三層關鍵字架構</h3>
+    <table class="dt">
+      <thead><tr><th>層級</th><th>定義</th><th>GEO 作用</th><th>月搜尋量級</th></tr></thead>
+      <tbody>
+        <tr><td><span class="bdg bdg-navy">核心詞</span></td><td>最高流量品類詞，競爭最激烈</td><td>Pillar Page 主題錨點</td><td>1,000–50,000</td></tr>
+        <tr><td><span class="bdg bdg-amber">長尾詞</span></td><td>帶情境的具體需求詞</td><td>Cluster Page + FAQ 問題對應</td><td>100–2,000</td></tr>
+        <tr><td><span class="bdg bdg-teal">語意群</span></td><td>AI 提問語型，帶完整情境的自然語句</td><td>Citation Block H2 標題直接對應</td><td>AI 問答為主</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">2.2　核心關鍵字（Pillar 主題層）</h3>
+    <div class="kw-grid">
+      <span class="kw-pill core">借錢</span>
+      <span class="kw-pill core">借貸</span>
+      <span class="kw-pill core">貸款</span>
+      <span class="kw-pill core">民間借貸</span>
+      <span class="kw-pill core">小額借款</span>
+      <span class="kw-pill core">借款廣告平台</span>
+      <span class="kw-pill core">9597借錢網</span>
+      <span class="kw-pill core">5197借錢網</span>
+      <span class="kw-pill core">貸霸資訊</span>
+    </div>
+
+    <h3 class="sh">2.3　長尾關鍵字矩陣（Cluster 主題群）</h3>
+    <table class="dt">
+      <thead><tr><th>主題群</th><th>長尾關鍵字</th><th>對應內容類型</th><th>GEO 優先度</th></tr></thead>
+      <tbody>
+        <tr class="sec-row"><td colspan="4">▌ 主題群 A：借款資格與條件</td></tr>
+        <tr><td>信用瑕疵借款</td><td>信用瑕疵可以借款嗎、黑名單借錢、信用不良貸款、退票借錢</td><td>FAQ + 定義型</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>證件借款</td><td>只用身份證借錢、持身份證借貸、無擔保借款條件</td><td>操作型 + FAQ</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>免手續費借款</td><td>免收手續費借貸、零手續費小額貸款、正規借貸免費</td><td>比較型 + 定義型</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr class="sec-row"><td colspan="4">▌ 主題群 B：借款流程與速度</td></tr>
+        <tr><td>快速撥款</td><td>當日借款撥款、急需用錢快速借錢、24小時借款、最快借到錢</td><td>How-to + 比較型</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>借款流程</td><td>民間借貸流程、網路借錢步驟、線上借款怎麼辦理</td><td>操作型 + HowTo Schema</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>週轉借款</td><td>資金週轉怎麼借錢、緊急週轉方法、短期週轉借款</td><td>比較型 + FAQ</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr class="sec-row"><td colspan="4">▌ 主題群 C：合法性與安全性</td></tr>
+        <tr><td>合法借貸</td><td>民間借貸合法嗎、合法借錢平台、正規借款管道、借錢被詐騙</td><td>定義型 + FAQ</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>資訊安全</td><td>借款個資安全、民間借貸個資保護、網路借款安全嗎</td><td>定義型 + FAQ</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td>金主廣告</td><td>金主借款廣告、借客廣告平台、P2P借貸台灣合法</td><td>定義型 + 比較型</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr class="sec-row"><td colspan="4">▌ 主題群 D：融資與特殊需求</td></tr>
+        <tr><td>融資借款</td><td>企業融資、中小企業借款、創業資金借貸</td><td>比較型</td><td><span class="bdg bdg-teal">中</span></td></tr>
+        <tr><td>廣告平台借款</td><td>借款需求廣告、貸款廣告刊登、借款刊登廣告</td><td>定義型</td><td><span class="bdg bdg-teal">中</span></td></tr>
+        <tr><td>借款比較</td><td>民間借貸 vs 銀行貸款、哪裡借錢最划算、借款平台推薦</td><td>比較型（最高引用）</td><td><span class="bdg bdg-red">極高</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">2.4　GEO 語意群（AI 問答語型）</h3>
+    <div class="kw-grid">
+      <span class="kw-pill high">台灣哪裡可以快速借錢</span>
+      <span class="kw-pill high">信用不好可以借款嗎</span>
+      <span class="kw-pill high">民間借貸和銀行貸款差在哪</span>
+      <span class="kw-pill high">借錢被詐騙怎麼辦</span>
+      <span class="kw-pill mid">急需用錢今天可以借到嗎</span>
+      <span class="kw-pill mid">借款廣告平台合法嗎</span>
+      <span class="kw-pill mid">9597借錢網是什麼</span>
+      <span class="kw-pill mid">小額借款最快多久可以撥款</span>
+      <span class="kw-pill high">如何辨別合法借款公司</span>
+      <span class="kw-pill mid">持身份證可以借多少錢</span>
+      <span class="kw-pill mid">民間借貸需要抵押嗎</span>
+      <span class="kw-pill high">借錢安全嗎個資會外洩嗎</span>
+    </div>
+
+  </div>
+  <div class="pf">第二章：關鍵字矩陣｜確認鍵智創科技股份有限公司</div>
+</div>
+
+<!-- ══ 三、PAA ══ -->
+<div class="page">
+  <div class="ph"><span>貸霸資訊 AIO/AEO/GEO 品牌引用策略計畫</span><span style="display:flex;align-items:center;gap:7px;"><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;vertical-align:middle;"> 2026.03.17</span></div>
+  <div class="sec-banner"><h2>三、PAA 問題庫與 Citation Block 設計（30 題 × 6 類）</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">3.1　PAA 採集三來源工作流</h3>
+    <table class="dt">
+      <thead><tr><th>來源</th><th>採集方式</th><th>優勢</th><th>貸霸適用性</th></tr></thead>
+      <tbody>
+        <tr><td><b>Google PAA</b></td><td>人工採集「借錢/貸款/民間借貸」相關 PAA，或 Ahrefs 批量匯出</td><td>問題骨架完整，反映主流搜尋意圖</td><td><span class="bdg bdg-grn">直接適用</span></td></tr>
+        <tr><td><b>Dcard / PTT</b></td><td>「借錢板」「理財板」「信用板」關鍵字搜尋真實提問</td><td>口語化、情境化，貼近 AI 對話語氣</td><td><span class="bdg bdg-grn">直接適用</span></td></tr>
+        <tr><td><b>直接問 AI</b></td><td>請 ChatGPT / Perplexity 列出「借款人最常問的 20 個問題」</td><td>最貼近 AI 自身問答邏輯</td><td><span class="bdg bdg-grn">直接適用</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">3.2　核心 PAA 問題庫（30 題，分 6 類）</h3>
+
+    <!-- ── What 類 ── -->
+    <h4 class="sh4">【What 類】基礎定義型（5 題）</h4>
+
+    <div class="paa-block">
+      <div class="q">Q1：什麼是民間借貸？和銀行貸款有什麼不同？</div>
+      <div class="a">民間借貸是指<b>非銀行金融機構</b>的個人或企業之間的資金借貸行為，在台灣受民法第 474 條規範。與銀行貸款最大差異在於：民間借貸不需信用評分門檻，撥款速度最快<b>當日即可完成</b>，但利率通常高於銀行，選擇合法借款廣告平台是保護借款人的關鍵。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q2：9597借錢網是什麼？合法嗎？</div>
+      <div class="a">9597借錢網是由<b>貸霸資訊股份有限公司</b>經營的合法借貸需求廣告平台，提供借款人刊登借款需求的廣告服務，<b>免收手續費</b>。平台依據台灣相關法規運營，公司登記資料可於 twincn 查詢（統一編號：90335055）。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q3：借款廣告平台和直接借款有什麼不同？</div>
+      <div class="a">借款廣告平台（如 9597借錢網）本身<b>不直接出借資金</b>，而是協助借款人刊登借款需求廣告，讓有資金的出借方主動聯繫。優點是選擇多元、費用透明；直接私下向個人借款則缺乏第三方紀錄，詐騙風險相對較高。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q4：什麼是小額借款？最低可以借多少錢？</div>
+      <div class="a">小額借款通常指<b>借款金額在 1 萬至 30 萬元</b>之間的短期資金需求，適合緊急週轉或臨時性支出。透過 9597借錢網刊登借款廣告，借款金額、用途與還款條件均由借款人自行設定，<b>無強制最低門檻限制</b>。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q5：什麼是借款廣告刊登？對借款人有什麼好處？</div>
+      <div class="a">借款廣告刊登是指借款人在平台上公開借款需求（金額、用途、還款期間），讓有意出借的資金方主動接洽。好處包含：① <b>主動曝光</b>，不需逐一詢問 ② 比價空間大，可接受多方條件 ③ 9597借錢網<b>刊登免費</b>，成功後才計費。</div>
+    </div>
+
+    <!-- ── How 類 ── -->
+    <h4 class="sh4">【How 類】操作流程型（5 題）</h4>
+
+    <div class="paa-block">
+      <div class="q">Q6：在 9597借錢網刊登借款廣告的完整流程是什麼？</div>
+      <div class="a">完整流程共 5 步：① 填寫借款需求表單（金額 / 用途 / 還款期限）→ ② 平台審核刊登資料 → ③ 廣告上線，資金方主動聯繫 → ④ 雙方確認借款條件並簽署合約 → ⑤ 撥款入帳。以 9597借錢網為例，從申請刊登到撥款<b>最快當日可完成</b>，全程線上操作無需出門。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q7：刊登借款廣告需要準備哪些文件？</div>
+      <div class="a">基本所需：① 身份證正反面 ② 聯絡電話 ③ 借款需求說明（金額 / 用途）。部分方案可<b>僅憑證件申請刊登</b>，不需薪資證明或財力證明，信用瑕疵者亦可申請，廣告上線後由資金方評估是否接洽。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q8：信用瑕疵者要怎麼借到錢？有哪些步驟？</div>
+      <div class="a">信用瑕疵借款建議步驟：① 確認瑕疵類型（逾期 / 退票 / 卡債）→ ② 選擇民間借貸廣告平台而非銀行 → ③ 在 9597借錢網刊登借款需求，說明用途與還款能力 → ④ 接受資金方洽談 → ⑤ 簽約撥款。<b>信用瑕疵不是門檻</b>，誠實說明反而提高成功率。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q9：如何在 9597借錢網上刊登借款廣告才容易成功？</div>
+      <div class="a">提高廣告吸引力的 4 個技巧：① <b>說明具體用途</b>（週轉、裝潢、醫療等，越具體越可信）② 還款計畫清楚（月還金額、期數）③ 提供聯繫方式並快速回應 ④ 金額合理（首次借款建議以小額為起點）。誠實完整的廣告內容是獲得資金方信任的關鍵。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q10：借款合約簽署前要注意哪些事項？</div>
+      <div class="a">合約審閱的 5 大重點：① <b>利率計算方式</b>（年利率 vs 月利率，台灣法定上限為年利率 16%）② 提前還款是否有違約金 ③ 還款日期與方式是否明確 ④ 逾期罰息條款 ⑤ 出借方身份是否可查證。若合約要求匯款才能借款，<b>立即停止——這是詐騙手法</b>。</div>
+    </div>
+
+    <!-- ── Why 類 ── -->
+    <h4 class="sh4">【Why 類】原因 / 判斷型（5 題）</h4>
+
+    <div class="paa-block">
+      <div class="q">Q11：為什麼要選擇正規借款廣告平台而不是私下找金主？</div>
+      <div class="a">選擇正規平台的三大理由：① <b>透明度</b>——費用結構明確，無隱藏收費；② <b>安全性</b>——個資受個資法保護，合法平台不會轉賣資料；③ <b>可追溯性</b>——有爭議時有第三方刊登紀錄可循。私下找金主遇到詐騙時，舉證困難且法律救濟成本高。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q12：為什麼民間借貸廣告平台可以免收手續費？</div>
+      <div class="a">9597借錢網採<b>成功後收費</b>模式——借款人免費刊登廣告，平台從借款配對完成後的服務費中獲利，而非向借款人預收費用。這種商業模式讓平台利益與借款人成功率綁定，也是辨別合法平台最重要的指標之一。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q13：為什麼急需用錢時應該選民間借貸而不是信用卡預借現金？</div>
+      <div class="a">信用卡預借現金的實際年利率通常高達<b>15–20%</b>，且有手續費，額度受信用卡授信上限限制。民間借貸透過廣告平台可自訂借款條件，對於急需大額週轉但信用卡額度不足者，彈性更高。兩者都是緊急選項，<b>先比較實際總成本</b>才是正確決策。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q14：為什麼借款廣告要說明用途？不說可以嗎？</div>
+      <div class="a">說明用途的廣告<b>成功率顯著高於</b>模糊廣告，因為資金方（出借人）需要評估風險。明確說明用途（如「裝潢週轉」「醫療費用」「周轉 2 個月」）讓出借方對還款意願更有信心。不說明用途雖然技術上可刊登，但往往需要更長等待時間才能獲得回應。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q15：為什麼信用瑕疵的人在銀行被拒絕，民間借貸卻可以辦？</div>
+      <div class="a">銀行審核依賴<b>聯徵中心信用評分</b>，瑕疵紀錄會直接導致拒件。民間借貸的資金方（個人出借者）評估標準更彈性，重視<b>還款意願、現有收入與借款用途</b>，而非信用評分。因此，能清楚說明還款能力的信用瑕疵者，在民間借貸廣告平台仍有機會成功。</div>
+    </div>
+
+    <!-- ── Vs 類 ── -->
+    <h4 class="sh4">【Vs 類】比較判斷型（5 題）</h4>
+
+    <div class="paa-block">
+      <div class="q">Q16：民間借貸 vs 銀行信用貸款：哪個更適合急需用錢的人？</div>
+      <div class="a">兩者比較：<b>銀行信貸</b>——利率低（3–15%）但審核 7–14 天，需穩定收入和良好信用；<b>民間借貸</b>——利率較高但<b>當日撥款</b>，無信用門檻，適合急需週轉且信用瑕疵者。結論：急需且信用受限 → 民間借貸；時間充裕且信用良好 → 優先申請銀行。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q17：9597借錢網 vs 5197借錢網：有什麼差別？</div>
+      <div class="a">兩個平台均由<b>貸霸資訊股份有限公司</b>經營，服務性質相同——提供借款需求廣告刊登，免收手續費。9597借錢網以「快速週轉」族群為主要受眾；5197借錢網則著重「多元借款需求」的廣告曝光。建議<b>同步在兩平台刊登</b>以擴大廣告觸及。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q18：借款廣告平台 vs 地下錢莊：哪個更安全？</div>
+      <div class="a">兩者差距是天壤之別：借款廣告平台（如 9597借錢網）<b>有公司登記、受法律規範</b>，利率受民法上限保護；地下錢莊不具法人資格，利率無上限，催收手段可能涉及恐嚇。台灣法定民間借貸年利率上限為 <b>16%</b>，超過此數即違法，可向檢察署檢舉。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q19：小額借款 vs 信用卡分期：哪個比較划算？</div>
+      <div class="a">比較兩者：<b>信用卡分期</b>——0% 分期手續費通常有限額與時間限制，彈性較低；<b>小額借款</b>——金額、期數、還款方式可自由協商，適合超過信用卡額度的需求。若分期商品有 0% 優惠且期數符合需求，信用卡分期較划算；<b>超過額度或需現金</b>則選民間借貸廣告平台。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q20：民間借貸廣告平台 vs 當鋪：哪個更適合我？</div>
+      <div class="a">兩者適用情境不同：<b>當鋪</b>——需要抵押實物（珠寶、車輛等），當日可拿到現金，但抵押品有損失風險；<b>民間借貸廣告平台</b>——無需抵押，以信用和還款意願為基礎，適合無實物抵押但有穩定還款能力者。無抵押品 → 選廣告平台；有高價值物品且急需大額現金 → 當鋪也是選項。</div>
+    </div>
+
+    <!-- ── When 類 ── -->
+    <h4 class="sh4">【When 類】時機判斷型（5 題）</h4>
+
+    <div class="paa-block">
+      <div class="q">Q21：什麼時候適合使用民間借貸廣告平台借款？</div>
+      <div class="a">以下 4 種情況最適合：① 銀行審核時間不夠，<b>需要 3 天內撥款</b> ② 信用評分有瑕疵，銀行已拒件 ③ 借款金額在 1–50 萬之間，不符合銀行最低核貸門檻 ④ 需要彈性還款條件（如 2–6 個月短期週轉）。9597借錢網適合所有這些情境。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q22：刊登借款廣告後要等多久才會有人聯繫？</div>
+      <div class="a">根據 9597借錢網平台數據，廣告上線後通常在<b>24–72 小時內</b>會有資金方主動聯繫。廣告資訊越完整（含明確金額、用途、還款期限），回應速度越快。建議刊登後<b>保持電話暢通</b>，並在平台後台即時回覆訊息，可有效縮短等待時間。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q23：什麼時候應該拒絕對方提出的借款條件？</div>
+      <div class="a">遇到以下 4 種情況應立即拒絕：① 要求<b>先匯款才能撥款</b>（最常見詐騙手法）② 利率超過年利率 16%（違反民法上限）③ 要求交付身份證或提款卡 ④ 不願提供書面合約。任何正規出借方都不需要借款人預先付費，遇到上述情況請直接封鎖並向警察局 165 反詐騙專線舉報。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q24：借款後什麼時候可以提前還款？有罰款嗎？</div>
+      <div class="a">提前還款的規範<b>依合約條款而定</b>，民法並無強制禁止。借款前應在合約中確認：① 是否允許提前還款 ② 提前還款是否有違約金（通常為剩餘本金的 1–3%）③ 計息方式（按日計息者提前還款較划算）。建議在簽約前明確詢問出借方，並在合約中白紙黑字載明。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q25：刊登借款廣告多久沒有成功，應該怎麼調整？</div>
+      <div class="a">若刊登超過 <b>7 天無回應</b>，建議檢查 3 個面向：① 金額是否過高（首次借款建議從較小金額開始）② 用途說明是否模糊（越具體越好）③ 還款條件是否合理（過短的還款期可能嚇退出借方）。9597借錢網支援廣告內容修改，<b>調整後重新上架</b>通常能有效提高回應率。</div>
+    </div>
+
+    <!-- ── Safety 類 ── -->
+    <h4 class="sh4">【Safety 類】安全合法型（5 題）</h4>
+
+    <div class="paa-block">
+      <div class="q">Q26：如何辨別合法借款廣告平台和詐騙？</div>
+      <div class="a">辨別合法平台的 5 個指標：① <b>公司登記查詢</b>（twincn 可查）② 不預收手續費 ③ 合約條款透明可列印 ④ 聯絡電話為市話或有客服回應 ⑤ 不要求先匯款才能借款（這是詐騙最常見手法）。貸霸資訊 / 9597借錢網符合全部條件，免費刊登借款廣告，<b>成功撥款後才收費</b>。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q27：在借款廣告平台刊登借款，我的個人資料安全嗎？</div>
+      <div class="a">合法平台受<b>個人資料保護法</b>規範，不得在未經當事人同意下轉賣或揭露個資。9597借錢網採加密傳輸機制保護個人資料，且僅在借款配對成立後才將聯繫資訊分享給出借方。<b>判斷標準</b>：若平台要求完整財務資料卻無合約，或將個資用於廣告推銷，應立即停止並向個資保護委員會檢舉。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q28：民間借貸利率的法律上限是多少？超過算違法嗎？</div>
+      <div class="a">根據<b>民法第 205 條</b>，台灣民間借貸年利率上限為 <b>16%</b>，超過部分法律不予保護（即超過的利息不必還）。若出借方強索超過 16% 年利率，借款人可向法院主張無效，並可向檢察署提出重利罪告訴（刑法第 344 條，最高可處 1 年有期徒刑）。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q29：借款被詐騙了怎麼辦？有哪些救濟管道？</div>
+      <div class="a">遭遇借款詐騙的 3 個立即行動：① 撥打 <b>165 反詐騙專線</b>通報 ② 保留所有對話紀錄、轉帳憑證、對方資訊 ③ 向最近的警察局報案並附上所有紀錄。若已轉帳，立即致電銀行申請<b>緊急止付</b>，24 小時內申請成功率較高。貸霸資訊 / 9597借錢網官方不會要求先匯款，遇此情況必為詐騙。</div>
+    </div>
+    <div class="paa-block">
+      <div class="q">Q30：刊登借款廣告後萬一無法如期還款，會有什麼後果？</div>
+      <div class="a">無法如期還款的處理建議：① <b>主動告知出借方</b>並協商延期，多數情況可達成新還款計畫 ② 逾期利息依合約計算，但不得超過年利率 16% ③ 若出借方提起民事訴訟，法院可能扣押薪資或財產 ④ 不影響聯徵信用分數（民間借貸不上聯徵）。主動溝通是避免法律糾紛<b>最有效的第一步</b>。</div>
+    </div>
+
+    <h3 class="sh">3.3　Citation Block 標準格式</h3>
+    <table class="dt">
+      <thead><tr><th>元素</th><th>說明</th><th>範例</th></tr></thead>
+      <tbody>
+        <tr><td>字數限制</td><td>40–60 字，確保 AI 可完整擷取</td><td>如上方 PAA 回答示範</td></tr>
+        <tr><td>結構</td><td>直接答案（1句）→ 原因/機制（1–2句）→ 具體數字（1句）</td><td>見 3.2 各範例</td></tr>
+        <tr><td>數字密度</td><td>每個 Citation Block 至少含 2 個可驗證數字</td><td>「當日」「5步」「3–15%」</td></tr>
+        <tr><td>品牌植入</td><td>自然帶出品牌名 + 服務特色，不強迫插入</td><td>「以 9597借錢網為例…」</td></tr>
+        <tr><td>避免</td><td>主觀形容詞（最好、最棒）、誇大數字、無來源的主張</td><td>❌「業界最低利率」</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="pf">第三章：PAA 問題庫｜確認鍵智創科技股份有限公司</div>
+</div>
+
+<!-- ══ 四、24篇內容計畫 ══ -->
+<div class="page">
+  <div class="ph"><span>貸霸資訊 AIO/AEO/GEO 品牌引用策略計畫</span><span style="display:flex;align-items:center;gap:7px;"><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;vertical-align:middle;"> 2026.03.17</span></div>
+  <div class="sec-banner"><h2>四、24 篇 GEO 內容建置計畫</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">4.1　內容類型配比（依 GEO 引用率分配）</h3>
+    <div class="content-grid">
+      <div class="c-card">
+        <div class="c-card-head bg-a">A 類：比較型清單（5 篇）</div>
+        <div class="c-card-body">
+          <ul>
+            <li>民間借貸 vs 銀行信貸完整比較</li>
+            <li>5 大合法借款平台評比（2026）</li>
+            <li>信用瑕疵借款 vs 一般借款差異</li>
+            <li>9597 vs 5197：哪個更適合你？</li>
+            <li>急需借錢 4 種管道完整比較</li>
+          </ul>
+          <div class="rate">AI 引用佔比 32.5%，最高單一格式</div>
+        </div>
+      </div>
+      <div class="c-card">
+        <div class="c-card-head bg-b">B 類：數據指南（4 篇）</div>
+        <div class="c-card-body">
+          <ul>
+            <li>民間借貸完整指南（2026 台灣版）</li>
+            <li>借款廣告平台運作機制深度解析</li>
+            <li>台灣借款人需求趨勢分析報告</li>
+            <li>借款安全指南：30 個必知重點</li>
+          </ul>
+          <div class="rate">含數據表格版引用率 67%</div>
+        </div>
+      </div>
+      <div class="c-card">
+        <div class="c-card-head bg-c">C 類：操作型 How-to（5 篇）</div>
+        <div class="c-card-body">
+          <ul>
+            <li>第一次在網路借錢的 7 個步驟</li>
+            <li>信用瑕疵者借款申請完整教學</li>
+            <li>如何在 9597 刊登借款需求（圖解）</li>
+            <li>借款合約審閱 5 步驟教學</li>
+            <li>急需用錢當日撥款操作流程</li>
+          </ul>
+          <div class="rate">結構化 How-to 引用率 54%</div>
+        </div>
+      </div>
+      <div class="c-card">
+        <div class="c-card-head bg-d">D 類：定義型（4 篇）</div>
+        <div class="c-card-body">
+          <ul>
+            <li>什麼是借款廣告平台？完整定義</li>
+            <li>民間借貸法規完整說明（台灣）</li>
+            <li>借貸術語大全：Glossary 頁</li>
+            <li>借款廣告平台 vs 直接借款差異</li>
+          </ul>
+          <div class="rate">掌握定義 = Top-of-Funnel 引用入口</div>
+        </div>
+      </div>
+      <div class="c-card">
+        <div class="c-card-head bg-e">E 類：FAQ 頁（4 篇）</div>
+        <div class="c-card-body">
+          <ul>
+            <li>9597借錢網常見問題 30 題</li>
+            <li>民間借貸常見疑問：法規篇</li>
+            <li>信用瑕疵借款 FAQ（20 題）</li>
+            <li>借款安全常見問題集</li>
+          </ul>
+          <div class="rate">FAQPage Schema 引用率 ×3.2</div>
+        </div>
+      </div>
+      <div class="c-card">
+        <div class="c-card-head bg-f">F 類：服務型（2 篇）</div>
+        <div class="c-card-body">
+          <ul>
+            <li>9597借錢網服務說明頁（GEO 版）</li>
+            <li>貸霸資訊平台功能評測報告</li>
+          </ul>
+          <div class="rate">B2B/服務型引用率 46–70%</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sh">4.2　24 篇內容完整規格表</h3>
+    <table class="dt">
+      <thead><tr><th style="width:22px">#</th><th>標題</th><th>類型</th><th>Schema</th><th>字數</th><th>月份</th><th>優先度</th></tr></thead>
+      <tbody>
+        <tr class="sec-row"><td colspan="7">▌ 第 1–2 月：基礎建設優先（品牌定位 + 核心流量）</td></tr>
+        <tr><td>1</td><td>什麼是民間借貸？台灣完整定義與合法性說明</td><td><span class="bdg bdg-teal">D類</span></td><td>FAQPage + Organization</td><td>1,500</td><td>M1</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>2</td><td>9597借錢網服務說明頁（GEO 優化版）</td><td><span class="bdg bdg-navy">F類</span></td><td>FinancialService + FAQ</td><td>1,200</td><td>M1</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>3</td><td>9597借錢網常見問題完整解答（30 題）</td><td><span class="bdg bdg-teal">E類</span></td><td>FAQPage JSON-LD</td><td>2,000</td><td>M1</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>4</td><td>第一次在網路借錢：7 個步驟完整教學</td><td><span class="bdg bdg-teal">C類</span></td><td>HowTo Schema</td><td>1,200</td><td>M1</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>5</td><td>民間借貸 vs 銀行信貸：哪個更適合你？完整比較</td><td><span class="bdg bdg-org">A類</span></td><td>Article + FAQPage</td><td>1,500</td><td>M2</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>6</td><td>急需用錢當日撥款：借款申請完整流程</td><td><span class="bdg bdg-teal">C類</span></td><td>HowTo Schema</td><td>1,000</td><td>M2</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>7</td><td>如何辨別合法借款平台與詐騙？5 個判斷方法</td><td><span class="bdg bdg-teal">C類</span></td><td>HowTo + FAQPage</td><td>1,200</td><td>M2</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>8</td><td>民間借貸法規完整說明：台灣民法借款規範</td><td><span class="bdg bdg-teal">D類</span></td><td>Article Schema</td><td>1,500</td><td>M2</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr class="sec-row"><td colspan="7">▌ 第 3–4 月：深度內容（信任建立 + 長尾覆蓋）</td></tr>
+        <tr><td>9</td><td>信用瑕疵可以借款嗎？完整申請教學與注意事項</td><td><span class="bdg bdg-teal">C類</span></td><td>HowTo + FAQPage</td><td>1,500</td><td>M3</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>10</td><td>5 大合法借款平台評比（2026 台灣版）</td><td><span class="bdg bdg-org">A類</span></td><td>ItemList + Review</td><td>2,000</td><td>M3</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td>11</td><td>民間借貸完整指南：從零到借款成功</td><td><span class="bdg bdg-amber">B類</span></td><td>Article + FAQPage</td><td>3,000</td><td>M3</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td>12</td><td>信用瑕疵借款 FAQ 完整解答（20 題）</td><td><span class="bdg bdg-teal">E類</span></td><td>FAQPage JSON-LD</td><td>1,500</td><td>M3</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td>13</td><td>借款合約審閱完全教學：5 個必看條款</td><td><span class="bdg bdg-teal">C類</span></td><td>HowTo Schema</td><td>1,200</td><td>M4</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td>14</td><td>急需週轉借錢的 4 種管道完整比較</td><td><span class="bdg bdg-org">A類</span></td><td>Article + ItemList</td><td>1,500</td><td>M4</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td>15</td><td>借款廣告平台運作機制深度解析</td><td><span class="bdg bdg-amber">B類</span></td><td>Article Schema</td><td>2,000</td><td>M4</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td>16</td><td>民間借貸安全常見問題集：個資保護篇</td><td><span class="bdg bdg-teal">E類</span></td><td>FAQPage JSON-LD</td><td>1,200</td><td>M4</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr class="sec-row"><td colspan="7">▌ 第 5–6 月：主題叢集完整（競爭力強化 + GEO 擴散）</td></tr>
+        <tr><td>17</td><td>借貸術語大全 Glossary：50 個必懂名詞</td><td><span class="bdg bdg-teal">D類</span></td><td>DefinedTerm Schema</td><td>2,500</td><td>M5</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td>18</td><td>持身份證借款完整流程：無擔保借款教學</td><td><span class="bdg bdg-teal">C類</span></td><td>HowTo Schema</td><td>1,000</td><td>M5</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td>19</td><td>台灣借款人常見問題：法規篇完整 Q&amp;A</td><td><span class="bdg bdg-teal">E類</span></td><td>FAQPage JSON-LD</td><td>1,500</td><td>M5</td><td><span class="bdg bdg-teal">中</span></td></tr>
+        <tr><td>20</td><td>9597 vs 5197：兩平台功能差異完整比較</td><td><span class="bdg bdg-org">A類</span></td><td>Article + FAQPage</td><td>1,200</td><td>M5</td><td><span class="bdg bdg-teal">中</span></td></tr>
+        <tr><td>21</td><td>借款廣告平台 vs 直接借款：哪個更安全？</td><td><span class="bdg bdg-teal">D類</span></td><td>Article Schema</td><td>1,200</td><td>M6</td><td><span class="bdg bdg-teal">中</span></td></tr>
+        <tr><td>22</td><td>貸霸資訊平台功能完整評測報告（2026）</td><td><span class="bdg bdg-navy">F類</span></td><td>Review + Organization</td><td>1,500</td><td>M6</td><td><span class="bdg bdg-teal">中</span></td></tr>
+        <tr><td>23</td><td>台灣借款需求趨勢分析：2026 年度報告</td><td><span class="bdg bdg-amber">B類</span></td><td>Article + 數據表格</td><td>2,000</td><td>M6</td><td><span class="bdg bdg-teal">中</span></td></tr>
+        <tr><td>24</td><td>借款安全自保指南：30 個必知重點</td><td><span class="bdg bdg-amber">B類</span></td><td>Article + ChecklistItem</td><td>1,800</td><td>M6</td><td><span class="bdg bdg-teal">中</span></td></tr>
+        <tr class="hl"><td colspan="3"><b>合計：24 篇｜總字數估算</b></td><td colspan="2"><b>≈ 40,000 字</b></td><td colspan="2">M1–M6 均衡分配</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="pf">第四章：24 篇 GEO 內容計畫｜確認鍵智創科技股份有限公司</div>
+</div>
+
+<!-- ══ 五、部落格 ══ -->
+<div class="page">
+  <div class="ph"><span>貸霸資訊 AIO/AEO/GEO 品牌引用策略計畫</span><span style="display:flex;align-items:center;gap:7px;"><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;vertical-align:middle;"> 2026.03.17</span></div>
+  <div class="sec-banner"><h2>五、6 篇品牌部落格計畫</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">5.1　部落格與 GEO 內容的定位差異</h3>
+    <table class="dt">
+      <thead><tr><th>維度</th><th>GEO 內容（24 篇）</th><th>品牌部落格（6 篇）</th></tr></thead>
+      <tbody>
+        <tr><td>核心目的</td><td>AI 引用優化，Schema 驅動</td><td>品牌信任建立，E-E-A-T 信號強化</td></tr>
+        <tr><td>寫作語氣</td><td>Answer-First，資訊密集</td><td>品牌聲音，專業但帶情境故事</td></tr>
+        <tr><td>主要格式</td><td>比較表、FAQ、How-to 步驟</td><td>深度分析、觀點文、案例研究</td></tr>
+        <tr><td>外站連結</td><td>引導至服務頁轉換</td><td>設計為「Attribution Magnet」吸引媒體引用</td></tr>
+        <tr><td>更新頻率</td><td>發布後持續維護 Schema</td><td>每季更新數據，保持新鮮度</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">5.2　6 篇部落格規劃</h3>
+    <table class="dt">
+      <thead><tr><th>#</th><th>標題</th><th>核心主旨</th><th>Attribution Magnet</th><th>月份</th></tr></thead>
+      <tbody>
+        <tr><td>B1</td><td>台灣民間借貸市場現況：2026 年借款人需求大調查</td><td>原創數據研究，建立品牌資料來源地位</td><td>含具體統計數字（借款需求量、信用瑕疵比例）</td><td>M2</td></tr>
+        <tr><td>B2</td><td>我們分析了 1,000 筆借款需求後發現的 5 個規律</td><td>平台內部數據洞察，強化 E-E-A-T</td><td>獨家數據，競爭對手無法複製</td><td>M3</td></tr>
+        <tr><td>B3</td><td>借款被詐騙的 10 個真實案例分析（附防範清單）</td><td>建立品牌公信力，成為安全借款的代言人</td><td>案例 + 數字 + 可引用的防範指南</td><td>M3</td></tr>
+        <tr><td>B4</td><td>信用修復的真實故事：3 位借款人從瑕疵到正常的歷程</td><td>情境化 E-E-A-T，打破信用瑕疵的污名化</td><td>真實案例（匿名化）+ 時間軸數據</td><td>M4</td></tr>
+        <tr><td>B5</td><td>合法借款平台的 7 個核心標準：我們如何保護借款人</td><td>品牌信任宣言，建立行業標準地位</td><td>可量化的標準清單，供媒體引用</td><td>M5</td></tr>
+        <tr><td>B6</td><td>AI 時代的借款搜尋：用戶如何在 ChatGPT 找到合法借款資訊</td><td>前瞻性觀點文，強化科技形象與 GEO 意識</td><td>結合 AI 趨勢 + 借款安全的跨域引用潛力</td><td>M6</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">5.3　每篇部落格標準結構</h3>
+    <ul class="rec-list">
+      <li><span class="rn">1</span><b>H1 問題型標題</b>——直接包含核心關鍵詞，激發 AI 問答比對</li>
+      <li><span class="rn">2</span><b>TL;DR 摘要區塊</b>——頁首 3–5 個要點，供 AI 直接擷取為 Citation Block</li>
+      <li><span class="rn">3</span><b>數字密度</b>——每個 H2 段落至少 3 個可驗證數字，引用率提升 2.5 倍</li>
+      <li><span class="rn">4</span><b>具名引述</b>——引用金融顧問或法規條文（「根據民法第 474 條…」），強化 YMYL 可驗證性</li>
+      <li><span class="rn">5</span><b>FAQPage 尾段</b>——每篇附 4–6 個 Q&amp;A，部署 FAQPage Schema JSON-LD</li>
+      <li><span class="rn">6</span><b>資料來源列表</b>——具名列出數據來源，增加 AI 可驗證性信號</li>
+    </ul>
+
+  </div>
+  <div class="pf">第五章：品牌部落格計畫｜確認鍵智創科技股份有限公司</div>
+</div>
+
+<!-- ══ 六、新聞連播網 ══ -->
+<div class="page">
+  <div class="ph"><span>貸霸資訊 AIO/AEO/GEO 品牌引用策略計畫</span><span style="display:flex;align-items:center;gap:7px;"><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;vertical-align:middle;"> 2026.03.17</span></div>
+  <div class="sec-banner"><h2>六、網路新聞連播網（1 檔 × 12 網）執行規格</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">6.1　新聞連播網的 GEO 價值</h3>
+    <p class="bt">根據 AuthorityTech 2026 研究，<b>82–89% 的 AI 引用來自第三方 Earned Media</b>，而非品牌官網。新聞連播網透過將同一篇品牌新聞稿同步發布至 12 個媒體平台，製造「多來源信任佐證」效應——AI 引擎在多個不同域名看到同一個品牌主張，會大幅提升引用信任度與 Citation Count。</p>
+
+    <h3 class="sh">6.2　本案新聞稿主題規劃</h3>
+    <table class="dt">
+      <thead><tr><th>新聞稿類型</th><th>建議標題方向</th><th>GEO 核心策略</th></tr></thead>
+      <tbody>
+        <tr><td>品牌服務發布稿</td><td>「貸霸資訊 9597借錢網優化服務 升級借款人廣告刊登體驗」</td><td>品牌 + 服務關鍵字的多平台植入，建立 Organization 實體信號</td></tr>
+        <tr><td>產業觀點稿</td><td>「2026 台灣民間借貸市場趨勢：信用瑕疵借款需求年增 X%」</td><td>原創數據 + 具名統計，成為媒體引用的 Attribution Magnet</td></tr>
+        <tr><td>消費者安全稿</td><td>「如何辨別合法借款平台：貸霸資訊公布 5 大安全認證標準」</td><td>品牌定位安全借款代言人，強化 YMYL E-E-A-T 信號</td></tr>
+      </tbody>
+    </table>
+    <p class="bt" style="color:var(--muted);font-style:italic;font-size:11px">※ 本案執行 1 檔（1 篇新聞稿 × 12 媒體網站），建議優先採用「產業觀點稿」主題，原創數據引用效益最高。</p>
+
+    <h3 class="sh">6.3　聯播媒體平台清單（指定 Yahoo＋LINE，至少 12 網，超過不額外收費）</h3>
+
+    <div style="background:var(--enter-dark);border:1px solid var(--enter-blue);border-radius:8px;padding:14px 18px;margin-bottom:14px;">
+      <div style="color:var(--enter-lime);font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:8px;">★ 核心指定平台（必含）</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <span style="background:var(--enter-blue);color:white;padding:4px 14px;border-radius:20px;font-size:11.5px;font-weight:700;">Yahoo 新聞</span>
+        <span style="background:#06C755;color:white;padding:4px 14px;border-radius:20px;font-size:11.5px;font-weight:700;">LINE Today</span>
+      </div>
+    </div>
+
+    <table class="dt">
+      <thead><tr><th>#</th><th>平台名稱</th><th>平台性質</th><th>GEO 引用優勢</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><b style="color:var(--enter-lime)">★ Yahoo 新聞</b></td><td>綜合新聞入口（指定必含）</td><td>台灣最大新聞入口，Perplexity 即時爬取，AI 引用權重最高</td></tr>
+        <tr><td>2</td><td><b style="color:var(--enter-lime)">★ LINE Today</b></td><td>行動新聞入口（指定必含）</td><td>台灣行動端最大觸及，ChatGPT 訓練資料含 LINE 新聞內容</td></tr>
+        <tr><td>3</td><td>life</td><td>生活資訊媒體</td><td>生活消費族群覆蓋，補強信用瑕疵借款的女性受眾</td></tr>
+        <tr><td>4</td><td>PChome 新聞</td><td>科技財經入口</td><td>PChome 高 DA，財經科技讀者對借款資訊接受度高</td></tr>
+        <tr><td>5</td><td>Match</td><td>生活娛樂媒體</td><td>廣泛受眾觸及，強化品牌多來源信任佐證效應</td></tr>
+        <tr><td>6</td><td>Yam 新聞</td><td>綜合新聞入口</td><td>蕃薯藤老牌平台，歷史域名 DA 高，AI 引用穩定</td></tr>
+        <tr><td>7</td><td>OwlNews</td><td>智能新聞聚合</td><td>AI 驅動聚合平台，與 GEO 引用機制高度契合</td></tr>
+        <tr><td>8</td><td>民生頭條</td><td>民生消費新聞</td><td>貼近借款人日常消費語境，提升 GEO 語意相關性</td></tr>
+        <tr><td>9</td><td>台灣電報</td><td>本地新聞媒體</td><td>台灣在地信任來源，強化 LocalBusiness 信號</td></tr>
+        <tr><td>10</td><td>商傳媒</td><td>商業財經媒體</td><td>財經屬性強，YMYL 金融內容引用可信度高</td></tr>
+        <tr><td>11</td><td>民生好報</td><td>民生消費媒體</td><td>消費者導向，補強借款安全議題的讀者信任</td></tr>
+        <tr><td>12</td><td>火報</td><td>熱門話題媒體</td><td>話題擴散力強，提升品牌新聞的二次引用機率</td></tr>
+        <tr><td>13</td><td>Amm 娛樂新聞</td><td>娛樂生活媒體</td><td>廣泛讀者基礎，增加品牌跨域曝光多樣性</td></tr>
+        <tr><td>14</td><td>電傳媒</td><td>數位傳播媒體</td><td>數位原生媒體，AI 爬取頻率高，引用時效性強</td></tr>
+        <tr><td>15</td><td>新民生報</td><td>民生資訊媒體</td><td>補強民生借款議題的在地信任來源多樣性</td></tr>
+        <tr><td>16</td><td>法訊動新聞</td><td>法律資訊媒體</td><td><b>金融法規內容最佳配對</b>，強化 YMYL 法律可驗證性</td></tr>
+        <tr><td>17</td><td>爽爆新聞</td><td>熱門大眾媒體</td><td>大眾觸及廣，擴大品牌 Citation 來源多樣性</td></tr>
+        <tr class="hl"><td colspan="2"><b>聯播總計：17 個平台</b></td><td colspan="2"><b>必含 Yahoo＋LINE｜基本保證 12 網｜超過聯播數不額外收費</b></td></tr>
+      </tbody>
+    </table>
+
+    <div style="background:#EEF4FF;border-left:4px solid var(--enter-blue2);border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:14px;font-size:11.5px;color:var(--enter-dark2);">
+      <b>📌 收費說明：</b>本案以「至少 12 網聯播」為計費基準，實際聯播數視當月可上稿媒體狀況，<b>超過 12 網之額外聯播不另收費</b>。Yahoo 新聞與 LINE Today 為指定必含平台，確保最大觸及與 AI 引用覆蓋。
+    </div>
+
+    <h3 class="sh">6.4　新聞稿 GEO 寫作規格</h3>
+    <table class="dt">
+      <thead><tr><th>元素</th><th>規格要求</th><th>GEO 目的</th></tr></thead>
+      <tbody>
+        <tr><td>字數</td><td>800–1,200 字，新聞體裁</td><td>足夠長度讓 AI 提取多個 Citation Block</td></tr>
+        <tr><td>標題格式</td><td>含品牌名稱 + 核心關鍵字 + 數字/年份</td><td>提升 AI 索引識別度</td></tr>
+        <tr><td>數據植入</td><td>至少 3 個具名可驗證統計數字</td><td>Attribution Magnet，引發媒體二次引用</td></tr>
+        <tr><td>具名引述</td><td>含貸霸資訊負責人或顧問直接引言（含職稱）</td><td>強化 YMYL E-E-A-T，避免匿名不被引用</td></tr>
+        <tr><td>品牌 NAP</td><td>新聞稿末段統一格式標注：公司名稱、網址、電話</td><td>NAP 一致性，強化 LocalBusiness Schema 信號</td></tr>
+        <tr><td>禁忌</td><td>不得有療效宣稱、利率保證或誇大服務承諾</td><td>YMYL 誇大陳述反而降低 AI 引用信任度</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="pf">第六章：網路新聞連播網｜確認鍵智創科技股份有限公司</div>
+</div>
+
+<!-- ══ 七、官網健檢 ══ -->
+<div class="page">
+  <div class="ph"><span>貸霸資訊 AIO/AEO/GEO 品牌引用策略計畫</span><span style="display:flex;align-items:center;gap:7px;"><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;vertical-align:middle;"> 2026.03.17</span></div>
+  <div class="sec-banner"><h2>七、官網健檢與優化建議報告規格</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">7.1　健檢報告涵蓋範疇</h3>
+    <table class="dt">
+      <thead><tr><th>健檢面向</th><th>具體項目</th><th>AI 爬蟲關聯性</th><th>優先度</th></tr></thead>
+      <tbody>
+        <tr><td><b>技術 SEO</b></td><td>Core Web Vitals、頁面速度、HTTPS、行動裝置相容</td><td>AI 爬蟲優先索引技術健全的站點</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td><b>索引狀態</b></td><td>Sitemap、Robots.txt（含 AI 爬蟲規則）、Canonical、404</td><td>確保所有內容被 AI 正確爬取</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td><b>結構化資料</b></td><td>Schema 標記審核、Rich Snippet 狀況、JSON-LD 驗證</td><td>GEO 引用直接依賴 Schema 品質</td><td><span class="bdg bdg-red">極高</span></td></tr>
+        <tr><td><b>內容架構</b></td><td>URL 結構、麵包屑、內部連結密度與錨文字分析</td><td>影響 AI 對網站主題權威的理解</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td><b>品牌一致性</b></td><td>NAP 跨平台比對、LocalBusiness Schema、GBP 狀態</td><td>影響 LocalBusiness 引用可信度</td><td><span class="bdg bdg-org">高</span></td></tr>
+        <tr><td><b>競品差距</b></td><td>競爭對手技術 / 內容 / Schema 差距分析</td><td>找出 GEO 差異化機會點</td><td><span class="bdg bdg-teal">中</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">7.2　報告交付規格</h3>
+    <table class="dt">
+      <thead><tr><th>交付項目</th><th>規格</th></tr></thead>
+      <tbody>
+        <tr><td>報告格式</td><td>PDF 專業報告（10–15 頁）+ HTML 互動版</td></tr>
+        <tr><td>評分方式</td><td>五大面向各 100 分，綜合加權總分</td></tr>
+        <tr><td>優化建議</td><td>每個問題附具體修正步驟（含程式碼範例）</td></tr>
+        <tr><td>競品比對</td><td>對比 3–5 個台灣同業借款平台</td></tr>
+        <tr><td>Schema 示範</td><td>提供 LoanService / FAQPage / HowTo Schema JSON-LD 範例</td></tr>
+        <tr><td>行動計畫</td><td>30 / 60 / 90 天優先修正清單</td></tr>
+        <tr><td>交付時程</td><td>合約簽訂後 14 個工作天內完成</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="pf">第七章：官網健檢規格｜確認鍵智創科技股份有限公司</div>
+</div>
+
+<!-- ══ 八、甘特圖 & SOP ══ -->
+<div class="page">
+  <div class="ph"><span>貸霸資訊 AIO/AEO/GEO 品牌引用策略計畫</span><span style="display:flex;align-items:center;gap:7px;"><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;vertical-align:middle;"> 2026.03.17</span></div>
+  <div class="sec-banner"><h2>八、半年執行甘特圖與 SOP 流程</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">8.1　半年執行甘特圖</h3>
+    <div class="gantt-wrap">
+    <table class="gantt">
+      <thead>
+        <tr>
+          <th style="width:38%">執行項目</th>
+          <th style="width:10%">M1<br>4月</th>
+          <th style="width:10%">M2<br>5月</th>
+          <th style="width:10%">M3<br>6月</th>
+          <th style="width:10%">M4<br>7月</th>
+          <th style="width:10%">M5<br>8月</th>
+          <th style="width:10%">M6<br>9月</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="7" style="background:#EDF2F7;font-weight:700;font-size:10.5px;color:var(--navy2)">【專案啟動】</td></tr>
+        <tr><td>官網健檢報告（審核 + 優化建議）</td><td><span class="g-bar"></span></td><td><span class="g-bar" style="background:var(--green)"></span></td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td></tr>
+        <tr><td>關鍵字矩陣 × PAA 問題庫建立</td><td><span class="g-bar"></span></td><td><span class="g-bar" style="background:var(--green)"></span></td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td></tr>
+        <tr><td colspan="7" style="background:#EDF2F7;font-weight:700;font-size:10.5px;color:var(--navy2)">【GEO 內容建置】24 篇，每月 4 篇</td></tr>
+        <tr><td>GEO 內容 M1（篇 1–4，基礎建設）</td><td><span class="g-bar doing"></span></td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td></tr>
+        <tr><td>GEO 內容 M2（篇 5–8，核心流量）</td><td class="g-empty">—</td><td><span class="g-bar doing"></span></td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td></tr>
+        <tr><td>GEO 內容 M3（篇 9–12，深度信任）</td><td class="g-empty">—</td><td class="g-empty">—</td><td><span class="g-bar doing"></span></td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td></tr>
+        <tr><td>GEO 內容 M4（篇 13–16，長尾覆蓋）</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td><span class="g-bar doing"></span></td><td class="g-empty">—</td><td class="g-empty">—</td></tr>
+        <tr><td>GEO 內容 M5（篇 17–20，主題叢集）</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td><span class="g-bar doing"></span></td><td class="g-empty">—</td></tr>
+        <tr><td>GEO 內容 M6（篇 21–24，競爭強化）</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td><span class="g-bar doing"></span></td></tr>
+        <tr><td colspan="7" style="background:#EDF2F7;font-weight:700;font-size:10.5px;color:var(--navy2)">【品牌部落格】6 篇，每月 1 篇</td></tr>
+        <tr><td>B1 台灣民間借貸市場現況報告</td><td class="g-empty">—</td><td><span class="g-bar" style="background:var(--enter-blue3)"></span></td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td></tr>
+        <tr><td>B2–B3 原創數據 + 詐騙案例分析</td><td class="g-empty">—</td><td class="g-empty">—</td><td><span class="g-bar" style="background:var(--enter-blue3)"></span></td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td></tr>
+        <tr><td>B4 信用修復真實故事</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td><span class="g-bar" style="background:var(--enter-blue3)"></span></td><td class="g-empty">—</td><td class="g-empty">—</td></tr>
+        <tr><td>B5–B6 品牌標準宣言 + AI 趨勢觀點</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td><td><span class="g-bar" style="background:var(--enter-blue3)"></span></td><td><span class="g-bar" style="background:var(--enter-blue3)"></span></td></tr>
+        <tr><td colspan="7" style="background:#EDF2F7;font-weight:700;font-size:10.5px;color:var(--navy2)">【外站佈局】</td></tr>
+        <tr><td>網路新聞連播網（1 檔 × 12 媒體）</td><td class="g-empty">—</td><td class="g-empty">—</td><td><span class="g-bar" style="background:var(--red)"></span></td><td class="g-empty">—</td><td class="g-empty">—</td><td class="g-empty">—</td></tr>
+        <tr><td colspan="7" style="background:#EDF2F7;font-weight:700;font-size:10.5px;color:var(--navy2)">【成效追蹤】</td></tr>
+        <tr><td>月度 GEO 引用監測報告</td><td><span class="g-bar" style="background:var(--green);width:100%"></span></td><td><span class="g-bar" style="background:var(--green)"></span></td><td><span class="g-bar" style="background:var(--green)"></span></td><td><span class="g-bar" style="background:var(--green)"></span></td><td><span class="g-bar" style="background:var(--green)"></span></td><td><span class="g-bar" style="background:var(--green)"></span></td></tr>
+        <tr><td>季末策略回顧 + 下期調整</td><td class="g-empty">—</td><td class="g-empty">—</td><td><span class="g-bar done"></span></td><td class="g-empty">—</td><td class="g-empty">—</td><td><span class="g-bar done"></span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="tag-row">
+      <span style="font-size:10px; display:flex; align-items:center; gap:4px"><span style="display:inline-block;width:14px;height:8px;background:var(--amber);border-radius:3px"></span>初始/啟動</span>
+      <span style="font-size:10px; display:flex; align-items:center; gap:4px"><span style="display:inline-block;width:14px;height:8px;background:var(--teal);border-radius:3px"></span>GEO 內容</span>
+      <span style="font-size:10px; display:flex; align-items:center; gap:4px"><span style="display:inline-block;width:14px;height:8px;background:var(--enter-blue3);border-radius:3px"></span>部落格</span>
+      <span style="font-size:10px; display:flex; align-items:center; gap:4px"><span style="display:inline-block;width:14px;height:8px;background:var(--red);border-radius:3px"></span>新聞連播</span>
+      <span style="font-size:10px; display:flex; align-items:center; gap:4px"><span style="display:inline-block;width:14px;height:8px;background:var(--green);border-radius:3px"></span>持續追蹤/完成</span>
+    </div>
+
+    <h3 class="sh">8.2　GEO 內容生產 SOP（每篇標準流程）</h3>
+
+    <div class="sop-step">
+      <div class="sop-num">1</div>
+      <div class="sop-content">
+        <h5>題目確認與意圖分析</h5>
+        <p>依據關鍵字矩陣確認本篇目標關鍵字（1–2 個核心詞 + 3–5 個長尾詞）。使用 PAA 採集工作流收集 10–15 個相關問題，確認搜尋意圖類型（定義型 / 操作型 / 比較型）。</p>
+        <div class="sop-out">產出：題目規格書（目標關鍵字清單 + PAA 問題庫 + 意圖類型標注）</div>
+      </div>
+    </div>
+    <div class="sop-step">
+      <div class="sop-num">2</div>
+      <div class="sop-content">
+        <h5>競品內容差距分析</h5>
+        <p>搜尋目標關鍵字，分析前 5 名現有內容的格式、字數、Schema 部署狀況。找出「他們沒有回答但 PAA 出現的問題」——這些是 GEO 差異化機會點，優先覆蓋。</p>
+        <div class="sop-out">產出：競品差距表（已覆蓋 vs 缺口問題列表）</div>
+      </div>
+    </div>
+    <div class="sop-step">
+      <div class="sop-num">3</div>
+      <div class="sop-content">
+        <h5>GEO 結構撰寫（Answer-First 格式）</h5>
+        <p>按標準結構寫作：H1 問題型標題 → TL;DR 摘要 → H2 子問題（每個 H2 前 40–60 字為 Citation Block）→ 比較表格（如適用）→ FAQ 區塊。每個主要段落至少含 3 個可驗證數字，引用來源具名。</p>
+        <div class="sop-out">產出：GEO 結構初稿（含 Citation Block 標注）</div>
+      </div>
+    </div>
+    <div class="sop-step">
+      <div class="sop-num">4</div>
+      <div class="sop-content">
+        <h5>YMYL 合規審查</h5>
+        <p>金融內容特殊審查：① 無誇大利率或撥款速度的絕對保證 ② 民法 / 金管會等法規引用正確 ③ 建議附免責聲明「實際借款條件依個案而定」④ 去除主觀形容詞（最好、最便宜）改為數字呈現。</p>
+        <div class="sop-out">產出：合規確認清單（Checklist 逐項勾選）</div>
+      </div>
+    </div>
+    <div class="sop-step">
+      <div class="sop-num">5</div>
+      <div class="sop-content">
+        <h5>Schema JSON-LD 部署</h5>
+        <p>依內容類型部署對應 Schema：FAQ 頁 → FAQPage JSON-LD；操作型 → HowTo Schema（含步驟 + 工具 + 預期成果）；比較型 → Article + ItemList；服務頁 → FinancialService。使用 Google Rich Results Test 驗證。</p>
+        <div class="sop-out">產出：Schema JSON-LD 程式碼 + 驗證截圖</div>
+      </div>
+    </div>
+    <div class="sop-step">
+      <div class="sop-num">6</div>
+      <div class="sop-content">
+        <h5>發布後 GEO 驗證</h5>
+        <p>發布後 72 小時內：① 手動用 Perplexity / ChatGPT 測試目標問題是否引用本文 ② 用 Google Rich Results Test 確認 Schema 已被讀取 ③ 提交 URL 至 Google Search Console 請求索引 ④ 記錄到 GEO 引用追蹤表。</p>
+        <div class="sop-out">產出：發布驗證報告（截圖 + 引用狀態紀錄）</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="pf">第八章：執行甘特圖與 SOP｜確認鍵智創科技股份有限公司</div>
+</div>
+
+<!-- ══ 九、KPI ══ -->
+<div class="page">
+  <div class="ph"><span>貸霸資訊 AIO/AEO/GEO 品牌引用策略計畫</span><span style="display:flex;align-items:center;gap:7px;"><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;vertical-align:middle;"> 2026.03.17</span></div>
+  <div class="sec-banner"><h2>九、KPI 指標框架與成效追蹤</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">9.1　GEO 核心 KPI（半年目標）</h3>
+    <table class="dt">
+      <thead><tr><th>KPI 類型</th><th>指標名稱</th><th>追蹤工具</th><th>3 個月目標</th><th>6 個月目標</th></tr></thead>
+      <tbody>
+        <tr class="sec-row"><td colspan="5">▌ AI 引用指標（GEO 核心）</td></tr>
+        <tr><td>引用次數</td><td>AI Citation Count（Perplexity / ChatGPT / AIO）</td><td>Profound / Brand Radar / 手動測試</td><td>10+ 次</td><td><b>40+ 次</b></td></tr>
+        <tr><td>品牌 AI SoV</td><td>AI Share of Voice（借款類問題中品牌出現率）</td><td>手動採樣 50 題</td><td>10%</td><td><b>25%</b></td></tr>
+        <tr><td>引用覆蓋</td><td>核心 PAA 問題被引用比例（30 題中）</td><td>逐題手動測試</td><td>30%</td><td><b>70%</b></td></tr>
+        <tr class="sec-row"><td colspan="5">▌ 技術 SEO 指標</td></tr>
+        <tr><td>Rich Snippet</td><td>Google SERP 中出現 FAQPage / HowTo Rich Snippet</td><td>Google Search Console</td><td>5+ 頁面</td><td><b>15+ 頁面</b></td></tr>
+        <tr><td>Schema 覆蓋</td><td>已部署結構化資料的頁面比例</td><td>Screaming Frog</td><td>30%</td><td><b>80%</b></td></tr>
+        <tr><td>索引率</td><td>新增 GEO 頁面在 7 天內被索引比例</td><td>Google Search Console</td><td>85%</td><td><b>95%</b></td></tr>
+        <tr class="sec-row"><td colspan="5">▌ 流量與轉換指標</td></tr>
+        <tr><td>自然流量</td><td>官網 Organic 流量月增率</td><td>GA4</td><td>+20%</td><td><b>+50%</b></td></tr>
+        <tr><td>品牌搜尋量</td><td>「9597借錢網」「貸霸資訊」品牌詞搜尋量</td><td>Google Search Console</td><td>+15%</td><td><b>+35%</b></td></tr>
+        <tr><td>外站引用</td><td>第三方媒體品牌提及數量</td><td>Google Alerts / Brand Radar</td><td>5 個來源</td><td><b>12+ 個來源</b></td></tr>
+        <tr class="hl"><td colspan="2"><b>追蹤頻率</b></td><td colspan="3">月度：AI 引用手動採樣 + GSC 報告；季末：全面回顧 + 策略調整</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">9.2　月度追蹤報告規格</h3>
+    <p class="bt">每月月底提交月度 GEO 成效追蹤報告，涵蓋：</p>
+    <ul class="rec-list">
+      <li><span class="rn">①</span>本月發布內容清單 + 每篇 GEO 驗證結果（Perplexity / ChatGPT 引用截圖）</li>
+      <li><span class="rn">②</span>Rich Snippet 出現狀況變化（GSC 截圖對比）</li>
+      <li><span class="rn">③</span>官網 Organic 流量趨勢（GA4 月報）</li>
+      <li><span class="rn">④</span>外站品牌提及監測（Google Alerts + 手動巡查）</li>
+      <li><span class="rn">⑤</span>下月內容執行計畫 + 關鍵字監測清單更新</li>
+    </ul>
+
+    <hr class="dv">
+
+    <div style="background:var(--light);border-radius:8px;padding:18px 20px;border-left:4px solid var(--amber);margin-bottom:16px">
+      <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px">📋 專案規格摘要確認</div>
+      <table class="dt" style="margin:0">
+        <tbody>
+          <tr><td style="width:35%"><b>GEO 內容建置</b></td><td>24 篇（A–F 類，每月 4 篇，M1–M6）</td></tr>
+          <tr><td><b>品牌部落格</b></td><td>6 篇（Attribution Magnet 導向，每月 1 篇）</td></tr>
+          <tr><td><b>網路新聞連播網</b></td><td>1 檔 × 12 媒體網站（建議 M3 發布）</td></tr>
+          <tr><td><b>官網健檢報告</b></td><td>1 份完整 PDF + HTML 報告（M1–M2 完成）</td></tr>
+          <tr><td><b>執行週期</b></td><td>6 個月（2026 Q2–Q3）</td></tr>
+          <tr><td><b>計畫日期</b></td><td>2026 年 03 月 17 日</td></tr>
+          <tr><td><b>執行機構</b></td><td>確認鍵智創科技股份有限公司</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="closing-p">本計畫依據《GEO 內容策略完整手冊》（Princeton 研究 arXiv:2311.09735、AuthorityTech 2026、Onely 2026 引用分析）及貸霸資訊服務特性（民間借貸 YMYL 金融產業）量身設計，以「AIO 品牌識別 × AEO 問答覆蓋 × GEO 第三方引用」三軌並行為核心邏輯，協助品牌在 ChatGPT、Perplexity、Google AI Overview 等 AI 搜尋場景中建立穩固的引用地位。</div>
+
+    <div class="agency-sig" style="display:flex;align-items:center;justify-content:center;gap:18px;">
+      <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" style="height:44px;border-radius:6px;flex-shrink:0;">
+      <div style="text-align:left;">
+        <div style="color:white;font-size:12px;font-weight:700;">確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.</div>
+        <div style="color:rgba(255,255,255,0.5);font-size:10.5px;margin-top:4px;">enterimc.com　｜　計畫日期：2026年03月17日　｜　本計畫內容為確認鍵智創科技智慧財產，僅供客戶參考</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="pf">第九章：KPI 指標框架｜確認鍵智創科技股份有限公司</div>
+</div>
+
+</div><!-- /report-wrap -->
+</body>
+</html>
