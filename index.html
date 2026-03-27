@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enter IMC · 客戶報告總覽</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+:root {
+  --eb:#1B3A8C;--eb2:#254BAD;--eb3:#0D2568;
+  --ed:#0A1628;--el:#A8C8F8;--el2:#4A90D9;
+  --em:#C5D5F0;--elt:#F0F5FF;--emut:#5C7AA8;
+  --text:#1A2B3C;--mid:#C5D5F0;
+  --org:#C75000;--grn:#1A7A44;--red:#C0392B;--teal:#0E6A7C;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);min-height:100vh;}
+
+/* Header */
+.header{background:var(--eb);padding:0;box-shadow:0 3px 16px rgba(0,0,0,.2);}
+.header-inner{max-width:1100px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+.header img{height:36px;border-radius:4px;}
+.header-title{color:rgba(255,255,255,.55);font-size:11px;letter-spacing:2px;text-transform:uppercase;}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--eb3) 0%,var(--eb) 60%,var(--eb2) 100%);padding:52px 32px 44px;text-align:center;}
+.hero h1{color:white;font-size:26px;font-weight:900;margin-bottom:8px;}
+.hero h1 span{color:var(--el);}
+.hero p{color:rgba(255,255,255,.6);font-size:12.5px;}
+
+/* Stats bar */
+.stats{background:white;border-bottom:2px solid var(--mid);}
+.stats-inner{max-width:1100px;margin:0 auto;padding:14px 32px;display:flex;gap:32px;align-items:center;}
+.stat{text-align:center;}
+.stat-n{font-size:22px;font-weight:900;color:var(--eb);line-height:1;}
+.stat-l{font-size:10px;color:var(--emut);margin-top:2px;}
+.stats-div{width:1px;height:36px;background:var(--mid);}
+.search-wrap{flex:1;display:flex;justify-content:flex-end;}
+.search-wrap input{width:240px;padding:7px 14px;border:1.5px solid var(--mid);border-radius:20px;font-family:inherit;font-size:12px;color:var(--text);outline:none;transition:border .2s;}
+.search-wrap input:focus{border-color:var(--el2);}
+
+/* Main */
+.main{max-width:1100px;margin:0 auto;padding:32px;}
+
+/* Filter tabs */
+.filters{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;}
+.ftab{padding:5px 16px;border-radius:20px;font-size:11.5px;font-weight:600;cursor:pointer;border:1.5px solid var(--mid);background:white;color:var(--emut);transition:all .15s;}
+.ftab.active,.ftab:hover{background:var(--eb);color:white;border-color:var(--eb);}
+
+/* Grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
+
+/* Card */
+.card{background:white;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.07);overflow:hidden;transition:transform .15s,box-shadow .15s;text-decoration:none;display:block;}
+.card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(0,0,0,.12);}
+.card-stripe{height:5px;background:var(--eb);}
+.card-head{padding:18px 20px 12px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+.card-icon{width:44px;height:44px;border-radius:8px;background:var(--elt);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.card-meta{flex:1;}
+.card-client{font-size:14px;font-weight:900;color:var(--eb3);line-height:1.2;margin-bottom:3px;}
+.card-type{font-size:10px;color:var(--emut);font-weight:500;}
+.card-score{font-size:22px;font-weight:900;line-height:1;}
+.card-score-l{font-size:9px;color:var(--emut);}
+.card-body{padding:0 20px 16px;}
+.card-desc{font-size:11.5px;color:var(--emut);line-height:1.6;margin-bottom:10px;}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;}
+.tag{padding:2px 9px;border-radius:20px;font-size:10px;font-weight:600;background:var(--elt);color:var(--eb);border:1px solid var(--mid);}
+.card-foot{padding:10px 20px;background:var(--elt);border-top:1px solid var(--mid);display:flex;justify-content:space-between;align-items:center;}
+.card-date{font-size:10px;color:var(--emut);}
+.card-cta{font-size:10.5px;font-weight:700;color:var(--el2);}
+
+/* Score color */
+.score-r{color:var(--red);} .score-o{color:var(--org);} .score-a{color:#B8860B;} .score-g{color:var(--grn);}
+.stripe-r{background:var(--red);} .stripe-o{background:var(--org);} .stripe-a{background:#D4A017;} .stripe-g{background:var(--grn);}
+
+/* Empty */
+.empty{text-align:center;padding:60px 20px;color:var(--emut);font-size:13px;}
+
+/* Footer */
+.footer{background:var(--eb);margin-top:60px;padding:20px 32px;text-align:center;}
+.footer p{font-size:10px;color:rgba(255,255,255,.4);}
+
+@media(max-width:600px){
+  .header-inner{padding:14px 20px;}
+  .hero{padding:36px 20px 30px;}
+  .stats-inner{flex-wrap:wrap;gap:16px;padding:12px 20px;}
+  .main{padding:20px;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <img src="data:image/png;base64,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" alt="Enter IMC">
+    <div class="header-title">Client Report Portal</div>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Enter IMC <span>客戶報告總覽</span></h1>
+  <p>確認鍵智創科技 · GEO / SEO 健檢報告 · 策略計畫 · 報價文件</p>
+</div>
+
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-n" id="totalCount">1</div><div class="stat-l">報告總數</div></div>
+    <div class="stats-div"></div>
+    <div class="stat"><div class="stat-n" id="clientCount">1</div><div class="stat-l">客戶數</div></div>
+    <div class="stats-div"></div>
+    <div class="stat"><div class="stat-n">GEO</div><div class="stat-l">主力服務</div></div>
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="搜尋客戶或報告類型…" oninput="filterCards()">
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="filters">
+    <div class="ftab active" onclick="setFilter('all',this)">全部</div>
+    <div class="ftab" onclick="setFilter('geo',this)">GEO 健檢</div>
+    <div class="ftab" onclick="setFilter('plan',this)">策略計畫</div>
+    <div class="ftab" onclick="setFilter('quote',this)">報價</div>
+  </div>
+
+  <div class="grid" id="cardGrid">
+
+    <!-- ── FansFeed ── -->
+    <a class="card" href="reports/FansFeed_GEO_audit_20260327.html" target="_blank"
+       data-type="geo" data-client="fansfeed" data-keywords="fansfeed 整合行銷 社群代管 geo健檢">
+      <div class="card-stripe stripe-o"></div>
+      <div class="card-head">
+        <div class="card-icon">📊</div>
+        <div class="card-meta">
+          <div class="card-client">FansFeed</div>
+          <div class="card-type">GEO 官網健檢報告</div>
+        </div>
+        <div style="text-align:right;">
+          <div class="card-score score-o">41</div>
+          <div class="card-score-l">/ 100 分</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-desc">整合行銷 × 社群代管服務商。技術層多項 FAIL（llms.txt 缺失、全站零 Schema），內容基礎佳但 AI 引用架構待建立。</div>
+        <div class="card-tags">
+          <span class="tag">整合行銷</span>
+          <span class="tag">社群代管</span>
+          <span class="tag">B2B</span>
+          <span class="tag">風向專欄</span>
+        </div>
+      </div>
+      <div class="card-foot">
+        <div class="card-date">2026.03.27</div>
+        <div class="card-cta">開啟報告 →</div>
+      </div>
+    </a>
+
+    <!-- ── 未來新報告在此插入 ── -->
+    <div class="card" style="border:2px dashed var(--mid);box-shadow:none;background:transparent;cursor:default;"
+         data-type="placeholder" data-client="" data-keywords="">
+      <div style="padding:40px 20px;text-align:center;">
+        <div style="font-size:32px;margin-bottom:10px;">＋</div>
+        <div style="font-size:12px;color:var(--emut);line-height:1.7;">下一份客戶報告<br>完成後加入此處</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="empty" id="emptyMsg" style="display:none;">找不到符合的報告 🔍</div>
+</div>
+
+<div class="footer">
+  <p>© 2026 確認鍵智創科技股份有限公司 · Enter Internet Marketing CO., LTD. · enterimc.com · 本站內容僅供內部及授權客戶使用</p>
+</div>
+
+<script>
+let currentFilter = 'all';
+
+function setFilter(type, el) {
+  currentFilter = type;
+  document.querySelectorAll('.ftab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  filterCards();
+}
+
+function filterCards() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const cards = document.querySelectorAll('#cardGrid .card[data-client]');
+  let visible = 0;
+  cards.forEach(card => {
+    if (card.dataset.client === '') return; // placeholder
+    const matchType = currentFilter === 'all' || card.dataset.type === currentFilter;
+    const matchSearch = !q || card.dataset.keywords.includes(q) || card.dataset.client.includes(q);
+    const show = matchType && matchSearch;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  // placeholder visibility
+  document.querySelectorAll('#cardGrid .card[data-client=""]').forEach(p => {
+    p.style.display = currentFilter === 'all' && !q ? '' : 'none';
+  });
+  document.getElementById('emptyMsg').style.display = visible === 0 ? '' : 'none';
+}
+
+// Update counts
+const realCards = document.querySelectorAll('#cardGrid .card[data-client]:not([data-client=""])').length;
+document.getElementById('totalCount').textContent = realCards;
+document.getElementById('clientCount').textContent = realCards;
+</script>
+</body>
+</html>
