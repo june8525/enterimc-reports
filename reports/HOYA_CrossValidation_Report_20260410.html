@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOYA 禾雅醫務 GEO 數據交叉驗證報告</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+:root {
+  --eb:#1B3A8C;--eb2:#254BAD;--eb3:#0D2568;
+  --ed:#0A1628;--ed2:#1A2B3C;
+  --el:#A8C8F8;--el2:#4A90D9;
+  --em:#C5D5F0;--elt:#F0F5FF;--emut:#5C7AA8;
+  --red:#C0392B;--grn:#1A7A44;--org:#C75000;--teal:#0E6A7C;
+  --navy:#1B3A8C;--light:#F0F5FF;--mid:#C5D5F0;--text:#1A2B3C;--muted:#5C7AA8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);font-size:13px;line-height:1.65;}
+@media print{body{background:white;font-size:11px;}.page{box-shadow:none!important;margin-bottom:0!important;page-break-after:always;border-radius:0!important;}.page:last-child{page-break-after:avoid;}}
+.wrap{max-width:900px;margin:0 auto;padding:20px 14px 40px;}
+.page{background:white;border-radius:8px;box-shadow:0 3px 20px rgba(0,0,0,.09);margin-bottom:28px;overflow:hidden;}
+.cv-stripe{background:var(--eb);height:8px;}
+.cv-hero{background:white;padding:40px 52px 32px;display:flex;align-items:flex-start;justify-content:space-between;gap:32px;}
+.cv-rule{width:48px;height:4px;background:var(--eb);border-radius:2px;margin-bottom:14px;}
+.cv-eye{color:var(--eb);font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;}
+.cv-h1{color:var(--ed);font-size:28px;font-weight:900;line-height:1.2;margin-bottom:10px;}
+.cv-h1 span{color:var(--eb);}
+.cv-sub{color:var(--emut);font-size:12.5px;line-height:1.7;}
+.cv-la{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0;}
+.cv-la img{width:88px;border-radius:6px;}
+.cv-lt{font-size:9px;color:var(--emut);text-align:right;}
+.cv-band{background:var(--eb);padding:20px 52px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;}
+.cv-st{text-align:center;padding:10px 4px;border-right:1px solid rgba(255,255,255,.15);}
+.cv-st:last-child{border-right:none;}
+.stn{font-size:24px;font-weight:900;color:white;line-height:1;}
+.stu{font-size:9px;color:rgba(255,255,255,.7);}
+.stl{font-size:9px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4;}
+.cv-meta{background:var(--elt);padding:18px 52px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;border-top:1px solid var(--em);}
+.cv-mi{font-size:11px;color:var(--emut);}
+.cv-mi b{color:var(--ed2);display:block;font-size:11.5px;margin-top:2px;}
+.cv-foot{background:var(--eb);padding:11px 52px;display:flex;justify-content:space-between;align-items:center;}
+.cv-foot p{font-size:10px;color:rgba(255,255,255,.4);}
+.ph{background:var(--eb);padding:9px 28px;display:flex;justify-content:space-between;align-items:center;}
+.ph span{font-size:10px;color:rgba(255,255,255,.55);}
+.pf{background:var(--elt);border-top:1px solid var(--em);padding:7px 28px;text-align:center;font-size:10px;color:var(--muted);}
+.sec{background:var(--eb);border-left:5px solid var(--el2);padding:13px 24px;}
+.sec h2{color:white;font-size:14px;font-weight:700;}
+.pc{padding:22px 28px;}
+h3.sh{font-size:12.5px;font-weight:700;color:var(--navy);border-left:3px solid var(--el2);padding-left:9px;margin:16px 0 7px;}
+h4.sh4{font-size:11.5px;font-weight:700;color:var(--teal);margin:13px 0 5px;}
+p.bt{font-size:12.5px;line-height:1.8;color:var(--text);margin-bottom:10px;}
+.b{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;white-space:nowrap;}
+.br{background:#FADBD8;color:var(--red);}
+.bo{background:#FDEBD0;color:var(--org);}
+.bg{background:#D5F5E3;color:var(--grn);}
+.bt2{background:#D1ECF1;color:var(--teal);}
+.bb{background:var(--eb);color:white;}
+.bl{background:#D6E6FF;color:var(--eb3);}
+.bf{background:#FADBD8;color:#922B21;font-weight:900;}
+.bp{background:#D5F5E3;color:#1A5E38;font-weight:900;}
+.bw{background:#FDEBD0;color:#7D3200;font-weight:900;}
+.ib{padding:9px 13px;border-radius:0 5px 5px 0;margin-bottom:13px;font-size:11.5px;}
+.ir{background:#FEF0EF;border-left:4px solid var(--red);}
+.io{background:#FFF8F0;border-left:4px solid var(--org);}
+.ig{background:#F0FAF4;border-left:4px solid var(--grn);}
+.ii{background:#EEF4FF;border-left:4px solid var(--el2);}
+.dt{width:100%;border-collapse:collapse;margin:7px 0 14px;font-size:11.5px;}
+.dt th{background:var(--eb);color:white;font-weight:700;padding:7px 10px;text-align:left;font-size:11px;}
+.dt td{padding:6px 10px;border-bottom:1px solid var(--mid);vertical-align:top;line-height:1.55;}
+.dt tr:nth-child(even) td{background:var(--light);}
+.dt tr.hl td{background:var(--eb);color:white;font-weight:700;}
+.dt tr.hl td b{color:#A8C8F8;}
+.dt tr.sr td{background:#EDF2F7;font-weight:700;color:var(--eb3);font-size:11px;}
+.ct{width:100%;border-collapse:collapse;margin:7px 0 13px;font-size:11.5px;}
+.ct th{background:var(--eb3);color:white;padding:7px 10px;text-align:left;font-size:11px;}
+.ct td{padding:6px 10px;border-bottom:1px solid var(--mid);vertical-align:top;}
+.ct tr:nth-child(even) td{background:var(--light);}
+.ct .nm{font-weight:600;color:var(--ed2);}
+.rl{list-style:none;margin:7px 0 13px;}
+.rl li{display:flex;gap:9px;padding:7px 11px;background:var(--light);border-radius:5px;margin-bottom:5px;font-size:12px;line-height:1.6;border-left:3px solid var(--el2);}
+.rl .rn{font-weight:900;color:var(--el2);min-width:16px;}
+.fc{display:flex;border:1px solid var(--mid);border-radius:6px;overflow:hidden;margin-bottom:6px;}
+.fl{background:var(--light);padding:9px 13px;min-width:120px;font-size:11px;font-weight:700;color:var(--teal);display:flex;align-items:flex-start;border-right:1px solid var(--mid);}
+.fd{padding:9px 13px;font-size:12px;color:var(--text);line-height:1.6;}
+.agsig{display:flex;align-items:center;justify-content:center;gap:18px;padding:14px;background:var(--eb);border-radius:6px;margin-top:10px;}
+hr.dv{border:none;border-top:1px solid var(--mid);margin:14px 0;}
+.clp{font-size:11px;color:var(--muted);line-height:1.8;margin-bottom:10px;}
+code{background:#F0F5FF;padding:1px 5px;border-radius:3px;font-size:10.5px;color:var(--eb3);font-family:monospace;}
+/* 分數卡片 */
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0;}
+.score-card{border:1px solid var(--mid);border-radius:8px;padding:14px 16px;text-align:center;}
+.score-card .sc-label{font-size:10.5px;color:var(--muted);margin-bottom:6px;}
+.score-card .sc-num{font-size:26px;font-weight:900;line-height:1;}
+.score-card .sc-sub{font-size:10px;color:var(--muted);margin-top:5px;}
+.sc-blue{color:var(--eb);}
+.sc-green{color:var(--grn);}
+.sc-amber{color:#B8860B;}
+.sc-red{color:var(--red);}
+/* 一致性徽章 */
+.cv-match{background:#D5F5E3;color:#1A5E38;font-weight:700;}
+.cv-conflict{background:#FADBD8;color:#922B21;font-weight:700;}
+.cv-partial{background:#FDEBD0;color:#7D3200;font-weight:700;}
+.cv-na{background:#EDF2F7;color:var(--muted);font-weight:700;}
+/* 比較卡 */
+.compare-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0 16px;}
+.compare-card{border:1px solid var(--mid);border-radius:7px;overflow:hidden;}
+.compare-head{padding:9px 13px;font-size:11.5px;font-weight:700;color:white;}
+.compare-head.imc{background:var(--eb);}
+.compare-head.otterly{background:var(--teal);}
+.compare-body{padding:10px 13px;font-size:11.5px;line-height:1.65;color:var(--text);}
+/* 衝突高亮 */
+.conflict-bg td{background:#FEF0EF!important;}
+.warn-bg td{background:#FFF8F0!important;}
+/* 總結方塊 */
+.insight-box{border:1px solid var(--mid);border-radius:7px;padding:13px 16px;margin-bottom:10px;}
+.insight-box .ib-title{font-size:11.5px;font-weight:700;color:var(--eb3);margin-bottom:6px;}
+.insight-box .ib-body{font-size:11.5px;color:var(--text);line-height:1.7;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ══ 封面 ══ -->
+<div class="page">
+  <div class="cv-stripe"></div>
+  <div class="cv-hero">
+    <div>
+      <div class="cv-rule"></div>
+      <div class="cv-eye">Cross-Validation Report · GEO Audit · 2026</div>
+      <div class="cv-h1">HOYA 禾雅醫務<br><span>雙工具數據交叉驗證</span><br>分析報告</div>
+      <div class="cv-sub">
+        比對工具：確認鍵 GEO 健檢 v2（2026-04-08）× Otterly.AI Content Analysis（2026-04-10）<br>
+        目的：識別評分分歧、互補盲點，強化診斷可信度<br>
+        適用對象：HOYA 禾雅醫務 · hoyasupergood.com
+      </div>
+    </div>
+    <div class="cv-la">
+      <img src="data:image/png;base64,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" style="width:88px;border-radius:6px;">
+      <div class="cv-lt">確認鍵智創科技股份有限公司<br>Enter Internet Marketing CO., LTD.</div>
+    </div>
+  </div>
+  <div class="cv-band">
+    <div class="cv-st"><div class="stn">56</div><div class="stu">/ 100 分</div><div class="stl">Enter IMC GEO 總分</div></div>
+    <div class="cv-st"><div class="stn">58%</div><div class="stu">Readiness</div><div class="stl">Otterly AI 就緒分析</div></div>
+    <div class="cv-st"><div class="stn">75%</div><div class="stu">Structured</div><div class="stl">Otterly 結構化資料</div></div>
+    <div class="cv-st"><div class="stn">5</div><div class="stu">大面向</div><div class="stl">交叉驗證分析維度</div></div>
+  </div>
+  <div class="cv-meta">
+    <div class="cv-mi">受分析網站<b>https://hoyasupergood.com（HOYA 禾雅醫務）</b></div>
+    <div class="cv-mi">工具 A — Enter IMC GEO Audit v2<b>7 層 GEO 架構 · 50 項評估 · 逐頁 Schema 實測</b></div>
+    <div class="cv-mi">工具 B — Otterly.AI Content Analysis<b>4 維度（Structure / Content / Metadata / Technical）</b></div>
+    <div class="cv-mi">交叉驗證日期<b>2026 年 4 月 10 日</b></div>
+  </div>
+  <div class="cv-foot">
+    <p>本報告整合雙工具診斷，識別數據一致性與評估框架差異</p>
+    <p>© 2026 Enter Internet Marketing CO., LTD.</p>
+  </div>
+</div>
+
+<!-- ══ 總覽摘要 ══ -->
+<div class="page">
+  <div class="ph"><span>第一章：總覽 · 雙工具評分對照</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>📊 雙工具評分總覽與一致性判斷</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">各維度評分對照</h3>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="sc-label">Enter IMC · GEO 綜合總分</div>
+        <div class="sc-num sc-amber">56<span style="font-size:14px;font-weight:400;"> / 100</span></div>
+        <div class="sc-sub">7 層架構 · YMYL 醫療專用框架</div>
+      </div>
+      <div class="score-card">
+        <div class="sc-label">Otterly · AI Readiness 分析</div>
+        <div class="sc-num sc-amber">58<span style="font-size:14px;font-weight:400;">%</span></div>
+        <div class="sc-sub">內容 AI 就緒度整體評估</div>
+      </div>
+      <div class="score-card">
+        <div class="sc-label">Otterly · Structured Data</div>
+        <div class="sc-num sc-green">75<span style="font-size:14px;font-weight:400;">%</span></div>
+        <div class="sc-sub">Structure 73% / Meta 95% / Tech 100%</div>
+      </div>
+    </div>
+
+    <div class="ib io">⚠️ <strong>評分落差說明</strong>：Otterly Structured Data 75% 與 Enter IMC Schema 評分之間存在顯著差距。本報告將在第三章詳細分析根本原因——兩工具使用不同的評估標準，並非數據矛盾，而是框架差異。</div>
+
+    <h3 class="sh">一致性總結矩陣</h3>
+    <table class="dt">
+      <thead><tr><th>評估面向</th><th>Enter IMC 判斷</th><th>Otterly 判斷</th><th>一致性</th></tr></thead>
+      <tbody>
+        <tr><td>技術基礎（HTML / RWD / robots）</td><td><span class="b bp">PASS</span></td><td><span class="b bp">Technical 100%</span></td><td><span class="b cv-match">✓ 高度一致</span></td></tr>
+        <tr><td>動態內容 / AI 爬取障礙</td><td><span class="b bw">WARN — 動態內容多</span></td><td><span class="b bw">Static/Dynamic 46%</span></td><td><span class="b cv-match">✓ 一致（量化佐證）</span></td></tr>
+        <tr><td>Meta / Title / OG Tags</td><td><span class="b bp">PASS</span></td><td><span class="b bp">Meta 95%（30+25+25+15）</span></td><td><span class="b cv-match">✓ 一致</span></td></tr>
+        <tr class="conflict-bg"><td>Schema 結構化資料整體</td><td><span class="b bw">中等 — 醫療類型大量缺失</span></td><td><span class="b bp">75%（schema.org 存在）</span></td><td><span class="b cv-conflict">⚠ 顯著分歧</span></td></tr>
+        <tr><td>內容可讀性 / 摘要結構</td><td><span class="b bf">FAIL — 缺 Answer-First</span></td><td><span class="b bf">Readability 40%</span></td><td><span class="b cv-match">✓ 一致</span></td></tr>
+        <tr><td>語意重複 / 內容冗餘</td><td><span class="b bw">WARN — 見聞/新聞重複</span></td><td><span class="b bf">Semantic Repetition 35%</span></td><td><span class="b cv-match">✓ 一致</span></td></tr>
+        <tr><td>內容具體性 / 事實密度</td><td><span class="b bf">FAIL — 缺數字與研究引用</span></td><td><span class="b bf">Specificity 40%</span></td><td><span class="b cv-match">✓ 一致</span></td></tr>
+        <tr><td>品牌術語說明 / 縮寫</td><td><span class="b bw">WARN — 一日長城、OSAWELL 未解釋</span></td><td><span class="b bw">Jargon 60% / Acronyms 65%</span></td><td><span class="b cv-match">✓ 一致</span></td></tr>
+        <tr><td>外部引用連結</td><td><span class="b bw">WARN — 缺乏可信機構引用</span></td><td><span class="b bw">External Links 75%</span></td><td><span class="b cv-match">✓ 一致</span></td></tr>
+        <tr class="warn-bg"><td>插圖 / 富媒體策略</td><td><span class="b bw">WARN — 圖多但缺語意說明</span></td><td><span class="b bg">Illustration Opportunities 80%</span></td><td><span class="b cv-partial">△ 角度互補</span></td></tr>
+        <tr><td>BlogPosting author（YMYL）</td><td><span class="b bf">FAIL — 顯示非醫師帳號</span></td><td>— 無法偵測</td><td><span class="b cv-na">IMC 獨有</span></td></tr>
+        <tr><td>第三方媒體露出 / Earned Media</td><td><span class="b bf">FAIL — 空白</span></td><td>— 超出評估範疇</td><td><span class="b cv-na">IMC 獨有</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pf">確認鍵智創科技 · HOYA 禾雅醫務 GEO 交叉驗證報告 · 2026-04-10</div>
+</div>
+
+<!-- ══ 技術基礎層 ══ -->
+<div class="page">
+  <div class="ph"><span>第二章：技術基礎層 — 一致性確認</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>🔧 技術可達性：兩工具高度吻合，基礎評分可信</h2></div>
+  <div class="pc">
+    <div class="ib ig">✅ <strong>技術層評估結論</strong>：Enter IMC 與 Otterly 在所有技術基礎項目上完全一致，交叉驗證通過。這是報告中信心最高的區塊，可作為後續分析的穩固基準。</div>
+
+    <h3 class="sh">技術項目逐項比對</h3>
+    <table class="ct">
+      <thead><tr><th style="width:22%">檢查項目</th><th style="width:24%">Enter IMC 實測</th><th style="width:24%">Otterly 量化</th><th style="width:14%">一致性</th><th>交叉驗證說明</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="nm">HTML 結構有效性</span></td>
+          <td><span class="b bp">PASS</span> WordPress 標準輸出</td>
+          <td><span class="b bp">Valid HTML 100%</span> 40/40</td>
+          <td><span class="b cv-match">✓ 一致</span></td>
+          <td>兩工具均確認 HTML 無結構錯誤，互相印證</td>
+        </tr>
+        <tr>
+          <td><span class="nm">行動裝置優化 RWD</span></td>
+          <td><span class="b bp">PASS</span> 手機版顯示正常</td>
+          <td><span class="b bp">Mobile-friendly 100%</span> 30/30</td>
+          <td><span class="b cv-match">✓ 一致</span></td>
+          <td>完全吻合，無需進一步確認</td>
+        </tr>
+        <tr>
+          <td><span class="nm">Robots.txt / AI 爬蟲開放</span></td>
+          <td><span class="b bp">PASS</span> GPTBot ✅ ClaudeBot ✅ Google-Extended ✅</td>
+          <td><span class="b bp">Robots & crawling 100%</span> 20/20</td>
+          <td><span class="b cv-match">✓ 一致</span></td>
+          <td>Otterly 給滿分，與 IMC 實測 6 個 AI 爬蟲全開放相符</td>
+        </tr>
+        <tr>
+          <td><span class="nm">語言宣告</span></td>
+          <td><span class="b bp">PASS</span> lang="zh-TW" 正確</td>
+          <td><span class="b bp">Language 100%</span> 10/10</td>
+          <td><span class="b cv-match">✓ 一致</span></td>
+          <td>完全吻合</td>
+        </tr>
+        <tr>
+          <td><span class="nm">Meta / Title / OG 標籤</span></td>
+          <td><span class="b bp">PASS</span> Rank Math 自動生成完整</td>
+          <td><span class="b bp">Meta 95%</span> Title 30/30、OG 15/15</td>
+          <td><span class="b cv-match">✓ 一致</span></td>
+          <td>Otterly 細分 Meta descriptions 25/30（非滿分），IMC 僅整體確認，微小差異不影響結論</td>
+        </tr>
+        <tr>
+          <td><span class="nm">Static vs Dynamic 內容比例</span></td>
+          <td><span class="b bw">WARN</span> 動態內容多，LLM 爬取障礙高</td>
+          <td><span class="b bw">Static/Dynamic 46%</span></td>
+          <td><span class="b cv-match">✓ 一致（量化）</span></td>
+          <td>Otterly 將 IMC 的定性警告具體量化為 46%——超過半數內容難以被 LLM 爬取</td>
+        </tr>
+        <tr>
+          <td><span class="nm">IndexNow 啟用狀態</span></td>
+          <td><span class="b bw">WARN</span> 未啟用，Bing 無即時通知</td>
+          <td>— 未評估</td>
+          <td><span class="b cv-na">IMC 獨有</span></td>
+          <td>Otterly 不評估 IndexNow，IMC 此項發現無法交叉驗證，但技術層面確認無誤</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">Otterly「Static vs Dynamic 46%」的意義補充</h3>
+    <div class="compare-wrap">
+      <div class="compare-card">
+        <div class="compare-head imc">Enter IMC GEO Audit 描述</div>
+        <div class="compare-body">首頁大量使用 JavaScript 動態渲染（Slider、動畫效果、延遲載入圖片），LLM 爬蟲無法讀取這些視覺區塊的文字內容，導致核心服務描述可能對 AI 不可見。</div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-head otterly">Otterly.AI 量化數據</div>
+        <div class="compare-body">Static vs Dynamic 評分 46%——代表頁面上大約有超過一半的內容屬於「LLM 難以或無法讀取」的動態類型。這個數字直接佐證了 IMC 的定性警告。</div>
+      </div>
+    </div>
+  </div>
+  <div class="pf">確認鍵智創科技 · HOYA 禾雅醫務 GEO 交叉驗證報告 · 2026-04-10</div>
+</div>
+
+<!-- ══ Schema 分歧分析 ══ -->
+<div class="page">
+  <div class="ph"><span>第三章：Schema 評分分歧深度分析（最關鍵差異）</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>🧬 Schema 結構化資料：框架差異導致的評分落差解析</h2></div>
+  <div class="pc">
+    <div class="ib ir">🚨 <strong>最重要的差異點</strong>：Otterly 給出 Schema.org structured data <strong>25/25 滿分</strong>，但 Enter IMC 實測確認 MedicalClinic / Dentist Schema 全站 0 頁部署。這是本報告最需要釐清的數據分歧。</div>
+
+    <h3 class="sh">Schema 評分詳細比對</h3>
+    <table class="dt">
+      <thead><tr><th style="width:22%">Schema 類型</th><th style="width:22%">Enter IMC 實測</th><th style="width:22%">Otterly 評估</th><th style="width:14%">一致性</th><th>差異根因</th></tr></thead>
+      <tbody>
+        <tr class="sr"><td colspan="5">▌ 通用 Schema（兩工具均可偵測）</td></tr>
+        <tr>
+          <td>Organization / Person+Org</td>
+          <td><span class="b bp">PASS</span> 全站 100% 覆蓋，得 3/3</td>
+          <td>計入 schema.org 25/25</td>
+          <td><span class="b cv-match">✓ 一致</span></td>
+          <td>此類型兩工具均可偵測，結果吻合</td>
+        </tr>
+        <tr>
+          <td>WebSite / WebPage</td>
+          <td><span class="b bp">PASS</span> 全站部署</td>
+          <td>計入 schema.org 25/25</td>
+          <td><span class="b cv-match">✓ 一致</span></td>
+          <td>Rank Math 自動生成，兩工具同步確認</td>
+        </tr>
+        <tr>
+          <td>BreadcrumbList</td>
+          <td><span class="b bp">PASS</span> 全站覆蓋，得 2/2</td>
+          <td>間接反映在 Heading hierarchy 25/30</td>
+          <td><span class="b cv-partial">△ 間接符合</span></td>
+          <td>評估維度不完全相同，但方向一致</td>
+        </tr>
+        <tr>
+          <td>BlogPosting</td>
+          <td><span class="b bp">PASS</span> 全 5 篇文章部署，得 3/3</td>
+          <td>未單獨量化</td>
+          <td><span class="b cv-na">IMC 獨有實測</span></td>
+          <td>Otterly 不細分 BlogPosting，IMC 逐頁驗證更精確</td>
+        </tr>
+        <tr class="sr"><td colspan="5">▌ YMYL 醫療專用 Schema（核心分歧點）</td></tr>
+        <tr class="conflict-bg">
+          <td><strong>MedicalClinic / Dentist Schema</strong></td>
+          <td><span class="b bf">FAIL 🚨</span> 全站 13 頁均缺失，得 0/5</td>
+          <td><span class="b bp">Schema.org 25/25 滿分</span></td>
+          <td><span class="b cv-conflict">⚠ 顯著差異</span></td>
+          <td>根本原因見下方分析框</td>
+        </tr>
+        <tr class="conflict-bg">
+          <td>LocalBusiness（各院所）</td>
+          <td><span class="b bf">FAIL</span> 3 院所頁均缺失，得 0/3</td>
+          <td>未單獨列出</td>
+          <td><span class="b cv-conflict">⚠ IMC 發現，Otterly 未偵測</span></td>
+          <td>Otterly 不評估特定 Schema 類型是否適當</td>
+        </tr>
+        <tr class="conflict-bg">
+          <td>Person（各醫師獨立節點）</td>
+          <td><span class="b bf">FAIL</span> 9 位醫師均無獨立 Person 節點，得 0/4</td>
+          <td>未單獨量化</td>
+          <td><span class="b cv-na">IMC 獨有</span></td>
+          <td>Otterly 無法判斷 Person schema 對象是否為醫師</td>
+        </tr>
+        <tr>
+          <td>FAQPage</td>
+          <td><span class="b bw">WARN</span> 僅 1 頁（/post/1672），得 1/5</td>
+          <td>未單獨量化</td>
+          <td><span class="b cv-na">IMC 獨有實測</span></td>
+          <td>逐頁實測才能確認 FAQPage 的部署範圍</td>
+        </tr>
+        <tr>
+          <td>HowTo / MedicalCondition</td>
+          <td><span class="b bf">FAIL</span> 全站缺失，得 0/4</td>
+          <td>未評估</td>
+          <td><span class="b cv-na">IMC 獨有</span></td>
+          <td>屬 YMYL 醫療網站進階 Schema，Otterly 標準不涵蓋</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">Otterly 25/25 滿分 vs. IMC FAIL 的根本原因</h3>
+    <div class="compare-wrap">
+      <div class="compare-card">
+        <div class="compare-head otterly">Otterly 評分邏輯（Schema.org 25/25）</div>
+        <div class="compare-body">
+          Otterly 評估的是「網站是否部署了 schema.org 格式的結構化資料」這個二元問題。<br><br>
+          禾雅醫務已透過 Rank Math 自動部署 Organization、WebSite、BreadcrumbList、BlogPosting 等通用 Schema——這些在 Otterly 的 General SEO 標準下確實達到滿分。
+        </div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-head imc">Enter IMC 評分邏輯（YMYL 醫療框架）</div>
+        <div class="compare-body">
+          IMC 評估的是「YMYL 醫療機構網站是否部署了 AI 判斷機構屬性所需的 Schema 類型」。<br><br>
+          對牙科診所而言，MedicalClinic、Dentist、醫師 Person 節點才是核心——這些全部缺失，因此評為 FAIL。兩者評估標準根本不同。
+        </div>
+      </div>
+    </div>
+    <div class="ib ii">💡 <strong>結論</strong>：兩個評分<strong>並不矛盾</strong>。Otterly 的 25/25 意味著「通用 SEO Schema 完整」；IMC 的 FAIL 意味著「YMYL 醫療 AI 引用所需的專用 Schema 缺失」。對於希望被 ChatGPT、Google AIO 引用為醫療權威來源的禾雅，IMC 的框架更具指導意義。</div>
+  </div>
+  <div class="pf">確認鍵智創科技 · HOYA 禾雅醫務 GEO 交叉驗證報告 · 2026-04-10</div>
+</div>
+
+<!-- ══ 內容品質交叉驗證 ══ -->
+<div class="page">
+  <div class="ph"><span>第四章：內容品質層 — 兩工具高度一致的診斷</span><img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>📝 內容品質：雙重工具共同確認的改善優先項</h2></div>
+  <div class="pc">
+    <div class="ib ig">✅ <strong>關鍵結論</strong>：在內容品質層，Enter IMC 與 Otterly 的診斷高度吻合。這代表以下所有問題均有雙重工具佐證，優先修復的可信度最高。</div>
+
+    <h3 class="sh">內容品質各項交叉驗證</h3>
+
+    <div class="fc">
+      <div class="fl">可讀性<br>摘要結構</div>
+      <div class="fd">
+        <span class="b cv-match">✓ 高度一致</span><br>
+        <strong>IMC：</strong>Answer-First 段落 1/5（FAIL）、TL;DR 摘要框 0/3（FAIL）——服務頁以品牌語言開場，未直接回答患者問題。<br>
+        <strong>Otterly：</strong>Readability 40%、Summary Block 20%——量化確認缺乏摘要與問答結構。<br>
+        <strong>行動建議：</strong>於每篇文章頂部加入「快速重點」框（3–5 項要點），服務頁首段改為直接回答「什麼是 XX / 費用 / 適合誰」。
+      </div>
+    </div>
+
+    <div class="fc">
+      <div class="fl">語意重複<br>內容冗餘</div>
+      <div class="fd">
+        <span class="b cv-match">✓ 一致</span><br>
+        <strong>IMC：</strong>客戶見證、最新消息區塊多處重複，削弱 AI 萃取信號。<br>
+        <strong>Otterly：</strong>Semantic Repetition 35%（最低評分之一）——明確指出 testimonial 與 news 列表重複，標題如「OUR FEATURE」反覆出現卻無新內容。<br>
+        <strong>行動建議：</strong>合併重複區塊為單一模組，使用同義詞強化語意變化（如「全口重建」/「全口修復」/「同日重建方案」）。
+      </div>
+    </div>
+
+    <div class="fc">
+      <div class="fl">內容具體性<br>事實密度</div>
+      <div class="fd">
+        <span class="b cv-match">✓ 一致</span><br>
+        <strong>IMC：</strong>缺乏具體數字、研究引用、療程成功率等可驗證數據（Princeton GEO 研究：含數字內容 AI 引用率 +26.5%）。<br>
+        <strong>Otterly：</strong>Specificity 40%——確認缺乏費用範圍、治療時長、恢復期、醫師認證等具體資訊。<br>
+        <strong>行動建議：</strong>加入具體數字：植牙平均治療時間 2–3 小時、恢復期 1–2 週、費用範圍 NT,xxx–xx,xxx（或說明費用依個案評估）。
+      </div>
+    </div>
+
+    <div class="fc">
+      <div class="fl">品牌術語<br>縮寫說明</div>
+      <div class="fd">
+        <span class="b cv-match">✓ 一致</span><br>
+        <strong>IMC：</strong>「一日長城」、「微笑冒險隊」、「OSAWELL」等品牌詞未解釋，新訪客難以理解。<br>
+        <strong>Otterly：</strong>Jargon and Metaphors 60%、Acronyms and Terminology 65%——確認行銷術語風險，建議加入一行定義。<br>
+        <strong>行動建議：</strong>每個品牌術語首次出現時補充括弧說明（例：「一日長城（全口重建一日手術方案，同日重建）」）。
+      </div>
+    </div>
+
+    <div class="fc">
+      <div class="fl">外部引用<br>連結策略</div>
+      <div class="fd">
+        <span class="b cv-match">✓ 一致</span><br>
+        <strong>IMC：</strong>缺乏可信外部機構引用，AI 無法從外部驗證醫療內容可信度。<br>
+        <strong>Otterly：</strong>External Link Suggestions 75%——具體建議 WHO 口腔健康頁、美國 NIH 睡眠呼吸中止症資料、衛福部牙科相關頁面。<br>
+        <strong>行動建議：</strong>採納 Otterly 建議的外部連結，搭配 IMC 建議的內文 anchor 文字（「了解更多 [WHO / 衛福部]」）。
+      </div>
+    </div>
+
+    <div class="fc">
+      <div class="fl">插圖策略<br>富媒體</div>
+      <div class="fd">
+        <span class="b cv-partial">△ 評估角度互補</span><br>
+        <strong>IMC：</strong>現有圖片區塊偏多但缺語意說明，image-only 區塊中斷文字流，AI 無法讀取視覺內容。<br>
+        <strong>Otterly：</strong>Illustration Opportunities 80%（相對高分）——認為有豐富的圖表創作機會，建議加入服務流程圖、比較表格、醫師頭照卡等。<br>
+        <strong>整合觀點：</strong>兩者並不矛盾——Otterly 指出「機會」，IMC 指出「現有問題」。行動方向：將現有 image-only 區塊改為圖文並列，並依 Otterly 建議新增植牙流程圖、止鼾牙套 vs 呼吸器比較表。
+      </div>
+    </div>
+  </div>
+  <div class="pf">確認鍵智創科技 · HOYA 禾雅醫務 GEO 交叉驗證報告 · 2026-04-10</div>
+</div>
+
+<!-- ══ IMC 獨有發現 ══ -->
+<div class="page">
+  <div class="ph"><span>第五章：Enter IMC 獨有發現（Otterly 評估盲點）</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>🎯 YMYL 醫療專屬風險：Otterly 無法偵測的關鍵缺口</h2></div>
+  <div class="pc">
+    <div class="ib io">⚠️ 以下三項問題是 Enter IMC 逐頁實測才能發現的 YMYL 特有風險，Otterly 的通用評估框架無法識別。這些是禾雅醫務被 AI 引用最大的結構性障礙。</div>
+
+    <h3 class="sh">① BlogPosting Author 欄位顯示非醫師身份</h3>
+    <div class="fc">
+      <div class="fl" style="color:var(--red);">YMYL<br>最高風險</div>
+      <div class="fd">
+        <strong>實測發現：</strong>所有文章的 BlogPosting Schema 中，<code>author.name</code> 欄位顯示為「快找整合顧問」或 "grace"，而非醫師姓名。<br><br>
+        <strong>為何 Otterly 無法偵測：</strong>Otterly 只確認 BlogPosting Schema 是否存在，不讀取欄位值的語意內容，無法判斷 author 是否為醫師。<br><br>
+        <strong>對 AI 引用的影響：</strong>Google AIO 在判斷 YMYL 醫療內容是否值得引用時，<code>author</code> 的 E-E-A-T 身份是核心信號——非醫師署名會直接降低被引用機率。<br><br>
+        <strong>修復成本：極低（今天可做）</strong>——WordPress 後台更改作者帳號 display name 即可，預計 GEO 評分 +4 分。
+      </div>
+    </div>
+
+    <h3 class="sh">② 9 位醫師無獨立 Person Schema 節點</h3>
+    <div class="fc">
+      <div class="fl" style="color:var(--org);">E-E-A-T<br>信任缺口</div>
+      <div class="fd">
+        <strong>實測發現：</strong>team 頁與所有文章頁均缺少個別醫師的 Person Schema（含 name、jobTitle、medicalSpecialty、url、sameAs 等欄位）。現有 Person 節點僅指向公司帳號，非醫師個人。<br><br>
+        <strong>為何 Otterly 無法偵測：</strong>Otterly 不評估 YMYL 專業身份節點是否存在，其 schema.org 評分不涵蓋醫師個人節點。<br><br>
+        <strong>對 AI 引用的影響：</strong>ChatGPT Search、Google AIO 在引用牙科建議時，會優先選擇有具名醫師節點的內容。缺少此節點等同於無法對 AI 宣告「這是醫師說的」。<br><br>
+        <strong>修復成本：中（第 3–4 週）</strong>——建立 9 位醫師個人頁面 + Person Schema，預計 GEO 評分 +6 分。
+      </div>
+    </div>
+
+    <h3 class="sh">③ 第三方媒體露出完全空白</h3>
+    <div class="fc">
+      <div class="fl" style="color:var(--red);">外站<br>信任空白</div>
+      <div class="fd">
+        <strong>實測發現：</strong>全網路無任何媒體新聞報導、方格子知識型文章、或其他品牌提及來源。<br><br>
+        <strong>關鍵數據：</strong>82–89% 的 AI 引用來自第三方 Earned Media，品牌自有官網的 AI 引用率僅佔少數——沒有外部佐證，AI 幾乎無法從多個角度驗證禾雅的品牌可信度。<br><br>
+        <strong>為何 Otterly 無法偵測：</strong>Otterly 為網站內容分析工具，不評估外部品牌生態，此面向完全超出其評估範疇。<br><br>
+        <strong>修復方向：</strong>新聞聯播網首波發稿（第 5–8 週，預計 +3 分）、方格子知識型文章佈局（第 9–12 週，預計 +2 分）。
+      </div>
+    </div>
+  </div>
+  <div class="pf">確認鍵智創科技 · HOYA 禾雅醫務 GEO 交叉驗證報告 · 2026-04-10</div>
+</div>
+
+<!-- ══ 框架差異與結論 ══ -->
+<div class="page">
+  <div class="ph"><span>第六章：評估框架差異解析 · 綜合結論</span><img src="data:image/png;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><h2>🔍 框架差異解析 · 整合診斷結論</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">兩工具評估框架全面比較</h3>
+    <table class="dt">
+      <thead><tr><th style="width:22%">比較面向</th><th>Enter IMC GEO Audit v2</th><th>Otterly.AI Content Analysis</th></tr></thead>
+      <tbody>
+        <tr><td><strong>評估框架</strong></td><td>7 層 GEO 架構：技術可達性 → AI 引用生態，專為「被 AI 引用」設計</td><td>4 維度：Structure / Content / Metadata / Technical，通用內容優化框架</td></tr>
+        <tr><td><strong>Schema 評估深度</strong></td><td>逐頁讀取 <code>application/ld+json</code>，判斷 YMYL 醫療專用類型是否存在及欄位值是否正確</td><td>偵測 schema.org 結構化資料是否存在，以通用 SEO 標準給分</td></tr>
+        <tr><td><strong>YMYL 醫療敏感性</strong></td><td>重點評估 author 真實身份、MedicalClinic、醫師 E-E-A-T 信號</td><td>未特別處理 YMYL 醫療網站的特殊標準，同等對待所有產業</td></tr>
+        <tr><td><strong>作者身份判斷</strong></td><td>讀取 author.name 欄位值，判斷是否為醫師</td><td>僅確認 Schema 存在性，不讀取欄位語意</td></tr>
+        <tr><td><strong>第三方品牌生態</strong></td><td>評估媒體露出、Earned Media 比重、跨平台引用現況</td><td>不在評估範疇（純網站內容分析）</td></tr>
+        <tr><td><strong>內容動態性偵測</strong></td><td>定性判斷（JS 動態渲染警告）</td><td>量化輸出（Static vs Dynamic 46%）</td></tr>
+        <tr><td><strong>報告時間差</strong></td><td>2026-04-08</td><td>2026-04-10（晚 2 天，網站無重大變更）</td></tr>
+        <tr><td><strong>最適用場景</strong></td><td>醫療 / 金融 / 法律等 YMYL 網站的 AI 引用最佳化</td><td>一般網站的 SEO 與 AI 就緒度基礎健檢</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">雙工具互補關係圖解</h3>
+    <div class="compare-wrap">
+      <div class="compare-card">
+        <div class="compare-head otterly">Otterly 的獨特貢獻（量化佐證）</div>
+        <div class="compare-body">
+          ✅ Static vs Dynamic <strong>46%</strong>——將 IMC 的定性警告數字化<br>
+          ✅ Semantic Repetition <strong>35%</strong>——佐證內容冗餘嚴重性<br>
+          ✅ Specificity <strong>40%</strong>——佐證缺乏具體數字的問題<br>
+          ✅ External Link Suggestions <strong>75%</strong>——提供具體連結建議（WHO、NIH、衛福部）<br>
+          ✅ Illustration Opportunities <strong>80%</strong>——補充圖表創作機會清單
+        </div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-head imc">IMC 的獨特貢獻（YMYL 深度診斷）</div>
+        <div class="compare-body">
+          🚨 Author 欄位「快找整合顧問」——Otterly 無法偵測的 YMYL 致命傷<br>
+          🚨 MedicalClinic Schema 全站 0 頁——Otterly 25/25 背後隱藏的最大缺口<br>
+          🚨 FAQPage 僅 1 頁——引用率提升機會 15% → 41%（×3.2）<br>
+          🚨 第三方媒體空白——82–89% AI 引用來自 Earned Media，目前缺席<br>
+          🚨 9 位醫師無 Person Schema——AI 無法識別醫療專業身份
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sh">整合診斷結論</h3>
+    <div class="insight-box">
+      <div class="ib-title">📌 結論一：數據矛盾還是框架差異？</div>
+      <div class="ib-body">兩份報告的評分落差（尤其是 Schema 部分）<strong>不代表數據矛盾</strong>，而是評估標準不同的必然結果。Otterly 的 Schema 滿分反映通用 SEO 合規性；IMC 的 FAIL 反映 YMYL 醫療 AI 引用的專業門檻。兩者在各自框架內均正確。</div>
+    </div>
+    <div class="insight-box">
+      <div class="ib-title">📌 結論二：高度一致的診斷最值得優先執行</div>
+      <div class="ib-body">內容可讀性差（Readability 40% / Answer-First 1/5）、語意重複嚴重（35%）、具體性不足（40%）——這些問題獲得<strong>兩份工具雙重確認</strong>，優先修復的可信度與緊迫性最高，且通常不需要技術部署，難度低。</div>
+    </div>
+    <div class="insight-box">
+      <div class="ib-title">📌 結論三：Otterly 量化數據強化了提案說服力</div>
+      <div class="ib-body">Otterly 的 % 數字可作為向客戶簡報時的量化佐證，搭配 IMC 的深度診斷，形成「數字有力、分析深入」的完整交付物。建議在客戶報告中同時呈現兩份工具的數據，說明 IMC 框架為何對 YMYL 客戶更具指導意義。</div>
+    </div>
+
+    <hr class="dv">
+    <div class="agsig">
+      <img src="data:image/png;base64,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" style="height:44px;border-radius:6px;flex-shrink:0;">
+      <div>
+        <div style="color:white;font-size:12px;font-weight:700;">確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.</div>
+        <div style="color:rgba(255,255,255,.5);font-size:10.5px;margin-top:4px;">enterimc.com　｜　報告日期：2026年04月10日　｜　本文件內容為確認鍵智創科技智慧財產，僅供客戶參考</div>
+      </div>
+    </div>
+  </div>
+  <div class="pf">確認鍵智創科技 · HOYA 禾雅醫務 GEO 交叉驗證報告 · 2026-04-10</div>
+</div>
+
+</div>
+</body>
+</html>
