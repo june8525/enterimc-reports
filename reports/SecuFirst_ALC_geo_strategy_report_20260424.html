@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecuFirst / ALC GEO 關鍵字策略 + 監測 Prompt 規劃書 — 確認鍵智創科技</title>
+<meta name="report-client" content="SecuFirst / ALC 天鉞電子">
+<meta name="report-type" content="strategy">
+<meta name="report-desc" content="GEO 關鍵字戰場規劃與 30 題 AI 能見度監測 prompt 設計">
+<meta name="report-tags" content="GEO策略,AI能見度,監測,電商,行車記錄器">
+<meta name="report-date" content="2026-04-24">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+:root {
+  --eb:#1B3A8C; --eb2:#254BAD; --eb3:#0D2568;
+  --ed:#0A1628; --ed2:#1A2B3C;
+  --el:#A8C8F8; --el2:#4A90D9;
+  --em:#C5D5F0; --elt:#F0F5FF; --emut:#5C7AA8;
+  --red:#C0392B; --grn:#1A7A44; --org:#C75000; --teal:#0E6A7C;
+  --light:#F0F5FF; --mid:#C5D5F0; --text:#1A2B3C; --muted:#5C7AA8;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Noto Sans TC',sans-serif; background:#D8E4F5; color:var(--text); font-size:13px; line-height:1.65; }
+@media print { body { background:white; font-size:11px; } .page { box-shadow:none!important; margin-bottom:0!important; page-break-after:always; border-radius:0!important; } .page:last-child { page-break-after:avoid; } }
+.wrap { max-width:900px; margin:0 auto; padding:20px 14px 40px; }
+.page { background:white; border-radius:8px; box-shadow:0 3px 20px rgba(0,0,0,.09); margin-bottom:28px; overflow:hidden; }
+.cv-stripe { background:var(--eb); height:8px; }
+.cv-hero { background:white; padding:40px 52px 32px; display:flex; align-items:flex-start; justify-content:space-between; gap:32px; }
+.cv-rule { width:48px; height:4px; background:var(--eb); border-radius:2px; margin-bottom:14px; }
+.cv-eye { color:var(--eb); font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px; }
+.cv-h1 { color:var(--ed); font-size:26px; font-weight:900; line-height:1.2; margin-bottom:10px; }
+.cv-h1 span { color:var(--eb); }
+.cv-sub { color:var(--emut); font-size:12.5px; line-height:1.7; }
+.cv-la { display:flex; flex-direction:column; align-items:flex-end; gap:10px; flex-shrink:0; }
+.cv-la img { width:88px; border-radius:6px; }
+.cv-lt { font-size:9px; color:var(--emut); text-align:right; }
+.cv-band { background:var(--eb); padding:20px 52px; display:grid; grid-template-columns:repeat(5,1fr); gap:1px; }
+.cv-st { text-align:center; padding:10px 4px; border-right:1px solid rgba(255,255,255,.15); }
+.cv-st:last-child { border-right:none; }
+.stn { font-size:24px; font-weight:900; color:white; line-height:1; }
+.stu { font-size:9px; color:rgba(255,255,255,.7); }
+.stl { font-size:9px; color:rgba(255,255,255,.5); margin-top:4px; line-height:1.4; }
+.cv-meta { background:var(--elt); padding:18px 52px; display:grid; grid-template-columns:repeat(2,1fr); gap:10px 32px; border-top:1px solid var(--em); }
+.cv-mi { font-size:11px; color:var(--emut); }
+.cv-mi b { color:var(--ed2); display:block; font-size:11.5px; margin-top:2px; }
+.cv-foot { background:var(--eb); padding:11px 52px; display:flex; justify-content:space-between; align-items:center; }
+.cv-foot p { font-size:10px; color:rgba(255,255,255,.4); }
+.ph { background:var(--eb); padding:9px 28px; display:flex; justify-content:space-between; align-items:center; }
+.ph span { font-size:10px; color:rgba(255,255,255,.55); }
+.ph img { height:18px; border-radius:2px; }
+.pf { background:var(--elt); border-top:1px solid var(--em); padding:7px 28px; text-align:center; font-size:10px; color:var(--muted); }
+.sec { background:var(--eb); border-left:5px solid var(--el2); padding:13px 24px; }
+.sec h2 { color:white; font-size:14px; font-weight:700; }
+.pc { padding:22px 28px; }
+h3.sh { font-size:12.5px; font-weight:700; color:var(--eb); border-left:3px solid var(--el2); padding-left:9px; margin:16px 0 7px; }
+p.bt { font-size:12.5px; line-height:1.8; color:var(--text); margin-bottom:10px; }
+.b { display:inline-block; padding:2px 8px; border-radius:20px; font-size:10px; font-weight:700; white-space:nowrap; }
+.bb { background:var(--eb); color:white; }
+.ib { padding:9px 13px; border-radius:0 5px 5px 0; margin-bottom:13px; font-size:11.5px; }
+.ir { background:#FEF0EF; border-left:4px solid var(--red); }
+.ig { background:#F0FAF4; border-left:4px solid var(--grn); }
+.ii { background:#EEF4FF; border-left:4px solid var(--el2); }
+.dt { width:100%; border-collapse:collapse; margin:7px 0 14px; font-size:11px; }
+.dt th { background:var(--eb); color:white; font-weight:700; padding:7px 10px; text-align:left; font-size:10.5px; }
+.dt td { padding:6px 10px; border-bottom:1px solid var(--mid); vertical-align:top; line-height:1.55; }
+.dt tr:nth-child(even) td { background:var(--light); }
+.dt tr.sr td { background:#EDF2F7; font-weight:700; color:var(--eb3); font-size:11px; }
+.pt { width:100%; border-collapse:collapse; margin:7px 0 14px; font-size:11px; }
+.pt th { background:var(--eb3); color:white; font-weight:700; padding:8px 8px; text-align:left; font-size:10.5px; }
+.pt td { padding:9px 10px; border-bottom:1px solid var(--mid); vertical-align:top; line-height:1.55; }
+.pt tr:nth-child(even) td { background:var(--light); }
+.pt .no { font-weight:900; color:var(--eb); text-align:center; width:30px; }
+.pt .pb { color:var(--eb3); font-weight:600; }
+.pt .pr { font-size:10.5px; color:var(--muted); line-height:1.5; margin-top:3px; }
+.lgy { background:#D5F5E3; color:#1A5E38; }
+.lme { background:#FDEBD0; color:#7D3200; }
+.lha { background:#F3D1E8; color:#7D2B56; }
+.bgA { background:#D6E6FF; color:var(--eb3); }
+.bgB { background:#FFF3D1; color:#8B5A00; }
+.bgC { background:#D1ECF1; color:var(--teal); }
+.bgD { background:#E8DDFF; color:#5A3D8B; }
+.agsig { display:flex; align-items:center; justify-content:center; gap:18px; padding:14px; background:var(--eb); border-radius:6px; margin-top:10px; }
+.clp { font-size:11px; color:var(--muted); line-height:1.8; margin-bottom:10px; }
+code { background:#F0F5FF; padding:1px 5px; border-radius:3px; font-size:10.5px; color:var(--eb3); font-family:monospace; }
+.rl { list-style:none; margin:7px 0 13px; }
+.rl li { display:flex; gap:9px; padding:7px 11px; background:var(--light); border-radius:5px; margin-bottom:5px; font-size:12px; line-height:1.6; border-left:3px solid var(--el2); }
+.rl .rn { font-weight:900; color:var(--el2); min-width:16px; }
+.hl { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:10px 0 18px; }
+.hc { border:1px solid var(--mid); border-radius:7px; padding:12px 14px; background:white; }
+.hc h5 { font-size:11px; font-weight:700; color:var(--muted); margin-bottom:6px; }
+.hc .n { font-size:22px; font-weight:900; color:var(--eb); line-height:1.2; margin-bottom:4px; }
+.hc .s { font-size:10.5px; color:var(--ed2); line-height:1.5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+
+<div class="page">
+  <div class="cv-stripe"></div>
+  <div class="cv-hero">
+    <div>
+      <div class="cv-rule"></div>
+      <div class="cv-eye">GEO STRATEGY · M1 啟動交付文件</div>
+      <div class="cv-h1">SecuFirst / ALC<br><span>GEO 關鍵字策略</span><br>與 AI 能見度監測規劃書</div>
+      <div class="cv-sub">
+        基於 Ahrefs 關鍵字情報與貴品牌四大產品戰場，<br>
+        為 SecuFirst / ALC 量身設計 30 組 AI 能見度監測題目，<br>
+        並於 4/11 啟動首週實測，取得 M1 基線數據。
+      </div>
+    </div>
+    <div class="cv-la">
+      <img src="data:image/png;base64,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" alt="Enter IMC Logo">
+      <div class="cv-lt">確認鍵智創科技<br>Enter IMC</div>
+    </div>
+  </div>
+  <div class="cv-band">
+    <div class="cv-st"><div class="stn">30</div><div class="stu">組</div><div class="stl">AI 能見度監測題目</div></div>
+    <div class="cv-st"><div class="stn">4</div><div class="stu">戰場</div><div class="stl">汽車 / 機車 / CarPlay / 網攝</div></div>
+    <div class="cv-st"><div class="stn">4 / 4</div><div class="stu">平台</div><div class="stl">AIO / ChatGPT / Perplexity / Bing</div></div>
+    <div class="cv-st"><div class="stn">114</div><div class="stu">次</div><div class="stl">官網兩週內被 AI 引用</div></div>
+    <div class="cv-st"><div class="stn">Top 1</div><div class="stu">網域</div><div class="stl">品類 AI 最常引用來源</div></div>
+  </div>
+  <div class="cv-meta">
+    <div class="cv-mi">委託品牌<b>SecuFirst · ALC（天鉞電子股份有限公司 5251）</b></div>
+    <div class="cv-mi">監測區域<b>Taiwan · 繁體中文</b></div>
+    <div class="cv-mi">戰場分配<b>汽車 8 / 機車 8 / CarPlay 7 / 網攝 7</b></div>
+    <div class="cv-mi">關鍵字來源<b>Ahrefs Keywords Explorer（2026-04-24 資料）</b></div>
+    <div class="cv-mi">主要競品<b>Mio · PAPAGO · 響尾蛇</b></div>
+    <div class="cv-mi">交付日期<b>2026年04月24日</b></div>
+  </div>
+  <div class="cv-foot">
+    <p>本文件為確認鍵智創科技智慧財產，僅供客戶內部參考</p>
+    <p>© 2026 Enter Internet Marketing CO., LTD.</p>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="ph"><span>CHAPTER 01 · 策略摘要</span><img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z"></div>
+  <div class="sec"><h2>一、策略摘要：ALC 在 AI 搜尋時代的機會</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">1.1 為什麼需要 AI 能見度監測？</h3>
+    <p class="bt">
+      自 2025 年起，台灣消費者越來越常使用 ChatGPT、Perplexity、Google AI 摘要（AIO）來取代傳統 Google 搜尋——
+      當他們問「機車行車記錄器推薦」或「CarPlay 多媒體盒怎麼選」時，AI 會直接給出答案並標註品牌。
+      這意味著：<b>如果貴品牌沒有被 AI 引用，等於在新一代消費者的購買決策路徑上消失。</b>
+    </p>
+    <p class="bt">
+      本份文件即是針對貴品牌，建立一套可持續追蹤的 AI 引用監測系統。透過 30 組精心設計的模擬消費者問句，
+      每週自動在主流 AI 平台跑一遍，觀察 ALC / SecuFirst 是否被 AI 列入推薦、排第幾位、引用了哪個網頁。
+      <b>本專案已於 4 月 11 日啟動實測，首週基線數據詳見第四章。</b>
+    </p>
+
+    <h3 class="sh">1.2 好消息：ALC 已具備 AI 引用的基本條件</h3>
+    <div class="ib ig">
+      <b>透過 Ahrefs 實測貴網站在 Google 的排名，我們發現一個重要資訊 —— ALC 在多個核心關鍵字已排 Google 第 1 名：</b>
+      <div class="hl" style="margin-top:10px;">
+        <div class="hc"><h5>carplay</h5><div class="n">第 1 名</div><div class="s">月搜尋量<br><b>16,000 次</b></div></div>
+        <div class="hc"><h5>apple carplay</h5><div class="n">第 1 名</div><div class="s">月搜尋量<br><b>6,500 次</b></div></div>
+        <div class="hc"><h5>機車行車記錄器</h5><div class="n">第 1 名</div><div class="s">月搜尋量<br><b>2,600 次</b></div></div>
+        <div class="hc"><h5>carplay 怎麼用</h5><div class="n">第 1 名</div><div class="s">月搜尋量<br><b>600 次</b></div></div>
+      </div>
+      業界研究顯示：<b>97% 被 Google AI 摘要引用的頁面，同時在 Google 搜尋 Top 10 名次內</b>。
+      也就是說，貴網站已經具備被 AI 引用的「入場券」——只要後續配合技術端的優化（Schema 結構化資料、llms.txt 等，詳見 GEO 健檢報告），
+      這些高排名頁面就能快速轉換為 AI 引用來源。
+    </div>
+
+    <h3 class="sh">1.3 四大戰場與 ALC 產品線對應</h3>
+    <p class="bt">為確保監測結果能全面反映品牌表現，我們將 30 組題目均衡分佈於四個核心戰場：</p>
+    <table class="dt">
+      <thead><tr><th style="width:95px;">戰場</th><th style="width:60px;">題數</th><th>核心搜尋主題（Ahrefs 實測）</th><th style="width:170px;">ALC 對應產品線</th></tr></thead>
+      <tbody>
+        <tr><td><span class="b bb">汽車</span></td><td>8 題</td><td>行車記錄器推薦、記憶卡容量、電子後視鏡、哨兵模式</td><td>CX10 · CX20 · CX50 · CX60</td></tr>
+        <tr><td><span class="b bb">機車</span></td><td>8 題</td><td>機車行車記錄器推薦、安全帽式、防水等級、PTT 論壇討論</td><td>A1 · B1 · T1-S · M6PRO</td></tr>
+        <tr><td><span class="b bb">CarPlay</span></td><td>7 題</td><td>CarPlay 是什麼、連不上排除、無線接收器推薦</td><td>I7 · I8 · I9 · I10 · I10 PRO</td></tr>
+        <tr><td><span class="b bb">網攝</span></td><td>7 題</td><td>居家監視器、無線網路攝影機、戶外防水方案</td><td>AWC05 · AWC10 · AWF21 · AWF54 · AWF61</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">1.4 題目設計的三個層次</h3>
+    <p class="bt">為了真實反映消費者在不同購買階段提問 AI 的行為，我們把 30 題依消費者決策旅程分為三個層次：</p>
+    <table class="dt">
+      <thead><tr><th style="width:95px;">層次</th><th style="width:60px;">題數</th><th>代表情境</th><th>觀察重點</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="b lgy">認知階段</span></td><td>12 題</td>
+          <td>消費者還在研究階段：「機車族為什麼需要行車記錄器？」「CarPlay 是什麼？」</td>
+          <td>AI 在提供一般性知識時，是否會引用 ALC 官網作為來源</td>
+        </tr>
+        <tr>
+          <td><span class="b lme">比較階段</span></td><td>12 題</td>
+          <td>消費者準備挑選：「2026 年推薦的行車記錄器品牌有哪些？」「Mio 跟 PAPAGO 比較」</td>
+          <td>ALC 是否被 AI 列入推薦品牌、與競品相對位置如何</td>
+        </tr>
+        <tr>
+          <td><span class="b lha">決策階段</span></td><td>6 題</td>
+          <td>消費者鎖定具體產品：「ALC CX60 跟 CX20 該選哪一台？」「I9 這個價位合理嗎？」</td>
+          <td>AI 對 ALC 特定型號的認識深度，是否能準確描述產品差異</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="pf">確認鍵智創科技 · SecuFirst / ALC GEO 策略規劃 · 2026年04月24日</div>
+</div>
+
+
+<div class="page">
+  <div class="ph"><span>CHAPTER 02 · 關鍵字情報</span><img src="data:image/png;base64,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"></div>
+  <div class="sec"><h2>二、四大戰場關鍵字情報（Ahrefs 實測）</h2></div>
+  <div class="pc">
+    <p class="bt">本章摘錄我們為貴品牌設計 30 題時，所參考的關鍵字搜尋量與排名現況。資料來源為 Ahrefs Keywords Explorer 台灣地區即時數據。</p>
+
+    <h3 class="sh">2.1 戰場一 · 汽車行車記錄器</h3>
+    <table class="dt">
+      <thead><tr><th>關鍵字</th><th style="width:75px;">月搜量</th><th style="width:75px;">AI 摘要</th><th style="width:95px;">ALC 排名</th></tr></thead>
+      <tbody>
+        <tr><td>行車記錄器</td><td>8,800</td><td>✅ 會觸發</td><td>第 7 名</td></tr>
+        <tr><td>行車記錄器推薦</td><td>5,500</td><td>✅ 會觸發</td><td>第 8 名</td></tr>
+        <tr><td>電子後視鏡</td><td>3,900</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>行車記錄器記憶卡</td><td>1,900</td><td>✅ 會觸發</td><td>第 9 名</td></tr>
+        <tr><td>電子後視鏡推薦</td><td>1,100</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>汽車行車記錄器</td><td>1,000</td><td>✅ 會觸發</td><td>第 10 名</td></tr>
+        <tr><td>哨兵模式</td><td>800</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>電子後視鏡缺點</td><td>800</td><td>✅ 會觸發</td><td>第 9 名</td></tr>
+        <tr><td>行車記錄器品牌排名</td><td>700</td><td>✅ 會觸發</td><td>第 8 名</td></tr>
+        <tr><td>雙鏡頭行車記錄器推薦</td><td>250</td><td>✅ 會觸發</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">2.2 戰場二 · 機車行車記錄器</h3>
+    <table class="dt">
+      <thead><tr><th>關鍵字</th><th style="width:75px;">月搜量</th><th style="width:75px;">AI 摘要</th><th style="width:95px;">ALC 排名</th></tr></thead>
+      <tbody>
+        <tr><td>機車行車紀錄器<span style="color:var(--muted);font-size:10px;">（「紀」寫法）</span></td><td>6,400</td><td>—</td><td>第 5 名</td></tr>
+        <tr><td>機車行車記錄器推薦</td><td>3,500</td><td>✅ 會觸發</td><td>第 6 名</td></tr>
+        <tr><td>機車行車記錄器</td><td>2,500</td><td>✅ 會觸發</td><td><b>第 1 名 🎯</b></td></tr>
+        <tr><td>機車行車紀錄器推薦<span style="color:var(--muted);font-size:10px;">（「紀」寫法）</span></td><td>700</td><td>—</td><td><b>第 1 名 🎯</b></td></tr>
+        <tr><td>行車記錄器 機車</td><td>700</td><td>✅ 會觸發</td><td>第 5 名</td></tr>
+        <tr><td>安全帽行車記錄器</td><td>350</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>機車行車記錄器推薦 ptt</td><td>250</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>機車行車記錄器安裝費用</td><td>200</td><td>✅ 會觸發</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <p class="bt" style="font-size:10.5px;color:var(--muted);margin-top:-4px;">
+      ※ 台灣消費者對「紀錄器」與「記錄器」兩種寫法都會使用，兩者在 Ahrefs 視為獨立關鍵字。貴網站於「紀」寫法排名較佳，兩種寫法合計是完整的市場搜尋量。
+    </p>
+
+    <h3 class="sh">2.3 戰場三 · CarPlay / 車用多媒體</h3>
+    <table class="dt">
+      <thead><tr><th>關鍵字</th><th style="width:75px;">月搜量</th><th style="width:75px;">AI 摘要</th><th style="width:95px;">ALC 排名</th></tr></thead>
+      <tbody>
+        <tr><td>carplay</td><td>16,000</td><td>✅ 會觸發</td><td><b>第 1 名 🎯</b></td></tr>
+        <tr><td>apple carplay</td><td>7,200</td><td>✅ 會觸發</td><td><b>第 1 名 🎯</b></td></tr>
+        <tr><td>android auto</td><td>6,100</td><td>—</td><td>—</td></tr>
+        <tr><td>carplay 連不上</td><td>1,300</td><td>✅ 會觸發</td><td>第 10 名</td></tr>
+        <tr><td>無線 carplay</td><td>1,100</td><td>✅ 會觸發</td><td>第 9 名</td></tr>
+        <tr><td>apple carplay 連不上</td><td>1,000</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>carplay 是什麼</td><td>900</td><td>✅ 會觸發</td><td><b>第 1 名 🎯</b></td></tr>
+        <tr><td>carplay 怎麼用</td><td>800</td><td>✅ 會觸發</td><td><b>第 1 名 🎯</b></td></tr>
+        <tr><td>安卓機 carplay</td><td>800</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>無線 carplay 接收器推薦</td><td>200</td><td>✅ 會觸發</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">2.4 戰場四 · 居家網路攝影機</h3>
+    <table class="dt">
+      <thead><tr><th>關鍵字</th><th style="width:75px;">月搜量</th><th style="width:75px;">AI 摘要</th><th style="width:95px;">ALC 排名</th></tr></thead>
+      <tbody>
+        <tr><td>網路攝影機</td><td>1,700</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>無線監視器</td><td>1,000</td><td>—</td><td>—</td></tr>
+        <tr><td>無線監視器推薦</td><td>600</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>網路攝影機推薦</td><td>400</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>居家監視器</td><td>150</td><td>✅ 會觸發</td><td>—</td></tr>
+        <tr><td>居家監視器推薦</td><td>100</td><td>✅ 會觸發</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <div class="ib ii" style="margin-top:8px;">
+      <b>網攝戰場觀察：</b>此戰場整體搜尋量遠低於前三個戰場，且 SecuFirst / ALC 目前未進入 Google Top 20。
+      建議以「台灣在地品牌 vs 小米、TP-Link 等外商全球品牌」作為市場切角差異，長期累積內容深度以擴大品牌聲量。
+    </div>
+
+    <h3 class="sh">2.5 品牌搜尋現況（建立後續成長基準）</h3>
+    <div class="ib io">
+      <b>品牌詞搜尋量盤點：</b>
+      <table class="dt" style="margin-top:8px;">
+        <thead><tr><th>品牌詞</th><th style="width:90px;">月搜量</th><th>備註</th></tr></thead>
+        <tbody>
+          <tr><td>secufirst</td><td>150</td><td>既有居家監視器老客戶回訪搜尋</td></tr>
+          <tr><td>天鉞電子 · 天鉞電子股份有限公司</td><td>合計 140</td><td>上市公司法人 / 投資人搜尋</td></tr>
+          <tr><td>alc 行車記錄器系列品牌詞</td><td>合計 30</td><td>目前品牌認知度待提升</td></tr>
+          <tr class="sr"><td colspan="3">市場競品對照</td></tr>
+          <tr><td>mio 行車記錄器</td><td>5,100</td><td>市場領導者</td></tr>
+          <tr><td>寶麗萊 · polaroid 行車記錄器</td><td>2,150</td><td>強勢國際品牌</td></tr>
+          <tr><td>hp 行車記錄器</td><td>1,200</td><td>次級主流</td></tr>
+          <tr><td>papago 行車記錄器</td><td>800</td><td>在地主流</td></tr>
+        </tbody>
+      </table>
+      <b>策略意義：</b>品牌搜尋量是長期經營指標，透過 GEO + SEO + 內容行銷的組合操作，目標在半年內讓 ALC 品牌詞搜尋量逐步成長，縮小與主要競品的能見度差距。
+    </div>
+  </div>
+  <div class="pf">確認鍵智創科技 · SecuFirst / ALC GEO 策略規劃 · 2026年04月24日</div>
+</div>
+
+
+<div class="page">
+  <div class="ph"><span>CHAPTER 03 · 監測 Prompt 清單</span><img src="data:image/png;base64,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"></div>
+  <div class="sec"><h2>三、30 組 AI 能見度監測題目</h2></div>
+  <div class="pc">
+    <p class="bt">
+      以下 30 組題目已匯入 Otterly.AI 監測平台，每週自動在 Google AI 摘要、ChatGPT Search、Perplexity、Bing Copilot 四大平台執行。
+      題目完整 CSV 匯入檔案已另行提供（<code>SecuFirst_ALC_otterly_prompts_20260424.csv</code>）。首週實測結果詳見第四章。
+    </p>
+
+    <h3 class="sh">3.1 戰場一 · 汽車行車記錄器（8 題）</h3>
+    <table class="pt">
+      <thead><tr><th style="width:30px;">#</th><th style="width:90px;">分類</th><th>監測題目 / 設計說明</th></tr></thead>
+      <tbody><tr>
+      <td class="no">1</td>
+      <td><span class="b bgA">汽車</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">汽車行車記錄器怎麼選？2026 年新手車主該注意哪些規格？</div>
+          <div class="pr">主戰場核心認知題。對應「汽車行車記錄器」(8,800/月) 與「行車記錄器」母題，Google AIO 觸發率高。</div></td>
+    </tr><tr>
+      <td class="no">2</td>
+      <td><span class="b bgA">汽車</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">汽車行車記錄器的記憶卡要選多大容量？128GB 可以錄多久？</div>
+          <div class="pr">對應 ALC 既有部落格文章 /dashcam-memory-card，該頁目前排 Google 第 9 名。</div></td>
+    </tr><tr>
+      <td class="no">3</td>
+      <td><span class="b bgA">汽車</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">電子後視鏡跟傳統行車記錄器有什麼差別？優缺點分別是什麼？</div>
+          <div class="pr">ALC 有 CX50 電子後視鏡產品線；「電子後視鏡」(3,900/月)、「電子後視鏡缺點」(800/月) 都有 AIO 觸發。</div></td>
+    </tr><tr>
+      <td class="no">4</td>
+      <td><span class="b bgA">汽車</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">2026 年值得推薦的汽車行車記錄器品牌有哪些？請列出 TOP 5 並比較差異</div>
+          <div class="pr">品牌排名型題目。觀察 ALC 是否被列入 TOP 5 品牌清單，以及與 Mio、PAPAGO、響尾蛇等競品的相對位置。</div></td>
+    </tr><tr>
+      <td class="no">5</td>
+      <td><span class="b bgA">汽車</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">Mio 跟 PAPAGO 的汽車行車記錄器哪個比較好？優缺點比較給我參考</div>
+          <div class="pr">兩大競品比較題。觀察 AI 回答兩家競品比較時，是否會主動帶入其他替代品牌（包含 ALC）。</div></td>
+    </tr><tr>
+      <td class="no">6</td>
+      <td><span class="b bgA">汽車</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">PTT 跟 Dcard 上，前後雙鏡頭 4K 汽車行車記錄器怎麼選比較不會踩雷？</div>
+          <div class="pr">ALC CX20+CX20R、CX60+CX60-R 正是此規格。論壇關鍵字用於驗證 UGC 是否進入 AI 引用來源。</div></td>
+    </tr><tr>
+      <td class="no">7</td>
+      <td><span class="b bgA">汽車</span><br><span class="b lha" style="margin-top:4px;">決策</span></td>
+      <td><div class="pb">ALC CX60 汽車行車記錄器跟 CX20 星光級 4K 前後鏡，該選哪一台？實際使用有什麼差別？</div>
+          <div class="pr">品牌型號比較題。觀察 ChatGPT 與 Perplexity 是否能答出 ALC 自家產品差異。</div></td>
+    </tr><tr>
+      <td class="no">8</td>
+      <td><span class="b bgA">汽車</span><br><span class="b lha" style="margin-top:4px;">決策</span></td>
+      <td><div class="pb">ALC CX50 分離式前後鏡電子後視鏡適合哪些車型安裝？安裝難度跟步驟是什麼？</div>
+          <div class="pr">品牌型號 + 使用情境。對應 ALC 既有文章 /electronic-rearview-mirror。</div></td>
+    </tr></tbody>
+    </table>
+
+    <h3 class="sh">3.2 戰場二 · 機車行車記錄器（8 題）</h3>
+    <table class="pt">
+      <thead><tr><th style="width:30px;">#</th><th style="width:90px;">分類</th><th>監測題目 / 設計說明</th></tr></thead>
+      <tbody><tr>
+      <td class="no">9</td>
+      <td><span class="b bgB">機車</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">機車族為什麼需要行車記錄器？它跟汽車用的有什麼關鍵差異？</div>
+          <div class="pr">機車戰場入門題。ALC 的 /motorcycle-dashcam 文章目前在「機車行車記錄器」(2,500/月) 排 Google 第 1 名。</div></td>
+    </tr><tr>
+      <td class="no">10</td>
+      <td><span class="b bgB">機車</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">機車行車記錄器該裝在安全帽上還是車身上？兩者的優缺點分別是什麼？</div>
+          <div class="pr">ALC T1-S 為安全帽款代表產品。Matters 第三方訪談已有完整論述，利於 AI 引用。</div></td>
+    </tr><tr>
+      <td class="no">11</td>
+      <td><span class="b bgB">機車</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">機車行車記錄器防水等級要選 IP65 還是 IP66？日常通勤騎士怎麼判斷？</div>
+          <div class="pr">技術規格長尾題。ALC B1 的 IP65 規格正好是此情境答案。</div></td>
+    </tr><tr>
+      <td class="no">12</td>
+      <td><span class="b bgB">機車</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">PTT 推薦的機車行車記錄器品牌有哪些？雙鏡頭款式誰的 CP 值最高？</div>
+          <div class="pr">論壇關鍵字 + 雙鏡頭情境。ALC 在「機車行車記錄器推薦」(3,500/月) 已排 Google 第 6。</div></td>
+    </tr><tr>
+      <td class="no">13</td>
+      <td><span class="b bgB">機車</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">Mio MiVue、PAPAGO、響尾蛇，哪家的機車行車記錄器比較值得買？</div>
+          <div class="pr">三大競品比較題，建立 ALC 在「非品牌題」被列入替代選項的基準。</div></td>
+    </tr><tr>
+      <td class="no">14</td>
+      <td><span class="b bgB">機車</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">機車藍芽對講 + 行車記錄器二合一的產品有哪些？適合長途重機騎士嗎？</div>
+          <div class="pr">ALC A1 正是此品類的代表。測試 AI 能否在語意接近情境主動引用。</div></td>
+    </tr><tr>
+      <td class="no">15</td>
+      <td><span class="b bgB">機車</span><br><span class="b lha" style="margin-top:4px;">決策</span></td>
+      <td><div class="pb">ALC T1-S 雙鏡頭機車行車記錄器的實際使用心得如何？跟 B1 側掛式怎麼選？</div>
+          <div class="pr">品牌雙型號對比題。Matters、Dcard 均已有 T1-S、B1 使用者內容。</div></td>
+    </tr><tr>
+      <td class="no">16</td>
+      <td><span class="b bgB">機車</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">機車用 CarPlay 前後雙鏡頭行車記錄器有哪些品牌推薦？值得從普通機車記錄器升級嗎？</div>
+          <div class="pr">進階情境題。對應 ALC M6PRO 這個新興品類，觀察 AI 是否認識新產品類別。</div></td>
+    </tr></tbody>
+    </table>
+  </div>
+  <div class="pf">確認鍵智創科技 · SecuFirst / ALC GEO 策略規劃 · 2026年04月24日</div>
+</div>
+
+
+<div class="page">
+  <div class="ph"><span>CHAPTER 03 · 監測 Prompt 清單（續）</span><img src="data:image/png;base64,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"></div>
+  <div class="sec"><h2>三、30 組 AI 能見度監測題目（續）</h2></div>
+  <div class="pc">
+    <h3 class="sh">3.3 戰場三 · CarPlay / 車用多媒體（7 題）</h3>
+    <table class="pt">
+      <thead><tr><th style="width:30px;">#</th><th style="width:90px;">分類</th><th>監測題目 / 設計說明</th></tr></thead>
+      <tbody><tr>
+      <td class="no">17</td>
+      <td><span class="b bgC">CarPlay</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">CarPlay 是什麼？跟 Android Auto 有什麼差別？沒有原廠支援的車要怎麼用？</div>
+          <div class="pr">CarPlay 戰場核心題。ALC 的 /what-is-carplay 文章目前在「carplay」(16,000/月) 排 Google 第 1 名。</div></td>
+    </tr><tr>
+      <td class="no">18</td>
+      <td><span class="b bgC">CarPlay</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">Apple CarPlay 連不上車機怎麼辦？有哪些常見排除方法？</div>
+          <div class="pr">疑難排解型問句，AI 引用率最高的內容格式之一。ALC 同篇文章在「carplay 連不上」(1,300/月) 排第 10。</div></td>
+    </tr><tr>
+      <td class="no">19</td>
+      <td><span class="b bgC">CarPlay</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">無線 CarPlay 接收器值得買嗎？跟有線相比優缺點是什麼？</div>
+          <div class="pr">ALC I7 / I8 / I9 正是此品類產品，直接對應商品購買意圖。</div></td>
+    </tr><tr>
+      <td class="no">20</td>
+      <td><span class="b bgC">CarPlay</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">2026 年推薦的車用 CarPlay 多媒體盒有哪些品牌？具備哪些功能才算好用？</div>
+          <div class="pr">CarPlay 盒子市場多為中國代工品牌，ALC 作為台灣在地品牌有差異化機會。</div></td>
+    </tr><tr>
+      <td class="no">21</td>
+      <td><span class="b bgC">CarPlay</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">安卓機跟 CarPlay 可以並存嗎？一台車同時支援 Apple CarPlay 跟 Android Auto 怎麼選產品？</div>
+          <div class="pr">ALC I9、I10 PRO 均支援雙系統，直接匹配此情境。</div></td>
+    </tr><tr>
+      <td class="no">22</td>
+      <td><span class="b bgC">CarPlay</span><br><span class="b lha" style="margin-top:4px;">決策</span></td>
+      <td><div class="pb">ALC I9 旗艦版汽車 CarPlay 多媒體盒跟 I8 差在哪？6,490 元這個價位合理嗎？</div>
+          <div class="pr">品牌型號比較 + 實際售價。直接對應購買決策情境。</div></td>
+    </tr><tr>
+      <td class="no">23</td>
+      <td><span class="b bgC">CarPlay</span><br><span class="b lha" style="margin-top:4px;">決策</span></td>
+      <td><div class="pb">ALC I10 PRO 安卓版 CarPlay 多功能行車記錄器，可以裝 YouTube、導航 APP 嗎？</div>
+          <div class="pr">品牌型號 + 功能查詢。銜接「apple carplay app 下載」類長尾搜尋。</div></td>
+    </tr></tbody>
+    </table>
+
+    <h3 class="sh">3.4 戰場四 · 居家網路攝影機（7 題）</h3>
+    <table class="pt">
+      <thead><tr><th style="width:30px;">#</th><th style="width:90px;">分類</th><th>監測題目 / 設計說明</th></tr></thead>
+      <tbody><tr>
+      <td class="no">24</td>
+      <td><span class="b bgD">網攝</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">居家監視器跟無線網路攝影機有什麼差別？哪種比較適合租屋族？</div>
+          <div class="pr">網攝戰場入門題。租屋族情境讓答案更具體，利於 AI 引用具體建議。</div></td>
+    </tr><tr>
+      <td class="no">25</td>
+      <td><span class="b bgD">網攝</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">2026 年無線網路攝影機選購重點是什麼？防水等級、畫質跟夜視要怎麼看？</div>
+          <div class="pr">規格比較型題目。SecuFirst AWF21 / AWF61 / AWF54 產品線都能對應。</div></td>
+    </tr><tr>
+      <td class="no">26</td>
+      <td><span class="b bgD">網攝</span><br><span class="b lgy" style="margin-top:4px;">認知</span></td>
+      <td><div class="pb">戶外用防水網路攝影機要選哪種？IP65 跟 IP66 防水等級差在哪？</div>
+          <div class="pr">SecuFirst AWF54 / AWF61 專攻戶外防水款，匹配此情境精準。</div></td>
+    </tr><tr>
+      <td class="no">27</td>
+      <td><span class="b bgD">網攝</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">台灣在地品牌的居家無線監視器有哪些推薦？跟小米、TP-Link 相比如何？</div>
+          <div class="pr">台灣在地品牌切角是 SecuFirst（天鉞電子）的核心差異化戰場。</div></td>
+    </tr><tr>
+      <td class="no">28</td>
+      <td><span class="b bgD">網攝</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">年長者長輩獨居的居家安全監控方案該怎麼規劃？需要幾台攝影機、功能怎麼選？</div>
+          <div class="pr">使用情境題目，讓 AI 依使用者目的而非品牌名來推薦。</div></td>
+    </tr><tr>
+      <td class="no">29</td>
+      <td><span class="b bgD">網攝</span><br><span class="b lme" style="margin-top:4px;">比較</span></td>
+      <td><div class="pb">防水、可旋轉的戶外無線網路攝影機選購時，畫素、夜視距離、防水等級要注意哪些規格？</div>
+          <div class="pr">規格組合型長尾。對應 SecuFirst AWF54 / AWF61 的產品特性。</div></td>
+    </tr><tr>
+      <td class="no">30</td>
+      <td><span class="b bgD">網攝</span><br><span class="b lha" style="margin-top:4px;">決策</span></td>
+      <td><div class="pb">SecuFirst 跟 ALC 都是天鉞電子的品牌，兩者的產品線分別主打哪些應用場景？</div>
+          <div class="pr">企業品牌矩陣題。觀察 AI 是否能正確關聯 SecuFirst 與 ALC 同屬天鉞電子（上市代號 5251）。</div></td>
+    </tr></tbody>
+    </table>
+  </div>
+  <div class="pf">確認鍵智創科技 · SecuFirst / ALC GEO 策略規劃 · 2026年04月24日</div>
+</div>
+
+
+<div class="page">
+  <div class="ph"><span>CHAPTER 04 · AI 能見度實測結果</span><img src="data:image/png;base64,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"></div>
+  <div class="sec"><h2>四、AI 能見度首週實測結果（M1 基線）</h2></div>
+  <div class="pc">
+
+    <p class="bt">
+      本份文件第三章的 30 組題目，已於 <b>2026 年 4 月 11 日</b>先行匯入 Otterly.AI 監測平台實際執行。
+      以下數據取自 <b>4/11 – 4/24 共兩週</b>期間，於 Google AI 摘要、ChatGPT、Perplexity、Bing Copilot 四大 AI 平台的累積引用狀況，
+      作為後續半年 GEO 專案成效追蹤的 <b>M1 基線數據</b>。
+    </p>
+
+    <h3 class="sh">4.1 整體表現速覽</h3>
+    <div class="hl">
+      <div class="hc"><h5>AI 引用總次數</h5><div class="n">1,946</div><div class="s">30 題 × 4 平台 × 兩週累積</div></div>
+      <div class="hc"><h5>品牌被 AI 提及</h5><div class="n">56 次</div><div class="s">橫跨四大 AI 平台</div></div>
+      <div class="hc"><h5>官網被引用</h5><div class="n">114 次</div><div class="s">為所有被引用網域第 1 名</div></div>
+      <div class="hc"><h5>決策階段品牌排名</h5><div class="n">第 1 名</div><div class="s">6 題帶型號 Hard 題全數第 1</div></div>
+    </div>
+
+    <div class="ib ii">
+      <b>一句話結論：</b>首週基線顯示 SecuFirst / ALC 在 AI 引用上的起點表現優於多數同類品牌——
+      <code>secufirst.com.tw</code> 成為 AI 回答時引用次數最多的單一網域，超越 YouTube、Vocus、Dcard 等第三方平台。
+      尚有明顯成長空間的領域為「認知階段」題目的品牌名見度，以及 Bing Copilot 平台的引用滲透。
+    </div>
+
+    <h3 class="sh">4.2 四大 AI 平台滲透狀況</h3>
+    <table class="dt">
+      <thead><tr><th style="width:140px;">AI 平台</th><th style="width:120px;">總引用次數</th><th style="width:130px;">品牌被提及次數</th><th style="width:140px;">官網被引用次數</th><th>觀察</th></tr></thead>
+      <tbody>
+        <tr><td><b>Perplexity</b></td><td>600</td><td>59</td><td>42</td><td>品牌能見度與官網引用雙冠軍，為 ALC 最強勢平台</td></tr>
+        <tr><td><b>ChatGPT Search</b></td><td>684</td><td>48</td><td>34</td><td>引用量最大，品牌曝光穩定</td></tr>
+        <tr><td><b>Google AI 摘要</b></td><td>464</td><td>45</td><td>34</td><td>與 ChatGPT 同等表現，與貴網站現有 Google 排名互相呼應</td></tr>
+        <tr><td><b>Bing Copilot</b></td><td>198</td><td>12</td><td>4</td><td>引用滲透偏低，為後續半年強化重點</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">4.3 三個題目層次的表現差異</h3>
+    <table class="dt">
+      <thead><tr><th style="width:110px;">層次</th><th style="width:100px;">品牌提及</th><th style="width:100px;">平均排名</th><th>觀察說明</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="b lha">決策階段<br>（6 題）</span></td>
+          <td>全數提及</td>
+          <td><b>第 1 名</b></td>
+          <td>當消費者直接問 ALC CX20 / CX60、I8 / I9、T1-S / B1、I10 PRO 或 SecuFirst × ALC 品牌關聯時，4 大 AI 平台均能正確回答，且將 ALC 列為首選品牌。</td>
+        </tr>
+        <tr>
+          <td><span class="b lme">比較階段<br>（12 題）</span></td>
+          <td>部分題有提及</td>
+          <td>第 1–3 名</td>
+          <td>「2026 車用 CarPlay 推薦品牌」「機車 CarPlay 升級」類題目，AI 已主動將 ALC 納入推薦清單。「Mio vs PAPAGO」「PTT 推薦」類題目尚未穩定提及，為後續外站內容操作重點。</td>
+        </tr>
+        <tr>
+          <td><span class="b lgy">認知階段<br>（12 題）</span></td>
+          <td>少數題有提及</td>
+          <td>—</td>
+          <td>AI 在回答「行車記錄器怎麼選」「CarPlay 是什麼」這類通用知識題時，仍會引用貴官網作為資料來源（貢獻 114 次官網被引用數的多數來源），但回答中不必然口頭標示 ALC 品牌——屬於「資訊貢獻者」的角色。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">4.4 AI 引用生態：誰在這個品類被 AI 聽見？</h3>
+    <p class="bt">
+      兩週內被 AI 引用的所有網域分佈，可反映「AI 眼中這個品類的權威來源生態」。
+      下表為前 15 大被引用網域，secufirst.com.tw 穩居第 1。
+    </p>
+    <table class="dt">
+      <thead><tr><th style="width:30px;">#</th><th>網域</th><th style="width:130px;">類別</th><th style="width:80px;">被引用次數</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><b>secufirst.com.tw</b></td><td>品牌官網</td><td><b>114</b></td></tr>
+        <tr><td>2</td><td>youtube.com</td><td>影音平台</td><td>78</td></tr>
+        <tr><td>3</td><td>vocus.cc</td><td>部落格 / 個人站</td><td>76</td></tr>
+        <tr><td>4</td><td>dcard.tw</td><td>社群 / 論壇</td><td>70</td></tr>
+        <tr><td>5</td><td>24h.pchome.com.tw</td><td>電商通路</td><td>54</td></tr>
+        <tr><td>6</td><td>mobile01.com</td><td>社群 / 論壇</td><td>52</td></tr>
+        <tr><td>7</td><td>uptogo.com.tw</td><td>部落格 / 個人站</td><td>42</td></tr>
+        <tr><td>8</td><td>taiziya3105.com</td><td>同業品牌（台智亞）</td><td>38</td></tr>
+        <tr><td>9</td><td>pernis.com.tw</td><td>同業品牌（蜂鷹）</td><td>36</td></tr>
+        <tr><td>10</td><td>reddit.com</td><td>社群 / 論壇</td><td>34</td></tr>
+        <tr><td>11</td><td>rhythmtaiwan.com.tw</td><td>其他資訊站</td><td>32</td></tr>
+        <tr><td>12</td><td>tw.my-best.com</td><td>評測媒體</td><td>30</td></tr>
+        <tr><td>13</td><td>hs-cctv.com.tw</td><td>同業品牌</td><td>30</td></tr>
+        <tr><td>14</td><td>ptt.cc</td><td>社群 / 論壇</td><td>30</td></tr>
+        <tr><td>15</td><td>momoshop.com.tw</td><td>電商通路</td><td>28</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">4.5 網域類別結構分析</h3>
+    <table class="dt">
+      <thead><tr><th>來源類別</th><th style="width:100px;">引用次數</th><th style="width:80px;">佔比</th><th>意義</th></tr></thead>
+      <tbody>
+        <tr><td>品牌官網 / 通路</td><td>936</td><td>48.1%</td><td>含 ALC 官網、電商通路與同業品牌網站</td></tr>
+        <tr><td>其他資訊站</td><td>340</td><td>17.5%</td><td>專業技術網站、周邊配件站</td></tr>
+        <tr><td>社群 / 論壇</td><td>194</td><td>10.0%</td><td>Dcard、Mobile01、Reddit、PTT（UGC 來源）</td></tr>
+        <tr><td>部落格 / 個人站</td><td>192</td><td>9.9%</td><td>Vocus、uptogo、個人專欄（第三方長文評測）</td></tr>
+        <tr><td>新聞 / 媒體</td><td>152</td><td>7.8%</td><td>car-tv.com.tw 等汽車媒體</td></tr>
+        <tr><td>影音</td><td>80</td><td>4.1%</td><td>YouTube 開箱 / 評測影片</td></tr>
+        <tr><td>社群媒體</td><td>34</td><td>1.7%</td><td>Facebook 等</td></tr>
+        <tr><td>其他（百科、政府、教育）</td><td>18</td><td>0.9%</td><td>Wikipedia 等權威來源</td></tr>
+      </tbody>
+    </table>
+    <div class="ib ii">
+      <b>觀察：</b>AI 在此品類的引用來源中，社群論壇（Dcard、Mobile01、PTT）佔 10%、部落格專欄（Vocus、uptogo）佔近 10%——合計約 20% 的 AI 引用來自第三方 UGC 與專欄內容。
+      這塊正是後續半年外站佈局（部落格邀稿、論壇經營、YouTube 開箱合作）可著力加強的領域，讓「AI 看得見 ALC」的來源更多元。
+    </div>
+
+    <h3 class="sh">4.6 過往內容資產的 AI 引用現況</h3>
+    <p class="bt">
+      比對本次兩週 Otterly 實測結果與貴品牌過去於 Dcard、Mobile01 論壇累積的品牌相關討論內容，我們觀察到部分過往文章已進入 AI 引用來源清單——
+      這代表過去在論壇累積的 UGC 正在轉化為 AI 時代的品牌資產，持續為 AI 提供關於 ALC 產品的佐證素材。
+    </p>
+    <table class="dt">
+      <thead><tr><th>論壇 / 版位</th><th>文章主題</th><th style="width:90px;">AI 引用次數</th><th style="width:160px;">引用平台</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Mobile01<br><span style="font-size:10px;color:var(--muted);">機車行車記錄器綜合</span></td>
+          <td>行車紀錄器選擇困難（ALC B1 跟 T1-S）</td>
+          <td>4 次</td>
+          <td>ChatGPT · Bing Copilot</td>
+        </tr>
+        <tr>
+          <td>Dcard<br><span style="font-size:10px;color:var(--muted);">機車板</span></td>
+          <td>選購 側掛式行車記錄器請益</td>
+          <td>2 次</td>
+          <td>ChatGPT</td>
+        </tr>
+        <tr>
+          <td>Dcard<br><span style="font-size:10px;color:var(--muted);">行車記錄器板</span></td>
+          <td>詢問 機車行車記錄器 ALC B1</td>
+          <td>2 次</td>
+          <td>ChatGPT</td>
+        </tr>
+        <tr>
+          <td>Mobile01<br><span style="font-size:10px;color:var(--muted);">汽車行車記錄器綜合</span></td>
+          <td>ALC CX20 行車紀錄器小小心得</td>
+          <td>2 次</td>
+          <td>Perplexity</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ib ig">
+      <b>意義：</b>這 4 篇過往論壇文章合計在本次兩週實測中貢獻 <b>10 次 AI 引用</b>，佔整體引用來自論壇類別（194 次）約 5%。
+      更關鍵的觀察是，這些文章已經在 <b>ChatGPT、Perplexity、Bing Copilot 三大 AI 平台</b>被引用，
+      顯示論壇長尾內容確實會被 AI 持續抓取作為品牌討論的佐證——
+      這也呼應了前述「社群論壇類別佔 AI 引用 10%」的結構性觀察。
+    </div>
+
+  </div>
+  <div class="pf">確認鍵智創科技 · SecuFirst / ALC GEO 策略規劃 · 2026年04月24日</div>
+</div>
+
+
+<div class="page">
+  <div class="ph"><span>CHAPTER 05 · 下一步行動</span><img src="data:image/png;base64,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"></div>
+  <div class="sec"><h2>五、後續執行規劃</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">5.1 監測執行現況</h3>
+    <p class="bt">本專案 M1 階段的監測系統已於 4 月 11 日啟動，目前狀態如下：</p>
+    <ul class="rl">
+      <li><span class="rn">①</span>Otterly.AI 監測平台專案已建立，區域設定為 Taiwan、語言為繁體中文。</li>
+      <li><span class="rn">②</span>30 組監測題目已匯入並開始執行。</li>
+      <li><span class="rn">③</span>品牌名與型號變體已設定：ALC · SecuFirst · 天鉞電子，以及 CX、I、M、T、AWF 系列型號。</li>
+      <li><span class="rn">④</span>三大競品監測已設定：Mio / MiVue、PAPAGO、響尾蛇 / Carscam。</li>
+      <li><span class="rn">⑤</span>四大 AI 平台監測已啟用：Google AI 摘要、ChatGPT Search、Perplexity、Bing Copilot。</li>
+      <li><span class="rn">⑥</span>首週基線數據已彙整於本報告第四章，作為後續半年成效追蹤的起點。</li>
+    </ul>
+
+    <h3 class="sh">5.2 每月月報追蹤指標</h3>
+    <p class="bt">後續每月月報將以本份 M1 基線為起點，持續追蹤以下六項 AI 能見度核心指標的變化：</p>
+    <table class="dt">
+      <thead><tr><th style="width:180px;">指標</th><th style="width:130px;">M1 基線</th><th>意義與追蹤重點</th></tr></thead>
+      <tbody>
+        <tr><td><b>品牌提及次數</b><br>Brand Mentions</td><td>56 次<br>（兩週）</td><td>AI 回答 30 題時，口頭提到 ALC / SecuFirst 品牌的總次數。</td></tr>
+        <tr><td><b>AI 引用次數</b><br>Citations to Own Domain</td><td>114 次<br>（兩週）</td><td>AI 回答中直接引用 secufirst.com.tw 作為來源連結的次數。</td></tr>
+        <tr><td><b>Share of Voice</b><br>聲量佔有率</td><td>持續計算中</td><td>在有提及競品的題目中，ALC 相較 Mio、PAPAGO、響尾蛇的聲量佔比。</td></tr>
+        <tr><td><b>引用網域數</b><br>Domain Diversity</td><td>Top 1<br>被引用網域</td><td>AI 引用 ALC 時除官網外的其他來源多元性（Dcard、YouTube、Vocus 等）。</td></tr>
+        <tr><td><b>跨平台出現率</b><br>Cross-Platform</td><td>4 / 4 平台</td><td>ALC 已於 Google AIO、ChatGPT、Perplexity、Bing Copilot 四平台均被引用。</td></tr>
+        <tr><td><b>Top 10 問句出現數</b><br>Top Coverage</td><td>6 題<br>（決策階段全中）</td><td>30 題中 ALC 出現聲量最高的前 10 題，是否含轉換意圖題目。</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sh">5.3 與 GEO 官網健檢的搭配</h3>
+    <div class="ib ii">
+      本份監測規劃需與「<b>SecuFirst / ALC GEO 官網健檢報告</b>」的修復建議搭配執行：
+      健檢報告已指出在技術層面（Schema 結構化資料、llms.txt、作者署名）與內容層面（Pillar 長文、FAQ 強化）的 17 項優先修復項目。
+      第四章呈現的 M1 基線數據，已顯示貴網站在 AI 引用面有紮實起點；
+      當網站端完成健檢建議的技術補強後，這些已經存在的引用基礎將有機會進一步放大——
+      後續每月月報會以 M1 基線為比對基準，量化每一步優化帶來的實際成效。
+    </div>
+
+    <h3 class="sh">5.4 結語</h3>
+    <p class="clp">
+      AI 搜尋時代的品牌能見度，不再只看 Google 排名，而是看 AI 在回答消費者問題時「怎麼介紹貴品牌」。
+      本報告第二章的 Ahrefs 實測資料顯示，ALC 在多個核心關鍵字已擁有 Google 第 1 名的穩固根基；
+      第四章的 Otterly 首週實測則進一步證實，這份 Google 排名優勢已經部分轉化為 AI 引用表現——
+      <code>secufirst.com.tw</code> 成為此品類 AI 引用量最多的單一網域。
+    </p>
+    <p class="clp">
+      接下來半年，確認鍵將協助 SecuFirst / ALC 同步推進三件事：完成官網健檢建議的技術修復、擴充內容深度與作者權威信號、
+      並透過本監測系統量化追蹤每項動作對 AI 能見度的實際影響。目標是將目前「決策階段已全面領先、認知與比較階段尚有空間」的現況，
+      逐步擴展為全漏斗均衡覆蓋。每月月報會以清晰數據呈現這段成長曲線。
+    </p>
+
+    <div class="agsig">
+      <img src="data:image/png;base64,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" style="height:44px;border-radius:6px;flex-shrink:0;">
+      <div>
+        <div style="color:white;font-size:12px;font-weight:700;">
+          確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.
+        </div>
+        <div style="color:rgba(255,255,255,.5);font-size:10.5px;margin-top:4px;">
+          enterimc.com　｜　交付日期：2026年04月24日　｜　本文件內容為確認鍵智創科技智慧財產，僅供客戶參考
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pf">確認鍵智創科技 · SecuFirst / ALC GEO 策略規劃 · 2026年04月24日</div>
+</div>
+
+</div></body></html>
