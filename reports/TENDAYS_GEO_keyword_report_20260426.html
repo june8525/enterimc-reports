@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TENDAYS GEO 關鍵字分析報告 ｜ 確認鍵 Enter IMC</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+:root {
+  --eb:  #1B3A8C; --eb2: #254BAD; --eb3: #0D2568;
+  --ed:  #0A1628; --ed2: #1A2B3C;
+  --el:  #A8C8F8; --el2: #4A90D9;
+  --em:  #C5D5F0; --elt: #F0F5FF; --emut: #5C7AA8;
+  --red: #C0392B; --grn: #1A7A44; --org: #C75000; --teal: #0E6A7C;
+  --navy: #1B3A8C; --light: #F0F5FF; --mid: #C5D5F0;
+  --text: #1A2B3C; --muted: #5C7AA8;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: #D8E4F5;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+@media print {
+  body { background: white; font-size: 11px; }
+  .page { box-shadow: none !important; margin-bottom: 0 !important;
+          page-break-after: always; border-radius: 0 !important; }
+  .page:last-child { page-break-after: avoid; }
+}
+
+.wrap { max-width: 900px; margin: 0 auto; padding: 20px 14px 40px; }
+.page { background: white; border-radius: 8px;
+        box-shadow: 0 3px 20px rgba(0,0,0,.09); margin-bottom: 28px; overflow: hidden; }
+
+.cv-stripe  { background: var(--eb); height: 8px; }
+.cv-hero    { background: white; padding: 40px 52px 32px;
+              display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; }
+.cv-rule    { width: 48px; height: 4px; background: var(--eb); border-radius: 2px; margin-bottom: 14px; }
+.cv-eye     { color: var(--eb); font-size: 10px; font-weight: 700;
+              letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+.cv-h1      { color: var(--ed); font-size: 28px; font-weight: 900; line-height: 1.2; margin-bottom: 10px; }
+.cv-h1 span { color: var(--eb); }
+.cv-sub     { color: var(--emut); font-size: 12.5px; line-height: 1.7; }
+.cv-la      { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; flex-shrink: 0; }
+.cv-la img  { width: 88px; border-radius: 6px; }
+.cv-lt      { font-size: 9px; color: var(--emut); text-align: right; }
+.cv-band    { background: var(--eb); padding: 20px 52px;
+              display: grid; grid-template-columns: repeat(5,1fr); gap: 1px; }
+.cv-st      { text-align: center; padding: 10px 4px;
+              border-right: 1px solid rgba(255,255,255,.15); }
+.cv-st:last-child { border-right: none; }
+.stn { font-size: 24px; font-weight: 900; color: white; line-height: 1; }
+.stu { font-size: 9px; color: rgba(255,255,255,.7); }
+.stl { font-size: 9px; color: rgba(255,255,255,.5); margin-top: 4px; line-height: 1.4; }
+.cv-meta    { background: var(--elt); padding: 18px 52px;
+              display: grid; grid-template-columns: repeat(2,1fr); gap: 10px 32px;
+              border-top: 1px solid var(--em); }
+.cv-mi      { font-size: 11px; color: var(--emut); }
+.cv-mi b    { color: var(--ed2); display: block; font-size: 11.5px; margin-top: 2px; }
+.cv-foot    { background: var(--eb); padding: 11px 52px;
+              display: flex; justify-content: space-between; align-items: center; }
+.cv-foot p  { font-size: 10px; color: rgba(255,255,255,.4); }
+
+.ph         { background: var(--eb); padding: 9px 28px;
+              display: flex; justify-content: space-between; align-items: center; }
+.ph span    { font-size: 10px; color: rgba(255,255,255,.55); }
+.pf         { background: var(--elt); border-top: 1px solid var(--em);
+              padding: 7px 28px; text-align: center; font-size: 10px; color: var(--muted); }
+.sec        { background: var(--eb); border-left: 5px solid var(--el2); padding: 13px 24px; }
+.sec h2     { color: white; font-size: 14px; font-weight: 700; }
+.pc         { padding: 22px 28px; }
+
+h3.sh       { font-size: 12.5px; font-weight: 700; color: var(--navy);
+              border-left: 3px solid var(--el2); padding-left: 9px; margin: 16px 0 7px; }
+h4.sh4      { font-size: 11.5px; font-weight: 700; color: var(--teal); margin: 13px 0 5px; }
+p.bt        { font-size: 12.5px; line-height: 1.8; color: var(--text); margin-bottom: 10px; }
+
+.b          { display: inline-block; padding: 2px 8px; border-radius: 20px;
+              font-size: 10px; font-weight: 700; white-space: nowrap; }
+.br         { background: #FADBD8; color: var(--red); }
+.bo         { background: #FDEBD0; color: var(--org); }
+.bg         { background: #D5F5E3; color: var(--grn); }
+.bt2        { background: #D1ECF1; color: var(--teal); }
+.bb         { background: var(--eb); color: white; }
+.bl         { background: #D6E6FF; color: var(--eb3); }
+.bf         { background: #FADBD8; color: #922B21; font-weight: 900; }
+.bp         { background: #D5F5E3; color: #1A5E38; font-weight: 900; }
+.bw         { background: #FDEBD0; color: #7D3200; font-weight: 900; }
+
+.ib         { padding: 9px 13px; border-radius: 0 5px 5px 0; margin-bottom: 13px; font-size: 11.5px; }
+.ir         { background: #FEF0EF; border-left: 4px solid var(--red); }
+.io         { background: #FFF8F0; border-left: 4px solid var(--org); }
+.ig         { background: #F0FAF4; border-left: 4px solid var(--grn); }
+.ii         { background: #EEF4FF; border-left: 4px solid var(--el2); }
+
+.dt         { width: 100%; border-collapse: collapse; margin: 7px 0 14px; font-size: 11.5px; }
+.dt th      { background: var(--eb); color: white; font-weight: 700;
+              padding: 7px 10px; text-align: left; font-size: 11px; }
+.dt td      { padding: 6px 10px; border-bottom: 1px solid var(--mid);
+              vertical-align: top; line-height: 1.55; }
+.dt tr:nth-child(even) td { background: var(--light); }
+.dt tr.hl td    { background: var(--eb); color: white; font-weight: 700; }
+.dt tr.hl td b  { color: #A8C8F8; }
+.dt tr.sr td    { background: #EDF2F7; font-weight: 700; color: var(--eb3); font-size: 11px; }
+
+.kw-wrap { display: flex; flex-wrap: wrap; gap: 7px; margin: 8px 0 14px; }
+.kw      { background: var(--light); border: 1px solid var(--mid); border-radius: 20px;
+           padding: 3px 11px; font-size: 11px; color: var(--ed2); font-weight: 500; }
+.kw.core { background: var(--eb); color: white; border-color: var(--eb2); }
+.kw.hi   { background: #D6E6FF; color: var(--eb3); border-color: var(--el2); }
+.kw.mid2 { background: #D1ECF1; color: var(--teal); border-color: var(--teal); }
+
+.rl    { list-style: none; margin: 7px 0 13px; }
+.rl li { display: flex; gap: 9px; padding: 7px 11px; background: var(--light);
+         border-radius: 5px; margin-bottom: 5px; font-size: 12px; line-height: 1.6;
+         border-left: 3px solid var(--el2); }
+.rl .rn { font-weight: 900; color: var(--el2); min-width: 16px; }
+
+.pri     { display: inline-block; padding: 2px 8px; border-radius: 20px;
+           font-size: 10px; font-weight: 700; color: white; }
+.pc3     { background: #922B21; }
+.ph2     { background: var(--org); }
+.pm      { background: var(--teal); }
+.pl2     { background: var(--grn); }
+
+.agsig { display: flex; align-items: center; justify-content: center; gap: 18px;
+         padding: 14px; background: var(--eb); border-radius: 6px; margin-top: 10px; }
+
+hr.dv  { border: none; border-top: 1px solid var(--mid); margin: 14px 0; }
+.clp   { font-size: 11px; color: var(--muted); line-height: 1.8; margin-bottom: 10px; }
+code   { background: #F0F5FF; padding: 1px 5px; border-radius: 3px;
+         font-size: 10.5px; color: var(--eb3); font-family: monospace; }
+
+/* 客製：流量結構雙欄圖 */
+.struct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0 16px; }
+.struct-card { border: 1px solid var(--mid); border-radius: 7px; padding: 14px 16px; background: white; }
+.struct-card .num { font-size: 32px; font-weight: 900; color: var(--eb); line-height: 1; margin-bottom: 4px; }
+.struct-card .lab { font-size: 11.5px; color: var(--muted); margin-bottom: 8px; }
+.struct-bar { height: 10px; background: var(--mid); border-radius: 5px; overflow: hidden; }
+.struct-bar > div { height: 100%; background: var(--eb); border-radius: 5px; }
+.struct-card.warn .num { color: var(--org); }
+.struct-card.warn .struct-bar > div { background: var(--org); }
+
+/* 競品矩陣 */
+.matrix { width: 100%; border-collapse: collapse; font-size: 11px; margin: 10px 0; }
+.matrix th, .matrix td { padding: 7px 8px; border: 1px solid var(--mid); text-align: center; }
+.matrix th { background: var(--eb); color: white; font-size: 10.5px; }
+.matrix td.lbl { background: var(--elt); font-weight: 700; color: var(--eb3); text-align: left; }
+.matrix td.dash { color: var(--muted); }
+.matrix td.high { background: #FEF0EF; color: var(--red); font-weight: 700; }
+.matrix td.mid3 { background: #FFF8F0; color: var(--org); font-weight: 600; }
+.matrix td.low { background: #F0FAF4; color: var(--grn); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    
+<div class="page">
+  <div class="cv-stripe"></div>
+  <div class="cv-hero">
+    <div>
+      <div class="cv-rule"></div>
+      <div class="cv-eye">KEYWORD ANALYSIS</div>
+      <div class="cv-h1">TENDAYS<br><span>GEO 關鍵字</span><br>分析報告</div>
+      <div class="cv-sub">
+        以 Ahrefs 數據盤點 TENDAYS 在搜尋與 AI 引擎中的關鍵字表現，<br>
+        作為後續 GEO（生成式引擎優化）服務規劃的數據基礎。
+      </div>
+    </div>
+    <div class="cv-la">
+      <img src="data:image/png;base64,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" alt="Enter IMC">
+      <div class="cv-lt">確認鍵智創科技<br>Enter IMC</div>
+    </div>
+  </div>
+
+  <div class="cv-band" style="grid-template-columns: repeat(6,1fr);">
+    <div class="cv-st">
+      <div class="stn">162</div>
+      <div class="stu">關鍵字</div>
+      <div class="stl">自家有機關鍵字數</div>
+    </div>
+    <div class="cv-st">
+      <div class="stn">3,610</div>
+      <div class="stu">月流量</div>
+      <div class="stl">當前有機搜尋流量</div>
+    </div>
+    <div class="cv-st">
+      <div class="stn">86%</div>
+      <div class="stu">品牌詞佔比</div>
+      <div class="stl">流量集中於品牌詞</div>
+    </div>
+    <div class="cv-st">
+      <div class="stn">72</div>
+      <div class="stu">AI 摘要</div>
+      <div class="stl">會觸發 AI 摘要的詞數</div>
+    </div>
+    <div class="cv-st">
+      <div class="stn">90</div>
+      <div class="stu">媒體連結</div>
+      <div class="stl">Dofollow 反向連結數</div>
+    </div>
+    <div class="cv-st">
+      <div class="stn">229</div>
+      <div class="stu">內容缺口</div>
+      <div class="stl">對手有但 TENDAYS 缺</div>
+    </div>
+  </div>
+
+  <div class="cv-meta">
+    <div class="cv-mi">分析對象<b>TENDAYS 恬褋仕（精準睡眠／量身紓壓床）</b></div>
+    <div class="cv-mi">域名<b>www.tendays.com.tw</b></div>
+    <div class="cv-mi">數據區間<b>2025/10/26 – 2026/04/26（近 6 個月）</b></div>
+    <div class="cv-mi">數據來源<b>Ahrefs Site Explorer / Content Gap</b></div>
+    <div class="cv-mi">分析地區<b>Taiwan</b></div>
+    <div class="cv-mi">報告日期<b>2026年04月26日</b></div>
+  </div>
+
+  <div class="cv-foot">
+    <p>本報告為關鍵字情報盤點，後續可延伸 GEO 策略規劃文件</p>
+    <p>© 2026 Enter Internet Marketing CO., LTD.</p>
+  </div>
+</div>
+
+    
+<div class="page">
+  <div class="ph">
+    <span>TENDAYS GEO 關鍵字分析報告</span>
+    <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" style="height:18px;border-radius:2px;" alt="Logo">
+  </div>
+  <div class="sec"><h2>01　重點摘要</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">三項主要發現</h3>
+
+    <div class="ib ii">
+      <b style="color:var(--eb3);">發現 1：流量結構高度集中於品牌詞</b><br>
+      在自家可監測到的 162 個有機關鍵字中，僅 10 個是真正的品牌詞（含 TENDAYS、恬褋仕、CLIMA），但這 10 個詞貢獻了 86% 的流量；其餘 152 個非品牌詞合計只貢獻 14% 的流量。這代表目前的搜尋曝光，主要來自既有客戶與已知品牌的回訪搜尋，新客導入動能偏弱。
+    </div>
+
+    <div class="ib io">
+      <b style="color:var(--org);">發現 2：傳統排名退步，但 AI 摘要 引用反向成長</b><br>
+      過去 6 個月，TENDAYS 在 Top 4-10 排名的關鍵字數從 93 個降至 35 個（減少 62%），交易型流量從 1,660 降至 784（減少 53%）。同期間，會觸發 Google AI 摘要（搜尋結果頁上方的 AI 自動回答區塊） 的關鍵字頁面數從 3 個增加到 11 個（成長 252%）。傳統 SEO（搜尋引擎優化）與 AI 引用的走勢出現明顯分歧。
+    </div>
+
+    <div class="ib ig">
+      <b style="color:var(--grn);">發現 3：真實競爭對手是線上直營床墊品牌，不是傳統高端寢具</b><br>
+      經 Ahrefs 共同關鍵字分析，TENDAYS 與 Lunio、EMMA Sleep、SleepyTofu 三個線上直營床墊品牌的詞庫重疊度最高（共同詞 19-30 個）；與傳統高端品牌如丹普 Tempur 的重疊度反而較低（共同詞僅 7 個）。但這三個對手彼此重疊 173-302 個詞，TENDAYS 僅與其重疊 15-31 個，表示 TENDAYS 並未真正進入該戰場。
+    </div>
+
+    <h3 class="sh">三項策略建議</h3>
+
+    <table class="dt">
+      <tr>
+        <th style="width:90px;">策略軸</th>
+        <th style="width:130px;">行動</th>
+        <th>說明</th>
+      </tr>
+      <tr>
+        <td><span class="b bg">鞏固</span></td>
+        <td>守住「睡姿主題」</td>
+        <td>「睡姿」相關 28 個關鍵字目前帶來 313 流量，是非品牌詞中表現最好的類目，亦是 TENDAYS 唯一在直接對手戰場勝出的內容類型。應強化既有頁面並延伸子主題。</td>
+      </tr>
+      <tr>
+        <td><span class="b bo">推進</span></td>
+        <td>排名 11-30 名的詞推進前 10</td>
+        <td>共有 8 個關鍵字符合「會觸發 AI 摘要 + 月搜量 ≥ 200 + 排名 11-30」的條件，例如「嬰兒床墊」（#12）、「兒童枕頭」（#22）、「減壓床墊」（#12）。這些詞推進後可同時提升 SEO 與 AI 引用機會。</td>
+      </tr>
+      <tr>
+        <td><span class="b bb">補位</span></td>
+        <td>補上 7 大內容缺口</td>
+        <td>「床尺寸知識」類目共 87,040 月搜量、難度 0-1，三個直接對手都有對應內容，TENDAYS 完全缺席。一篇結構化的床尺寸完整指南即可切入。</td>
+      </tr>
+    </table>
+
+    <h3 class="sh">本報告涵蓋範圍</h3>
+    <p class="bt">
+      本報告聚焦於「關鍵字情報盤點」，內容涵蓋：自家網域健檢、162 個自家關鍵字結構、競品識別、4 站關鍵字重疊矩陣，以及 2,143 個內容缺口分析。<br>
+      <br>
+      <span class="b bl">本報告不包含</span>　網站技術健檢（robots.txt / sitemap / JS 渲染等）、AI 引擎引用詳細頁面追蹤（Otterly / Peec.ai 監測）、內容生產規劃與時程。如需上述項目，可另行延伸製作。
+    </p>
+
+  </div>
+  <div class="pf">確認鍵智創科技 Enter IMC ｜ 第 1 頁</div>
+</div>
+
+    
+<div class="page">
+  <div class="ph">
+    <span>TENDAYS GEO 關鍵字分析報告</span>
+    <img src="data:image/png;base64,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" style="height:18px;border-radius:2px;" alt="Logo">
+  </div>
+  <div class="sec"><h2>02　網域健檢快照</h2></div>
+  <div class="pc">
+
+    <p class="bt">本章呈現 TENDAYS 域名整體 SEO / GEO 體質基準數據，作為後續所有分析的對照基礎。所有指標均取自 Ahrefs Site Explorer 的 Taiwan 地區數據（資料截至 2026/04/26）。</p>
+
+    <h3 class="sh">域名核心指標</h3>
+
+    <table class="dt">
+      <tr>
+        <th style="width:140px;">指標</th>
+        <th style="width:90px;">當前值</th>
+        <th style="width:90px;">6 個月變化</th>
+        <th>說明</th>
+      </tr>
+      <tr class="sr"><td colspan="4">▌ 排名與流量</td></tr>
+      <tr>
+        <td>網域評分</td>
+        <td><b>14</b></td>
+        <td><span class="b br">−12</span></td>
+        <td>網域整體權重，過去半年下滑 12 點，目前處於偏低區間。</td>
+      </tr>
+      <tr>
+        <td>有機關鍵字數</td>
+        <td><b>83</b></td>
+        <td><span class="b br">−36</span></td>
+        <td>進入 Google 排名的關鍵字數，過去半年減少約 30%。</td>
+      </tr>
+      <tr>
+        <td>有機流量（月）</td>
+        <td><b>3,610</b></td>
+        <td><span class="b bg">+1,150</span></td>
+        <td>整體月流量實際上升 47%，但成長集中於品牌詞首頁回流。</td>
+      </tr>
+      <tr>
+        <td>流量價值（USD）</td>
+        <td><b>$269</b></td>
+        <td><span class="b bg">+$88</span></td>
+        <td>流量轉換為廣告投放等值的金額，與流量同步成長 49%。</td>
+      </tr>
+      <tr>
+        <td>Top 1-3 排名數</td>
+        <td><b>20</b></td>
+        <td><span class="b bg">+3</span></td>
+        <td>進前三名的關鍵字數略有上升。</td>
+      </tr>
+      <tr class="sr"><td colspan="4">▌ 反向連結（Backlinks）</td></tr>
+      <tr>
+        <td>Backlinks 總數</td>
+        <td><b>208</b></td>
+        <td><span class="b br">−107</span></td>
+        <td>歷史累積 202K，目前處於低點。</td>
+      </tr>
+      <tr>
+        <td>引用網域數</td>
+        <td><b>95</b></td>
+        <td><span class="b bg">+26</span></td>
+        <td>過去半年從 73 個成長至 96 個，新增約三成。</td>
+      </tr>
+      <tr>
+        <td>Dofollow 連結（非 Spam）</td>
+        <td><b>90</b></td>
+        <td>—</td>
+        <td>真正具備 SEO 權重的有效連結，含 21 筆來自 DR ≥ 70 的高權威媒體。</td>
+      </tr>
+      <tr>
+        <td>高權威媒體連結（DR ≥ 70）</td>
+        <td><b>21</b></td>
+        <td>—</td>
+        <td>包含 LINE Today、工商時報、商業周刊、風傳媒、蕃新聞、CTWANT 等主流媒體報導。</td>
+      </tr>
+      <tr class="sr"><td colspan="4">▌ AI 引用（AI Citations）</td></tr>
+      <tr>
+        <td>AI 摘要 引用頁</td>
+        <td><b>11</b></td>
+        <td><span class="b bg">+8</span></td>
+        <td>Google AI 摘要 區塊引用 TENDAYS 的頁面數，半年成長 252%。</td>
+      </tr>
+      <tr>
+        <td>ChatGPT 引用頁</td>
+        <td><b>9</b></td>
+        <td><span class="b bg">+4</span></td>
+        <td>ChatGPT 引用 22 次、覆蓋 9 個頁面。</td>
+      </tr>
+      <tr>
+        <td>Perplexity 引用頁</td>
+        <td><b>4</b></td>
+        <td><span class="b br">−6</span></td>
+        <td>Perplexity 引用頁數半年下滑。</td>
+      </tr>
+      <tr>
+        <td>Copilot 引用頁</td>
+        <td><b>4</b></td>
+        <td><span class="b bg">+4</span></td>
+        <td>Microsoft Copilot 引用頁從 0 增至 4。</td>
+      </tr>
+      <tr>
+        <td>Gemini 引用頁</td>
+        <td><b>0</b></td>
+        <td>—</td>
+        <td>目前尚未被 Google Gemini 引用。</td>
+      </tr>
+    </table>
+
+    <h3 class="sh">指標解讀</h3>
+
+    <div class="ib ii">
+      <b>整體流量逆勢成長（+47%），但動能集中於品牌詞</b><br>
+      域名評分 網域評分從 26 降至 14、Top 4-10 排名數從 93 降至 35，這些指標與流量「+47%」同時並存的合理解釋是：成長主要來自首頁與枕頭系列頁的品牌詞流量回流，而非新客戶搜尋類目詞而來。後續第 03 章關鍵字結構分析將具體驗證此判讀。
+    </div>
+
+    <div class="ib ig">
+      <b>反向連結體質：媒體公關基礎扎實</b><br>
+      過去半年新增 26 個引用網域（從 73 → 96，成長 32%），其中 90 個 Dofollow 連結中有 21 筆來自 DR ≥ 70 的高權威媒體，包含 LINE Today（DR 95）、工商時報、蕃新聞、商業周刊、風傳媒、良醫健康網、CTWANT 等主流媒體報導，多數聚焦於「賈永婕代言」、「週年慶」、「母親節高端床墊選購」、「商業菁英睡眠」等公關主題。網域評分（DR）在過去半年從 26 降至 14，主因是 Ahrefs 演算法的整體調整，而非客戶外鏈品質下滑。<br><br>
+      實際的限制在於：高權威連結數量相較同業仍有差距（如 SleepyTofu 約 1,749 筆 Dofollow 連結），且連結指向集中於首頁與品牌名相關報導，較少導向類目主題頁，這是後續可優化的方向。
+    </div>
+
+    <div class="ib ig">
+      <b>AI 引用是少數逆勢成長的指標</b><br>
+      在 SEO 多項指標下滑期間，Google AI 摘要 引用頁從 3 增至 11、ChatGPT 引用頁從 0 升到 9、Copilot 從 0 升到 4。這代表 TENDAYS 既有內容已具備被 AI 引擎引用的條件，是 GEO 服務的可運作基礎。
+    </div>
+
+  </div>
+  <div class="pf">確認鍵智創科技 Enter IMC ｜ 第 2 頁</div>
+</div>
+
+    
+<div class="page">
+  <div class="ph">
+    <span>TENDAYS GEO 關鍵字分析報告</span>
+    <img src="data:image/png;base64,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" style="height:18px;border-radius:2px;" alt="Logo">
+  </div>
+  <div class="sec"><h2>03　自家關鍵字結構分析</h2></div>
+  <div class="pc">
+
+    <p class="bt">本章針對 TENDAYS 站上 162 個有機關鍵字進行結構性盤點，揭示流量來源組成、類目分布、AI 摘要 觸發狀況，以及目前掌握的關鍵字陣地。</p>
+
+    <h3 class="sh">3.1 品牌詞 vs 非品牌詞流量結構</h3>
+
+    <div class="ib io">
+      <b>說明：</b>Ahrefs 系統將「TENDAYS 排得上名次的高頻詞」全部標記為 Branded（含床墊、枕頭、睡眠等），但實際上這些是市場類目詞。本報告經人工校正後，將真實品牌詞限定為包含「TENDAYS / 恬褋仕 / CLIMA / 10days / 天達」等品牌名稱的關鍵字。
+    </div>
+
+    <div class="struct-grid">
+      <div class="struct-card">
+        <div class="lab">真實品牌詞（含 TENDAYS、恬褋仕等）</div>
+        <div class="num">86%</div>
+        <div style="font-size:11px;color:var(--text);margin-bottom:8px;">10 個關鍵字 ｜ 帶來 3,078 流量</div>
+        <div class="struct-bar"><div style="width:86%;"></div></div>
+      </div>
+      <div class="struct-card warn">
+        <div class="lab">非品牌詞（市場類目詞）</div>
+        <div class="num">14%</div>
+        <div style="font-size:11px;color:var(--text);margin-bottom:8px;">152 個關鍵字 ｜ 帶來 501 流量</div>
+        <div class="struct-bar"><div style="width:14%;"></div></div>
+      </div>
+    </div>
+
+    <p class="bt">152 個非品牌詞合計帶來 501 流量，平均每詞貢獻 3.3 流量，這代表大部分非品牌詞排名落在搜尋結果第二頁（11 名）以後。健康的品牌結構應該是非品牌詞貢獻 50% 以上流量，作為新客導入的主要來源。</p>
+
+    <h3 class="sh">3.2 非品牌詞類目分布（依月搜量總和排序）</h3>
+
+    <table class="dt">
+      <tr>
+        <th>類目</th>
+        <th style="width:55px;">詞數</th>
+        <th style="width:90px;">月搜量總和</th>
+        <th style="width:75px;">現有流量</th>
+        <th>狀態</th>
+      </tr>
+      <tr>
+        <td>其他（含競品名、人名、活動詞）</td>
+        <td>43</td>
+        <td>41,960</td>
+        <td>8</td>
+        <td><span class="b bo">流量轉換率極低</span></td>
+      </tr>
+      <tr>
+        <td>床墊類目</td>
+        <td>12</td>
+        <td>37,680</td>
+        <td>26</td>
+        <td><span class="b br">幾乎未掌握</span></td>
+      </tr>
+      <tr>
+        <td>枕頭類目</td>
+        <td>44</td>
+        <td>21,920</td>
+        <td>106</td>
+        <td><span class="b bo">詞多但分散</span></td>
+      </tr>
+      <tr>
+        <td>床墊推薦類</td>
+        <td>7</td>
+        <td>12,070</td>
+        <td>1</td>
+        <td><span class="b br">完全缺席</span></td>
+      </tr>
+      <tr>
+        <td>睡姿主題</td>
+        <td>28</td>
+        <td>9,630</td>
+        <td><b>313</b></td>
+        <td><span class="b bg">表現最佳</span></td>
+      </tr>
+      <tr>
+        <td>枕頭選購類</td>
+        <td>8</td>
+        <td>9,490</td>
+        <td>40</td>
+        <td><span class="b bo">邊緣表現</span></td>
+      </tr>
+      <tr>
+        <td>睡眠健康</td>
+        <td>9</td>
+        <td>8,000</td>
+        <td>7</td>
+        <td><span class="b br">未抓到主流詞</span></td>
+      </tr>
+      <tr>
+        <td>紓壓概念（品牌核心定位詞）</td>
+        <td>1</td>
+        <td>1,600</td>
+        <td>0</td>
+        <td><span class="b br">排名 #47</span></td>
+      </tr>
+    </table>
+
+    <div class="ib ii">
+      <b>核心觀察</b><br>
+      「睡姿主題」類目搜量規模僅排第 4 大（9,630），卻貢獻全站非品牌詞 62.5% 的流量（313 / 501）— 證明 TENDAYS 在這個主題的內容已被 Google 認可並產生實質排名，是目前唯一找到「內容與市場需求對齊」的類目。<br><br>
+      相對地，「床墊類目」（37,680 搜量）與「床墊推薦類」（12,070 搜量）兩個高商業價值類目，TENDAYS 幾乎沒有對應排名 — 這是後續策略最該補上的兩塊。
+    </div>
+
+    <h3 class="sh">3.3 已守住的非品牌詞 Top 10（核心陣地）</h3>
+
+    <table class="dt">
+      <tr>
+        <th style="width:35px;">排名</th>
+        <th>關鍵字</th>
+        <th style="width:75px;">月搜量</th>
+        <th style="width:65px;">現有流量</th>
+        <th>主題類別</th>
+      </tr>
+      <tr>
+        <td><span class="b bp">#1</span></td>
+        <td><b>睡姿分析</b></td>
+        <td>150</td>
+        <td><b>84</b></td>
+        <td>睡姿主題（核心王牌）</td>
+      </tr>
+      <tr>
+        <td>#7</td>
+        <td>睡姿</td>
+        <td>1,100</td>
+        <td>56</td>
+        <td>睡姿主題</td>
+      </tr>
+      <tr>
+        <td>#9</td>
+        <td>人體工學枕</td>
+        <td>600</td>
+        <td>40</td>
+        <td>枕頭類目（產品特色詞）</td>
+      </tr>
+      <tr>
+        <td><span class="b bp">#1</span></td>
+        <td>睡姿心理學</td>
+        <td>200</td>
+        <td>27</td>
+        <td>睡姿主題（延伸）</td>
+      </tr>
+      <tr>
+        <td>#9</td>
+        <td>兒童枕頭推薦</td>
+        <td>500</td>
+        <td>28</td>
+        <td>枕頭選購類</td>
+      </tr>
+      <tr>
+        <td>#6</td>
+        <td>最容易入睡的睡姿</td>
+        <td>350</td>
+        <td>26</td>
+        <td>睡姿主題</td>
+      </tr>
+      <tr>
+        <td>#5</td>
+        <td>最放鬆的睡覺姿勢</td>
+        <td>250</td>
+        <td>24</td>
+        <td>睡姿主題</td>
+      </tr>
+      <tr>
+        <td>#7</td>
+        <td>睡覺姿勢</td>
+        <td>800</td>
+        <td>21</td>
+        <td>睡姿主題</td>
+      </tr>
+      <tr>
+        <td>#9</td>
+        <td>記憶枕怎麼睡</td>
+        <td>400</td>
+        <td>18</td>
+        <td>枕頭類目（使用方式）</td>
+      </tr>
+      <tr>
+        <td>#8</td>
+        <td>寶寶床墊</td>
+        <td>200</td>
+        <td>11</td>
+        <td>床墊類目（嬰幼兒）</td>
+      </tr>
+    </table>
+
+    <p class="bt">這 10 個關鍵字共貢獻 335 流量，佔非品牌詞流量的 67%。觀察可見三條主賽道：<b>睡姿主題</b>（6 個詞）、<b>人體工學枕 / 記憶枕</b>（2 個詞）、<b>嬰幼兒寢具</b>（2 個詞）。後續策略應以強化這三條賽道為基礎。</p>
+
+  </div>
+  <div class="pf">確認鍵智創科技 Enter IMC ｜ 第 3 頁</div>
+</div>
+
+    
+<div class="page">
+  <div class="ph">
+    <span>TENDAYS GEO 關鍵字分析報告</span>
+    <img src="data:image/png;base64,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" style="height:18px;border-radius:2px;" alt="Logo">
+  </div>
+  <div class="sec"><h2>04　AI 摘要 戰場與優先處理清單</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">4.1 AI 摘要 觸發狀況概覽</h3>
+
+    <p class="bt">在 TENDAYS 自家 162 個關鍵字中，<b>共 72 個（44%）會觸發 Google AI 摘要 區塊</b>。這個比例代表 GEO 戰場的真實規模 — TENDAYS 已在這 72 個詞上有不同程度的排名基礎。</p>
+
+    <table class="dt">
+      <tr>
+        <th>TENDAYS 在「會觸發 AI 摘要」的非品牌詞中的排名分布</th>
+        <th style="width:80px;">詞數</th>
+        <th style="width:75px;">佔比</th>
+        <th>策略意義</th>
+      </tr>
+      <tr>
+        <td>排名 1-3 名</td>
+        <td><b>11</b></td>
+        <td>16%</td>
+        <td>已具備被 AI 引擎引用的最佳位置</td>
+      </tr>
+      <tr>
+        <td>排名 4-10 名</td>
+        <td><b>16</b></td>
+        <td>23%</td>
+        <td>進入 AI 摘要引用候選範圍</td>
+      </tr>
+      <tr>
+        <td>排名 11-20 名</td>
+        <td>4</td>
+        <td>6%</td>
+        <td>推進前 10 即可進入引用候選</td>
+      </tr>
+      <tr>
+        <td>排名 21-50 名</td>
+        <td>15</td>
+        <td>21%</td>
+        <td>需要中期內容優化</td>
+      </tr>
+      <tr>
+        <td>排名 51+ 或未排名</td>
+        <td>24</td>
+        <td>34%</td>
+        <td>缺乏對應內容或內容能見度過低</td>
+      </tr>
+    </table>
+
+    <p class="bt">合計 27 個關鍵字（38%）位於前 10 名，這是 TENDAYS 目前在 GEO 戰場上「實質有底盤」的範圍。</p>
+
+    <h3 class="sh">4.2 優先處理清單：8 個高效益 推進機會</h3>
+
+    <p class="bt">以下清單同時符合三個條件：<b>會觸發 AI 摘要</b>、<b>月搜量 ≥ 200</b>、<b>當前排名 11-30</b>。將這些詞推進前 10 名後，同時提升傳統 SEO 排名與 AI 引擎引用機會。</p>
+
+    <table class="dt">
+      <tr>
+        <th style="width:90px;">關鍵字</th>
+        <th style="width:60px;">月搜量</th>
+        <th style="width:55px;">難度</th>
+        <th style="width:50px;">當前排名</th>
+        <th>當前對應頁面</th>
+        <th style="width:75px;">建議</th>
+      </tr>
+      <tr>
+        <td><b>床墊</b></td>
+        <td>30,000</td>
+        <td>39</td>
+        <td>#24</td>
+        <td><code>/2026mothersday</code>（活動頁，與意圖不符）</td>
+        <td><span class="b br">需新建主題頁</span></td>
+      </tr>
+      <tr>
+        <td><b>枕頭</b></td>
+        <td>10,000</td>
+        <td>0</td>
+        <td>#17</td>
+        <td><code>/product-109</code></td>
+        <td><span class="b bg">優化既有頁</span></td>
+      </tr>
+      <tr>
+        <td><b>床墊推薦</b></td>
+        <td>9,200</td>
+        <td>14</td>
+        <td>#29</td>
+        <td><code>/2026mothersday</code>（活動頁，與意圖不符）</td>
+        <td><span class="b br">需新建推薦頁</span></td>
+      </tr>
+      <tr>
+        <td><b>嬰兒床墊</b></td>
+        <td>2,300</td>
+        <td>0</td>
+        <td>#12</td>
+        <td><code>/product-101-105</code></td>
+        <td><span class="b bg">推進前 10</span></td>
+      </tr>
+      <tr>
+        <td>趴睡</td>
+        <td>1,300</td>
+        <td>0</td>
+        <td>#26</td>
+        <td><code>/healthynews-sleeppose</code>（睡姿王牌頁）</td>
+        <td><span class="b bg">王牌頁延伸</span></td>
+      </tr>
+      <tr>
+        <td>兒童枕頭</td>
+        <td>1,100</td>
+        <td>0</td>
+        <td>#22</td>
+        <td><code>/product-109-117</code></td>
+        <td><span class="b bg">推進前 10</span></td>
+      </tr>
+      <tr>
+        <td>側睡</td>
+        <td>1,000</td>
+        <td>0</td>
+        <td>#24</td>
+        <td><code>/healthynews-sleeppose</code>（睡姿王牌頁）</td>
+        <td><span class="b bg">王牌頁延伸</span></td>
+      </tr>
+      <tr>
+        <td><b>減壓床墊</b></td>
+        <td>200</td>
+        <td>0</td>
+        <td>#12</td>
+        <td><code>/product-101</code></td>
+        <td><span class="b bg">推進前 10</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">4.3 三個結構性問題</h3>
+
+    <div class="ib ir">
+      <b>問題 1：核心類目詞落在不對應頁面</b><br>
+      「床墊」（30,000 月搜量）與「床墊推薦」（9,200 月搜量）兩個高價值詞，目前都落在 <code>/2026mothersday</code>（母親節活動頁），與使用者搜尋意圖不符。當活動結束後該頁將失去排名，這兩個詞會直接掉出排名。建議盡快新建專屬的「床墊主題頁」與「床墊推薦頁」。
+    </div>
+
+    <div class="ib io">
+      <b>問題 2：相同詞落在多個頁面（疑似關鍵字相食）</b><br>
+      多個頁面同時排「tendays 枕頭」這個品牌長尾詞，且部分頁面排名嚴重退步：<code>/product-109-118-121-product100</code>（從 #10 → #38）、<code>/sales-66-70-page130</code>（從 #1 → #24）、<code>/tendays-kids</code>（從 #13 → #23）。這通常代表內部頁面互相競爭同一關鍵字，導致 Google 無法判斷哪個頁面最該排名。建議透過頁面整併或主從關係調整解決。
+    </div>
+
+    <div class="ib io">
+      <b>問題 3：品牌核心定位詞「紓壓」排名 #47</b><br>
+      TENDAYS 自我定位為「量身紓壓床」，但「紓壓」這個 1,600 月搜量的概念詞目前排在 #47。這代表品牌在傳達核心價值的關鍵詞上沒有實質排名，需要強化品牌定位內容的搜尋優化。
+    </div>
+
+  </div>
+  <div class="pf">確認鍵智創科技 Enter IMC ｜ 第 4 頁</div>
+</div>
+
+    
+<div class="page">
+  <div class="ph">
+    <span>TENDAYS GEO 關鍵字分析報告</span>
+    <img src="data:image/png;base64,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" style="height:18px;border-radius:2px;" alt="Logo">
+  </div>
+  <div class="sec"><h2>05　競品識別與差距分析</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">5.1 經 Ahrefs 演算法識別的 Top 20 競品</h3>
+
+    <p class="bt">透過 Ahrefs Organic Competitors 工具，依「共同關鍵字數」排序，識別出 20 個與 TENDAYS 在搜尋戰場上有交集的網站。經人工分類後，可分為三類：直接競品（11 個）、家居連鎖（5 個）、健康/媒體網站（4 個）。</p>
+
+    <h4 class="sh4">▸ 直接競品（11 個）— 需重點關注</h4>
+
+    <table class="dt">
+      <tr>
+        <th>類型</th>
+        <th>品牌</th>
+        <th style="width:60px;">網域評分</th>
+        <th style="width:65px;">共同詞</th>
+        <th style="width:75px;">敵詞庫</th>
+        <th style="width:75px;">月流量</th>
+      </tr>
+      <tr><td colspan="6" class="sr"><b>線上直營床墊（線上直營，本土）</b></td></tr>
+      <tr>
+        <td>線上直營</td>
+        <td><b>Lunio</b></td>
+        <td>24</td>
+        <td><span class="b bb">30</span></td>
+        <td>1,729</td>
+        <td>32,519</td>
+      </tr>
+      <tr>
+        <td>線上直營</td>
+        <td>SleepyTofu 睡眠豆腐</td>
+        <td>36</td>
+        <td><span class="b bb">19</span></td>
+        <td>653</td>
+        <td>79,618</td>
+      </tr>
+      <tr>
+        <td>線上直營</td>
+        <td>IsNight</td>
+        <td>14</td>
+        <td><span class="b bb">17</span></td>
+        <td>618</td>
+        <td>8,662</td>
+      </tr>
+      <tr><td colspan="6" class="sr"><b>線上直營床墊（線上直營，國際）</b></td></tr>
+      <tr>
+        <td>國際線上直營</td>
+        <td><b>EMMA Sleep</b></td>
+        <td>27</td>
+        <td><span class="b bb">24</span></td>
+        <td>664</td>
+        <td>65,727</td>
+      </tr>
+      <tr><td colspan="6" class="sr"><b>傳統高端寢具</b></td></tr>
+      <tr>
+        <td>國際品牌</td>
+        <td>Tempur 丹普</td>
+        <td>74</td>
+        <td>7</td>
+        <td>46</td>
+        <td>7,085</td>
+      </tr>
+      <tr>
+        <td>本土高端</td>
+        <td>mibi 寢具</td>
+        <td>10</td>
+        <td>6</td>
+        <td>70</td>
+        <td>3,390</td>
+      </tr>
+      <tr><td colspan="6" class="sr"><b>本土寢具二線</b></td></tr>
+      <tr>
+        <td>寢具</td>
+        <td>AWAKE</td>
+        <td>28</td>
+        <td>15</td>
+        <td>503</td>
+        <td>8,607</td>
+      </tr>
+      <tr>
+        <td>寢具</td>
+        <td>Peni</td>
+        <td>21</td>
+        <td>9</td>
+        <td>511</td>
+        <td>6,877</td>
+      </tr>
+      <tr>
+        <td>寢具</td>
+        <td>床先生</td>
+        <td>11</td>
+        <td>9</td>
+        <td>437</td>
+        <td>5,635</td>
+      </tr>
+      <tr><td colspan="6" class="sr"><b>嬰幼兒寢具</b></td></tr>
+      <tr>
+        <td>嬰幼兒</td>
+        <td>OceanBaby 海洋寶貝</td>
+        <td>25</td>
+        <td>9</td>
+        <td>263</td>
+        <td>2,941</td>
+      </tr>
+      <tr><td colspan="6" class="sr"><b>大品牌寢具產品線</b></td></tr>
+      <tr>
+        <td>特殊</td>
+        <td>3M（寢具產品線）</td>
+        <td>62</td>
+        <td>16</td>
+        <td>2,675</td>
+        <td>165,122</td>
+      </tr>
+      <tr class="hl">
+        <td colspan="2"><b>TENDAYS 自家</b></td>
+        <td><b>14</b></td>
+        <td>—</td>
+        <td><b>162</b></td>
+        <td><b>3,610</b></td>
+      </tr>
+    </table>
+
+    <p class="bt">9 個外圍對手（IKEA、NITORI、HOLA 等家居連鎖、UHO 健康媒體等）會在部分長尾詞上分享流量，但非真正的品牌競爭對手。</p>
+
+    <h3 class="sh">5.2 4 站關鍵字重疊矩陣</h3>
+
+    <p class="bt">將 TENDAYS 與 3 家共同詞最多的直接競品（Lunio、EMMA Sleep、SleepyTofu）做兩兩交叉比對，數字代表兩個網站「同時排得到」的關鍵字數量。</p>
+
+    <table class="matrix">
+      <tr>
+        <th></th>
+        <th>TENDAYS</th>
+        <th>Lunio</th>
+        <th>EMMA Sleep</th>
+        <th>SleepyTofu</th>
+      </tr>
+      <tr>
+        <td class="lbl">TENDAYS</td>
+        <td class="dash">—</td>
+        <td class="low">18</td>
+        <td class="low">31</td>
+        <td class="low">15</td>
+      </tr>
+      <tr>
+        <td class="lbl">Lunio</td>
+        <td class="low">18</td>
+        <td class="dash">—</td>
+        <td class="high">234</td>
+        <td class="high">173</td>
+      </tr>
+      <tr>
+        <td class="lbl">EMMA Sleep</td>
+        <td class="low">31</td>
+        <td class="high">234</td>
+        <td class="dash">—</td>
+        <td class="high">302</td>
+      </tr>
+      <tr>
+        <td class="lbl">SleepyTofu</td>
+        <td class="low">15</td>
+        <td class="high">173</td>
+        <td class="high">302</td>
+        <td class="dash">—</td>
+      </tr>
+    </table>
+
+    <div class="ib ii">
+      <b>解讀</b><br>
+      Lunio、EMMA Sleep、SleepyTofu 三家彼此重疊 173-302 個關鍵字，代表這三家品牌正在同一個搜尋戰場上互相競爭。<br>
+      但 TENDAYS 與這三家的重疊只有 15-31 個關鍵字 — 雖然 Ahrefs 將其識別為 TENDAYS 的「最相近競品」，但實際上 <b>TENDAYS 並未真正進入該戰場</b>。<br>
+      <br>
+      策略意義：要進入這個成長中的市場，需要補上對手已經在排但 TENDAYS 缺席的詞（即第 06 章的內容缺口分析）。
+    </div>
+
+  </div>
+  <div class="pf">確認鍵智創科技 Enter IMC ｜ 第 5 頁</div>
+</div>
+
+<div class="page">
+  <div class="ph">
+    <span>TENDAYS GEO 關鍵字分析報告</span>
+    <img src="data:image/png;base64,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" style="height:18px;border-radius:2px;" alt="Logo">
+  </div>
+  <div class="sec"><h2>05　競品識別與差距分析（續）</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">5.3 同等級競品 6 個月成長對照</h3>
+
+    <p class="bt">取 5 個與 TENDAYS 流量規模相近或具參考價值的對手，比較過去 6 個月流量變化。</p>
+
+    <table class="dt">
+      <tr>
+        <th>品牌</th>
+        <th style="width:80px;">半年前流量</th>
+        <th style="width:75px;">當前流量</th>
+        <th style="width:80px;">變化幅度</th>
+        <th>觀察</th>
+      </tr>
+      <tr class="hl">
+        <td><b>TENDAYS</b></td>
+        <td>2,425</td>
+        <td>3,578</td>
+        <td><b>+47.5%</b></td>
+        <td>成長動能集中於品牌詞</td>
+      </tr>
+      <tr>
+        <td>mibi 寢具</td>
+        <td>2,116</td>
+        <td>3,390</td>
+        <td><span class="b bg">+60.2%</span></td>
+        <td>同等級對手成長更快</td>
+      </tr>
+      <tr>
+        <td>EMMA Sleep</td>
+        <td>40,002</td>
+        <td>65,727</td>
+        <td><span class="b bg">+64.3%</span></td>
+        <td>半年增加 25,725 流量，動能完全來自非品牌詞</td>
+      </tr>
+      <tr>
+        <td>OceanBaby 海洋寶貝</td>
+        <td>4,294</td>
+        <td>2,941</td>
+        <td><span class="b br">−31.5%</span></td>
+        <td>嬰幼兒寢具品牌退步中</td>
+      </tr>
+      <tr>
+        <td>SleepyTofu 睡眠豆腐</td>
+        <td>100,904</td>
+        <td>79,618</td>
+        <td><span class="b br">−21.1%</span></td>
+        <td>原市場龍頭退步</td>
+      </tr>
+      <tr>
+        <td>Tempur 丹普</td>
+        <td>8,516</td>
+        <td>7,085</td>
+        <td><span class="b br">−16.8%</span></td>
+        <td>國際傳統品牌也在退步</td>
+      </tr>
+    </table>
+
+    <div class="ib ig">
+      <b>市場觀察</b><br>
+      搜尋流量正從「老品牌與市場領先者」轉移至「新興線上直營品牌」。SleepyTofu（−21%）與 Tempur（−17%）退步，EMMA Sleep（+64%）與 mibi（+60%）成長。TENDAYS 雖搭上這波成長（+47%），但動能來源與 EMMA 不同 — TENDAYS 靠品牌詞，EMMA 靠非品牌類目詞。
+    </div>
+
+    <h3 class="sh">5.4 網域評分並非排名瓶頸</h3>
+
+    <table class="dt">
+      <tr>
+        <th>對照</th>
+        <th style="width:65px;">網域評分</th>
+        <th style="width:80px;">關鍵字數</th>
+        <th style="width:80px;">月流量</th>
+        <th>觀察</th>
+      </tr>
+      <tr>
+        <td>TENDAYS</td>
+        <td>14</td>
+        <td>162</td>
+        <td>3,610</td>
+        <td>基準對照</td>
+      </tr>
+      <tr>
+        <td>IsNight（同 網域評分 14）</td>
+        <td>14</td>
+        <td>618</td>
+        <td>8,662</td>
+        <td>同網域評分 但流量為 TENDAYS 2.4 倍</td>
+      </tr>
+      <tr>
+        <td>mibi 寢具（網域評分 10，更低）</td>
+        <td>10</td>
+        <td>70</td>
+        <td>3,390</td>
+        <td>網域評分比 TENDAYS 低，流量相近</td>
+      </tr>
+      <tr>
+        <td>EMMA Sleep（網域評分 27）</td>
+        <td>27</td>
+        <td>664</td>
+        <td>65,727</td>
+        <td>網域評分提升 13 點，流量為 TENDAYS 18 倍</td>
+      </tr>
+    </table>
+
+    <p class="bt">這組對照顯示：<b>網域評分 14 並非無法經營的瓶頸</b>。同網域評分的 IsNight 流量達 TENDAYS 的 2.4 倍，網域評分更低的 mibi 也能達到接近的流量。差距主要來自<b>內容覆蓋的廣度與深度</b>，而非外鏈體質。事實上，TENDAYS 已累積 21 筆來自 DR ≥ 70 主流媒體的 Dofollow 連結（LINE Today、工商時報、商周、風傳媒等），公關媒體基礎在同等規模品牌中屬中上水準。EMMA Sleep 的案例顯示，網域評分中等（27）+ 完整內容架構，即可達到大量流量。</p>
+
+  </div>
+  <div class="pf">確認鍵智創科技 Enter IMC ｜ 第 6 頁</div>
+</div>
+
+    
+<div class="page">
+  <div class="ph">
+    <span>TENDAYS GEO 關鍵字分析報告</span>
+    <img src="data:image/png;base64,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" style="height:18px;border-radius:2px;" alt="Logo">
+  </div>
+  <div class="sec"><h2>06　內容缺口分析（Content Gap）</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">6.1 分析方法</h3>
+
+    <p class="bt">將 TENDAYS 與 3 家直接競品（Lunio、EMMA Sleep、SleepyTofu）的關鍵字庫進行交叉比對，找出「至少一家對手有排名、但 TENDAYS 沒有排名」的關鍵字，作為內容缺口候選。</p>
+
+    <table class="dt">
+      <tr>
+        <th>篩選條件</th>
+        <th style="width:90px;">詞數</th>
+        <th>說明</th>
+      </tr>
+      <tr>
+        <td>原始 Content Gap 結果</td>
+        <td>2,143</td>
+        <td>Ahrefs 工具產出的全部候選詞</td>
+      </tr>
+      <tr>
+        <td>排除無關詞後</td>
+        <td>1,975</td>
+        <td>已排除：競品品牌名、人名、風水、日式榻榻米、洗衣等不相關詞</td>
+      </tr>
+      <tr>
+        <td>TENDAYS 沒排到的詞</td>
+        <td>2,118</td>
+        <td>TENDAYS 完全沒有排名</td>
+      </tr>
+      <tr class="hl">
+        <td><b>強信號缺口</b></td>
+        <td><b>229</b></td>
+        <td><b>至少 2 家對手都有排，TENDAYS 缺席</b></td>
+      </tr>
+      <tr>
+        <td>最強信號缺口</td>
+        <td>69</td>
+        <td>3 家對手都有排，TENDAYS 缺席</td>
+      </tr>
+    </table>
+
+    <h3 class="sh">6.2 11 大缺口主題分布</h3>
+
+    <p class="bt">將「至少 2 家對手有排、TENDAYS 缺席」的 229 個強信號詞，依主題類目分群整理。</p>
+
+    <table class="dt">
+      <tr>
+        <th>主題類目</th>
+        <th style="width:55px;">缺口詞數</th>
+        <th style="width:90px;">月搜量總和</th>
+        <th>策略意義</th>
+      </tr>
+      <tr>
+        <td><b>床尺寸知識</b>（雙人床尺寸、單人加大尺寸…）</td>
+        <td>44</td>
+        <td><b>87,040</b></td>
+        <td><span class="b br">最大缺口</span> 難度 0-1，純資訊型內容</td>
+      </tr>
+      <tr>
+        <td>床墊類目（單人床墊、折疊床墊…）</td>
+        <td>70</td>
+        <td>51,260</td>
+        <td>床墊主題下細分詞</td>
+      </tr>
+      <tr>
+        <td>其他（含床架、折疊床等）</td>
+        <td>34</td>
+        <td>25,080</td>
+        <td>包含「單人床」「折疊床」等高搜量詞</td>
+      </tr>
+      <tr>
+        <td>枕頭類目</td>
+        <td>11</td>
+        <td>12,170</td>
+        <td>「枕頭」（10,000 月搜量）TENDAYS 沒排到</td>
+      </tr>
+      <tr>
+        <td>寢具配件（保潔墊、床包等）</td>
+        <td>6</td>
+        <td>8,890</td>
+        <td>「保潔墊」（8,500）為核心切入點</td>
+      </tr>
+      <tr>
+        <td>材質類目（乳膠、獨立筒、記憶）</td>
+        <td>20</td>
+        <td>7,500</td>
+        <td>對手用此教育市場</td>
+      </tr>
+      <tr>
+        <td>床墊保養 / 汰換 / 回收</td>
+        <td>13</td>
+        <td>6,280</td>
+        <td>售後 / 服務型內容</td>
+      </tr>
+      <tr>
+        <td>推薦 / 評價類</td>
+        <td>14</td>
+        <td>940</td>
+        <td>商業末端，難度較低</td>
+      </tr>
+      <tr>
+        <td>選購指南</td>
+        <td>4</td>
+        <td>370</td>
+        <td>TENDAYS 已部分覆蓋</td>
+      </tr>
+    </table>
+
+  </div>
+  <div class="pf">確認鍵智創科技 Enter IMC ｜ 第 7 頁</div>
+</div>
+
+<div class="page">
+  <div class="ph">
+    <span>TENDAYS GEO 關鍵字分析報告</span>
+    <img src="data:image/png;base64,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" style="height:18px;border-radius:2px;" alt="Logo">
+  </div>
+  <div class="sec"><h2>06　內容缺口分析（續）</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">6.3 最大缺口：床尺寸知識（87,040 月搜量）</h3>
+
+    <p class="bt">這是最值得優先處理的內容缺口。TENDAYS 在此類目完全缺席，但三個對手都有相應內容。所有詞 難度介於 0-1 之間，數值越低越好打，屬低競爭難度。</p>
+
+    <table class="dt">
+      <tr>
+        <th>關鍵字</th>
+        <th style="width:65px;">月搜量</th>
+        <th style="width:55px;">難度</th>
+        <th style="width:55px;">Lunio</th>
+        <th style="width:55px;">EMMA</th>
+        <th style="width:55px;">Tofu</th>
+      </tr>
+      <tr>
+        <td><b>雙人床尺寸</b></td>
+        <td>25,000</td>
+        <td>0</td>
+        <td>#2</td>
+        <td>#8</td>
+        <td>#42</td>
+      </tr>
+      <tr>
+        <td>單人床尺寸</td>
+        <td>14,000</td>
+        <td>0</td>
+        <td>#35</td>
+        <td>#6</td>
+        <td>#34</td>
+      </tr>
+      <tr>
+        <td>標準雙人床尺寸</td>
+        <td>9,900</td>
+        <td>1</td>
+        <td>#2</td>
+        <td>#8</td>
+        <td>#39</td>
+      </tr>
+      <tr>
+        <td>床墊尺寸</td>
+        <td>8,100</td>
+        <td>0</td>
+        <td>#59</td>
+        <td>#10</td>
+        <td>#21</td>
+      </tr>
+      <tr>
+        <td>單人加大尺寸</td>
+        <td>7,700</td>
+        <td>0</td>
+        <td>#2</td>
+        <td>#5</td>
+        <td>#23</td>
+      </tr>
+      <tr>
+        <td>雙人加大尺寸</td>
+        <td>7,400</td>
+        <td>1</td>
+        <td>#3</td>
+        <td>#10</td>
+        <td>#31</td>
+      </tr>
+      <tr>
+        <td>加大雙人床尺寸</td>
+        <td>3,000</td>
+        <td>0</td>
+        <td>#2</td>
+        <td>#45</td>
+        <td>#32</td>
+      </tr>
+    </table>
+
+    <div class="ib ig">
+      <b>切入策略建議</b><br>
+      Lunio 用一篇結構化的「床墊尺寸完全指南」即拿下多個 Top 3 排名。TENDAYS 可參考相同模式，建立一篇涵蓋所有床尺寸（單人、單人加大、標準雙人、雙人加大、King、Queen）的<b>主題樞紐頁</b>，附上完整尺寸對照表（含公分、英寸、台灣慣用稱謂）與選購建議。一篇文章即可同時切入 7 個高搜量缺口詞。
+    </div>
+
+    <h3 class="sh">6.4 7 大優先處理內容缺口</h3>
+
+    <p class="bt">綜合「月搜量規模 × 競爭難度 × 對手覆蓋率 × 與品牌相關度」評估，建議優先處理順序如下：</p>
+
+    <table class="dt">
+      <tr>
+        <th style="width:35px;">序</th>
+        <th>主題內容</th>
+        <th style="width:80px;">月搜量規模</th>
+        <th style="width:70px;">優先級</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><b>床尺寸完全指南</b>（單人/雙人/加大/King/Queen 全覆蓋的主題樞紐頁）</td>
+        <td>87,040</td>
+        <td><span class="pri pc3">立即</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><b>床墊主題樞紐頁</b>（床墊 / 雙人床墊 / 單人床墊 / 折疊床墊 等）</td>
+        <td>50,000+</td>
+        <td><span class="pri pc3">立即</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>「枕頭」主題頁優化（目前 #17，目標推進前 10）</td>
+        <td>10,000</td>
+        <td><span class="pri ph2">高</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>「床墊推薦」內容頁（脫離母親節活動頁，建立常設頁）</td>
+        <td>9,200</td>
+        <td><span class="pri ph2">高</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>保潔墊知識文（選購 + 保養）</td>
+        <td>8,500</td>
+        <td><span class="pri pm">中</span></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>材質教育文（乳膠 / 記憶 / 獨立筒比較與優缺點）</td>
+        <td>7,000</td>
+        <td><span class="pri pm">中</span></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>床墊回收 / 汰換指南（服務型內容）</td>
+        <td>6,000</td>
+        <td><span class="pri pl2">低</span></td>
+      </tr>
+    </table>
+
+    <h3 class="sh">6.5 25 個重疊詞的勝負對照</h3>
+
+    <p class="bt">在 TENDAYS 與 3 家對手都有排名的 25 個共同詞中，TENDAYS 排名最佳的有 4 個（16%），其餘 21 個（84%）均輸給對手。觀察可見 4 個勝場全部集中在「睡姿/睡法/躺法」一條故事線上。</p>
+
+    <table class="dt">
+      <tr>
+        <th>關鍵字</th>
+        <th style="width:60px;">月搜量</th>
+        <th style="width:65px;">TENDAYS</th>
+        <th style="width:55px;">Lunio</th>
+        <th style="width:55px;">EMMA</th>
+        <th style="width:55px;">Tofu</th>
+        <th style="width:60px;">結果</th>
+      </tr>
+      <tr><td colspan="7" class="sr"><b>TENDAYS 勝場（4 個，全集中於睡姿/睡法主題）</b></td></tr>
+      <tr><td>睡覺姿勢</td><td>1,000</td><td><b>#7</b></td><td>—</td><td>#10</td><td>—</td><td><span class="b bp">勝</span></td></tr>
+      <tr><td>枕頭躺法</td><td>70</td><td><b>#6</b></td><td>—</td><td>#7</td><td>—</td><td><span class="b bp">勝</span></td></tr>
+      <tr><td>枕頭睡法</td><td>40</td><td><b>#5</b></td><td>#10</td><td>#9</td><td>—</td><td><span class="b bp">勝</span></td></tr>
+      <tr><td>記憶床墊 推薦</td><td>20</td><td><b>#8</b></td><td>—</td><td>#10</td><td>—</td><td><span class="b bp">勝</span></td></tr>
+      <tr><td colspan="7" class="sr"><b>TENDAYS 落敗（21 個，僅列前 5 大搜量）</b></td></tr>
+      <tr><td><b>床墊推薦</b></td><td>10,000</td><td>#83</td><td>#35</td><td><b>#2</b></td><td>#25</td><td><span class="b bf">敗</span></td></tr>
+      <tr><td>雙人床墊</td><td>3,000</td><td>#96</td><td>#27</td><td>#10</td><td><b>#7</b></td><td><span class="b bf">敗</span></td></tr>
+      <tr><td>枕頭太高</td><td>250</td><td>#50</td><td>#21</td><td><b>#7</b></td><td>—</td><td><span class="b bf">敗</span></td></tr>
+      <tr><td>睡覺不用枕頭</td><td>250</td><td>#67</td><td>—</td><td><b>#8</b></td><td>#60</td><td><span class="b bf">敗</span></td></tr>
+      <tr><td>側躺姿勢</td><td>150</td><td>#53</td><td><b>#5</b></td><td>—</td><td>—</td><td><span class="b bf">敗</span></td></tr>
+    </table>
+
+    <div class="ib ii">
+      <b>勝場分析啟示</b><br>
+      TENDAYS 在「睡姿、睡覺姿勢、枕頭躺法、枕頭睡法、記憶床墊使用方式」等內容上，能在直接競品的戰場中勝出。這四個詞共同特徵：<b>偏向「使用方法/教學」而非「商品比較」</b>。這呼應了第 03 章「睡姿主題」是 TENDAYS 唯一找到內容對齊點的觀察。<br><br>
+      策略意義：TENDAYS 應強化「使用方法/教學型」內容，而非與 線上直營對手在「商品評測 / 比較」類內容上正面對抗。
+    </div>
+
+  </div>
+  <div class="pf">確認鍵智創科技 Enter IMC ｜ 第 8 頁</div>
+</div>
+
+    
+<div class="page">
+  <div class="ph">
+    <span>TENDAYS GEO 關鍵字分析報告</span>
+    <img src="data:image/png;base64,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" style="height:18px;border-radius:2px;" alt="Logo">
+  </div>
+  <div class="sec"><h2>07　戰略總結與後續建議</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">7.1 三軸戰略架構</h3>
+
+    <p class="bt">綜合本報告 6 章分析，建議 TENDAYS 後續 GEO 服務以「鞏固、推進、補位」三軸並行：</p>
+
+    <table class="dt">
+      <tr>
+        <th style="width:90px;">策略軸</th>
+        <th style="width:160px;">行動主軸</th>
+        <th>具體執行</th>
+      </tr>
+      <tr>
+        <td><span class="b bg">鞏固</span><br>守住既有陣地</td>
+        <td>強化「睡姿主題」內容群</td>
+        <td>
+          • 既有王牌頁 <code>/healthynews-sleeppose</code>（睡姿分析 #1）持續優化<br>
+          • 延伸子主題：趴睡、側睡、仰睡、各睡姿適合的枕頭高度<br>
+          • 串連使用方法/教學型內容（記憶枕怎麼睡、枕頭躺法）形成主題群<br>
+          • 守住目前 28 個睡姿類關鍵字的排名
+        </td>
+      </tr>
+      <tr>
+        <td><span class="b bo">推進</span><br>排名 11-30 衝前 10</td>
+        <td>8 個高效益 詞推進機會</td>
+        <td>
+          • <b>嬰兒床墊</b>（#12）<b>減壓床墊</b>（#12）<b>兒童枕頭</b>（#22）— 對應頁面已存在，需內容深化<br>
+          • <b>枕頭</b>（#17）— 既有 <code>/product-109</code> 強化即可<br>
+          • <b>趴睡 / 側睡</b>（#26 / #24）— 從睡姿王牌頁延伸<br>
+          • 處理「tendays 枕頭」品牌長尾詞的關鍵字相食問題
+        </td>
+      </tr>
+      <tr>
+        <td><span class="b bb">補位</span><br>建立新陣地</td>
+        <td>7 大內容缺口補上</td>
+        <td>
+          • <b>立即執行</b>：床尺寸完全指南（87,040 月搜量）+ 床墊主題樞紐頁（50,000+）<br>
+          • <b>高優先</b>：床墊推薦頁脫離母親節活動頁、建立常設內容<br>
+          • <b>中優先</b>：保潔墊、材質教育文、紓壓概念文（強化品牌定位詞）
+        </td>
+      </tr>
+    </table>
+
+    <h3 class="sh">7.2 不建議的方向</h3>
+
+    <div class="ib ir">
+      <b>不建議：與 線上直營床墊品牌正面對抗「商品比較 / 評測」類內容</b><br>
+      Lunio、EMMA Sleep、SleepyTofu 三家在「床墊推薦、單人床墊、雙人床墊」這類商品比較內容上已建立深厚基礎，且彼此在同個戰場互相競爭。雖然 TENDAYS 已累積 90 個 Dofollow 連結與 21 筆高權威媒體報導，但內容覆蓋廣度仍不足以在短期內於商品比較類內容取得排名。建議改走「使用方法 / 教學 / 健康知識」類內容，這才是已驗證的勝出路徑（步驟 6.5 顯示 TENDAYS 在此類內容上能勝過直接競品）。
+    </div>
+
+    <div class="ib ir">
+      <b>不建議：投入「床墊」（30,000 月搜量）這類超級紅海詞</b><br>
+      此類詞 難度 39，且 搜尋結果第一頁被大型家居連鎖、媒體與已建立內容架構的 線上直營品牌佔據。TENDAYS 在沒有完整類目樞紐架構前，投入此單詞優化的 效益極低。建議先建立完整的「床墊主題樞紐頁 + 子主題群」，自然延伸到此類大詞的排名。
+    </div>
+
+    <h3 class="sh">7.3 後續可延伸的工作項目</h3>
+
+    <ul class="rl">
+      <li><span class="rn">①</span><b>網站技術健檢報告</b>：本報告未涵蓋 robots.txt、sitemap、JS 渲染、Schema 結構化資料等技術面項目。建議於後續執行 GEO 健檢，確認沒有技術性障礙阻擋 AI 引擎與 Google 爬取。</li>
+      <li><span class="rn">②</span><b>AI 引擎引用追蹤設置</b>：透過 Otterly.AI 或 Peec.ai 建立每日追蹤，監測 TENDAYS 在 ChatGPT、Perplexity、Google AI 摘要、Bing Copilot 等引擎中的實際引用情況，作為後續策略調整依據。</li>
+      <li><span class="rn">③</span><b>內容生產規劃</b>：將本報告 7 大優先缺口轉換為具體的內容行事曆，含主題、字數、PAA 問題庫、發佈時程。</li>
+      <li><span class="rn">④</span><b>競品內容拆解</b>：針對 Lunio、EMMA Sleep 半年成長動能（+1,520 與 +25,725 流量）做深度拆解，分析其內容形態、頁面架構、Schema 標記，作為 TENDAYS 內容架構參考。</li>
+      <li><span class="rn">⑤</span><b>成效追蹤儀表板</b>：依本報告 162 個自家關鍵字 + 8 個推進候選詞 + 7 大缺口主題，設定可量化的月度與季度 成效指標，與客戶建立每月成效溝通機制。</li>
+    </ul>
+
+  </div>
+  <div class="pf">確認鍵智創科技 Enter IMC ｜ 第 9 頁</div>
+</div>
+
+    
+<div class="page">
+  <div class="ph">
+    <span>TENDAYS GEO 關鍵字分析報告</span>
+    <img src="data:image/png;base64,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" style="height:18px;border-radius:2px;" alt="Logo">
+  </div>
+  <div class="sec"><h2>附錄　數據來源與分析方法說明</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">數據來源</h3>
+    <table class="dt">
+      <tr>
+        <th>項目</th>
+        <th>數據來源</th>
+        <th>取樣時間</th>
+      </tr>
+      <tr>
+        <td>網域基礎指標</td>
+        <td>Ahrefs Site Explorer / Overview（Domain 模式）</td>
+        <td>2026/04/26</td>
+      </tr>
+      <tr>
+        <td>歷史趨勢數據</td>
+        <td>Ahrefs Site Explorer / Performance</td>
+        <td>2025/10/26 – 2026/04/26</td>
+      </tr>
+      <tr>
+        <td>有機關鍵字</td>
+        <td>Ahrefs Site Explorer / Organic Keywords</td>
+        <td>2026/04/26</td>
+      </tr>
+      <tr>
+        <td>Top Pages</td>
+        <td>Ahrefs Site Explorer / Top Pages（含 6 個月對比）</td>
+        <td>2026/04/26</td>
+      </tr>
+      <tr>
+        <td>競品識別</td>
+        <td>Ahrefs Site Explorer / Organic Competitors</td>
+        <td>2026/04/26</td>
+      </tr>
+      <tr>
+        <td>內容缺口</td>
+        <td>Ahrefs Content Gap（vs Lunio + EMMA + SleepyTofu）</td>
+        <td>2026/04/26</td>
+      </tr>
+      <tr>
+        <td>反向連結明細</td>
+        <td>Ahrefs Site Explorer / Backlinks（Domain 模式，171 筆有效樣本）</td>
+        <td>2026/04/27</td>
+      </tr>
+    </table>
+
+    <div class="ib ii" style="margin-top:14px;">
+      <b>反向連結資料的取樣模式說明</b><br>
+      本報告反向連結相關數據（02 章、05 章）採用 Ahrefs <b>Domain 模式</b>取樣，可涵蓋主網域與所有子網域的完整連結資料，此為反向連結分析的標準做法。若採用 Subdomains 模式則會排除 www 主域，導致連結數被嚴重低估，無法反映實際公關媒體基礎。
+    </div>
+
+    <h3 class="sh">分析方法說明</h3>
+
+    <h4 class="sh4">▸ 品牌詞 / 非品牌詞判定</h4>
+    <p class="bt">由於 Ahrefs 系統的 Branded 標記將 TENDAYS 排得到名次的高頻詞（如「床墊」「枕頭」「賈永婕」「睡眠」「紓壓」）誤判為品牌詞，本報告採人工校正方式重新分類，僅將包含「TENDAYS / 恬褋仕 / CLIMA / 10days / 天達 / Tian Da」等品牌名稱的關鍵字標記為品牌詞，其餘均歸為非品牌詞。</p>
+
+    <h4 class="sh4">▸ 主題類目分類</h4>
+    <p class="bt">關鍵字主題類目分群採規則式判定，依關鍵字內含的字串特徵（如「睡姿」「床墊」「枕頭」「推薦」「尺寸」等）分入對應類目。少數模糊詞歸入「其他」類目並另行檢視。</p>
+
+    <h4 class="sh4">▸ 競品識別演算法</h4>
+    <p class="bt">直接競品依「Common keywords（共同關鍵字數）」由 Ahrefs 演算法計算。本報告再進一步以人工方式分類，區分「直接競品」「家居連鎖」「健康/媒體」等類型。</p>
+
+    <h4 class="sh4">▸ 內容缺口篩選邏輯</h4>
+    <p class="bt">原始 2,143 個 Content Gap 候選詞，先排除含競品品牌名、人名、無關主題（風水、日式榻榻米、洗衣劑等）的詞，得到 1,975 個有效候選。再依「對手覆蓋家數」分為三層：1 家對手有排（弱信號）、2 家對手有排（強信號，本報告採用）、3 家對手都有排（最強信號）。</p>
+
+    <h3 class="sh">本報告未包含的項目</h3>
+    <p class="bt">
+      • 網站技術健檢（robots.txt、sitemap、JS 渲染、Schema 標記、Core Web Vitals）<br>
+      • AI 引擎實際引用內容追蹤（Otterly.AI / Peec.ai 監測數據）<br>
+      • 內容生產規劃與時程<br>
+      • 成效指標與每月追蹤儀表板<br>
+      • 服務報價與執行方案
+    </p>
+
+    <hr class="dv">
+
+    <div class="agsig">
+      <img src="data:image/png;base64,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" style="height:44px;border-radius:6px;flex-shrink:0;" alt="Enter IMC">
+      <div>
+        <div style="color:white;font-size:12px;font-weight:700;">
+          確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.
+        </div>
+        <div style="color:rgba(255,255,255,.5);font-size:10.5px;margin-top:4px;">
+          enterimc.com　｜　報告日期：2026年04月26日　｜　本文件內容為確認鍵智創科技智慧財產，僅供客戶參考
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="pf">確認鍵智創科技 Enter IMC ｜ 附錄</div>
+</div>
+
+  </div>
+</body>
+</html>
