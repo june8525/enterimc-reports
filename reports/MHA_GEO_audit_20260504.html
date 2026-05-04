@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+<meta charset="UTF-8">
+<title>妙健環境科技 GEO 官網健檢報告 — 確認鍵智創科技</title>
+<meta name="report-client" content="妙健環境科技 MHA">
+<meta name="report-score" content="64">
+<meta name="report-desc" content="妙健環境科技除甲醛 YMYL 健康服務官網 GEO 健檢。技術基礎與 Schema 部署優於同業，主要缺口為 FAQPage Schema、首頁 H1、Pillar 整合、維基百科條目">
+<meta name="report-tags" content="GEO健檢,YMYL,本地服務,除甲醛,室內空氣品質">
+<meta name="report-type" content="audit">
+<meta name="report-date" content="2026-05-04">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+:root {
+  --eb:#1B3A8C; --eb2:#254BAD; --eb3:#0D2568;
+  --ed:#0A1628; --ed2:#1A2B3C;
+  --el:#A8C8F8; --el2:#4A90D9;
+  --em:#C5D5F0; --elt:#F0F5FF;
+  --emut:#5C7AA8;
+  --red:#C0392B; --grn:#1A7A44; --org:#C75000; --teal:#0E6A7C;
+  --navy:#1B3A8C; --light:#F0F5FF; --mid:#C5D5F0; --text:#1A2B3C; --muted:#5C7AA8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);font-size:13px;line-height:1.7;padding:20px 0}
+.wrap{max-width:900px;margin:0 auto}
+.page{background:white;border-radius:8px;box-shadow:0 3px 20px rgba(0,0,0,.09);margin-bottom:18px;overflow:hidden}
+.cv-stripe{height:8px;background:var(--eb)}
+.cv-hero{padding:42px 38px 32px;display:flex;justify-content:space-between;align-items:flex-start;gap:30px}
+.cv-rule{width:48px;height:3px;background:var(--eb);margin-bottom:14px}
+.cv-eye{font-size:10px;color:var(--emut);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-bottom:18px}
+.cv-h1{font-size:32px;line-height:1.3;font-weight:900;color:var(--ed);margin-bottom:18px}
+.cv-h1 span{color:var(--eb)}
+.cv-sub{font-size:13px;color:var(--emut);max-width:480px}
+.cv-la{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.cv-lt{font-size:10px;color:var(--emut);text-align:right;line-height:1.5}
+.cv-band{background:var(--eb);padding:24px 38px;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;color:white}
+.cv-st{text-align:center}
+.cv-st .stn{font-size:26px;font-weight:900;color:var(--el);line-height:1}
+.cv-st .stu{font-size:10px;color:rgba(255,255,255,.7);margin-top:4px}
+.cv-st .stl{font-size:10px;color:rgba(255,255,255,.85);margin-top:6px;letter-spacing:.5px}
+.cv-meta{padding:22px 38px;background:var(--elt);display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.cv-mi{font-size:11px;color:var(--emut);display:flex;justify-content:space-between;border-bottom:1px dashed var(--mid);padding-bottom:6px}
+.cv-mi b{color:var(--ed);font-weight:700}
+.cv-foot{background:var(--eb3);color:rgba(255,255,255,.85);padding:14px 38px;font-size:10.5px;display:flex;justify-content:space-between}
+
+.ph{background:var(--eb3);color:white;padding:12px 28px;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1px}
+.ph b{font-weight:700}
+.sec{background:var(--eb);color:white;padding:14px 28px;border-left:5px solid var(--el2);position:relative}
+.sec h2{font-size:18px;font-weight:700;letter-spacing:.5px}
+.sec .sectag{font-size:10px;color:var(--el);letter-spacing:2px;text-transform:uppercase}
+.pc{padding:22px 28px}
+.pf{background:var(--elt);color:var(--emut);padding:8px 28px;font-size:9.5px;display:flex;justify-content:space-between;border-top:1px solid var(--mid)}
+
+h3.sh{font-size:14px;font-weight:700;color:var(--ed);border-left:3px solid var(--el2);padding-left:9px;margin-top:16px;margin-bottom:8px}
+h4.sh4{font-size:12.5px;font-weight:700;color:var(--teal);margin-top:13px;margin-bottom:6px}
+p.bt{font-size:12.5px;line-height:1.8;margin:6px 0;color:var(--text)}
+
+.b{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10.5px;font-weight:700;letter-spacing:.3px}
+.bb{background:var(--eb);color:white}
+.br{background:#FCE5E1;color:var(--red)}
+.bo{background:#FFE9D5;color:var(--org)}
+.bg{background:#D6F0E3;color:var(--grn)}
+.bt2{background:#D5EAEF;color:var(--teal)}
+.bl{background:var(--elt);color:var(--eb)}
+.bf{background:var(--red);color:white}
+.bp{background:var(--grn);color:white}
+.bw{background:var(--org);color:white}
+
+.ib{padding:12px 16px;border-radius:4px;margin:10px 0;font-size:12px;line-height:1.7}
+.ir{background:#FCE5E1;border-left:4px solid var(--red);color:#7B2519}
+.io{background:#FFE9D5;border-left:4px solid var(--org);color:#7A3300}
+.ig{background:#D6F0E3;border-left:4px solid var(--grn);color:#0E5230}
+.ii{background:var(--elt);border-left:4px solid var(--eb);color:var(--ed2)}
+.ib b{font-weight:700}
+
+table.dt{width:100%;border-collapse:collapse;margin:10px 0;font-size:11.5px}
+table.dt th{background:var(--eb);color:white;padding:9px 8px;font-weight:700;text-align:left;font-size:11px}
+table.dt td{padding:8px;border-bottom:1px solid var(--mid);vertical-align:top}
+table.dt tr:nth-child(even) td{background:var(--elt)}
+table.dt tr.sr td{background:#E5EDF8;font-weight:700;color:var(--ed);font-size:11px}
+table.dt tr.hl td{background:var(--eb3);color:white;font-weight:600}
+table.dt tr.hl td b{color:var(--el)}
+table.dt td.ce{text-align:center}
+table.dt td.bld{font-weight:700;color:var(--ed)}
+
+ul.rl{list-style:none;padding:0;margin:8px 0}
+ul.rl li{background:var(--elt);border-left:3px solid var(--el2);padding:8px 12px;margin-bottom:5px;font-size:12px;line-height:1.7;display:flex;gap:8px}
+ul.rl li .rn{color:var(--eb);font-weight:700;flex-shrink:0}
+
+.sov{display:grid;grid-template-columns:240px 1fr;gap:24px;margin:10px 0 18px;align-items:center}
+.tsb{width:200px;height:200px;border-radius:50%;background:conic-gradient(var(--eb) 0deg, var(--eb) calc(64 * 3.6deg), var(--mid) calc(64 * 3.6deg));display:flex;align-items:center;justify-content:center;margin:0 auto}
+.tsb .inn{width:160px;height:160px;border-radius:50%;background:white;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.tsb .num{font-size:46px;font-weight:900;line-height:1}
+.tsb .num.sg{color:var(--grn)} .tsb .num.sa{color:#A56E00} .tsb .num.so{color:var(--org)} .tsb .num.sr{color:var(--red)}
+.tsb .denom{font-size:16px;color:var(--emut);margin-top:2px}
+.tsb .lbl{font-size:10px;color:var(--emut);letter-spacing:2px;margin-top:6px}
+.lsg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lsc{background:var(--elt);border-radius:4px;padding:10px 12px;border-left:3px solid var(--el2)}
+.lsc .ln{font-size:10.5px;color:var(--emut);letter-spacing:1px}
+.lsc .ll{font-size:13px;font-weight:700;color:var(--ed);margin:2px 0}
+.lsbar{height:6px;background:var(--mid);border-radius:3px;overflow:hidden;margin:5px 0 4px}
+.lsbar .fill{height:100%;background:var(--grn);border-radius:3px}
+.fill.bg2{background:var(--grn)} .fill.ba{background:#C9A227} .fill.bo2{background:var(--org)} .fill.br2{background:var(--red)}
+.lsc .lsv{font-size:11px;color:var(--ed);font-weight:700;text-align:right}
+
+.pyr{display:flex;flex-direction:column;align-items:center;gap:3px;margin:14px 0}
+.pr{padding:10px 14px;color:white;font-size:11.5px;font-weight:600;text-align:center;border-radius:3px;line-height:1.4}
+.pr1{width:45%;background:var(--eb3)}
+.pr2{width:60%;background:var(--eb)}
+.pr3{width:75%;background:var(--eb2)}
+.pr4{width:90%;background:var(--el2)}
+.pr5{width:100%;background:#7BA8E0;color:var(--ed)}
+.pr b{display:block;font-size:14px;font-weight:900;margin-bottom:2px}
+
+.fc{display:flex;background:var(--elt);border-left:4px solid var(--red);margin-bottom:8px;border-radius:0 4px 4px 0;overflow:hidden}
+.fc.fco{border-color:var(--org)} .fc.fcg{border-color:var(--grn)} .fc.fcb{border-color:var(--eb)} .fc.fct{border-color:var(--teal)}
+.fc .ftag{background:var(--red);color:white;padding:10px 12px;font-weight:700;font-size:11px;writing-mode:vertical-rl;letter-spacing:1px}
+.fc.fco .ftag{background:var(--org)} .fc.fcg .ftag{background:var(--grn)} .fc.fcb .ftag{background:var(--eb)} .fc.fct .ftag{background:var(--teal)}
+.fc .fbody{padding:10px 14px;flex:1}
+.fc .fbody h5{font-size:13px;color:var(--ed);font-weight:700;margin-bottom:4px}
+.fc .fbody p{font-size:11.5px;color:var(--text);line-height:1.6}
+
+.agsig{background:var(--eb3);padding:18px 28px;display:flex;align-items:center;gap:14px;border-top:3px solid var(--el2)}
+.clp{background:var(--elt);padding:14px 18px;border-radius:4px;border-left:3px solid var(--eb);margin:10px 0;font-size:12px;line-height:1.8;color:var(--ed2)}
+
+@media print{
+  body{background:white;padding:0}
+  .page{box-shadow:none;margin-bottom:0;page-break-after:always;border-radius:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ 封面 ============ -->
+<div class="page">
+  <div class="cv-stripe"></div>
+  <div class="cv-hero">
+    <div>
+      <div class="cv-rule"></div>
+      <div class="cv-eye">GEO Generative Engine Optimization Audit</div>
+      <div class="cv-h1">妙健環境科技<br><span>GEO 官網健檢</span><br>評分報告</div>
+      <div class="cv-sub">針對 mha-eco.com 進行七層 GEO 評分。涵蓋技術可達性、語意架構、主題權威、YMYL 內容可信度、品牌信號等面向，協助妙健環境科技在 ChatGPT / Perplexity / Google AIO / Bing Copilot 四大 AI 引擎建立可持續引用能見度。</div>
+    </div>
+    <div class="cv-la">
+      <img src="data:image/jpeg;base64,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" style="width:88px;border-radius:6px;" alt="Enter IMC">
+      <div class="cv-lt">確認鍵智創科技股份有限公司<br>Enter Internet Marketing CO., LTD.</div>
+    </div>
+  </div>
+
+  <div class="cv-band">
+    <div class="cv-st"><div class="stn">64</div><div class="stu">/ 100</div><div class="stl">GEO 綜合健檢</div></div>
+    <div class="cv-st"><div class="stn">7</div><div class="stu">層</div><div class="stl">評估框架</div></div>
+    <div class="cv-st"><div class="stn">YMYL</div><div class="stu">類型</div><div class="stl">產業類型</div></div>
+    <div class="cv-st"><div class="stn">48</div><div class="stu">項</div><div class="stl">健檢評估項目</div></div>
+    <div class="cv-st"><div class="stn">10</div><div class="stu">項</div><div class="stl">立即修復建議</div></div>
+  </div>
+
+  <div class="cv-meta">
+    <div class="cv-mi">客戶名稱<b>妙健環境科技股份有限公司（MHA）</b></div>
+    <div class="cv-mi">官網網域<b>mha-eco.com</b></div>
+    <div class="cv-mi">產業分類<b>YMYL 健康服務 / 室內空氣品質</b></div>
+    <div class="cv-mi">技術平台<b>WordPress + Rank Math SEO</b></div>
+    <div class="cv-mi">健檢日期<b>2026 年 5 月 4 日</b></div>
+    <div class="cv-mi">服務範疇<b>除甲醛 / TVOC / IAQ 治理</b></div>
+    <div class="cv-mi">服務地區<b>北、新北、桃園、台中四處分公司</b></div>
+    <div class="cv-mi">關鍵資產<b>ISO 三大認證 / GRAFTON 日本專利</b></div>
+  </div>
+
+  <div class="cv-foot">
+    <p>本報告為妙健環境科技 GEO 健檢專案 M1 啟動階段交付物</p>
+    <p>© 2026 Enter Internet Marketing CO., LTD.</p>
+  </div>
+</div>
+
+<!-- ============ 第一章：目錄與品牌背景 ============ -->
+<div class="page">
+  <div class="ph"><b>第一章 ｜ 目錄與品牌背景</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 01</div><h2>目錄與品牌背景</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">章節索引</h3>
+    <table class="dt">
+      <tr><th style="width:6%">章</th><th>主題</th><th style="width:18%">GEO 層級</th><th style="width:14%" class="ce">佔分比重</th></tr>
+      <tr><td class="ce bld">02</td><td>健檢總覽：總分、金字塔分層、核心問題 Top 5</td><td><span class="b bb">總覽</span></td><td class="ce">—</td></tr>
+      <tr><td class="ce bld">03</td><td>第一層：技術可達性（robots.txt / llms.txt / sitemap）</td><td><span class="b br">封鎖性</span></td><td class="ce">Pass / Fail</td></tr>
+      <tr><td class="ce bld">04</td><td>第二層：語意架構（Schema、Answer-First、結構化內容）</td><td><span class="b bf">最關鍵</span></td><td class="ce">35 分</td></tr>
+      <tr><td class="ce bld">05</td><td>第三層：主題與實體權威（內容叢集、實體密度）</td><td><span class="b bo">中期</span></td><td class="ce">25 分</td></tr>
+      <tr><td class="ce bld">06</td><td>第四層：內容可信度（YMYL 嚴格審查）</td><td><span class="b bo">中期</span></td><td class="ce">20 分</td></tr>
+      <tr><td class="ce bld">07</td><td>第五層:品牌信號（搜尋量、第三方提及、PR）</td><td><span class="b bg">長期</span></td><td class="ce">15 分</td></tr>
+      <tr><td class="ce bld">08</td><td>第六+七層：四大平台差異化策略 + KPI 框架 + 結語</td><td><span class="b bt2">加分</span></td><td class="ce">+</td></tr>
+    </table>
+
+    <h3 class="sh">品牌背景與本次健檢範圍</h3>
+    <div class="ib ii">
+      <p><b>妙健環境科技股份有限公司（MHA）</b>為台灣除甲醛工程領導品牌，代理日本 GRAFTON 氨基高分子專利技術（專利號 3742575），迄今累積<b>超過 5,000 場案例、10 萬坪治理面積</b>，服務涵蓋家庭住宅、國際機場、醫療院所、商業辦公室。獲行政院國發基金投資，持有 ISO 9001 / 14001 / 45001 三大國際認證並榮獲第 22 屆國家品牌玉山獎傑出企業獎。全台設台北總公司（萬華區莒光路）、新北、桃園、台中四處分公司。</p>
+      <p style="margin-top:8px"><b>平台基礎：</b>網站建置於 WordPress + Rank Math SEO，TTFB 16ms（極佳）、傳統渲染（非 SPA）、HTTPS、RWD 全通過。<b>llms.txt（57.9KB）、robots.txt、sitemap_index.xml（10 個分類 sitemap）皆已 PASS</b>，技術基礎相當扎實。</p>
+      <p style="margin-top:8px"><b>產業屬性評估：</b>妙健屬於<b>「YMYL 健康服務 + 本地工程」</b>雙重類別。本健檢採「YMYL 本地服務」保守端基準值，平台係數 0%（自建系統，完全可控）。</p>
+    </div>
+
+  </div>
+  <div class="pf"><span>妙健環境科技 GEO 官網健檢報告</span><span>P.01 / 08</span></div>
+</div>
+
+<!-- ============ 第二章：健檢總覽 ============ -->
+<div class="page">
+  <div class="ph"><b>第二章 ｜ 健檢總覽</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 02</div><h2>健檢總覽</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">2.1 GEO 綜合健檢總分</h3>
+    <div class="sov">
+      <div class="tsb">
+        <div class="inn">
+          <div class="num sa">64</div>
+          <div class="denom">/ 100</div>
+          <div class="lbl">GEO SCORE</div>
+        </div>
+      </div>
+      <div class="lsg">
+        <div class="lsc">
+          <div class="ln">第二層 ｜ 35%</div>
+          <div class="ll">語意架構</div>
+          <div class="lsbar"><div class="fill ba" style="width:62%"></div></div>
+          <div class="lsv">22 / 35</div>
+        </div>
+        <div class="lsc">
+          <div class="ln">第三層 ｜ 25%</div>
+          <div class="ll">主題與實體權威</div>
+          <div class="lsbar"><div class="fill ba" style="width:64%"></div></div>
+          <div class="lsv">16 / 25</div>
+        </div>
+        <div class="lsc">
+          <div class="ln">第四層 ｜ 20%</div>
+          <div class="ll">YMYL 內容可信度</div>
+          <div class="lsbar"><div class="fill bg2" style="width:75%"></div></div>
+          <div class="lsv">15 / 20</div>
+        </div>
+        <div class="lsc">
+          <div class="ln">第五層 ｜ 15%</div>
+          <div class="ll">品牌信號</div>
+          <div class="lsbar"><div class="fill ba" style="width:73%"></div></div>
+          <div class="lsv">11 / 15</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ib ig"><b>整體判讀：</b>妙健的 GEO 表現<b>優於同業同類客戶平均</b>。技術基礎（llms.txt / robots.txt / sitemap）全 PASS，Schema 部署亦相當完整（Place、LocalBusiness、Organization、WebSite、Person、BreadcrumbList、BlogPosting 都已部署），且 Google AIO 已主動引用妙健的官方資訊（玉山獎、5,000 場、母嬰級標準、3 年保固）。CNEWS、UDN、ETtoday、工商時報於 2025/10–11 都有產業層級報導。剩餘 36 分提升空間集中在三點：(1) <b>FAQPage / HowTo / Service Schema 三項仍缺</b>（單一最大引用率倍增器）；(2) <b>首頁 H1 為空</b>＋缺核心 Pillar 整合頁；(3) <b>無維基百科條目</b>＋論壇 UGC（PTT / Mobile01）幾乎為零。</div>
+
+    <h3 class="sh">2.2 GEO 金字塔分層視覺化</h3>
+    <div class="pyr">
+      <div class="pr pr1"><b>第六+七層</b>平台差異化＋KPI 框架（加分）</div>
+      <div class="pr pr2"><b>第五層 ｜ 11/15</b>品牌信號：搜尋量、第三方媒體、PR</div>
+      <div class="pr pr3"><b>第四層 ｜ 15/20</b>YMYL 內容可信度：作者署名、醫師審閱、引用密度</div>
+      <div class="pr pr4"><b>第三層 ｜ 16/25</b>主題與實體權威：Pillar 叢集、實體密度</div>
+      <div class="pr pr5" style="border:2px solid var(--red)"><b>第二層 ｜ 22/35（最關鍵）</b>語意架構：Schema、Answer-First、結構化</div>
+    </div>
+    <p class="bt"><b style="color:var(--red)">⚠️ 紅框標示：</b>第二層為 GEO 最關鍵層（佔 35 分、改動成本最低、見效最快）。妙健已完成 22/35，主要缺口是 FAQPage / HowTo / Service Schema 與首頁 H1。</p>
+
+    <h3 class="sh">2.3 核心問題 Top 5</h3>
+
+    <div class="fc">
+      <div class="ftag">#1</div>
+      <div class="fbody">
+        <h5>FAQPage / HowTo / Service Schema 仍缺 → 失去最大引用率倍增器</h5>
+        <p>首頁與內頁 Schema 已部署 LocalBusiness、Organization、Person、BreadcrumbList、BlogPosting（基礎相當扎實），但 <b>/faq-materials/、/faq-service/ 等 FAQ 頁仍缺 FAQPage Schema</b>，施工流程頁仍缺 HowTo Schema、各服務頁缺 Service Schema。FAQPage 部署後 AI 引用率 15→41%（×3.2），是現階段單一最大改善槓桿。</p>
+      </div>
+    </div>
+
+    <div class="fc">
+      <div class="ftag">#2</div>
+      <div class="fbody">
+        <h5>首頁 H1 為空字串 → AI 對首頁主題判斷模糊</h5>
+        <p>https://mha-eco.com/ 的 DOM 中 H1 元素陣列為空（<code>document.querySelectorAll('h1')</code> 回傳 0 個）。內頁如 /grafton/、/about-advisors/、/mha-certifications/ 都有正確 H1，但首頁這個關鍵入口缺 H1，會降低 AI 對品牌主題的權威識別度。</p>
+      </div>
+    </div>
+
+    <div class="fc fco">
+      <div class="ftag">#3</div>
+      <div class="fbody">
+        <h5>缺核心 Pillar 整合頁 → 知識文未形成主題權威叢集</h5>
+        <p>妙健已有不少優質 Cluster 文章（「台北除甲醛公司怎麼選 三大判斷指標」「WHO 公告甲醛」「除甲醛效果關鍵在施工細節」「室內空品成新顯學 妙健以日系長效技術引領系統化治理新典範」），但缺一個整合性的「<b>台灣甲醛治理完整指南</b>」Pillar 頁把這些 Cluster 文章串起來。AI 在被問通用問題時，會拿單一 Cluster 文回答，無法把妙健識別為「該主題的中心節點」。</p>
+      </div>
+    </div>
+
+    <div class="fc fco">
+      <div class="ftag">#4</div>
+      <div class="fbody">
+        <h5>文章無作者署名欄位 → YMYL E-E-A-T 信號未顯化</h5>
+        <p>妙健已有 <b>4 位顧問具名（柯錦和博士、洪宇軒醫師、孫因理事長、陳哲郎建築師）+ 2 位董事</b>於 /about-advisors/ 頁面具名展示，個別文章也引用具名專家發言（如「孫因建議選擇除甲醛公司應確認技師訓練...」）——但<b>每篇文章頁缺乏「by 作者」署名欄位</b>，未在 BlogPosting Schema 中填入 author 節點指向 Person Schema。現有的 Person Schema 只有顧問頁本身的，文章引用作者沒被結構化。</p>
+      </div>
+    </div>
+
+    <div class="fc fct">
+      <div class="ftag">#5</div>
+      <div class="fbody">
+        <h5>維基百科無條目 + 論壇 UGC 為零 → 兩個 ChatGPT 引用權威節點缺席</h5>
+        <p>zh.wikipedia.org/wiki/妙健環境科技 顯示「目前還沒有與上述標題相同的條目」；Mobile01 site 搜尋無妙健 / 除甲醛 GRAFTON 相關文件。<b>新聞媒體（CNEWS、UDN、ETtoday、工商時報）已有 2025 年報導</b>具備 Wikipedia 引用來源條件，現在送審即可。論壇 UGC 則需另外操作。</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="pf"><span>妙健環境科技 GEO 官網健檢報告</span><span>P.02 / 08</span></div>
+</div>
+
+<!-- ============ 第三章：第一層 技術可達性 ============ -->
+<div class="page">
+  <div class="ph"><b>第三章 ｜ 第一層：技術可達性</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 03 ｜ LAYER 1</div><h2>技術可達性（Pass / Fail 封鎖性）</h2></div>
+  <div class="pc">
+
+    <div class="ib ig"><b>✅ 第一層判讀：</b>妙健第一層幾乎全 PASS，技術基礎。WordPress + Rank Math SEO 自動產生了 llms.txt 與 sitemap_index，robots.txt 設定正確並指向 sitemap。剩下 IndexNow 與 Bing Webmaster 待確認，但對 GEO 整體影響低。</div>
+
+    <h3 class="sh">A 區：AI 爬蟲可訪問性</h3>
+    <table class="dt">
+      <tr><th style="width:25%">檢查項目</th><th style="width:12%" class="ce">狀態</th><th>說明</th></tr>
+      <tr><td><b>llms.txt</b></td><td class="ce"><span class="b bp">PASS</span></td><td>https://mha-eco.com/llms.txt 200 OK，57,908 bytes，由 Rank Math SEO 自動產生。內含品牌簡介（「新家裝潢除甲醛就找妙健...」）、Sitemap 連結、全部文章與分類連結。AI 平台（ChatGPT / Perplexity / Gemini）可順利取得品牌結構化定位。</td></tr>
+      <tr><td><b>robots.txt</b></td><td class="ce"><span class="b bp">PASS</span></td><td>200 OK，271 bytes。設定為 <code>User-agent: *</code> + <code>Disallow: /wp-admin/</code> + <code>Sitemap: https://mha-eco.com/sitemap_index.xml</code>。屬中性正常設定。</td></tr>
+      <tr><td><b>sitemap_index.xml</b></td><td class="ce"><span class="b bp">PASS+</span></td><td>200 OK，包含 <b>10 個分類 sitemap</b>：post / page / project / reviews / news / category / projects-tag / projects / reviews-category / local。結構完整，Sitemap 切分粒度優於同業。</td></tr>
+      <tr><td><b>未明確列出 AI 爬蟲</b></td><td class="ce"><span class="b bw">WARN</span></td><td>robots.txt 雖以 <code>User-agent: *</code> 涵蓋所有爬蟲，但未針對 GPTBot / ClaudeBot / Google-Extended / PerplexityBot 個別 Allow。建議補上明確規則，傳遞「主動歡迎 AI 引用」訊號。</td></tr>
+      <tr><td><b>IndexNow 協議</b></td><td class="ce"><span class="b bw">WARN</span></td><td>未發現 IndexNow 部署跡象。WordPress 有 IndexNow 外掛可一鍵啟用，搭配 Bing Webmaster 即可推送新內容（直接影響 ChatGPT Search 引用即時性）。</td></tr>
+      <tr><td><b>Bing Webmaster 驗證</b></td><td class="ce"><span class="b bw">WARN</span></td><td>未確認，建議由客戶提供。Bing 排名直接影響 ChatGPT Search 引用（87% ChatGPT 引用來源來自 Bing Top 10）。</td></tr>
+    </table>
+
+    <h3 class="sh">B 區：技術基礎</h3>
+    <table class="dt">
+      <tr><th style="width:25%">檢查項目</th><th style="width:12%" class="ce">狀態</th><th>說明</th></tr>
+      <tr><td><b>HTTPS 加密</b></td><td class="ce"><span class="b bp">PASS</span></td><td>全站 HTTPS。</td></tr>
+      <tr><td><b>RWD 響應式</b></td><td class="ce"><span class="b bp">PASS</span></td><td>WordPress 主題本身即支援 RWD，行動版顯示正常。</td></tr>
+      <tr><td><b>頁面速度</b></td><td class="ce"><span class="b bp">PASS+</span></td><td><b>TTFB 16ms（極佳）</b>、DOMContentLoaded 879ms、Load 1310ms、首頁傳輸 77KB。傳統渲染（非 SPA），AI 爬蟲可直接讀取首屏內容。</td></tr>
+      <tr><td><b>JavaScript 渲染壁壘</b></td><td class="ce"><span class="b bp">PASS</span></td><td>非 SPA（無 React / Next / Nuxt root 元素），WordPress 傳統 PHP 渲染，HTML 完整。</td></tr>
+      <tr><td><b>Hreflang</b></td><td class="ce"><span class="b bg">N/A</span></td><td>網站僅 zh-TW 單語版本，無 hreflang 需求。</td></tr>
+      <tr><td><b>Canonical</b></td><td class="ce"><span class="b bp">PASS</span></td><td>首頁與內頁均有正確 canonical 標記。</td></tr>
+      <tr><td><b>URL 結構</b></td><td class="ce"><span class="b bw">WARN</span></td><td>多數 URL 結構良好（/grafton/、/about-advisors/、/mha-certifications/、/faq-materials/），但部分文章 URL 為中文百分比編碼（如 /醫：甲醛...% 編碼），不利國際 AI 爬蟲解讀，但對 zh-TW 影響不大。</td></tr>
+    </table>
+
+    <h3 class="sh">第一層修復建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><b>更新 robots.txt 明確列出 AI 爬蟲 Allow 規則</b>：在現有 <code>User-agent: *</code> 之外，補上 GPTBot、ClaudeBot、PerplexityBot、Google-Extended、Amazonbot 的明確 <code>User-agent</code> + <code>Allow: /</code> 區塊。改動成本：5 分鐘。</li>
+      <li><span class="rn">②</span><b>WordPress 安裝 IndexNow 外掛 + 申請 Bing Webmaster</b>：兩個動作合計約 1 小時內可完成。Bing 排名是 ChatGPT Search 87% 引用的來源，這一步等於同時優化 ChatGPT Search 與 Bing Copilot。</li>
+      <li><span class="rn">③</span><b>llms.txt 內容優化</b>：目前 Rank Math 自動產生的 llms.txt 是「全部頁面平鋪」格式，建議手動編輯為結構化的 Markdown（含品牌定位、核心服務、四分公司、技術優勢、推薦頁面），AI 抓取效率更高。</li>
+    </ul>
+
+  </div>
+  <div class="pf"><span>妙健環境科技 GEO 官網健檢報告</span><span>P.03 / 08</span></div>
+</div>
+
+<!-- ============ 第四章：第二層 語意架構 ============ -->
+<div class="page">
+  <div class="ph"><b>第四章 ｜ 第二層:語意架構（最關鍵）</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 04 ｜ LAYER 2 ｜ 22 / 35 分</div><h2>語意架構</h2></div>
+  <div class="pc">
+
+    <div class="ib io"><b>第二層說明：</b>妙健 22/35（62%）。Schema 部署相當扎實——首頁、內頁、文章頁都有完整 @graph（Place / LocalBusiness / Organization / WebSite / BreadcrumbList / Person / BlogPosting）。剩餘缺口集中在三項仍缺的 Schema 類型（FAQPage / HowTo / Service）與首頁 H1。</div>
+
+    <h3 class="sh">C 區：內容結構可引用性</h3>
+    <table class="dt">
+      <tr><th style="width:30%">指標</th><th style="width:12%" class="ce">狀態</th><th>說明與評語</th></tr>
+      <tr><td><b>首頁 H1</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>首頁 H1 元素陣列為空（H2 有 26 個、H3 有 40 個但無 H1）。內頁如 /grafton/、/about-advisors/ 都有正確 H1，僅首頁缺。</td></tr>
+      <tr><td><b>Answer-First 段落結構</b></td><td class="ce"><span class="b bw">WARN</span></td><td>服務頁有部分直接答案（「母嬰級驗收 ≤0.06ppm」），但缺以「使用者問題」為核心的 Answer-First 段落。文章頁如「台北除甲醛公司怎麼選」結構較佳。</td></tr>
+      <tr><td><b>自給自足段落（SSP）</b></td><td class="ce"><span class="b bw">WARN</span></td><td>知識文章 SSP 結構合格（每段含主張+數據），但服務頁仍以行銷敘述為主。</td></tr>
+      <tr><td><b>TL;DR 摘要區</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>無頁面部署摘要區。AI 在生成答案時優先萃取此類結構。</td></tr>
+      <tr><td><b>比較矩陣 / 數據表格</b></td><td class="ce"><span class="b bw">WARN</span></td><td>有具體數字（5,000 場、10 萬坪、0.06ppm），但未以結構化比較表格呈現。比較型清單文佔 GEO 引用的 32.5%。</td></tr>
+      <tr><td><b>FAQ 內容（HTML 結構）</b></td><td class="ce"><span class="b bw">WARN</span></td><td>/faq-materials/、/faq-service/ 等 FAQ 頁存在（含 Q&A 內容），但未用 details 標籤或 FAQPage Schema 包裝。</td></tr>
+      <tr><td><b>HowTo 流程說明</b></td><td class="ce"><span class="b bw">WARN</span></td><td>施工流程說明存在，但未以 HowTo Step 格式呈現。</td></tr>
+      <tr><td><b>內部連結密度</b></td><td class="ce"><span class="b bp">PASS</span></td><td>首頁 40+ 個有效內部連結，連到 GRAFTON、認證、顧問、案例、各 FAQ、各分公司頁，內部連結密度合格。</td></tr>
+    </table>
+
+    <h3 class="sh">D 區：Schema 標記覆蓋率</h3>
+    <div class="ib ig">✅ <b>Schema 部署現況：</b>妙健 Schema 部署相當完整，以下為各頁面實際部署狀況：</div>
+    <table class="dt">
+      <tr><th style="width:24%">Schema 類型</th><th style="width:12%" class="ce">GEO 重要性</th><th class="ce">首頁</th><th class="ce">服務頁</th><th class="ce">技術頁</th><th class="ce">文章頁</th><th>說明</th></tr>
+      <tr><td><b>Place（地理）</b></td><td class="ce">高（本地）</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td>含台北萬華區莒光路完整地址</td></tr>
+      <tr><td><b>LocalBusiness + Organization</b></td><td class="ce">極高（本地）</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td>合併節點，含 name / url / email / 地址</td></tr>
+      <tr><td><b>WebSite</b></td><td class="ce">基礎</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td>已部署</td></tr>
+      <tr><td><b>BreadcrumbList</b></td><td class="ce">基礎</td><td class="ce">—</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td>內頁全部具備</td></tr>
+      <tr><td><b>Person</b></td><td class="ce">高（YMYL）</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td>已部署但未連結到文章 author 欄位</td></tr>
+      <tr><td><b>BlogPosting / Article</b></td><td class="ce">中</td><td class="ce">—</td><td class="ce">—</td><td class="ce">—</td><td class="ce">1 ✓</td><td>文章頁已部署</td></tr>
+      <tr><td><b>ImageObject</b></td><td class="ce">中</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td class="ce">1 ✓</td><td>已部署</td></tr>
+      <tr><td><b>FAQPage</b></td><td class="ce">極高 ×3.2</td><td class="ce">0 ✗</td><td class="ce">0 ✗</td><td class="ce">0 ✗</td><td class="ce">0 ✗</td><td><b>FAQ 內容存在但 Schema 未部署</b>——單一最大缺口</td></tr>
+      <tr><td><b>HowTo</b></td><td class="ce">中高</td><td class="ce">—</td><td class="ce">0 ✗</td><td class="ce">—</td><td class="ce">—</td><td>施工流程未 HowTo 化</td></tr>
+      <tr><td><b>Service</b></td><td class="ce">高（服務）</td><td class="ce">—</td><td class="ce">0 ✗</td><td class="ce">—</td><td class="ce">—</td><td>各服務頁缺 Service Schema</td></tr>
+      <tr><td><b>Review / AggregateRating</b></td><td class="ce">高</td><td class="ce">0 ✗</td><td class="ce">0 ✗</td><td class="ce">—</td><td class="ce">—</td><td>5,000+ 案例已有評價數據，未結構化</td></tr>
+    </table>
+
+    <h3 class="sh">第二層修復建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><b>立即修復首頁 H1</b>：建議填入「妙健除甲醛 — 全方位長效除甲醛專家」或「妙健環境科技 — 國家品牌玉山獎肯定的長效除甲醛專家」。改動成本：5 分鐘。</li>
+      <li><span class="rn">②</span><b>FAQPage Schema 部署</b>：/faq-materials/、/faq-service/ 與其他內含 Q&A 的服務頁，全部加 FAQPage Schema。Rank Math SEO 有內建 FAQ block，可直接在 WordPress 後台啟用，預估 1 名工程師 2 天完成全站。FAQPage 是單一最大引用率倍增器（×3.2）。</li>
+      <li><span class="rn">③</span><b>HowTo Schema 部署</b>：將「盤點→塗布→驗收」施工流程頁轉為 HowTo Step 格式，觸發 Google AIO 步驟型摘要。</li>
+      <li><span class="rn">④</span><b>Service Schema 部署</b>：每個服務頁（住宅除甲醛、商業空間除甲醛、IAQ 管理、PPM 檢測、ESG 顧問）部署 Service Schema，含服務名稱、提供者、服務地區（areaServed 含四分公司）。</li>
+      <li><span class="rn">⑤</span><b>Review / AggregateRating Schema</b>：5,000+ 案例選 30 則部署 Review Schema，AI 在被問「妙健評價」時可直接引用評分。</li>
+      <li><span class="rn">⑥</span><b>產品/服務頁加 Answer-First 摘要段 + 比較表格</b>：每個服務頁頂部加 50 字摘要段、加「妙健 vs 一般除甲醛業者」比較表（含 Schema）。比較型內容是 GEO 引用率最高的格式（67%）。</li>
+    </ul>
+
+  </div>
+  <div class="pf"><span>妙健環境科技 GEO 官網健檢報告</span><span>P.04 / 08</span></div>
+</div>
+
+<!-- ============ 第五章：第三層 主題與實體權威 ============ -->
+<div class="page">
+  <div class="ph"><b>第五章 ｜ 第三層:主題與實體權威</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 05 ｜ LAYER 3 ｜ 16 / 25 分</div><h2>主題與實體權威</h2></div>
+  <div class="pc">
+
+    <div class="ib io"><b>第三層說明：</b>妙健 16/25（64%）。主題權威基礎扎實——已有 GRAFTON 技術頁、顧問群頁、ISO 認證頁、ESG 服務頁、PPM 檢測頁，且部落格已產出多篇質量良好的知識文（「台北除甲醛公司怎麼選 三大判斷指標」「WHO 公告甲醛」「除甲醛效果關鍵在施工細節」）。剩餘缺口是缺一個 Pillar 整合頁把這些 Cluster 串起來，以及部分主題（檢測 / 法規 / 族群）的深度不足。</div>
+
+    <h3 class="sh">F 區：主題叢集架構（Pillar-Cluster）</h3>
+    <table class="dt">
+      <tr><th style="width:30%">主題叢集</th><th style="width:14%" class="ce">Pillar 頁</th><th style="width:14%" class="ce">Cluster 文章</th><th>判讀</th></tr>
+      <tr><td><b>甲醛知識總覽</b></td><td class="ce"><span class="b bf">無</span></td><td class="ce"><span class="b bw">部分</span></td><td>缺核心 Pillar「台灣甲醛治理完整指南」。已有「WHO 公告甲醛」「醫：甲醛危害不只短期」等零散知識文</td></tr>
+      <tr><td><b>住宅 / 新屋 / 裝潢除甲醛</b></td><td class="ce"><span class="b bw">有服務頁</span></td><td class="ce"><span class="b bw">部分</span></td><td>有住宅服務頁、有「室內空品成新顯學」等 Cluster 文，但缺「新屋甲醛來源」「裝潢後幾天甲醛最高」等問題導向文章</td></tr>
+      <tr><td><b>商業空間 / 醫療院所</b></td><td class="ce"><span class="b bw">有服務頁</span></td><td class="ce"><span class="b bf">缺深度</span></td><td>有商業服務頁但缺「為何醫院需要除甲醛」「月子中心 IAQ 標準」差異化內容</td></tr>
+      <tr><td><b>GRAFTON 技術解析</b></td><td class="ce"><span class="b bp">PASS（/grafton/）</span></td><td class="ce"><span class="b bw">部分</span></td><td>/grafton/ 完整技術頁存在（H1 正確、含 BreadcrumbList Schema），講解氨基高分子原理（基本原料葡萄糖、伽馬射線照射、與甲醛反應分解為類氨基酸）</td></tr>
+      <tr><td><b>檢測 / PPM / 法規</b></td><td class="ce"><span class="b bw">部分</span></td><td class="ce"><span class="b bf">缺深度</span></td><td>有 /ppm-service/ 頁但缺「PPM 怎麼換算」「環保署標準 vs 國際標準差異」教育型內容</td></tr>
+      <tr><td><b>選廠商指南</b></td><td class="ce"><span class="b bw">有 Cluster</span></td><td class="ce"><span class="b bg">PASS</span></td><td>「台北除甲醛公司怎麼選 三大判斷指標」這篇文質量良好（含具名專家發言、具體判斷標準）</td></tr>
+    </table>
+
+    <h3 class="sh">G 區：實體密度</h3>
+    <p class="bt">實體密度（Entity Density）指頁面是否含「足夠多、清晰、可被識別的專有名詞」。研究顯示達 15+ 清晰實體的頁面 AI 引用機率為一般頁面的 4.8 倍。</p>
+    <table class="dt">
+      <tr><th style="width:30%">實體類型</th><th style="width:18%" class="ce">妙健現況</th><th>判讀</th></tr>
+      <tr><td>品牌實體</td><td class="ce"><span class="b bg">高</span></td><td>「妙健」「MHA」「GRAFTON」（含日本專利號 3742575）「Ovomedia」「妙健環境科技」品牌實體清晰，且內頁實際使用</td></tr>
+      <tr><td>核心知識實體</td><td class="ce"><span class="b bg">高</span></td><td>甲醛專業術語（TVOC、IAQ、VOC、氨基高分子、HCHO、葡萄糖、伽馬射線、類氨基酸）在 /grafton/ 頁有完整技術解釋</td></tr>
+      <tr><td>地理實體</td><td class="ce"><span class="b bg">高</span></td><td>四處分公司（台北萬華莒光路、新北板橋、桃園蘆竹、台中烏日）地理實體明確，是本地 GEO 的優勢資產</td></tr>
+      <tr><td>具體數字密度</td><td class="ce"><span class="b bg">高</span></td><td>5,000 場、10 萬坪、0.06ppm、3 年保固、4 次複測、20 年日本專利歷史、99.9% 分解率（+26.5% AI 引用率）</td></tr>
+      <tr><td>認證 / 機構實體</td><td class="ce"><span class="b bg">高</span></td><td>ISO 9001 / 14001 / 45001（含具體版本年份）、國發基金、第 22 屆國家品牌玉山獎、WELL AP 健康建築顧問——權威機構實體齊全且有專屬頁面</td></tr>
+      <tr><td>人物實體</td><td class="ce"><span class="b bp">PASS</span></td><td>/about-advisors/ 已具名 4 位顧問（柯錦和博士、洪宇軒醫師、孫因理事長、陳哲郎建築師）+ 2 位董事（黃泰勛、楊立德），含完整資歷</td></tr>
+    </table>
+
+    <h3 class="sh">H 區：語意涵蓋</h3>
+    <table class="dt">
+      <tr><th>類型</th><th class="ce">妙健現況</th><th>判讀</th></tr>
+      <tr><td>「除甲醛」「除甲醛推薦」類別詞</td><td class="ce"><span class="b bw">部分</span></td><td>有服務頁、有「台北除甲醛公司怎麼選」Cluster 文，但缺整合性的「2026 台灣除甲醛業者推薦 Top X」清單文</td></tr>
+      <tr><td>「甲醛是什麼」「甲醛多久散」教育型問句</td><td class="ce"><span class="b bw">部分</span></td><td>有「WHO 公告甲醛」相關文章，但缺整合性入門教學</td></tr>
+      <tr><td>「除甲醛費用」「除甲醛一坪多少錢」決策型問句</td><td class="ce"><span class="b bf">無</span></td><td>缺定價透明度頁面（即使不寫具體金額，可寫「影響費用的 5 個因素」）</td></tr>
+      <tr><td>「孕婦除甲醛」「寶寶房除甲醛」族群型問句</td><td class="ce"><span class="b bf">無</span></td><td>有提母嬰級驗收標準但缺族群專屬指南文</td></tr>
+      <tr><td>「PPM 換算」「甲醛濃度標準」工具型問句</td><td class="ce"><span class="b bw">部分</span></td><td>有 /ppm-service/ 頁但無互動式 PPM 換算工具</td></tr>
+    </table>
+
+    <h3 class="sh">第三層修復建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><b>建立核心 Pillar「台灣甲醛治理完整指南」</b>（路徑：/guide/formaldehyde-removal-taiwan，5,000 字以上），把現有的零散 Cluster 文（WHO 公告、台北選廠商指南、室內空品趨勢、施工細節等）用內部連結匯流到此頁。含 TL;DR、目錄、FAQ 區、比較表格。</li>
+      <li><span class="rn">②</span><b>補齊 5 篇缺口 Cluster 文</b>：「除甲醛費用怎麼算」「孕婦寶寶房除甲醛全攻略」「PPM 怎麼換算（含計算機）」「新屋甲醛多久散掉」「醫院 / 月子中心為何需要除甲醛」。每篇 1,000–1,500 字，含 FAQPage Schema。</li>
+      <li><span class="rn">③</span><b>四處分公司獨立頁面 + LocalBusiness Schema</b>：每個分公司頁面含完整地址、電話、服務區域、本地案例、本地技師團隊。提升 Google AIO 在地引用優勢。</li>
+      <li><span class="rn">④</span><b>知識文章顯化引入顧問群</b>：把 /about-advisors/ 已具名的 4 位顧問實際出現在文章內容中（如柯錦和博士審閱「氨基高分子原理」、洪宇軒醫師審閱「甲醛健康影響」），用文章中的引用 + Schema 連結強化 E-E-A-T。</li>
+    </ul>
+
+  </div>
+  <div class="pf"><span>妙健環境科技 GEO 官網健檢報告</span><span>P.05 / 08</span></div>
+</div>
+
+<!-- ============ 第六章：第四層 YMYL 內容可信度 ============ -->
+<div class="page">
+  <div class="ph"><b>第六章 ｜ 第四層:YMYL 內容可信度</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 06 ｜ LAYER 4 ｜ 15 / 20 分</div><h2>內容可信度（YMYL 嚴格審查）</h2></div>
+  <div class="pc">
+
+    <div class="ib ig"><b>✅ 第四層判讀：</b>妙健 15/20（75%），優於同業同類客戶。<b>/about-advisors/ 已具名 4 位顧問</b>（柯錦和博士、洪宇軒醫師、孫因理事長、陳哲郎建築師）+ 2 位董事，含完整資歷。文章內也引用具名專家發言（例：「孫因理事長建議選擇除甲醛公司應確認技師訓練...」）。剩餘缺口是「文章作者欄位」與「醫師審閱聲明區塊」的結構化呈現。</div>
+
+    <h3 class="sh">I 區：資料可驗證性</h3>
+    <table class="dt">
+      <tr><th style="width:30%">指標</th><th style="width:12%" class="ce">狀態</th><th>說明</th></tr>
+      <tr><td><b>事實密度（具體數字）</b></td><td class="ce"><span class="b bp">PASS</span></td><td>5,000 場、10 萬坪、0.06ppm、3 年保固、4 次複測、20 年日本歷史、99.9% 分解率。事實密度上水準。</td></tr>
+      <tr><td><b>健康主張可溯源性</b></td><td class="ce"><span class="b bw">WARN</span></td><td>「甲醛被 WHO 列為一級致癌物」等醫學主張存在，部分文章有提（如 /WHO公告甲醛/ 文），但未在所有 YMYL 頁面附 IARC / WHO 原始連結。</td></tr>
+      <tr><td><b>認證可驗證性</b></td><td class="ce"><span class="b bp">PASS+</span></td><td>/mha-certifications/ 完整呈現 ISO 9001:2015、ISO 14001:2015、ISO 45001:2018（含版本年份）、WELL AP 認證、第 22 屆國家品牌玉山獎，都有專屬頁面。建議加入認證機構官網連結。</td></tr>
+      <tr><td><b>第三方施工紀錄</b></td><td class="ce"><span class="b bp">PASS</span></td><td>具備縮時錄影、APP 工程紀錄、甲醛檢測報告等可驗證機制。</td></tr>
+    </table>
+
+    <h3 class="sh">J 區：內容新鮮度</h3>
+    <table class="dt">
+      <tr><th style="width:30%">指標</th><th style="width:12%" class="ce">狀態</th><th>說明</th></tr>
+      <tr><td><b>文章發布頻率</b></td><td class="ce"><span class="b bp">PASS</span></td><td>post-sitemap 顯示 2025–2026 年文章持續產出，最新有 2025/11 玉山獎、2025/10–11 媒體報導文。</td></tr>
+      <tr><td><b>BlogPosting Schema datePublished</b></td><td class="ce"><span class="b bp">PASS</span></td><td>BlogPosting Schema 已部署於文章頁，含日期欄位。</td></tr>
+      <tr><td><b>服務頁「最後更新日期」顯示</b></td><td class="ce"><span class="b bw">WARN</span></td><td>服務頁前台未顯示「最後更新日期」，AI 對服務頁新鮮度無法快速判讀。</td></tr>
+    </table>
+
+    <h3 class="sh">K 區：作者透明度（YMYL 核心要求）</h3>
+    <table class="dt">
+      <tr><th style="width:30%">指標</th><th style="width:12%" class="ce">狀態</th><th>說明</th></tr>
+      <tr><td><b>顧問群具名</b></td><td class="ce"><span class="b bp">PASS</span></td><td><b>/about-advisors/ 已具名 4 位顧問 + 2 位董事</b>，含完整資歷（如「柯錦和｜台灣大學高分子科學與工程學博士｜康德生醫總經理」）</td></tr>
+      <tr><td><b>文章中引用具名專家</b></td><td class="ce"><span class="b bp">PASS</span></td><td>「台北除甲醛公司怎麼選」一文引用「臺北市室內設計裝修商業同業公會榮譽理事長孫因建議...」，YMYL E-E-A-T 操作正確</td></tr>
+      <tr><td><b>文章 author 欄位與 Person Schema 連結</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>文章頁有 BlogPosting Schema 但 author 節點未連到顧問群的 Person Schema。前台也缺「by 作者 / 審閱者」署名欄位</td></tr>
+      <tr><td><b>醫師審閱聲明區塊</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>YMYL 健康類文章缺「本頁醫療資訊由 [醫師姓名] 審閱，審閱日期：YYYY/MM/DD」結構化區塊。Google AIO 對 YMYL 有「醫師審閱」的隱性要求</td></tr>
+    </table>
+
+    <h3 class="sh">第四層修復建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><b>BlogPosting Schema 補上 author + reviewedBy 節點</b>，連結到 /about-advisors/ 顧問群的 Person Schema。技術上是 WordPress + Rank Math 的設定問題，1 名工程師 1 天可全站完成。</li>
+      <li><span class="rn">②</span><b>每篇 YMYL 文章前台加「by 作者 / 審閱者」署名欄位</b>：例如「本文由妙健空品技師團隊撰寫，洪宇軒醫師審閱（2026/05）」。實際對應到顧問頁人員，不需新增人員。</li>
+      <li><span class="rn">③</span><b>YMYL 健康類文章底部加醫師審閱聲明框</b>：含醫師姓名、所屬醫院、審閱日期、相關連結。對 Google AIO YMYL 引用率影響最大。</li>
+      <li><span class="rn">④</span><b>所有健康主張附權威外部連結</b>：甲醛致癌主張附 IARC 官網（https://monographs.iarc.who.int）、台灣標準附環保署公告、驗收標準附法規連結。</li>
+      <li><span class="rn">⑤</span><b>服務頁加「規格 / 流程最後更新日期」前台顯示</b>，提升 Perplexity（30 天新鮮度敏感）與 Google AIO 的信任。</li>
+    </ul>
+
+  </div>
+  <div class="pf"><span>妙健環境科技 GEO 官網健檢報告</span><span>P.06 / 08</span></div>
+</div>
+
+<!-- ============ 第七章：第五層 品牌信號（PR） ============ -->
+<div class="page">
+  <div class="ph"><b>第七章 ｜ 第五層:品牌信號</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 07 ｜ LAYER 5 ｜ 11 / 15 分</div><h2>品牌信號</h2></div>
+  <div class="pc">
+
+    <div class="ib ig"><b>第五層判讀：</b>妙健 11/15（73%）。第三方品牌信號表現相當亮眼——<b>主流新聞媒體已有多家報導</b>（CNEWS、UDN 健康、ETtoday、工商時報），且<b>Google AIO 已主動引用妙健官方資訊</b>（玉山獎、5,000 場、母嬰級標準、3 年保固都被 AI Overview 引用）。剩餘關鍵缺口：維基百科無條目、Mobile01 / PTT 論壇 UGC 為零。</div>
+
+    <h3 class="sh">L 區：品牌提及量</h3>
+    <table class="dt">
+      <tr><th>第三方來源</th><th class="ce">狀態</th><th>說明</th></tr>
+      <tr><td><b>Google AIO 主動引用</b></td><td class="ce"><span class="b bp">PASS+</span></td><td>搜尋「妙健環境科技 除甲醛 報導」時，Google AI Overview 主動引用妙健官方資訊（玉山獎、5,000 場實績、母嬰級 ≤0.06ppm 標準、3 年保固、4 次複測、設計師與醫師推薦）——這是 GEO 已生效的實證</td></tr>
+      <tr><td><b>CNEWS 全民通訊社</b></td><td class="ce"><span class="b bp">PASS</span></td><td>2025/11/19 報導「室內空品成新顯學 妙健以日系長效技術引領系統化治理新典範」+「醫：甲醛危害不只是短期 妙健除甲醛以日本專利守護新家」</td></tr>
+      <tr><td><b>UDN 健康 / ETtoday 健康</b></td><td class="ce"><span class="b bp">PASS</span></td><td>2025/11/19 同一波報導透過 UDN 健康 / ETtoday 健康聯播露出</td></tr>
+      <tr><td><b>工商時報（ctee.com.tw）</b></td><td class="ce"><span class="b bp">PASS</span></td><td>2025/10/21 報導包含妙健環境科技股份有限公司</td></tr>
+      <tr><td><b>Facebook 品牌活躍度</b></td><td class="ce"><span class="b bp">PASS</span></td><td>首頁有官方 FB / IG / Messenger 連結，社群活躍度高</td></tr>
+      <tr><td><b>YouTube 影片內容</b></td><td class="ce"><span class="b bp">PASS</span></td><td>已與 YouTuber（喬好物）合作產出除甲醛紀錄影片</td></tr>
+    </table>
+
+    <h3 class="sh">M 區：缺口項目（FAIL）</h3>
+    <table class="dt">
+      <tr><th>項目</th><th class="ce">狀態</th><th>說明</th></tr>
+      <tr><td><b>維基百科 / Wikidata 條目</b></td><td class="ce"><span class="b bf">確認 FAIL</span></td><td>zh.wikipedia.org/wiki/妙健環境科技 顯示「目前還沒有與上述標題相同的條目」。Wikipedia 是 ChatGPT 訓練數據主要來源，這是企業層級權威的關鍵缺口</td></tr>
+      <tr><td><b>Mobile01 / PTT 論壇 UGC</b></td><td class="ce"><span class="b bf">確認 FAIL</span></td><td>「site:mobile01.com 妙健 OR 除甲醛 GRAFTON」回傳「找不到符合搜尋字詞的文件」。論壇 UGC 是 ChatGPT 引用的關鍵第三方信號之一</td></tr>
+      <tr><td><b>方格子 / vocus.cc 品牌知識文</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>未在方格子部署品牌知識文。方格子作為 AI 第三方引用來源效益高</td></tr>
+      <tr><td><b>設計師合作公開內容</b></td><td class="ce"><span class="b bw">WARN</span></td><td>與 300+ 設計師的合作以 FB 貼文為主，未轉化為官網「設計師推薦頁面」結構化呈現</td></tr>
+    </table>
+
+    <h3 class="sh">N 區：sameAs 連結整合</h3>
+    <p class="bt">妙健已有完整社群與媒體資產，但官網 Organization Schema 的 sameAs 欄位未見完整串聯。建議補上 FB / IG / YouTube / LINE 官方、所有第三方報導 URL、未來的維基百科條目，AI 才能順著節點驗證妙健為合法企業實體。</p>
+
+    <div class="ib ig"><b>第五層核心判讀：</b>妙健的問題不是「外部聲量不足」，而是「<b>聲量沒被結構化整合進官網，且缺維基百科這個 ChatGPT 引用權威節點</b>」。Google AIO 已開始主動引用妙健，意味著 Schema 與內容基礎已被 Google 認可——下一步是把這個優勢延伸到 ChatGPT（需 Wiki + Bing）與 Perplexity（需高頻新內容）。</div>
+
+    <h3 class="sh">第五層修復建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><b>立即新增維基百科「妙健環境科技」條目</b>。已具備充分引用來源條件（CNEWS + UDN 健康 + ETtoday + 工商時報 + 國發基金投資公開資訊 + 玉山獎得獎名單），可直接送審，不需額外做新聞聯播網。</li>
+      <li><span class="rn">②</span><b>新增官網 /press 媒體新聞頁</b>，整合所有第三方報導連結與重點段落（CNEWS、UDN、ETtoday、工商時報、YouTube 喬好物等），含 NewsArticle Schema。讓 AI 在妙健官網就能直接找到「妙健被誰報導過、講了什麼」。</li>
+      <li><span class="rn">③</span><b>Organization Schema 補完整 sameAs 欄位</b>：FB / IG / YouTube / LINE 官方 + 所有第三方報導 URL + （建立後的）維基百科條目。</li>
+      <li><span class="rn">④</span><b>新增 /partners/designers 設計師合作頁</b>：把 300+ 設計師合作公開化（取得對方同意），含設計師姓名、工作室、合作案例，配 ItemList Schema。</li>
+      <li><span class="rn">⑤</span><b>啟動論壇口碑（GEO-X-02）</b>：聚焦 PTT home_sale 裝潢板、Mobile01 裝修討論版、Dcard 居家板，半年期計畫，每月 6–10 篇種子文。<b>Mobile01 與 PTT 為零</b>是現階段最大的可控缺口。</li>
+      <li><span class="rn">⑥</span><b>方格子第三方長文（GEO-X-03）</b>：每月 2 篇技術深度長文，由 Enter IMC 操刀，掛妙健工程師 / 顧問共筆。</li>
+    </ul>
+
+  </div>
+  <div class="pf"><span>妙健環境科技 GEO 官網健檢報告</span><span>P.07 / 08</span></div>
+</div>
+
+<!-- ============ 第八章：第六+七層 平台差異化 + KPI + 結語 ============ -->
+<div class="page">
+  <div class="ph"><b>第八章 ｜ 第六+七層:平台差異化 + KPI + 結語</b><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 08 ｜ LAYER 6 + 7</div><h2>四大平台差異化策略 + KPI 框架</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">四大 AI 平台差異化策略</h3>
+    <table class="dt">
+      <tr><th style="width:18%">平台</th><th style="width:22%">最重要信號</th><th style="width:14%" class="ce">妙健現況</th><th>應對重點</th></tr>
+      <tr><td><b>Google AIO</b></td><td>E-E-A-T + 語意段落 + Schema</td><td class="ce"><span class="b bp">已生效</span></td><td>Google AIO 已主動引用妙健資訊。下一步是補 FAQPage Schema + 醫師審閱聲明，鞏固並擴大引用率</td></tr>
+      <tr><td><b>ChatGPT Search</b></td><td>Bing 排名 + Wikipedia + 第三方提及</td><td class="ce"><span class="b bw">部分</span></td><td>87% 引用來自 Bing Top 10。妙健需<b>申請 Bing Webmaster + IndexNow + 新增維基百科條目</b>（單一最高槓桿）</td></tr>
+      <tr><td><b>Perplexity</b></td><td>內容新鮮度（30 天）+ 外部引用密度</td><td class="ce"><span class="b bw">部分</span></td><td>已有月度文章產出但需提高頻率（每月 2–4 篇）。Perplexity 對 30 天內新鮮內容偏好極高</td></tr>
+      <tr><td><b>Bing Copilot</b></td><td>Schema + 語意明確標題 + Bing 排名</td><td class="ce"><span class="b bw">部分</span></td><td>Schema 基礎已有，補齊 FAQPage / HowTo / Service 即可顯著提升</td></tr>
+    </table>
+
+    <h3 class="sh">產業特殊要求（YMYL × 本地工程雙重類別）</h3>
+    <table class="dt">
+      <tr><th style="width:30%">特殊要求</th><th style="width:14%" class="ce">妙健狀態</th><th>說明</th></tr>
+      <tr><td>LocalBusiness Schema</td><td class="ce"><span class="b bp">已有</span></td><td>首頁與內頁都已部署，含台北萬華完整地址</td></tr>
+      <tr><td>四處分公司獨立 LocalBusiness 節點</td><td class="ce"><span class="b br">缺</span></td><td>現只有總公司資料，建議每分公司獨立節點</td></tr>
+      <tr><td>YMYL 顧問群具名 + 醫師審閱聲明</td><td class="ce"><span class="b bw">半</span></td><td>顧問頁已具名，但文章審閱聲明未顯化</td></tr>
+      <tr><td>健康主張附權威來源（WHO / IARC / 衛福部）</td><td class="ce"><span class="b bw">半</span></td><td>部分文章有提，需全站統一</td></tr>
+      <tr><td>本地服務評價 Schema（AggregateRating）</td><td class="ce"><span class="b br">缺</span></td><td>5,000+ 案例已具備數據，僅缺結構化</td></tr>
+    </table>
+
+    <h3 class="sh">KPI 框架（基於 Otterly 主系統 + 三維調節）</h3>
+    <div class="ib ii"><b>套用條件：</b>妙健 = <b>有部分 SEO 基礎</b>（基準組偏中端）× <b>YMYL 本地服務</b>產業係數（AI 引用次數 / 引用網域數取保守端）× <b>WordPress + Rank Math</b>平台係數（0%，不下調）。本 KPI 採用標準基準值。<b>已有 Google AIO 主動引用實證，起跑點優於同業同類客戶</b>。</div>
+
+    <table class="dt">
+      <tr><th style="width:25%">核心指標</th><th class="ce">M1–M3 啟動期</th><th class="ce">M4–M6 成長期</th><th class="ce">M7–M12 穩定期</th></tr>
+      <tr class="hl"><td><b>品牌提及率</b></td><td class="ce">5–15%</td><td class="ce">18–30%</td><td class="ce">35–50%</td></tr>
+      <tr class="hl"><td><b>AI 引用次數 / 月</b></td><td class="ce">10–30 次</td><td class="ce">40–90 次</td><td class="ce">100–180 次</td></tr>
+      <tr class="hl"><td><b>Share of Voice</b></td><td class="ce">5–15%</td><td class="ce">18–32%</td><td class="ce">35–50%</td></tr>
+      <tr class="hl"><td><b>引用網域數</b></td><td class="ce">2–5 個</td><td class="ce">6–10 個</td><td class="ce">10–15 個</td></tr>
+      <tr class="hl"><td><b>跨平台出現率</b></td><td class="ce">1–2 平台</td><td class="ce">2–3 平台</td><td class="ce">4 平台全</td></tr>
+      <tr class="hl"><td><b>Top 10 問句出現數</b></td><td class="ce">0–2 則</td><td class="ce">2–4 則</td><td class="ce">5–8 則</td></tr>
+    </table>
+    <div class="ib io">⚠️ <b>KPI 起點上修：</b>由於 Google AIO 已主動引用妙健，M1–M3 啟動期 KPI 起點較原預估上修（品牌提及率 5–15%，非 0–5%）。Baseline 欄於 M1 月底 Otterly 跑滿 14 天後填入，成為 M6 期末驗收的唯一計算基準。</div>
+
+    <h3 class="sh">結語</h3>
+    <div class="clp">
+      說明顯示，妙健環境科技的 GEO 表現<b>顯著優於同業同類客戶平均</b>。妙健已具備完整的技術基礎（llms.txt / robots.txt / sitemap_index 全 PASS）、扎實的 Schema 部署（LocalBusiness / Organization / Person / BreadcrumbList / BlogPosting / Place / WebSite / ImageObject），並有清晰的實體頁面（/grafton/、/about-advisors/、/mha-certifications/、/faq-materials/、/news/、四處分公司）。<b>更重要的是，Google AIO 已主動引用妙健的官方資訊</b>——這是 GEO 已開始生效的關鍵實證。<br><br>
+      剩餘的 36 分提升空間集中於可快速修復的項目：(1) 三項 Schema 補完（FAQPage / HowTo / Service）、(2) 首頁 H1、(3) Pillar 整合頁、(4) BlogPosting author 連結 + 醫師審閱聲明、(5) 維基百科條目、(6) 論壇 UGC。前 4 項屬技術配置，<b>4–8 週內可完成，預計把 GEO 評分從 64 分提升到 78+</b>。<br><br>
+      妙健的核心 GEO 任務不是「從零建立」，而是<b>「鞏固已生效的 AIO 引用、補完維基百科這個 ChatGPT 權威節點、把 5,000 場案例與設計師合作網絡結構化呈現」</b>。維基百科送審條件已具備（CNEWS + UDN + ETtoday + 工商時報 + 國發基金投資 + 玉山獎），是現階段最高 ROI 的單一動作。<br><br>
+      結合中期內容架構優化（Pillar-Cluster 整合 + 方格子長文 + 論壇口碑啟動），妙健有實力在 6–9 個月內成為台灣除甲醛服務 AI 引用的首選品牌。
+    </div>
+
+  </div>
+  <div class="agsig">
+    <img src="data:image/jpeg;base64,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" style="height:44px;border-radius:6px;flex-shrink:0;" alt="">
+    <div>
+      <div style="color:white;font-size:12px;font-weight:700;">確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.</div>
+      <div style="color:rgba(255,255,255,.5);font-size:10.5px;margin-top:4px;">enterimc.com　｜　報告日期：2026 年 5 月 4 日　｜　本文件內容為確認鍵智創科技智慧財產，僅供客戶參考</div>
+    </div>
+  </div>
+  <div class="pf"><span>妙健環境科技 GEO 官網健檢報告</span><span>P.08 / 08</span></div>
+</div>
+
+</div>
+</body>
+</html>
