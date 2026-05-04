@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+<meta charset="UTF-8">
+<title>OVO GEO 官網健檢報告 — 確認鍵智創科技</title>
+<meta name="report-client" content="OVO Ovomedia">
+<meta name="report-score" content="36">
+<meta name="report-desc" content="OVO 智慧投影機/閨蜜機/電視盒電商，核心問題為零知識內容、Schema 不完整、無 robots/llms 信號">
+<meta name="report-tags" content="GEO健檢,電商,智慧投影機,展雋創意">
+<meta name="report-type" content="audit">
+<meta name="report-date" content="2026-05-04">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+:root {
+  --eb:#1B3A8C; --eb2:#254BAD; --eb3:#0D2568;
+  --ed:#0A1628; --ed2:#1A2B3C;
+  --el:#A8C8F8; --el2:#4A90D9;
+  --em:#C5D5F0; --elt:#F0F5FF;
+  --emut:#5C7AA8;
+  --red:#C0392B; --grn:#1A7A44; --org:#C75000; --teal:#0E6A7C;
+  --navy:#1B3A8C; --light:#F0F5FF; --mid:#C5D5F0; --text:#1A2B3C; --muted:#5C7AA8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans TC',sans-serif;background:#D8E4F5;color:var(--text);font-size:13px;line-height:1.7;padding:20px 0}
+.wrap{max-width:900px;margin:0 auto}
+.page{background:white;border-radius:8px;box-shadow:0 3px 20px rgba(0,0,0,.09);margin-bottom:18px;overflow:hidden}
+.cv-stripe{height:8px;background:var(--eb)}
+.cv-hero{padding:42px 38px 32px;display:flex;justify-content:space-between;align-items:flex-start;gap:30px}
+.cv-rule{width:48px;height:3px;background:var(--eb);margin-bottom:14px}
+.cv-eye{font-size:10px;color:var(--emut);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-bottom:18px}
+.cv-h1{font-size:32px;line-height:1.3;font-weight:900;color:var(--ed);margin-bottom:18px}
+.cv-h1 span{color:var(--eb)}
+.cv-sub{font-size:13px;color:var(--emut);max-width:480px}
+.cv-la{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.cv-lt{font-size:10px;color:var(--emut);text-align:right;line-height:1.5}
+.cv-band{background:var(--eb);padding:24px 38px;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;color:white}
+.cv-st{text-align:center}
+.cv-st .stn{font-size:26px;font-weight:900;color:var(--el);line-height:1}
+.cv-st .stu{font-size:10px;color:rgba(255,255,255,.7);margin-top:4px}
+.cv-st .stl{font-size:10px;color:rgba(255,255,255,.85);margin-top:6px;letter-spacing:.5px}
+.cv-meta{padding:22px 38px;background:var(--elt);display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.cv-mi{font-size:11px;color:var(--emut);display:flex;justify-content:space-between;border-bottom:1px dashed var(--mid);padding-bottom:6px}
+.cv-mi b{color:var(--ed);font-weight:700}
+.cv-foot{background:var(--eb3);color:rgba(255,255,255,.85);padding:14px 38px;font-size:10.5px;display:flex;justify-content:space-between}
+
+.ph{background:var(--eb3);color:white;padding:12px 28px;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1px}
+.ph b{font-weight:700}
+.sec{background:var(--eb);color:white;padding:14px 28px;border-left:5px solid var(--el2);position:relative}
+.sec h2{font-size:18px;font-weight:700;letter-spacing:.5px}
+.sec .sectag{font-size:10px;color:var(--el);letter-spacing:2px;text-transform:uppercase}
+.pc{padding:22px 28px}
+.pf{background:var(--elt);color:var(--emut);padding:8px 28px;font-size:9.5px;display:flex;justify-content:space-between;border-top:1px solid var(--mid)}
+
+h3.sh{font-size:14px;font-weight:700;color:var(--ed);border-left:3px solid var(--el2);padding-left:9px;margin-top:16px;margin-bottom:8px}
+h4.sh4{font-size:12.5px;font-weight:700;color:var(--teal);margin-top:13px;margin-bottom:6px}
+p.bt{font-size:12.5px;line-height:1.8;margin:6px 0;color:var(--text)}
+
+.b{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10.5px;font-weight:700;letter-spacing:.3px}
+.bb{background:var(--eb);color:white}
+.br{background:#FCE5E1;color:var(--red)}
+.bo{background:#FFE9D5;color:var(--org)}
+.bg{background:#D6F0E3;color:var(--grn)}
+.bt2{background:#D5EAEF;color:var(--teal)}
+.bl{background:var(--elt);color:var(--eb)}
+.bf{background:var(--red);color:white}
+.bp{background:var(--grn);color:white}
+.bw{background:var(--org);color:white}
+
+.ib{padding:12px 16px;border-radius:4px;margin:10px 0;font-size:12px;line-height:1.7}
+.ir{background:#FCE5E1;border-left:4px solid var(--red);color:#7B2519}
+.io{background:#FFE9D5;border-left:4px solid var(--org);color:#7A3300}
+.ig{background:#D6F0E3;border-left:4px solid var(--grn);color:#0E5230}
+.ii{background:var(--elt);border-left:4px solid var(--eb);color:var(--ed2)}
+.ib b{font-weight:700}
+
+.pri{display:inline-block;padding:1px 8px;font-size:10px;border-radius:2px;font-weight:700;letter-spacing:.5px;color:white}
+.pc3{background:#921B12}
+.ph2{background:var(--org)}
+.pm{background:var(--teal)}
+.pl2{background:var(--grn)}
+
+table.dt{width:100%;border-collapse:collapse;margin:10px 0;font-size:11.5px}
+table.dt th{background:var(--eb);color:white;padding:9px 8px;font-weight:700;text-align:left;font-size:11px}
+table.dt td{padding:8px;border-bottom:1px solid var(--mid);vertical-align:top}
+table.dt tr:nth-child(even) td{background:var(--elt)}
+table.dt tr.sr td{background:#E5EDF8;font-weight:700;color:var(--ed);font-size:11px}
+table.dt tr.hl td{background:var(--eb3);color:white;font-weight:600}
+table.dt tr.hl td b{color:var(--el)}
+table.dt td.ce{text-align:center}
+table.dt td.bld{font-weight:700;color:var(--ed)}
+
+ul.rl{list-style:none;padding:0;margin:8px 0}
+ul.rl li{background:var(--elt);border-left:3px solid var(--el2);padding:8px 12px;margin-bottom:5px;font-size:12px;line-height:1.7;display:flex;gap:8px}
+ul.rl li .rn{color:var(--eb);font-weight:700;flex-shrink:0}
+
+.sov{display:grid;grid-template-columns:240px 1fr;gap:24px;margin:10px 0 18px;align-items:center}
+.tsb{width:200px;height:200px;border-radius:50%;background:conic-gradient(var(--eb) 0deg, var(--eb) calc(36 * 3.6deg), var(--mid) calc(36 * 3.6deg));display:flex;align-items:center;justify-content:center;margin:0 auto}
+.tsb .inn{width:160px;height:160px;border-radius:50%;background:white;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.tsb .num{font-size:46px;font-weight:900;line-height:1}
+.tsb .num.sg{color:var(--grn)} .tsb .num.sa{color:#A56E00} .tsb .num.so{color:var(--org)} .tsb .num.sr{color:var(--red)}
+.tsb .denom{font-size:16px;color:var(--emut);margin-top:2px}
+.tsb .lbl{font-size:10px;color:var(--emut);letter-spacing:2px;margin-top:6px}
+.lsg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lsc{background:var(--elt);border-radius:4px;padding:10px 12px;border-left:3px solid var(--el2)}
+.lsc .ln{font-size:10.5px;color:var(--emut);letter-spacing:1px}
+.lsc .ll{font-size:13px;font-weight:700;color:var(--ed);margin:2px 0}
+.lsbar{height:6px;background:var(--mid);border-radius:3px;overflow:hidden;margin:5px 0 4px}
+.lsbar .fill{height:100%;background:var(--grn);border-radius:3px}
+.fill.bg2{background:var(--grn)} .fill.ba{background:#C9A227} .fill.bo2{background:var(--org)} .fill.br2{background:var(--red)}
+.lsc .lsv{font-size:11px;color:var(--ed);font-weight:700;text-align:right}
+
+.pyr{display:flex;flex-direction:column;align-items:center;gap:3px;margin:14px 0}
+.pr{padding:10px 14px;color:white;font-size:11.5px;font-weight:600;text-align:center;border-radius:3px;line-height:1.4}
+.pr1{width:45%;background:var(--eb3)}
+.pr2{width:60%;background:var(--eb)}
+.pr3{width:75%;background:var(--eb2)}
+.pr4{width:90%;background:var(--el2)}
+.pr5{width:100%;background:#7BA8E0;color:var(--ed)}
+.pr b{display:block;font-size:14px;font-weight:900;margin-bottom:2px}
+
+.fc{display:flex;background:var(--elt);border-left:4px solid var(--red);margin-bottom:8px;border-radius:0 4px 4px 0;overflow:hidden}
+.fc.fco{border-color:var(--org)} .fc.fcg{border-color:var(--grn)} .fc.fcb{border-color:var(--eb)} .fc.fct{border-color:var(--teal)}
+.fc .ftag{background:var(--red);color:white;padding:10px 12px;font-weight:700;font-size:11px;writing-mode:vertical-rl;letter-spacing:1px}
+.fc.fco .ftag{background:var(--org)} .fc.fcg .ftag{background:var(--grn)} .fc.fcb .ftag{background:var(--eb)} .fc.fct .ftag{background:var(--teal)}
+.fc .fbody{padding:10px 14px;flex:1}
+.fc .fbody h5{font-size:13px;color:var(--ed);font-weight:700;margin-bottom:4px}
+.fc .fbody p{font-size:11.5px;color:var(--text);line-height:1.6}
+
+.agsig{background:var(--eb3);padding:18px 28px;display:flex;align-items:center;gap:14px;border-top:3px solid var(--el2)}
+.clp{background:var(--elt);padding:14px 18px;border-radius:4px;border-left:3px solid var(--eb);margin:10px 0;font-size:12px;line-height:1.8;color:var(--ed2)}
+
+@media print{
+  body{background:white;padding:0}
+  .page{box-shadow:none;margin-bottom:0;page-break-after:always;border-radius:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ 封面 ============ -->
+<div class="page">
+  <div class="cv-stripe"></div>
+  <div class="cv-hero">
+    <div>
+      <div class="cv-rule"></div>
+      <div class="cv-eye">GEO Generative Engine Optimization Audit</div>
+      <div class="cv-h1">OVO<br><span>GEO 官網健檢</span><br>評分報告</div>
+      <div class="cv-sub">針對 www.ovotv.com 進行七層 GEO 評分。涵蓋技術可達性、語意架構、主題權威、內容可信度、品牌信號等面向，搭配 Ahrefs 關鍵字情報與第三方品牌信號實測，協助 OVO 在 ChatGPT / Perplexity / Google AIO / Bing Copilot 四大 AI 引擎建立可持續引用能見度。</div>
+    </div>
+    <div class="cv-la">
+      <img src="data:image/jpeg;base64,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" style="width:88px;border-radius:6px;" alt="Enter IMC">
+      <div class="cv-lt">確認鍵智創科技股份有限公司<br>Enter Internet Marketing CO., LTD.</div>
+    </div>
+  </div>
+
+  <div class="cv-band">
+    <div class="cv-st"><div class="stn">36</div><div class="stu">/ 100</div><div class="stl">GEO 綜合健檢</div></div>
+    <div class="cv-st"><div class="stn">7</div><div class="stu">層</div><div class="stl">評估框架</div></div>
+    <div class="cv-st"><div class="stn">電商</div><div class="stu">類型</div><div class="stl">產業類型</div></div>
+    <div class="cv-st"><div class="stn">46</div><div class="stu">項</div><div class="stl">健檢評估項目</div></div>
+    <div class="cv-st"><div class="stn">17</div><div class="stu">項</div><div class="stl">立即修復建議</div></div>
+  </div>
+
+  <div class="cv-meta">
+    <div class="cv-mi">客戶名稱<b>OVO / 展雋創意股份有限公司</b></div>
+    <div class="cv-mi">官網網域<b>www.ovotv.com</b></div>
+    <div class="cv-mi">產業分類<b>消費品牌 / 智慧投影機電商</b></div>
+    <div class="cv-mi">技術平台<b>自建系統（傳統渲染，非 SPA）</b></div>
+    <div class="cv-mi">健檢日期<b>2026 年 5 月 4 日</b></div>
+    <div class="cv-mi">評估網域<b>DR 34（Ahrefs，2026-05）</b></div>
+    <div class="cv-mi">主要競品<b>BenQ / Epson / LG / 小米</b></div>
+    <div class="cv-mi">通路競品<b>PChome / momo</b></div>
+  </div>
+
+  <div class="cv-foot">
+    <p>本報告為 OVO（展雋創意）GEO 健檢專案 M1 啟動階段交付物</p>
+    <p>© 2026 Enter Internet Marketing CO., LTD.</p>
+  </div>
+</div>
+
+<!-- ============ 第一章：目錄與品牌背景 ============ -->
+<div class="page">
+  <div class="ph"><b>第一章 ｜ 目錄與品牌背景</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 01</div><h2>目錄與品牌背景</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">章節索引</h3>
+    <table class="dt">
+      <tr><th style="width:6%">章</th><th>主題</th><th style="width:18%">GEO 層級</th><th style="width:14%" class="ce">佔分比重</th></tr>
+      <tr><td class="ce bld">02</td><td>健檢總覽：總分、金字塔分層、核心問題 Top 5</td><td><span class="b bb">總覽</span></td><td class="ce">—</td></tr>
+      <tr><td class="ce bld">03</td><td>第一層：技術可達性（robots.txt / llms.txt / sitemap）</td><td><span class="b br">封鎖性</span></td><td class="ce">Pass / Fail</td></tr>
+      <tr><td class="ce bld">04</td><td>第二層：語意架構（Schema、Answer-First、結構化內容）</td><td><span class="b bf">最關鍵</span></td><td class="ce">35 分</td></tr>
+      <tr><td class="ce bld">05</td><td>第三層:主題與實體權威（內容叢集、實體密度）</td><td><span class="b bo">中期</span></td><td class="ce">25 分</td></tr>
+      <tr><td class="ce bld">06</td><td>第四層：內容可信度（作者、新鮮度、引用）</td><td><span class="b bo">中期</span></td><td class="ce">20 分</td></tr>
+      <tr><td class="ce bld">07</td><td>第五層：品牌信號（搜尋量、第三方提及、PR）</td><td><span class="b bg">長期</span></td><td class="ce">15 分</td></tr>
+      <tr><td class="ce bld">08</td><td>第六+七層：四大平台差異化策略 + KPI 框架 + 結語</td><td><span class="b bt2">加分</span></td><td class="ce">+</td></tr>
+    </table>
+
+    <h3 class="sh">品牌背景與本次健檢範圍</h3>
+    <div class="ib ii">
+      <p><b>OVO（Ovomedia / 展雋創意股份有限公司）</b>是台灣智慧投影機與電視盒銷量領導品牌，2013 年於新竹創立，2024 年跨入閨蜜機市場。集團旗下涵蓋四個自家品牌：<b>OVO</b>（旗艦影音）、<b>Warpple 沃朋</b>（年輕子品牌）、<b>Bongcom 幫康</b>（健康家電）、<b>Hihibox 嗨嗨</b>（群眾募資）。本健檢針對 zh-tw 主站 www.ovotv.com 進行，產品矩陣包含 K/SS 系列高亮投影機、U 系列便攜投影機、Warpple LA/LS 雲台投影機、TT8/JJ5/JJ1 閨蜜機、B9S 電視盒、SR 系列 RO 飲水機、SW1 洗碗機等。</p>
+      <p style="margin-top:8px"><b>SEO 基礎評估：</b>主要關鍵字「投影機」(月搜 17,000) 排名第 2、「ovo 投影機」(3,600) 排名第 1、「warpple」(1,300) 排名第 1，自然流量基礎扎實。Ahrefs DR 34，可視為「<b>有 SEO 基礎</b>」客戶；KPI 套用標準基準值，平台係數 0%（自建系統，完全可控）。</p>
+    </div>
+
+  </div>
+  <div class="pf"><span>OVO GEO 官網健檢報告</span><span>P.01 / 08</span></div>
+</div>
+
+<!-- ============ 第二章：健檢總覽 ============ -->
+<div class="page">
+  <div class="ph"><b>第二章 ｜ 健檢總覽</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 02</div><h2>健檢總覽</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">2.1 GEO 綜合健檢總分</h3>
+    <div class="sov">
+      <div class="tsb">
+        <div class="inn">
+          <div class="num sr">36</div>
+          <div class="denom">/ 100</div>
+          <div class="lbl">GEO SCORE</div>
+        </div>
+      </div>
+      <div class="lsg">
+        <div class="lsc">
+          <div class="ln">第二層 ｜ 35%</div>
+          <div class="ll">語意架構</div>
+          <div class="lsbar"><div class="fill br2" style="width:31%"></div></div>
+          <div class="lsv">11 / 35</div>
+        </div>
+        <div class="lsc">
+          <div class="ln">第三層 ｜ 25%</div>
+          <div class="ll">主題與實體權威</div>
+          <div class="lsbar"><div class="fill br2" style="width:32%"></div></div>
+          <div class="lsv">8 / 25</div>
+        </div>
+        <div class="lsc">
+          <div class="ln">第四層 ｜ 20%</div>
+          <div class="ll">內容可信度</div>
+          <div class="lsbar"><div class="fill br2" style="width:25%"></div></div>
+          <div class="lsv">5 / 20</div>
+        </div>
+        <div class="lsc">
+          <div class="ln">第五層 ｜ 15%</div>
+          <div class="ll">品牌信號</div>
+          <div class="lsbar"><div class="fill bg2" style="width:80%"></div></div>
+          <div class="lsv">12 / 15</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ib io"><b>整體判讀：</b>OVO 在傳統 SEO 表現良好（DR 34、品牌詞月搜 4,500、「投影機」全國第 2），且<b>第三方品牌信號比預期強</b>——T客邦（techbang）已為 OVO 各產品做過深度評測（K1 / SS1 / U8-A / U11 / K3 / Warpple LS1 等），Mobile01、PTT、Dcard 三大論壇都有真實使用者開箱與心得討論。但目前 GEO 結構轉化嚴重不足，問題集中於三點：(1) <b>沒有任何官網知識型內容</b>（無部落格 / 無深度產品比較頁），(2) <b>Schema 部署極簡</b>（只有 Product Schema 且缺 Brand / AggregateRating / Review），(3) <b>robots.txt 與 llms.txt 都不存在</b>，AI 爬蟲缺乏明確訊號。改善路徑明確且改動成本低。</div>
+
+    <h3 class="sh">2.2 GEO 金字塔分層視覺化</h3>
+    <div class="pyr">
+      <div class="pr pr1"><b>第六+七層</b>平台差異化＋KPI 框架（加分）</div>
+      <div class="pr pr2"><b>第五層 ｜ 12/15</b>品牌信號：搜尋量、第三方媒體、PR</div>
+      <div class="pr pr3"><b>第四層 ｜ 5/20</b>內容可信度：作者署名、引用密度、新鮮度</div>
+      <div class="pr pr4"><b>第三層 ｜ 8/25</b>主題與實體權威：Pillar 叢集、實體密度</div>
+      <div class="pr pr5" style="border:2px solid var(--red)"><b>第二層 ｜ 11/35（最關鍵）</b>語意架構：Schema、Answer-First、結構化</div>
+    </div>
+    <p class="bt"><b style="color:var(--red)">⚠️ 紅框標示：</b>第二層為 GEO 最關鍵層（佔 35 分、改動成本最低、見效最快）。OVO 目前在此層僅得 11/35，是首要修復目標。</p>
+
+    <h3 class="sh">2.3 核心問題 Top 5</h3>
+
+    <div class="fc">
+      <div class="ftag">#1</div>
+      <div class="fbody">
+        <h5>全站零部落格、零知識型內容 → AI 沒有素材可以引用 OVO 官網</h5>
+        <p>Sitemap 共 2,798 URL，當中 2,600 是產品頁、114 是 support，<b>沒有任何 /blog、/article、/guide 路徑</b>。研究顯示比較型清單文佔 AI 全體引用 32.5%、含表格的綜合指南引用率達 67%。OVO 第三方在 T客邦 / Mobile01 / Dcard 都有評測，但<b>「OVO 官網自身的引用權」幾乎為零</b>——AI 引用權永遠在外站手上。</p>
+      </div>
+    </div>
+
+    <div class="fc">
+      <div class="ftag">#2</div>
+      <div class="fbody">
+        <h5>robots.txt 與 llms.txt 都不存在 → AI 爬蟲缺乏明確邀請</h5>
+        <p>實測 https://www.ovotv.com/robots.txt 與 /llms.txt 皆 302 redirect 回首頁（等同 404）。雖然各家 AI 爬蟲未必嚴格依賴 robots.txt 才能爬，但「沒有檔案」會被視為「未明確開放」的負面訊號，且失去機會用 llms.txt 主動推薦核心頁面給 AI。</p>
+      </div>
+    </div>
+
+    <div class="fc fco">
+      <div class="ftag">#3</div>
+      <div class="fbody">
+        <h5>Product Schema 簡陋，無 Brand / AggregateRating / Review / GTIN</h5>
+        <p>U11 / K9 等主力產品頁僅部署最基礎 Product Schema（name、image、description、sku、offers），<b>缺 brand、aggregateRating、review、gtin/mpn 五項 GEO 關鍵欄位</b>。對比競品（BenQ、Epson 官網）均含完整評分與品牌標記，OVO 在電商 Schema 競爭力上明顯落後。</p>
+      </div>
+    </div>
+
+    <div class="fc fco">
+      <div class="ftag">#4</div>
+      <div class="fbody">
+        <h5>FAQPage Schema 全站 0 篇 → 失去單一最大引用率倍增器</h5>
+        <p>研究顯示部署 FAQPage Schema 的頁面，AI 引用率從 15% 提升至 41%（×3.2 倍）。OVO 在 support/topic/faq、support/category/faq 等 FAQ 路徑都被導回首頁（壞掉），而其他產品頁、support 頁也未部署 FAQPage Schema。</p>
+      </div>
+    </div>
+
+    <div class="fc fct">
+      <div class="ftag">#5</div>
+      <div class="fbody">
+        <h5>about 頁僅 615 字、無 Organization Schema → 品牌實體權威不足</h5>
+        <p>關於我們頁面內文總計 615 字，僅含使命/願景/價值觀三短語＋大事記六行條列。<b>無 Organization Schema、無 sameAs（FB / IG / YouTube / Wikipedia）、無團隊成員介紹</b>。實測也確認<b>維基百科無「展雋創意」或「Ovomedia」條目</b>，當 AI 在判斷「OVO 是哪一家公司、有什麼背景」時，會優先採用 PChome / momo 商家簡介或科技媒體報導，失去由官網主導品牌敘事的機會。</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="pf"><span>OVO GEO 官網健檢報告</span><span>P.02 / 08</span></div>
+</div>
+
+<!-- ============ 第三章：第一層 技術可達性 ============ -->
+<div class="page">
+  <div class="ph"><b>第三章 ｜ 第一層：技術可達性</b><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 03 ｜ LAYER 1</div><h2>技術可達性（Pass / Fail 封鎖性）</h2></div>
+  <div class="pc">
+
+    <div class="ib ir"><b>⚠️ 第一層警示：</b>本層任一 Fail 將封鎖所有後續 GEO 效益。OVO 在 robots.txt 與 llms.txt 兩項判定 Fail，需立即修復。整體影響評估為「<b>中度封鎖</b>」——AI 爬蟲仍可成功爬取網站（HTML 渲染速度良好、有 sitemap.xml），但缺乏明確的 GEO 邀請信號。</div>
+
+    <h3 class="sh">A 區：AI 爬蟲可訪問性</h3>
+    <table class="dt">
+      <tr><th style="width:25%">檢查項目</th><th style="width:12%" class="ce">狀態</th><th>實測結果</th></tr>
+      <tr><td><b>robots.txt</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>https://www.ovotv.com/robots.txt 回應 302，redirect 回 zh-tw 首頁。等同檔案不存在，無法宣告允許 GPTBot / ClaudeBot / Google-Extended / PerplexityBot 等 AI 爬蟲，亦無法指向 sitemap。</td></tr>
+      <tr><td><b>llms.txt</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>https://www.ovotv.com/llms.txt 同樣 302 redirect。失去主動推薦核心產品頁 / about 頁 / 知識頁給 AI 的機會。</td></tr>
+      <tr><td><b>sitemap.xml</b></td><td class="ce"><span class="b bp">PASS</span></td><td>https://www.ovotv.com/sitemap.xml 正常（200 OK，378KB）。共 2,798 個 URL，覆蓋 zh-tw + en-us 雙語版本，含產品頁 2,600、產品總覽 72、support 114、其他 12。最後更新時間 2026-05-04（即時更新）。</td></tr>
+      <tr><td><b>sitemap_index.xml</b></td><td class="ce"><span class="b bw">WARN</span></td><td>未獨立部署 sitemap_index.xml，但 sitemap.xml 已完整覆蓋。建議切分為產品 / support / about 三個 sitemap 並用 index 整合，提高 AI 抓取效率。</td></tr>
+      <tr><td><b>IndexNow</b></td><td class="ce"><span class="b bw">WARN</span></td><td>未發現 IndexNow API 整合跡象。產品頁價格/庫存頻繁更新時，無法主動通知 Bing / Yandex 重抓，影響 Bing Copilot 引用即時性。</td></tr>
+      <tr><td><b>Bing Webmaster 驗證</b></td><td class="ce"><span class="b bw">WARN</span></td><td>未確認，建議由客戶提供。Bing 排名直接影響 ChatGPT Search 引用（87% ChatGPT 引用來源來自 Bing Top 10）。</td></tr>
+    </table>
+
+    <h3 class="sh">B 區：技術基礎</h3>
+    <table class="dt">
+      <tr><th style="width:25%">檢查項目</th><th style="width:12%" class="ce">狀態</th><th>實測結果</th></tr>
+      <tr><td><b>HTTPS</b></td><td class="ce"><span class="b bp">PASS</span></td><td>全站 HTTPS。</td></tr>
+      <tr><td><b>RWD 響應式</b></td><td class="ce"><span class="b bp">PASS</span></td><td>產品頁有獨立的行動版與桌機版圖片資源（如 /home/products/mobile/U11.jpg），切版基礎佳。</td></tr>
+      <tr><td><b>頁面速度</b></td><td class="ce"><span class="b bp">PASS</span></td><td>首頁 TTFB 163ms、DOMContentLoaded 313ms、Load 640ms，傳輸 12.4KB。傳統渲染（非 SPA），AI 爬蟲可直接讀取首屏內容無 JS 渲染壁壘。</td></tr>
+      <tr><td><b>Hreflang</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>網站有 zh-tw 與 en-us 雙版本，但 HTML &lt;head&gt; 無 hreflang 標記。AI 抓取英文 prompt 時無法明確對應到 en-us 頁面，可能在 ChatGPT/Perplexity 出現「中英版本互搶引用」的混淆。</td></tr>
+      <tr><td><b>Canonical</b></td><td class="ce"><span class="b bp">PASS</span></td><td>首頁與產品頁均有正確 canonical 標記。</td></tr>
+      <tr><td><b>壞掉的頁面（404 redirect）</b></td><td class="ce"><span class="b bw">WARN</span></td><td>實測 /support/topic/faq、/support/category/faq、/service 等 sitemap 收錄頁面均 redirect 回首頁。Sitemap 與實際頁面狀態不一致，AI 爬蟲遇到此情況會降低對網站可信度的評分。</td></tr>
+    </table>
+
+    <h3 class="sh">第一層修復建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><b>立即新增 robots.txt</b>，明確列出 User-agent: GPTBot / ClaudeBot / Google-Extended / PerplexityBot / Amazonbot 並 Allow: /，並在最後加 Sitemap: https://www.ovotv.com/sitemap.xml。</li>
+      <li><span class="rn">②</span><b>新增 llms.txt</b>（位置同 /llms.txt），格式為 Markdown，需含品牌定位（OVO TV OS 串流電視平台 / 智慧投影機領導品牌）、四個子品牌的關係、核心產品線連結、support 與 about 連結。</li>
+      <li><span class="rn">③</span><b>修復或下架 /service、/support/topic/faq、/support/category/faq</b> 三條壞掉路徑。Sitemap 與實際頁面狀態一致，是 AI 信任的基本要求。</li>
+      <li><span class="rn">④</span><b>HTML &lt;head&gt; 加 hreflang</b>：&lt;link rel="alternate" hreflang="zh-TW" href="..."&gt; 與對應 en-us 版本，避免雙語版本互搶引用。</li>
+      <li><span class="rn">⑤</span><b>申請 Bing Webmaster 並提交 sitemap.xml</b>，導入 IndexNow API。Bing 排名是 ChatGPT Search 87% 引用的來源，這一步等於同時優化 ChatGPT 與 Bing Copilot。</li>
+    </ul>
+
+  </div>
+  <div class="pf"><span>OVO GEO 官網健檢報告</span><span>P.03 / 08</span></div>
+</div>
+
+<!-- ============ 第四章：第二層 語意架構 ============ -->
+<div class="page">
+  <div class="ph"><b>第四章 ｜ 第二層:語意架構（最關鍵）</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 04 ｜ LAYER 2 ｜ 11 / 35 分</div><h2>語意架構</h2></div>
+  <div class="pc">
+
+    <div class="ib io"><b>第二層說明：</b>本層佔總分 35%，是 GEO 最關鍵且改動成本最低的一層。OVO 目前 11/35（31%），主因是<b>產品頁 Schema 簡陋、全站零 FAQPage、零 BreadcrumbList、無 Answer-First 內容結構</b>。本層改善後預估 4–8 週內可看到 AI 引用率大幅提升。</div>
+
+    <h3 class="sh">C 區：內容結構可引用性</h3>
+    <table class="dt">
+      <tr><th style="width:30%">指標</th><th style="width:12%" class="ce">狀態</th><th>實測結果與評語</th></tr>
+      <tr><td><b>Answer-First 段落結構</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>產品頁直接從圖片開始，沒有「這是一台什麼樣的投影機」開門見山的 50 字摘要段。AI 在這種結構下難以萃取核心定位。</td></tr>
+      <tr><td><b>自給自足段落</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>研究顯示自給自足段落（一段內含完整背景＋主張＋數據）與引用率相關係數 r=0.87。OVO 產品頁多為條列規格，缺完整段落敘述。</td></tr>
+      <tr><td><b>TL;DR / 摘要區</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>無任何頁面部署摘要區（產品頁 / about 頁 / support 頁皆無）。</td></tr>
+      <tr><td><b>條列與表格密度</b></td><td class="ce"><span class="b bw">WARN</span></td><td>產品頁有規格條列但缺比較表格。「U11 vs U10 vs U9 怎麼選」這類比較矩陣表完全沒有，失去最高引用率（67%）的內容格式。</td></tr>
+      <tr><td><b>標題層級（H1/H2/H3）</b></td><td class="ce"><span class="b bf">FAIL</span></td><td><b>首頁 H1 為空字串</b>（DOM 中存在 &lt;h1&gt;&lt;/h1&gt; 但無內容），產品頁 H1 雖有商品名但前置一個空 H1 標籤。多重空 H1 會讓 AI 對頁面主題判斷模糊。</td></tr>
+      <tr><td><b>BreadcrumbList</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>產品頁無視覺麵包屑、無 BreadcrumbList Schema。AI 無法理解「U11 是 OVO 旗下投影機 → 便攜 U 系列 → U11」的階層關係。</td></tr>
+      <tr><td><b>內部連結密度</b></td><td class="ce"><span class="b bw">WARN</span></td><td>產品頁之間僅靠「主選單」連結，無相關產品交叉推薦區（例如「LA5 用戶也看了 LA6 / LA8」）。</td></tr>
+    </table>
+
+    <h3 class="sh">D 區：Schema 標記覆蓋率</h3>
+    <table class="dt">
+      <tr><th style="width:24%">Schema 類型</th><th style="width:12%" class="ce">GEO 重要性</th><th class="ce">首頁</th><th class="ce">產品頁</th><th class="ce">about 頁</th><th class="ce">support 頁</th><th>說明</th></tr>
+      <tr><td><b>Organization</b></td><td class="ce">基礎</td><td class="ce">0 ✗</td><td class="ce">—</td><td class="ce">0 ✗</td><td class="ce">0 ✗</td><td>全站完全未部署</td></tr>
+      <tr><td><b>WebSite</b></td><td class="ce">基礎</td><td class="ce">0 ✗</td><td class="ce">—</td><td class="ce">—</td><td class="ce">—</td><td>未部署</td></tr>
+      <tr><td><b>BreadcrumbList</b></td><td class="ce">基礎</td><td class="ce">—</td><td class="ce">0 ✗</td><td class="ce">0 ✗</td><td class="ce">0 ✗</td><td>未部署</td></tr>
+      <tr><td><b>Product / Offer</b></td><td class="ce">高</td><td class="ce">—</td><td class="ce">2/2 ⚠️</td><td class="ce">—</td><td class="ce">—</td><td>有部署但簡陋（缺 brand / aggregateRating / review / gtin）</td></tr>
+      <tr><td><b>AggregateRating</b></td><td class="ce">極高（電商）</td><td class="ce">—</td><td class="ce">0/2 ✗</td><td class="ce">—</td><td class="ce">—</td><td>所有產品頁都缺，AI 無法引用「OVO U11 評分 4.x 顆星」</td></tr>
+      <tr><td><b>Review</b></td><td class="ce">極高（電商）</td><td class="ce">—</td><td class="ce">0/2 ✗</td><td class="ce">—</td><td class="ce">—</td><td>未部署</td></tr>
+      <tr><td><b>Brand</b></td><td class="ce">高</td><td class="ce">—</td><td class="ce">0/2 ✗</td><td class="ce">—</td><td class="ce">—</td><td>四個自家品牌（OVO/Warpple/Bongcom/Hihibox）都未在 Product Schema 中標記</td></tr>
+      <tr><td><b>FAQPage</b></td><td class="ce">極高 ×3.2</td><td class="ce">0 ✗</td><td class="ce">0 ✗</td><td class="ce">0 ✗</td><td class="ce">0 ✗</td><td>全站 0 篇——單一最大缺口（部署後引用率 15→41%）</td></tr>
+      <tr><td><b>HowTo</b></td><td class="ce">中高</td><td class="ce">—</td><td class="ce">—</td><td class="ce">—</td><td class="ce">0 ✗</td><td>support 頁有手機投影、遙控器配對等流程內容，但未部署 HowTo Schema</td></tr>
+      <tr><td><b>VideoObject</b></td><td class="ce">中</td><td class="ce">—</td><td class="ce">0/2 ✗</td><td class="ce">—</td><td class="ce">—</td><td>產品頁有產品影片但無 VideoObject Schema</td></tr>
+      <tr><td><b>Article / BlogPosting</b></td><td class="ce">中</td><td class="ce">—</td><td class="ce">—</td><td class="ce">—</td><td class="ce">—</td><td><b>—（不適用）</b>OVO 全站無部落格 / 知識文，因此無 Article 部署需求；應優先補內容再補 Schema</td></tr>
+    </table>
+
+    <h3 class="sh">第二層修復建議（最高優先）</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><b>立即補完 Product Schema 五個關鍵欄位</b>：brand（{"@type":"Brand", "name":"OVO"} / "Warpple" / "Bongcom"）、aggregateRating（接 momo / 蝦皮 / Google 商家評論）、review（精選 3–5 則用戶評論）、gtin13/mpn、category。改動成本：1 名前端 1 週。</li>
+      <li><span class="rn">②</span><b>全站部署 Organization Schema</b>（首頁＆about 頁），含 name、alternateName（Ovomedia / 展雋創意）、logo、sameAs（連 FB / IG / YouTube / Line / 104）、subOrganization（OVO / Warpple / Bongcom / Hihibox 四個子品牌節點）。</li>
+      <li><span class="rn">③</span><b>產品頁 + support 頁全面部署 BreadcrumbList</b>（含視覺麵包屑），AI 才能理解產品階層。建議架構：首頁 → 投影機 → OVO 高亮 K 系列 → K9。</li>
+      <li><span class="rn">④</span><b>每個產品頁部署 FAQPage Schema</b>，每頁 5–8 題（如「U11 跟 U10 差在哪」「U11 可以連 Switch 嗎」「保固多久」）。FAQPage 是單一最大引用率倍增器（×3.2），預估部署後 AI 引用率提升幅度最大。</li>
+      <li><span class="rn">⑤</span><b>產品頁頂部加 50 字 Answer-First 摘要段</b>。範例：「OVO U11『小天王行動劇院』是 2024 年發表的便攜款 FHD 智慧投影機，主打 2,000 流明高亮、提把式雲台、25ms 低延遲，建議售價 NT$23,999，適合行動劇院與 K 歌情境。」</li>
+      <li><span class="rn">⑥</span><b>產品頁加比較表格區塊</b>（U11 vs U10 vs U9 / K9 vs K3-S / LA6 vs LA5 vs LA3），含表格與 Product 群組 Schema。比較表是 AI 引用率最高的格式（67%）。</li>
+      <li><span class="rn">⑦</span>修復<b>首頁的空 H1 標籤</b>（建議填入「OVO TV OS — 全台智慧投影機與電視盒銷量第一」或類似品牌定位文字）。</li>
+    </ul>
+
+  </div>
+  <div class="pf"><span>OVO GEO 官網健檢報告</span><span>P.04 / 08</span></div>
+</div>
+
+<!-- ============ 第五章：第三層 主題與實體權威 ============ -->
+<div class="page">
+  <div class="ph"><b>第五章 ｜ 第三層:主題與實體權威</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 05 ｜ LAYER 3 ｜ 8 / 25 分</div><h2>主題與實體權威</h2></div>
+  <div class="pc">
+
+    <div class="ib io"><b>第三層說明：</b>本層佔總分 25%，是 OVO 第二嚴重的缺口。<b>OVO 沒有任何主題叢集架構（Pillar-Cluster）</b>，全站 2,798 URL 中只有產品頁與 support 短文，缺乏「投影機怎麼選」「閨蜜機完整指南」這類深度主題頁。研究顯示「內容全面性」是預測 AI 引用最強的單一指標，這也是 OVO 立刻必須補的一層。</div>
+
+    <h3 class="sh">F 區：主題叢集架構</h3>
+    <table class="dt">
+      <tr><th style="width:30%">主題叢集</th><th style="width:14%" class="ce">Pillar 頁</th><th style="width:14%" class="ce">Cluster 文章</th><th>判讀</th></tr>
+      <tr><td><b>智慧投影機選購</b></td><td class="ce"><span class="b bw">部分</span></td><td class="ce"><span class="b bf">0</span></td><td>/product/overview/Allprojector 可作為 Pillar 雛形，但只是產品列表，無「怎麼選」的深度內容。Cluster 文（流明怎麼選、短焦 vs 超短焦、雷射 vs LED）全部缺席。</td></tr>
+      <tr><td><b>閨蜜機完整指南</b></td><td class="ce"><span class="b bf">無</span></td><td class="ce"><span class="b bf">0</span></td><td>/product/overview/TV 是產品列表非 Pillar 頁，沒有「閨蜜機是什麼、跟一般電視差在哪、四大品牌怎麼比」的長文。「閨蜜機」月搜 13,000 是巨大流量缺口。</td></tr>
+      <tr><td><b>電視盒選購</b></td><td class="ce"><span class="b bf">無</span></td><td class="ce"><span class="b bf">0</span></td><td>/product/overview/accessories 是配件大雜燴非電視盒專屬 Pillar。「電視盒」月搜 4,300 + 衍生詞群 6,000+ 的流量未被結構化。</td></tr>
+      <tr><td><b>RO 飲水機選購</b></td><td class="ce"><span class="b bf">無</span></td><td class="ce"><span class="b bf">0</span></td><td>/product/overview/Appliances 同樣是大雜燴。Bongcom 子品牌新業務線需要獨立 Pillar 才能在 AI 引用搶到位置。</td></tr>
+      <tr><td><b>OVO TV OS 平台介紹</b></td><td class="ce"><span class="b bw">弱</span></td><td class="ce"><span class="b bf">0</span></td><td>about 頁僅 615 字、首頁有 Slogan，但 OVO TV OS 作為集團核心軟體資產缺乏專屬說明頁。</td></tr>
+    </table>
+
+    <h3 class="sh">G 區：實體密度</h3>
+    <p class="bt">實體密度（Entity Density）指頁面是否含「足夠多、清晰、可被識別的專有名詞」（人名、地名、產品型號、規格、技術名詞、年份）。研究顯示達 15+ 清晰實體的頁面 AI 引用機率為一般頁面的 4.8 倍。</p>
+    <table class="dt">
+      <tr><th style="width:30%">頁面類型</th><th style="width:18%" class="ce">實體密度估計</th><th>實體分布判讀</th></tr>
+      <tr><td>首頁（zh-tw/）</td><td class="ce"><span class="b bw">中（約 12 個）</span></td><td>產品型號（U11、K9、LA8、SR3、LA5、TT8）+ 子品牌（OVO、Warpple、Bongcom）。但缺技術實體（如「ANSI 流明」「MEMC」「ToF」「Google TV」具體解釋）。</td></tr>
+      <tr><td>產品頁 U11</td><td class="ce"><span class="b bg">高（約 18 個）</span></td><td>規格實體密度高（2000 流明、25ms、MEMC、雙麥克風、雲台、提把式）。實體密度本身合格，但<b>缺敘事性段落把實體串起來</b>。</td></tr>
+      <tr><td>about 頁</td><td class="ce"><span class="b bf">低（約 8 個）</span></td><td>「展雋創意」「Ovomedia」「新竹」「2013」「沃朋」「幫康」「嗨嗨」「美國專利」。缺團隊成員姓名、辦公室地址、聯絡方式、合作夥伴等關鍵實體。</td></tr>
+      <tr><td>support 頁</td><td class="ce"><span class="b bf">低（約 4 個）</span></td><td>support/overview 僅 478 字。整個 support 區雖有 114 URL 但內容稀薄。</td></tr>
+    </table>
+
+    <h3 class="sh">H 區：語意涵蓋</h3>
+    <p class="bt">基於 Ahrefs 的 OVO 自然關鍵字資料，OVO 在「產品名 / 品牌名」類關鍵字排名強勢，但<b>在「教育/比較/問句」類關鍵字幾乎完全缺席</b>。AI 在被問到 TOFU/MOFU 問題時找不到 OVO 內容可引用。</p>
+    <table class="dt">
+      <tr><th>類型</th><th class="ce">月搜尋量</th><th class="ce">OVO 排名</th><th>判讀</th></tr>
+      <tr><td>「ovo」「ovo 投影機」「warpple」</td><td class="ce">9,400</td><td class="ce"><span class="b bg">#1</span></td><td>品牌詞穩固</td></tr>
+      <tr><td>「投影機」「智慧投影機」「投影」</td><td class="ce">18,100</td><td class="ce"><span class="b bg">#1–2</span></td><td>類別詞排名強</td></tr>
+      <tr><td>「投影機推薦」</td><td class="ce">6,100</td><td class="ce"><span class="b bo">未進前 10</span></td><td>OVO 自家網站沒有「投影機推薦」這篇文，把流量讓給了 my-best、tk3c、lin.ee 部落格</td></tr>
+      <tr><td>「投影機推薦 ptt」「家用投影機推薦 ptt」</td><td class="ce">2,850</td><td class="ce"><span class="b bf">無排名</span></td><td>需靠論壇外站操作</td></tr>
+      <tr><td>「閨蜜機」「閨蜜機推薦」「閨蜜機是什麼」「閨蜜機缺點」</td><td class="ce">14,650</td><td class="ce"><span class="b bf">無排名</span></td><td>OVO 已有 TT8/JJ5/JJ1 三款閨蜜機產品，但搜尋層完全空白——巨大缺口</td></tr>
+      <tr><td>「電視盒」「電視盒推薦」「電視盒是什麼」「電視盒需要網路嗎」</td><td class="ce">7,500</td><td class="ce"><span class="b bo">部分（首頁 #2）</span></td><td>類別詞「電視盒」相對品牌詞排名較弱，需獨立電視盒 Pillar 頁</td></tr>
+    </table>
+
+    <h3 class="sh">第三層修復建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><b>建立 4 個 Pillar 頁</b>（路徑：/zh-tw/guide/projector-selection、/guide/portable-display、/guide/tv-box-selection、/guide/ro-water-selection）。每篇 3,000 字以上，含 Answer-First 摘要、規格選購邏輯、產品比較矩陣、FAQ 區。</li>
+      <li><span class="rn">②</span><b>每個 Pillar 帶 4–6 篇 Cluster 文</b>，例如智慧投影機 Pillar 帶：流明怎麼選、短焦 vs 超短焦、4K vs FHD、家用 vs 商用、雷射 vs LED。Pillar-Cluster 共約 24–30 篇，是 OVO 一年期 GEO 內容工作量。</li>
+      <li><span class="rn">③</span><b>把現有產品頁規格條列改寫為敘事段落</b>。原本「2000 流明 / MEMC / 25ms 低延 / K 歌去人聲」改寫為「2,000 流明（ANSI 標準）的高亮輸出，搭配 MEMC 動態補償與 25 毫秒低延遲，讓 U11 即使在小孩玩 Switch 的時候也不會延遲嚴重——這是 K 歌族最常忽略的關鍵規格」。</li>
+      <li><span class="rn">④</span>about 頁擴充至 1,500 字以上，<b>具名介紹創辦人團隊（執行長吳有順）、台北 / 新竹辦公室地址、合作夥伴（friDay、4gtv、美華）、智慧投影機美國專利編號、iF / Red Dot 等獎項</b>。實體密度從 8 個提升到 30+ 個。</li>
+      <li><span class="rn">⑤</span>新增 <b>「OVO TV OS」獨立介紹頁</b>（/zh-tw/about/ovo-tv-os），說明這個串流電視作業系統的版本演進、支援硬體、合作 App 列表。這是 OVO 集團最大差異化資產，需要獨立的實體頁面。</li>
+    </ul>
+
+  </div>
+  <div class="pf"><span>OVO GEO 官網健檢報告</span><span>P.05 / 08</span></div>
+</div>
+
+<!-- ============ 第六章：第四層 內容可信度 ============ -->
+<div class="page">
+  <div class="ph"><b>第六章 ｜ 第四層:內容可信度</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 06 ｜ LAYER 4 ｜ 5 / 20 分</div><h2>內容可信度</h2></div>
+  <div class="pc">
+
+    <div class="ib io"><b>第四層說明：</b>佔 20 分，OVO 目前 5/20。本層主要受限於 OVO 沒有部落格內容，因此沒有作者署名 / 引用密度 / 新鮮度可評。但<b>產品頁也缺 Last Updated 標記、規格頁無資料來源</b>，是立即可改的項目。</div>
+
+    <h3 class="sh">I 區：資料可驗證性</h3>
+    <table class="dt">
+      <tr><th style="width:30%">指標</th><th style="width:12%" class="ce">狀態</th><th>實測結果</th></tr>
+      <tr><td><b>事實密度（具體數字）</b></td><td class="ce"><span class="b bp">PASS</span></td><td>產品頁規格數字完整（2000 流明、25ms、8W+8W、4K、Rec.709 130%）。事實密度合格。</td></tr>
+      <tr><td><b>第三方引用 / 資料來源</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>產品頁的「ANSI 流明」「Rec.709」「ToF 對焦」等規格主張沒有附資料來源或標準說明連結。</td></tr>
+      <tr><td><b>外部權威證明（獎項 / 認證）</b></td><td class="ce"><span class="b bw">WARN</span></td><td>about 頁提到「軟體獲美國專利」「全台銷售第一」，但無專利編號、無銷售數據來源、無獎項照片。</td></tr>
+      <tr><td><b>規格表格化</b></td><td class="ce"><span class="b bw">WARN</span></td><td>產品頁規格以條列為主，缺結構化規格表（含完整的尺寸、重量、輸入輸出、認證編號、保固條款）。</td></tr>
+    </table>
+
+    <h3 class="sh">J 區：內容新鮮度</h3>
+    <table class="dt">
+      <tr><th style="width:30%">指標</th><th style="width:12%" class="ce">狀態</th><th>實測結果</th></tr>
+      <tr><td><b>Last Updated 標記</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>產品頁無「最後更新日期」顯示，AI 無法判斷規格是否仍為最新。</td></tr>
+      <tr><td><b>Schema datePublished / dateModified</b></td><td class="ce"><span class="b bf">FAIL</span></td><td>Product Schema 未填入 datePublished 或 dateModified，AI 對新鮮度無從判斷。</td></tr>
+      <tr><td><b>頁面實際更新頻率</b></td><td class="ce"><span class="b bp">PASS</span></td><td>從 sitemap.xml lastmod 看，所有頁面 lastmod 為 2026-05-04（即時更新）。技術上更新頻率高，但缺乏向 AI 顯化的訊號。</td></tr>
+    </table>
+
+    <h3 class="sh">K 區：作者透明度</h3>
+    <div class="ib ii"><b>備註：</b>OVO 目前無部落格 / 知識文章，因此無作者署名議題。但這也是<b>嚴重缺口</b>——AI 在搜尋「OVO 怎麼選」「投影機選購」時找不到 OVO 工程師署名的權威指南，引用權永遠落在外站部落客（如 my-best、Mobile01、PTT）手上。<br><b>建議在啟動內容計畫時，搭配「OVO 工程師專欄」「Warpple 產品經理視角」等具名作者體系</b>，每篇文章配 author 欄位指向獨立 Person 節點（含 jobTitle、sameAs LinkedIn 等）。</div>
+
+    <h3 class="sh">第四層修復建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span>產品頁加入「規格最後驗證日期：YYYY/MM」顯示，並在 Product Schema 補 dateModified。改動成本：1 名前端 1 天。</li>
+      <li><span class="rn">②</span>規格頁面內所有引用的技術名詞（ANSI 流明、Rec.709、ToF、HDR10、MEMC）後加 (?) 圖示，hover 顯示簡短解釋並連結 Wikipedia 或國際標準頁。提升 AI 對 OVO 為「技術可信來源」的判讀。</li>
+      <li><span class="rn">③</span>about 頁補上美國專利<b>具體編號</b>、台北/新竹辦公室<b>具體地址</b>、「銷售第一」的<b>引用來源</b>（如 GfK / NPD / 某調研機構）。AI 對「主張+來源」的內容信任度遠高於「主張無來源」。</li>
+      <li><span class="rn">④</span>啟動 Pillar-Cluster 內容後，所有文章建立<b>具名作者制度</b>（OVO 工程師、Warpple 產品經理、Bongcom 健康家電顧問），每位作者建立 /author/{slug} 頁面，含 Person Schema、jobTitle、sameAs 連結社群。</li>
+    </ul>
+
+  </div>
+  <div class="pf"><span>OVO GEO 官網健檢報告</span><span>P.06 / 08</span></div>
+</div>
+
+<!-- ============ 第七章：第五層 品牌信號（外站 PR 已驗證版） ============ -->
+<div class="page">
+  <div class="ph"><b>第七章 ｜ 第五層:品牌信號</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 07 ｜ LAYER 5 ｜ 12 / 15 分</div><h2>品牌信號（外站 PR 實測）</h2></div>
+  <div class="pc">
+
+    <div class="ib ig"><b>第五層說明：</b>佔 15 分，OVO 目前 12/15。經實測驗證，<b>OVO 的第三方品牌信號比一般 GEO 健檢預期要強</b>——T客邦、Mobile01、PTT、Dcard 都有真實使用者開箱與評測，主流新聞媒體（中時、UDN、TVBS）也有產業層級報導。本層分數沒有更高的主因是：<b>維基百科無條目、PR 結構未顯化於 Schema、第三方引用未被官網結構化整合</b>。</div>
+
+    <h3 class="sh">L 區：品牌提及量（基於 Ahrefs 資料）</h3>
+    <table class="dt">
+      <tr><th>品牌詞</th><th class="ce">月搜尋量</th><th class="ce">趨勢</th><th>判讀</th></tr>
+      <tr><td><b>ovo</b></td><td class="ce">4,500</td><td class="ce"><span class="b bg">穩定</span></td><td>主品牌核心詞，但「OVO」在英文也指 lacto-ovo vegetarian、藝人 OVO 等，需注意品牌歧義</td></tr>
+      <tr><td><b>ovo 投影機</b></td><td class="ce">1,800</td><td class="ce"><span class="b bg">高</span></td><td>明確品牌+類別詞，是最有 GEO 價值的品牌詞</td></tr>
+      <tr><td><b>warpple</b></td><td class="ce">1,000</td><td class="ce"><span class="b bg">穩定</span></td><td>子品牌獨立搜尋量近千，已有獨立品牌資產</td></tr>
+      <tr><td><b>warpple la3 / la5 / la6</b></td><td class="ce">1,100（合計）</td><td class="ce"><span class="b bg">分散但穩定</span></td><td>產品線級別品牌詞，顯示品項認知度高</td></tr>
+      <tr><td><b>ovo 投影機評價 / ovo 投影機缺點</b></td><td class="ce">210</td><td class="ce"><span class="b bo">中</span></td><td>負評類關鍵字搜尋量低代表口碑佳，但 AI 在被問「OVO 評價」時很可能引用第三方部落客而非 OVO 官網</td></tr>
+      <tr><td><b>展雋創意</b></td><td class="ce">30</td><td class="ce"><span class="b bw">弱</span></td><td>母公司搜尋量極低，AI 不會主動關聯「OVO」與「展雋創意」，影響企業實體權威</td></tr>
+      <tr><td><b>ovo tv os</b></td><td class="ce">30</td><td class="ce"><span class="b bw">弱</span></td><td>核心軟體資產搜尋量低，需獨立內容操作</td></tr>
+    </table>
+
+    <h3 class="sh">M 區：搜尋量變化</h3>
+    <p class="bt">需於 M1 啟動 Otterly 監測 + Ahrefs 月度追蹤後，於 M2 月報內提供品牌詞搜尋量月變化趨勢。本健檢採用 2026-04 月度快照值。</p>
+
+    <h3 class="sh">N 區：數位 PR 與第三方引用佈局（實測驗證）</h3>
+    <p class="bt">本區所有判定均經 Google 站內搜尋（site: 運算子）與來源頁實際內容確認，非推測值。</p>
+    <table class="dt">
+      <tr><th style="width:22%">第三方來源</th><th style="width:14%" class="ce">狀態</th><th>實測證據（非推測）</th></tr>
+      <tr><td><b>維基百科條目</b></td><td class="ce"><span class="b bf">確認 FAIL</span></td><td>實測 zh.wikipedia.org/wiki/展雋創意 顯示「目前還沒有與上述標題相同的條目」。Wikipedia 是 ChatGPT Search 主要實體權威來源——這是企業層級權威的關鍵缺口。</td></tr>
+      <tr><td><b>科技媒體深度評測（T客邦 techbang）</b></td><td class="ce"><span class="b bp">PASS（強）</span></td><td>實測有多篇 OVO 產品深度評測：U11 行動投影機實測（2025）、SS1 雷射電視 mini（2026/02）、無框電視 K1 開箱、AI 行動劇院 U8-A 等。T客邦是台灣科技媒體最關鍵的引用來源之一。</td></tr>
+      <tr><td><b>主流新聞報導</b></td><td class="ce"><span class="b bp">PASS（中）</span></td><td>實測中時 2024/05 報導 K9 發表會「OVO 發表智慧投影機今年營收拼 3 億元」、UDN 2023/05「串流業者 OVO 將進軍日本挑戰 2026 年 IPO」、UDN 2015 OTT 350 萬小時里程碑。產業層級報導充分。</td></tr>
+      <tr><td><b>Mobile01 開箱與心得</b></td><td class="ce"><span class="b bp">PASS（強）</span></td><td>實測涵蓋 K1、K3、K3-W、K9、KS1、U1、U1-B、Warpple LS1 等多型號獨立心得，且<b>有正評也有負評</b>（如「反推 OVO 無框電視 K1 智慧投影機常態性失焦掉幀」）。真實使用者 UGC 對 AI 引用的可信度貢獻比業配軟文更高。</td></tr>
+      <tr><td><b>PTT 討論</b></td><td class="ce"><span class="b bp">PASS（中）</span></td><td>實測 OTT、Digitalhome、MobileComm、HardwareSale 各板均有 OVO 討論：K3/K3-E/K3-S/K3-W 系列差異問答、K9 推薦回應、U10 使用問題、K3 三萬內選擇等真實討論。</td></tr>
+      <tr><td><b>Dcard 開箱</b></td><td class="ce"><span class="b bp">PASS（中）</span></td><td>實測 3C 板、影片板有 U1-S（2025/05）、U8（2024/11）、U11（2026/01）、KS1 開箱文，年輕族群觸及到位。</td></tr>
+      <tr><td><b>YouTube 影音 KOL</b></td><td class="ce"><span class="b bp">PASS（中）</span></td><td>OVO 官方 YouTube 頻道有 1,160+ 訂閱，外部 KOL（ruirui_ovo 月搜 150）有合作。需更多影片 transcript 的文字化內容。</td></tr>
+      <tr><td><b>內容平台第三方長文（方格子等）</b></td><td class="ce"><span class="b bf">無</span></td><td>實測未發現方格子 vocus / Medium 等內容平台的 OVO 深度長文。GEO-X-03 可補。</td></tr>
+      <tr><td><b>社群官方帳號</b></td><td class="ce"><span class="b bp">PASS</span></td><td>FB、IG、YouTube、LINE 官方帳號齊全，需在 Organization Schema 用 sameAs 全部串起來——這是把現有強勢的第三方信號「串回官網」的關鍵動作。</td></tr>
+    </table>
+
+    <div class="ib ig"><b>第五層判讀重點：</b>OVO 的問題不是「外部聲量不足」，而是「<b>聲量沒被官網結構化整合</b>」。AI 在判斷 OVO 品牌權威時看到的是分散在多個第三方平台的零散證據，但官網沒有 Organization Schema、sameAs、Press 頁、Awards 頁來統整這些信號。修復重點是<b>把既有的強勢外部信號「拉回」官網結構</b>，而不是另起爐灶做品牌曝光。</div>
+
+    <h3 class="sh">第五層修復建議</h3>
+    <ul class="rl">
+      <li><span class="rn">①</span><b>立即新增維基百科「展雋創意」與「Ovomedia」中英文條目</b>。已具備引用來源條件（中時 2024 K9 發表報導 + UDN 2023 IPO 報導 + UDN 2015 OTT 報導），可直接送審，不需先做新聞聯播網。</li>
+      <li><span class="rn">②</span>新增<b>官網 /press 媒體新聞頁</b>，整合所有第三方報導連結與重點段落（中時、UDN、T客邦、TVBS 等），含 NewsArticle Schema。讓 AI 在 OVO 官網就能直接找到「OVO 被誰報導過、講了什麼」。</li>
+      <li><span class="rn">③</span>Organization Schema 的 <b>sameAs 欄位串起所有官方社群與第三方權威</b>：FB、IG、YouTube、LINE 官方、104 公司頁、Wikipedia 條目（建立後）、TWSE/工商登記等。</li>
+      <li><span class="rn">④</span>啟動<b>方格子第三方長文（GEO-X-03）</b>：每月 2 篇技術深度長文（如「2026 年台灣家用投影機選購全攻略」「閨蜜機選購：四大品牌技術差異拆解」），由 Enter IMC 操刀，掛 OVO 工程師 / 達人共筆。</li>
+      <li><span class="rn">⑤</span>持續啟動<b>新聞聯播網（GEO-X-01）</b>：聚焦未被報導的子品牌（Warpple、Bongcom、Hihibox）與新產品發表，每季 1 波（NT$40,000/波）。OVO 主品牌的新聞聲量已穩，重點是把子品牌拉到同一個權威水準。</li>
+      <li><span class="rn">⑥</span>論壇口碑（GEO-X-02）以「<b>正評鞏固 + 負評處理</b>」為核心：Mobile01 已有「反推 K1 失焦掉幀」這類負評影響搜尋結果，需安排官方客服窗口在論壇主動回覆並提供解決方案，把負評轉為「品牌負責任處理」的正面信號。</li>
+    </ul>
+
+  </div>
+  <div class="pf"><span>OVO GEO 官網健檢報告</span><span>P.07 / 08</span></div>
+</div>
+
+<!-- ============ 第八章：第六+七層 平台差異化 + KPI + 結語 ============ -->
+<div class="page">
+  <div class="ph"><b>第八章 ｜ 第六+七層:平台差異化 + KPI + 結語</b><img src="data:image/jpeg;base64,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" style="height:18px;border-radius:2px;"></div>
+  <div class="sec"><div class="sectag">CHAPTER 08 ｜ LAYER 6 + 7</div><h2>四大平台差異化策略 + KPI 框架</h2></div>
+  <div class="pc">
+
+    <h3 class="sh">四大 AI 平台差異化策略</h3>
+    <table class="dt">
+      <tr><th style="width:18%">平台</th><th style="width:22%">最重要信號</th><th style="width:14%" class="ce">新鮮度敏感</th><th>OVO 應對重點</th></tr>
+      <tr><td><b>Google AIO</b></td><td>E-E-A-T + 語意段落 + Google 傳統排名</td><td class="ce">中高</td><td>OVO 在 Google 自然排名強，但 AIO 需要 Answer-First 結構＋Schema。<b>本健檢第二層的 Schema 修復對 Google AIO 影響最大</b>。</td></tr>
+      <tr><td><b>ChatGPT Search</b></td><td>品牌第三方提及 + Bing 排名 + Wikipedia / Reddit</td><td class="ce">低</td><td>87% ChatGPT Search 引用來自 Bing Top 10。OVO 需<b>優先申請 Bing Webmaster + IndexNow</b>，並先把維基百科條目補上（這是 ChatGPT 引用來源權重最高的單一節點）。</td></tr>
+      <tr><td><b>Perplexity</b></td><td>內容新鮮度（30 天）+ 外部引用密度</td><td class="ce">非常高</td><td>OVO 必須建立<b>頻繁更新的內容節點</b>（Pillar-Cluster + 每月新文）。Perplexity 對 30 天內新鮮內容的偏好極高。</td></tr>
+      <tr><td><b>Bing Copilot</b></td><td>Schema + 語意明確標題 + Bing 排名</td><td class="ce">中</td><td>Bing Copilot 重 Schema，本健檢第二層的 Schema 全面修復對其影響最大。產品頁 FAQPage + Product 完整版是核心。</td></tr>
+    </table>
+
+    <h3 class="sh">產業特殊要求（電商品牌類別）</h3>
+    <table class="dt">
+      <tr><th style="width:30%">電商 GEO 特殊要求</th><th style="width:14%" class="ce">OVO 狀態</th><th>說明</th></tr>
+      <tr><td>Product Schema 完整（含 Brand / Rating / Review / GTIN）</td><td class="ce"><span class="b br">缺</span></td><td>本健檢第二層修復項 ① 處理</td></tr>
+      <tr><td>產品比較矩陣表（Comparison Table）</td><td class="ce"><span class="b br">無</span></td><td>本健檢第二層修復項 ⑥ 處理</td></tr>
+      <tr><td>使用者評價 Schema（AggregateRating）</td><td class="ce"><span class="b br">無</span></td><td>需接 momo / 蝦皮 / Google 商家評論 API</td></tr>
+      <tr><td>「Best of」清單文（XX 推薦 Top 10）</td><td class="ce"><span class="b br">無</span></td><td>需獨立經營，含影音投影機 / 閨蜜機 / 電視盒三大品類各一篇 Top 10</td></tr>
+      <tr><td>子品牌間的關係結構化（OVO ↔ Warpple ↔ Bongcom ↔ Hihibox）</td><td class="ce"><span class="b br">無</span></td><td>Organization Schema 需用 subOrganization 建立四個子品牌節點</td></tr>
+    </table>
+
+    <h3 class="sh">KPI 框架（基於 Otterly 主系統 + 三維調節）</h3>
+    <div class="ib ii"><b>套用條件：</b>OVO = <b>有 SEO 基礎</b>（DR 34、品牌詞 9,400/月、類別詞前 2 名）× <b>消費品牌</b>產業係數（重視品牌提及率與 AI 引用次數）× <b>自建系統</b>平台係數（0%，不下調）。本 KPI 採用標準基準值，不額外調整。</div>
+
+    <table class="dt">
+      <tr><th style="width:25%">核心指標</th><th class="ce">M1–M3 啟動期</th><th class="ce">M4–M6 成長期</th><th class="ce">M7–M12 穩定期</th></tr>
+      <tr class="hl"><td><b>品牌提及率</b></td><td class="ce">5–12%</td><td class="ce">20–35%</td><td class="ce">40–60%</td></tr>
+      <tr class="hl"><td><b>AI 引用次數 / 月</b></td><td class="ce">15–40 次</td><td class="ce">60–120 次</td><td class="ce">150–300+ 次</td></tr>
+      <tr class="hl"><td><b>Share of Voice</b></td><td class="ce">10–20%</td><td class="ce">25–40%</td><td class="ce">40–60%</td></tr>
+      <tr class="hl"><td><b>引用網域數</b></td><td class="ce">2–4 個</td><td class="ce">5–10 個</td><td class="ce">10–20 個</td></tr>
+      <tr class="hl"><td><b>跨平台出現率</b></td><td class="ce">1–2 平台</td><td class="ce">3 平台</td><td class="ce">4 平台全</td></tr>
+      <tr class="hl"><td><b>Top 10 問句出現數</b></td><td class="ce">0–2 則</td><td class="ce">3–5 則</td><td class="ce">6–9 則</td></tr>
+    </table>
+    <div class="ib io">⚠️ <b>KPI 目標套用三維調節：</b>消費品牌產業係數（品牌提及率與 AI 引用次數權重提升）× 自建系統平台係數（0%）。Baseline 欄於 M1 月底 Otterly 跑滿 14 天後填入，成為 M6 期末驗收的計算基準。</div>
+
+    <h3 class="sh">結語</h3>
+    <div class="clp">
+      OVO 是台灣智慧投影機與閨蜜機產業的傳統 SEO 強者，DR 34、品牌詞 9,400/月、「投影機」全國第 2，且<b>第三方品牌信號比預期強</b>——T客邦多篇深度評測、Mobile01 / PTT / Dcard 真實 UGC、中時 / UDN 等主流新聞報導都已具備，這是非常扎實的 GEO 起點。<br><br>
+      但目前 GEO 結構轉化嚴重不足——<b>沒有部落格、Product Schema 簡陋、零 FAQPage、零 BreadcrumbList、無 robots.txt 與 llms.txt、維基百科無條目</b>——這也代表「修復空間極大、改動成本相對低」。OVO 的核心 GEO 任務不是「從零開始建立品牌權威」，而是「<b>把既有的強勢外部信號（媒體報導、論壇 UGC、KOL 評測）拉回官網結構化整合</b>」。維基百科條目、Organization Schema 的 sameAs、Press 媒體新聞頁這三個動作，是把現有資產 GEO 化的最高 ROI 起點。<br><br>
+      同步啟動的<b>30 題 Otterly 監測</b>（Easy 12 / Medium 12 / Hard 6，符合 4:4:2 配比，country=Taiwan、language=Traditional Chinese）將於 M1 月底跑滿 14 天後產出 Baseline 數值，作為 M6 期末驗收唯一計算基準。
+    </div>
+
+  </div>
+  <div class="agsig">
+    <img src="data:image/jpeg;base64,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" style="height:44px;border-radius:6px;flex-shrink:0;" alt="">
+    <div>
+      <div style="color:white;font-size:12px;font-weight:700;">確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.</div>
+      <div style="color:rgba(255,255,255,.5);font-size:10.5px;margin-top:4px;">enterimc.com　｜　報告日期：2026 年 5 月 4 日　｜　本文件內容為確認鍵智創科技智慧財產，僅供客戶參考</div>
+    </div>
+  </div>
+  <div class="pf"><span>OVO GEO 官網健檢報告</span><span>P.08 / 08</span></div>
+</div>
+
+</div>
+</body>
+</html>
