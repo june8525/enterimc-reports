@@ -1,0 +1,1052 @@
+<!--
+  客戶：禾雅醫務管理顧問有限公司
+  文件：GEO 網站優化執行報告（客戶版）
+  日期：2026-05-07
+  製作：確認鍵智創科技股份有限公司 Enter Internet Marketing CO., LTD.
+  版本：v1.0
+-->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>禾雅醫務 GEO 網站優化執行報告 2026</title>
+<style>
+  :root {
+    /* 確認鍵 Enter IMC 品牌色 */
+    --primary: #1B3A8C;
+    --primary-light: #254BAD;
+    --primary-dark: #0D2568;
+    --accent: #4A90D9;
+    --accent-ice: #A8C8F8;
+    --table-head: #1B3A8C;
+    --table-row-alt: #F0F5FF;
+    --table-border: #C5D5F0;
+    --diagnostic-yellow: #FEF7E0;
+    --diagnostic-yellow-border: #C75000;
+    --geo-green: #E8F5EC;
+    --geo-green-border: #1A7A44;
+    --geo-green-text: #0E5A30;
+    --pill-good-bg: #E8F5EC;
+    --pill-good-text: #0E5A30;
+    --pill-bad-bg: #FBE8E5;
+    --pill-bad-text: #8C2A1F;
+    --pill-warn-bg: #FEF0DC;
+    --pill-warn-text: #8C3A00;
+    --pill-info-bg: #E5EEFB;
+    --pill-info-text: #1B3A8C;
+    --gray-bg: #F0F5FF;
+    --gray-border: #C5D5F0;
+    --text: #1A2B3C;
+    --text-muted: #5C7AA8;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, sans-serif;
+    color: var(--text);
+    background: #D8E4F5;
+    line-height: 1.6;
+    font-size: 13px;
+  }
+  .page {
+    width: 210mm; min-height: 297mm;
+    background: white;
+    margin: 20px auto;
+    padding: 15mm 16mm 12mm 16mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    page-break-after: always;
+    position: relative;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* ===== COVER ===== */
+  .cover { padding: 0; overflow: hidden; }
+  .cover-band { height: 14mm; background: var(--primary); }
+  .cover-body { padding: 16mm 16mm 0 16mm; }
+  .cover-eyebrow {
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--text);
+    margin-bottom: 10mm;
+  }
+  .cover-title-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+  }
+  .cover-title {
+    font-size: 36px; font-weight: 700; line-height: 1.4;
+    color: var(--text);
+  }
+  .cover-title .blue { color: var(--primary); }
+  .cover-logo {
+    width: 88px; height: 88px;
+    border-radius: 8px; overflow: hidden; flex-shrink: 0;
+    margin-top: 4px;
+    box-shadow: 0 2px 8px rgba(27,58,140,.15);
+  }
+  .cover-logo img { width: 100%; height: 100%; display: block; object-fit: cover; }
+  .cover-agency {
+    text-align: right; font-size: 10px;
+    color: var(--text-muted); margin-top: 6px;
+  }
+  .cover-hero {
+    margin: 10mm 0 11mm 0;
+    color: var(--text); font-size: 13.5px; line-height: 1.9;
+    max-width: 95%;
+  }
+  .cover-stats {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 11mm 4mm;
+    display: flex;
+    align-items: stretch;
+    border-radius: 4px;
+  }
+  .cover-stat {
+    flex: 1; text-align: center; padding: 0 3mm;
+    border-right: 1px solid rgba(168,200,248,0.22);
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .cover-stat:last-child { border-right: none; }
+  .cover-stat-num {
+    font-size: 32px; font-weight: 700; line-height: 1.1;
+    color: var(--accent-ice); letter-spacing: -0.5px;
+  }
+  .cover-stat-unit {
+    font-size: 10.5px; opacity: 0.78;
+    margin: 4px 0 9px; letter-spacing: 0.5px;
+  }
+  .cover-stat-label {
+    font-size: 11px; opacity: 0.95; line-height: 1.4;
+  }
+  .cover-meta {
+    margin-top: 10mm;
+    display: flex; flex-wrap: wrap;
+    gap: 7mm 14mm;
+    font-size: 12.5px;
+  }
+  .cover-meta > div { flex: 1 1 calc(50% - 14mm); min-width: 60mm; }
+  .cover-meta-label {
+    color: var(--text-muted); font-size: 11px; margin-bottom: 3px;
+  }
+  .cover-meta-value {
+    font-weight: 600; font-size: 13px; color: var(--text);
+  }
+  .cover-footer {
+    margin: 14mm 16mm 0 16mm;
+    background: #F1F5F9;
+    padding: 5mm 7mm;
+    display: flex; justify-content: space-between;
+    font-size: 10px; color: var(--text-muted);
+    border-radius: 3px;
+  }
+
+  /* ===== CHAPTER ===== */
+  .chapter-banner {
+    background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: white;
+    margin: -15mm -16mm 6mm -16mm;
+    padding: 6mm 16mm;
+    font-size: 12.5px; letter-spacing: 1.2px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 3px solid var(--accent-ice);
+  }
+  .chapter-banner > span:first-child {
+    font-weight: 700; display: flex; align-items: center;
+  }
+  .chapter-banner > span:first-child::before {
+    content: ""; display: inline-block;
+    width: 4px; height: 18px;
+    background: var(--accent-ice);
+    margin-right: 12px; border-radius: 1px;
+  }
+  .chapter-banner-logo {
+    height: 22px; border-radius: 3px; display: block; opacity: 0.95;
+  }
+  .section-header {
+    border-left: 5px solid var(--primary);
+    padding: 3px 16px;
+    margin: 0 0 5mm 0;
+    background: linear-gradient(90deg, var(--gray-bg) 0%, transparent 100%);
+    font-size: 17px; font-weight: 700;
+    color: var(--primary-dark); line-height: 2.1;
+  }
+  .section-header .num {
+    color: var(--primary); font-weight: 700; margin-right: 8px;
+  }
+  .subsection-header {
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+    font-size: 14px; font-weight: 700;
+    margin: 5mm 0 2mm 0;
+    color: var(--primary-dark);
+  }
+
+  /* ===== INFO BOXES ===== */
+  .diagnostic, .geo-tip, .alert-box, .info-box {
+    padding: 9px 16px;
+    margin: 3mm 0 4mm 0;
+    font-size: 12.5px;
+    line-height: 1.7;
+    border-radius: 0 3px 3px 0;
+  }
+  .diagnostic {
+    background: var(--diagnostic-yellow);
+    border-left: 4px solid var(--diagnostic-yellow-border);
+  }
+  .diagnostic strong { color: var(--diagnostic-yellow-border); }
+  .geo-tip {
+    background: var(--geo-green);
+    border-left: 4px solid var(--geo-green-border);
+    color: var(--geo-green-text);
+  }
+  .geo-tip strong { color: var(--geo-green-border); }
+  .alert-box {
+    background: var(--pill-bad-bg);
+    border-left: 4px solid var(--pill-bad-text);
+  }
+  .alert-box strong { color: var(--pill-bad-text); }
+  .info-box {
+    background: var(--pill-info-bg);
+    border-left: 4px solid var(--primary);
+  }
+
+  /* ===== TABLES ===== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3mm 0 6mm 0;
+    font-size: 12.5px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  thead th {
+    background: var(--primary-dark); color: white;
+    text-align: left; padding: 7px 11px;
+    font-weight: 700; font-size: 12.5px;
+    border-bottom: 2px solid var(--accent-ice);
+    letter-spacing: 0.3px;
+  }
+  thead th.right { text-align: right; }
+  tbody td {
+    padding: 7px 11px;
+    border-bottom: 1px solid var(--gray-border);
+    vertical-align: top;
+  }
+  tbody td.right { text-align: right; }
+  tbody tr:nth-child(even) { background: var(--table-row-alt); }
+  tbody tr.highlight {
+    background: var(--primary); color: white; font-weight: 600;
+  }
+  tbody tr.highlight td { border-bottom-color: var(--primary-dark); }
+  tbody tr.highlight strong { color: var(--accent-ice); }
+
+  /* ===== PILLS ===== */
+  .pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 11px;
+    font-size: 11.5px;
+    font-weight: 700;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+  .pill-good { background: var(--pill-good-bg); color: var(--pill-good-text); }
+  .pill-bad { background: var(--pill-bad-bg); color: var(--pill-bad-text); }
+  .pill-warn { background: var(--pill-warn-bg); color: var(--pill-warn-text); }
+  .pill-info { background: var(--pill-info-bg); color: var(--pill-info-text); }
+  .pill-now { background: var(--primary); color: white; }
+
+  /* ===== STATUS CARDS（顧問已交付專用）===== */
+  .done-grid {
+    display: flex; flex-wrap: wrap;
+    gap: 4mm; margin: 4mm 0;
+  }
+  .done-card {
+    flex: 1 1 calc(50% - 4mm); min-width: 75mm;
+    border: 1px solid var(--gray-border);
+    background: linear-gradient(135deg, #F0F8F2 0%, #FFFFFF 100%);
+    border-left: 4px solid var(--geo-green-border);
+    padding: 9px 14px;
+    border-radius: 0 4px 4px 0;
+  }
+  .done-card-title {
+    font-size: 13px; font-weight: 700;
+    color: var(--geo-green-text);
+    margin-bottom: 3px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .done-card-desc {
+    font-size: 11.5px; color: var(--text);
+    line-height: 1.55;
+  }
+  .check-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 18px; height: 18px;
+    background: var(--geo-green-border); color: white;
+    border-radius: 50%;
+    font-size: 11px; font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* ===== KEY FINDING CARDS ===== */
+  .finding {
+    border: 1px solid var(--gray-border);
+    border-left: 4px solid var(--accent);
+    padding: 10px 16px;
+    margin: 3mm 0;
+    background: white;
+    border-radius: 0 3px 3px 0;
+  }
+  .finding-title {
+    font-size: 14px; font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 4px;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 10px; flex-wrap: wrap;
+  }
+  .finding-desc {
+    font-size: 12.5px; color: var(--text); line-height: 1.7;
+  }
+  .finding-desc strong { color: var(--primary); }
+
+  /* ===== GANTT (flex 版) ===== */
+  .gantt { margin: 5mm 0; }
+  .gantt-row {
+    display: flex; align-items: center;
+    border-bottom: 1px solid var(--gray-border);
+    padding: 7px 0; font-size: 12px;
+  }
+  .gantt-head {
+    background: var(--primary-dark); color: white;
+    font-weight: 700; padding: 9px 0;
+    border-bottom: 2px solid var(--accent-ice);
+  }
+  .gantt-task { flex: 0 0 38%; padding: 0 12px; }
+  .gantt-row > div:nth-child(2) { flex: 0 0 12%; text-align: center; }
+  .gantt-bars {
+    flex: 1; display: flex; gap: 3px; padding-right: 10px;
+  }
+  .gantt-bars > div { flex: 1; }
+  .bar { height: 12px; border-radius: 2px; }
+  .bar-fill { background: var(--primary); }
+  .bar-fill-2 { background: var(--accent); }
+  .bar-fill-3 { background: var(--accent-ice); }
+  .bar-fill-warn { background: #C0392B; }
+  .bar-empty { background: #E5E7EB; }
+
+  /* ===== KPI METRICS ===== */
+  .kpi-row {
+    display: flex; flex-wrap: wrap;
+    gap: 3mm; margin: 4mm 0 6mm 0;
+  }
+  .kpi-card {
+    flex: 1 1 calc(33% - 3mm); min-width: 50mm;
+    background: linear-gradient(135deg, var(--gray-bg) 0%, white 100%);
+    border: 1px solid var(--gray-border);
+    border-top: 3px solid var(--primary);
+    padding: 8px 13px;
+    border-radius: 0 0 3px 3px;
+  }
+  .kpi-card .lbl {
+    font-size: 11px; color: var(--text-muted); letter-spacing: 0.3px;
+  }
+  .kpi-card .from-to {
+    display: flex; align-items: baseline; gap: 6px;
+    margin: 4px 0 2px;
+  }
+  .kpi-card .from {
+    font-size: 14px; color: var(--text-muted);
+    text-decoration: line-through;
+  }
+  .kpi-card .arrow { color: var(--primary); font-weight: 700; }
+  .kpi-card .to {
+    font-size: 22px; font-weight: 700; color: var(--primary);
+    line-height: 1;
+  }
+  .kpi-card .sub { font-size: 11px; color: var(--text-muted); }
+
+  /* ===== AGSIG（末頁署名）===== */
+  .agsig {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    margin: 8mm -16mm -8mm -16mm;
+    padding: 6mm 16mm;
+    display: flex; align-items: center; gap: 14px;
+    border-top: 3px solid var(--accent);
+  }
+  .agsig-logo {
+    height: 44px; border-radius: 6px; flex-shrink: 0; display: block;
+  }
+  .agsig-text { flex: 1; }
+  .agsig-name {
+    color: white; font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+  }
+  .agsig-meta {
+    color: var(--accent-ice); font-size: 10.5px; margin-top: 5px; opacity: 0.85;
+  }
+
+  .page-footer {
+    position: absolute; bottom: 8mm; left: 16mm; right: 16mm;
+    text-align: center; font-size: 10px;
+    color: var(--text-muted);
+    padding-top: 3mm;
+    border-top: 1px solid var(--table-border);
+    letter-spacing: 0.3px;
+  }
+
+  p { margin: 0 0 3mm 0; }
+  ul { margin: 2mm 0 4mm 0; padding-left: 18px; }
+  ul li { margin-bottom: 2mm; line-height: 1.7; font-size: 13px; }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================ COVER ============================ -->
+<div class="page cover">
+  <div class="cover-band"></div>
+  <div class="cover-body">
+    <div class="cover-eyebrow">GEO EXECUTION REPORT · 2026</div>
+    <div class="cover-title-row">
+      <div class="cover-title">
+        禾雅醫務<br>
+        <span class="blue">GEO 網站優化</span><br>
+        執行報告
+      </div>
+      <div>
+        <div class="cover-logo"><img src="data:image/jpeg;base64,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" alt="Enter IMC"></div>
+        <div class="cover-agency">確認鍵智創科技股份有限公司</div>
+      </div>
+    </div>
+
+    <div class="cover-hero">
+      根據 Google Search Console 過去半年實戰數據（2025/11–2026/05）與網站實際盤點結果，<br>
+      確認禾雅醫務的 GEO 基礎建設已具規模、且實際表現優於原 Ahrefs 估算。本報告整理當前已完成的 8 項優化資產、待修正的 3 個關鍵項目，與下一階段的整體策略總綱。
+    </div>
+
+    <div class="cover-stats">
+      <div class="cover-stat">
+        <div class="cover-stat-num">487</div>
+        <div class="cover-stat-unit">點擊 / 月</div>
+        <div class="cover-stat-label">GSC 4 月實際流量</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-num">3.0×</div>
+        <div class="cover-stat-unit">vs 原估算</div>
+        <div class="cover-stat-label">遠超預期表現</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-num">10×</div>
+        <div class="cover-stat-unit">曝光成長</div>
+        <div class="cover-stat-label">5 個月內倍數成長</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-num">8</div>
+        <div class="cover-stat-unit">已交付項目</div>
+        <div class="cover-stat-label">內容與架構資產</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-num">800+</div>
+        <div class="cover-stat-unit">M3 目標 / 月</div>
+        <div class="cover-stat-label">完成優化後預期</div>
+      </div>
+    </div>
+
+    <div class="cover-meta">
+      <div>
+        <div class="cover-meta-label">分析對象</div>
+        <div class="cover-meta-value">禾雅醫務 HOYA（hoyasupergood.com）</div>
+        <div class="cover-meta-value" style="font-weight: 400; font-size: 11.5px; color: var(--text-muted); margin-top: 2px;">
+          含林口禾林、林口禾瑞、南港禾顏三家分院
+        </div>
+      </div>
+      <div>
+        <div class="cover-meta-label">資料來源</div>
+        <div class="cover-meta-value">Google Search Console 實戰數據</div>
+        <div class="cover-meta-value" style="font-weight: 400; font-size: 11.5px; color: var(--text-muted); margin-top: 2px;">
+          資料區間：2025/11/05 – 2026/05/04
+        </div>
+      </div>
+      <div>
+        <div class="cover-meta-label">本次重點</div>
+        <div class="cover-meta-value">已完成項目盤點 + 待修正優化清單</div>
+      </div>
+      <div>
+        <div class="cover-meta-label">報告日期</div>
+        <div class="cover-meta-value">2026 年 5 月 7 日</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <span>本報告基於 GSC 實測數據與網站盤點，作為後續優化依據</span>
+    <span>© 2026 Enter Internet Marketing CO., LTD.</span>
+  </div>
+</div>
+
+
+<!-- ============================ 第一章 ============================ -->
+<div class="page">
+  <div class="chapter-banner">
+    <span>第一章　現況總覽 — 半年成長軌跡</span>
+    <img class="chapter-banner-logo" src="data:image/jpeg;base64,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" alt="Enter IMC">
+  </div>
+
+  <div class="section-header"><span class="num">01 ｜</span>禾雅醫務目前在 Google 上的實際表現</div>
+
+  <div class="diagnostic">
+    <strong>核心結論：</strong>禾雅醫務過去半年的自然搜尋表現呈現穩定上升趨勢，
+    <strong>4 月實際點擊 487 次</strong>，較先前 Ahrefs 估算（160 次/月）高出 3 倍，
+    曝光從 11 月的 3,834 成長至 3 月峰值 39,834，<strong>5 個月內成長 10 倍</strong>。
+    這表示既有的內容與技術基礎已開始發揮效益，下一階段重點在「補完缺口、放大成果」。
+  </div>
+
+  <div class="subsection-header">1.1 半年月度成長軌跡</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>月份</th>
+        <th class="right">點擊</th>
+        <th class="right">曝光</th>
+        <th class="right">CTR</th>
+        <th class="right">平均排名</th>
+        <th>趨勢說明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>2025/11</td><td class="right">127</td><td class="right">3,834</td><td class="right">3.31%</td><td class="right">10.0</td><td>起始基線</td></tr>
+      <tr><td>2025/12</td><td class="right">192</td><td class="right">7,865</td><td class="right">2.44%</td><td class="right">10.9</td><td>曝光開始放大</td></tr>
+      <tr><td>2026/01</td><td class="right">293</td><td class="right">14,614</td><td class="right">2.00%</td><td class="right">9.8</td><td>進入成長期</td></tr>
+      <tr><td>2026/02</td><td class="right">370</td><td class="right">23,415</td><td class="right">1.58%</td><td class="right">6.6</td><td>排名大幅上升</td></tr>
+      <tr class="highlight"><td>2026/03</td><td class="right">596</td><td class="right">39,834</td><td class="right">1.50%</td><td class="right">4.9</td><td><strong>峰值 — 排名進前 5</strong></td></tr>
+      <tr><td>2026/04</td><td class="right">487</td><td class="right">27,198</td><td class="right">1.79%</td><td class="right">6.3</td><td>持續穩定表現</td></tr>
+    </tbody>
+  </table>
+
+  <div class="geo-tip">
+    <strong>給品牌的洞察：</strong>從 11 月的 127 點擊成長到 4 月的 487 點擊，過程中沒有任何付費廣告投入。
+    這是內容資產在 Google 與 AI 引擎中持續累積信任度的結果。下一階段的目標是延續這條成長曲線，並把「曝光」轉化為更高比例的「點擊」。
+  </div>
+
+  <div class="subsection-header">1.2 流量結構：誰真正在帶來病患詢問</div>
+
+  <table>
+    <thead>
+      <tr><th>主題群</th><th class="right">6 個月點擊</th><th class="right">CTR</th><th>對診所的商業價值</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>三分院品牌字（禾林 / 禾顏 / 禾瑞）</td><td class="right">429</td><td class="right">6.04%</td><td><span class="pill pill-good">高 — 高轉換意圖</span></td></tr>
+      <tr><td>根管治療相關</td><td class="right">112</td><td class="right">1.05%</td><td><span class="pill pill-good">高 — CTR 待修就能放大</span></td></tr>
+      <tr><td>牙鑽 / 貼鑽衛教</td><td class="right">190</td><td class="right">3.62%</td><td><span class="pill pill-warn">低 — 不導向實際療程</span></td></tr>
+      <tr><td>止鼾 / 睡眠呼吸中止症</td><td class="right">47</td><td class="right">1.41%</td><td><span class="pill pill-good">高 — OSAWELL 差異化</span></td></tr>
+      <tr><td>矯正</td><td class="right">47</td><td class="right">1.45%</td><td><span class="pill pill-good">中高</span></td></tr>
+      <tr><td>植牙 / 全口</td><td class="right">11</td><td class="right">1.84%</td><td><span class="pill pill-bad">最大缺口待補</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">禾雅醫務 GEO 網站優化執行報告 ｜ 確認鍵智創科技 ｜ 第 2 頁</div>
+</div>
+
+
+<!-- ============================ 第一章（續）: 3 月峰值分析 ============================ -->
+<div class="page">
+  <div class="chapter-banner">
+    <span>第一章（續）　3 月峰值的真實原因</span>
+    <img class="chapter-banner-logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" alt="Enter IMC">
+  </div>
+
+  <div class="section-header"><span class="num">01 ｜</span>為什麼 3 月特別好？來自實際數據的解析</div>
+
+  <p style="font-size: 13px; margin-bottom: 5mm;">3 月是過去半年的明確高峰：<strong>596 點擊、39,834 曝光、平均排名 4.87</strong>。
+  4 月雖然回落到 487 點擊，但這不是「退步」——把每月數據攤開後，可以看到一個清楚的演算法故事。</p>
+
+  <div class="subsection-header">1.3 半年來的關鍵指標變化（每日平均曝光）</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>月份</th>
+        <th class="right">點擊</th>
+        <th class="right">每日平均曝光</th>
+        <th class="right">平均排名</th>
+        <th>關鍵變化</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>2025/11</td><td class="right">127</td><td class="right">147</td><td class="right">9.95</td><td>排名在第 10 名邊緣</td></tr>
+      <tr><td>2025/12</td><td class="right">192</td><td class="right">254</td><td class="right">10.91</td><td>內容開始被 Google 認識</td></tr>
+      <tr><td>2026/01</td><td class="right">293</td><td class="right">471</td><td class="right">9.84</td><td>進入成長期、曝光翻倍</td></tr>
+      <tr><td>2026/02</td><td class="right">370</td><td class="right">836</td><td class="right">6.65</td><td>排名突破前 7</td></tr>
+      <tr class="highlight"><td><strong>2026/03</strong></td><td class="right"><strong>596</strong></td><td class="right"><strong>1,285</strong></td><td class="right"><strong>4.87</strong></td><td><strong>排名首次進前 5 — 觸發演算法獎勵</strong></td></tr>
+      <tr><td>2026/04</td><td class="right">487</td><td class="right">907</td><td class="right">6.33</td><td>排名回到正常區間、CTR 反而提升至 1.79%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="subsection-header">3 個關鍵發現</div>
+
+  <div class="finding">
+    <div class="finding-title">
+      <span>① 3 月的飆升是「排名突破門檻」的結果，不是運氣</span>
+      <span class="pill pill-good">演算法獎勵效應</span>
+    </div>
+    <div class="finding-desc">
+      平均排名從 2 月的 6.65 跳到 3 月的 <strong>4.87（首次進前 5）</strong>，這是搜尋演算法重要的分水嶺——
+      Google 對「前 5 名」與「第 6–10 名」的曝光待遇有顯著差異。
+      一旦進入前 5，Google 會給予<strong>更多次數</strong>的曝光機會，因此 3 月每日平均曝光從 836 跳到 <strong>1,285</strong>（+54%）。
+    </div>
+  </div>
+
+  <div class="finding">
+    <div class="finding-title">
+      <span>② 3 月不是某幾天爆量，而是整月每天都好</span>
+      <span class="pill pill-info">穩定推薦</span>
+    </div>
+    <div class="finding-desc">
+      檢視 3 月每日數據，沒有任何單日點擊超過 30 次（最高 3/13 為 30 點擊），
+      但<strong>每天都穩定在 1,200–1,500 曝光</strong>。
+      這代表內容不是被某次爆紅帶起來，而是禾雅的 GEO 資產被 Google 正式列為「該領域可信任的來源」，每天持續被推薦。這種成長更扎實、更可複製。
+    </div>
+  </div>
+
+  <div class="finding">
+    <div class="finding-title">
+      <span>③ 4 月「下降」其實是品質提升的訊號</span>
+      <span class="pill pill-good">CTR 1.50% → 1.79%</span>
+    </div>
+    <div class="finding-desc">
+      4 月平均排名退回 6.33，曝光降回每日 907——但同時 <strong>CTR 從 1.50% 提升至 1.79%</strong>。
+      意思是：4 月雖然 Google 推薦次數減少，但<strong>留下來看到禾雅的人，更精準、更願意點擊</strong>。
+      這通常表示無效的廣泛曝光被過濾掉，留下真正在找牙醫的搜尋者。
+    </div>
+  </div>
+
+  <div class="geo-tip">
+    <strong>給品牌方的策略意涵：</strong>3 月的高點告訴我們「禾雅完全有能力打進前 5」，
+    4 月的回落告訴我們「目前的內容深度還不夠把這個位置守住」。
+    本報告第四章的待修正項目（特別是 B 類療程頁深度補強），
+    目的就是<strong>把 3 月的高點變成 5–7 月的常態</strong>，
+    讓平均排名穩定在 4–5 之間，而不是 6–7 區間徘徊。
+  </div>
+
+  <div class="page-footer">禾雅醫務 GEO 網站優化執行報告 ｜ 確認鍵智創科技 ｜ 第 3 頁</div>
+</div>
+
+
+<!-- ============================ 第二章 ============================ -->
+<div class="page">
+  <div class="chapter-banner">
+    <span>第二章　三大關鍵發現</span>
+    <img class="chapter-banner-logo" src="data:image/jpeg;base64,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" alt="Enter IMC">
+  </div>
+
+  <div class="section-header"><span class="num">02 ｜</span>從半年數據中萃取的策略性發現</div>
+
+  <p style="font-size: 13px; margin-bottom: 5mm;">透過對 GSC 半年數據與網站實際內容的交叉分析，發現三個影響後續 GEO 策略走向的關鍵事實：</p>
+
+  <div class="finding">
+    <div class="finding-title">
+      <span>① 根管治療文章是隱形金礦</span>
+      <span class="pill pill-bad">+200~300 點擊／月待挖</span>
+    </div>
+    <div class="finding-desc">
+      「根管治療費用」一詞月曝光 <strong>1,124 次</strong>、平均排名 <strong>第 1.2 名</strong>，但點擊率僅 <strong>1.14%</strong>
+      （第一名正常應落在 25–35%）。代表搜尋者已在 Google 看到禾雅，但因標題與摘要不夠吸引而沒有點進來。
+      只要重寫文章標題與開頭段落，就能釋放這個全站最大的單一機會。
+    </div>
+  </div>
+
+  <div class="finding">
+    <div class="finding-title">
+      <span>② 三家分院共站架構是品牌資產，不是混淆</span>
+      <span class="pill pill-good">已內建集團規模感</span>
+    </div>
+    <div class="finding-desc">
+      林口禾林、林口禾瑞、南港禾顏三家分院的品牌字共帶來 <strong>429 點擊 / 6 個月</strong>，
+      佔總流量近 <strong>48%</strong>，且每家分院的點擊率都在 5–17% 之間（高品質流量）。
+      這代表 Google 與使用者已能正確識別「三家分院屬於同一集團」，這是同業少見的優勢。
+    </div>
+  </div>
+
+  <div class="finding">
+    <div class="finding-title">
+      <span>③ 6 個療程頁完全沒有點擊</span>
+      <span class="pill pill-bad">關鍵商業漏洞</span>
+    </div>
+    <div class="finding-desc">
+      植牙、隱形矯正、美白、牙周、一日長城、兒童牙科這 6 個核心療程頁，
+      過去 6 個月在 Google 上累計曝光約 <strong>370 次</strong>，但<strong>合計 0 點擊</strong>。
+      尤其植牙頁排名已在第 6.7 名（前 10），代表使用者有看到，但頁面內容過於單薄、無法吸引點擊。
+      這是現階段最重要的待補項目。
+    </div>
+  </div>
+
+  <div class="subsection-header">給品牌的策略性意義</div>
+
+  <div class="info-box">
+    這三個發現指向一個明確結論：<strong>禾雅的「地基」已經穩固</strong>（三分院架構正確、根管文章已在 Google 第 1 名、半年成長 10 倍），
+    現階段不需要砍掉重練、不需要花錢買流量。<strong>真正要做的是補完最後 20% 的優化收尾</strong>——
+    把高曝光低點擊的頁面修好、把零點擊的療程頁補實，就能讓既有的成長動能再放大一倍。
+  </div>
+
+  <div class="page-footer">禾雅醫務 GEO 網站優化執行報告 ｜ 確認鍵智創科技 ｜ 第 4 頁</div>
+</div>
+
+
+<!-- ============================ 第三章 ============================ -->
+<div class="page">
+  <div class="chapter-banner">
+    <span>第三章　已完成項目盤點</span>
+    <img class="chapter-banner-logo" src="data:image/jpeg;base64,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" alt="Enter IMC">
+  </div>
+
+  <div class="section-header"><span class="num">03 ｜</span>過去半年內已建立完成的 GEO 資產</div>
+
+  <div class="geo-tip">
+    <strong>盤點結論：</strong>實際檢視 hoyasupergood.com 後確認，禾雅內部團隊已完成大量符合 GEO 標準的內容與架構工作。
+    原規劃的核心衛教文章中，<strong>有 4 篇已上線且品質優異</strong>（皆採用 Q&amp;A 結構、醫師具名、含明確費用數字），
+    集團架構與技術標記也已大致就位。以下是可從待辦清單中剔除的已完成項目：
+  </div>
+
+  <div class="subsection-header">3.1 內容資產（已上線且符合 GEO 標準）</div>
+
+  <div class="done-grid">
+    <div class="done-card">
+      <div class="done-card-title"><span class="check-icon">✓</span>OSAWELL 止鼾牙套衛教</div>
+      <div class="done-card-desc">
+        /post/1672/「OSAWELL 牙套照護路徑」採 Q&amp;A 格式，是「睡眠呼吸中止症看哪一科」這類問題的 AI 引用候選文章。
+      </div>
+    </div>
+    <div class="done-card">
+      <div class="done-card-title"><span class="check-icon">✓</span>3 種打呼治療方式比較</div>
+      <div class="done-card-desc">
+        /post/1631/ 完整涵蓋止鼾牙套、CPAP、手術三方比較，符合 AI 引擎偏好的「比較型」內容結構。
+      </div>
+    </div>
+    <div class="done-card">
+      <div class="done-card-title"><span class="check-icon">✓</span>一日長城 vs 傳統植牙分析</div>
+      <div class="done-card-desc">
+        /post/1712/「一日長城 vs 傳統植牙 CP 值分析」（4/23 上線），是全口重建關鍵字群的核心內容。
+      </div>
+    </div>
+    <div class="done-card">
+      <div class="done-card-title"><span class="check-icon">✓</span>邱耀賢醫師獲獎背書頁</div>
+      <div class="done-card-desc">
+        /post/1686/「OSAWELL 年度卓越獎」+ 台北醫學大學專利技術，建立了 AI 引擎重視的醫療權威訊號（E-E-A-T）。
+      </div>
+    </div>
+    <div class="done-card">
+      <div class="done-card-title"><span class="check-icon">✓</span>跨療程串接內容</div>
+      <div class="done-card-desc">
+        /post/1560/「淺眠多夢睡不著？原來是口腔在搞鬼」連結矯正與呼吸道議題，建立主題群關聯。
+      </div>
+    </div>
+    <div class="done-card">
+      <div class="done-card-title"><span class="check-icon">✓</span>多牙症與電動牙刷衛教</div>
+      <div class="done-card-desc">
+        /post/1632/ 多牙症、/post/1603/ 電動牙刷皆採問句式標題與 FAQ-style 段落，已具備 AI 引用基本條件。
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection-header">3.2 技術與架構（已正確建置）</div>
+
+  <div class="done-grid">
+    <div class="done-card">
+      <div class="done-card-title"><span class="check-icon">✓</span>三家分院集團架構標記</div>
+      <div class="done-card-desc">
+        Google 已正確識別「HOYA 禾雅醫務」與三家分院屬於同一集團，搜尋「林口牙醫」、「南港牙醫」時都能關聯到禾雅體系。
+      </div>
+    </div>
+    <div class="done-card">
+      <div class="done-card-title"><span class="check-icon">✓</span>多診所架構於官網明確展現</div>
+      <div class="done-card-desc">
+        Header 導覽列、/clinic/ 分院總覽、聯絡表單三處皆清楚列出三家分院，符合 AI 引擎對「企業實體完整性」的判斷標準。
+      </div>
+    </div>
+  </div>
+
+  <div class="geo-tip">
+    <strong>★ 特別肯定：OSAWELL 路線是禾雅最強的差異化資產</strong><br>
+    台北醫學大學專利技術 + AI 客製化 + 邱耀賢醫師獲頒「OSAWELL 年度卓越獎」——
+    這套差異化故事是 AI 引擎在被問「止鼾牙套」、「睡眠呼吸中止症看哪一科」時最容易引用的訊號組合。
+    建議所有相關內容持續強化這條主軸。
+  </div>
+
+  <div class="page-footer">禾雅醫務 GEO 網站優化執行報告 ｜ 確認鍵智創科技 ｜ 第 5 頁</div>
+</div>
+
+
+<!-- ============================ 第四章 ============================ -->
+<div class="page">
+  <div class="chapter-banner">
+    <span>第四章　待修正項目清單</span>
+    <img class="chapter-banner-logo" src="data:image/jpeg;base64,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" alt="Enter IMC">
+  </div>
+
+  <div class="section-header"><span class="num">04 ｜</span>三類待修正項目（依優先順序）</div>
+
+  <p style="font-size: 13px; margin-bottom: 5mm;">本章將待辦事項分為「立即修復」、「內容深度補強」、「衛教文章新增」三類，
+  每一項都標明預期效益，協助品牌方判斷投入順序。</p>
+
+  <div class="subsection-header">A 類：立即修復項目（不動頁面結構，1–2 週可完成）</div>
+
+  <table>
+    <thead>
+      <tr><th style="width: 24%;">修正項目</th><th>處理重點</th><th class="right" style="width: 24%;">預期效益</th></tr>
+    </thead>
+    <tbody>
+      <tr class="highlight">
+        <td><strong>根管治療文章 CTR 修復</strong></td>
+        <td>重寫標題為「根管治療費用一顆多少錢？2026 健保自費完整對照」、文章開頭加入費用對照表。<strong>全站 ROI 最高的單一動作。</strong></td>
+        <td class="right"><strong>+200~300 點擊／月</strong></td>
+      </tr>
+      <tr>
+        <td>首頁 Title 與 Meta 重寫</td>
+        <td>目前首頁標題未含任何在地或療程關鍵字，重寫後可釋放 17K 月曝光的點擊潛力。</td>
+        <td class="right"><span class="pill pill-good">+50~80 點擊／月</span></td>
+      </tr>
+      <tr>
+        <td>三家分院頁面資訊補強</td>
+        <td>修正分院頁面的小型技術標記錯誤（圖片對應、URL 一致性等），並補上完整的營業時間、服務項目、定位資料。</td>
+        <td class="right"><span class="pill pill-good">在地搜尋強化</span></td>
+      </tr>
+      <tr>
+        <td>3 篇已完成衛教文章補上 FAQ 結構標記</td>
+        <td>OSAWELL 牙套、3 種打呼治療、一日長城這 3 篇文章已是 Q&amp;A 格式，補上對應的技術標記後可立即被 AI 引擎更精準識別。</td>
+        <td class="right"><span class="pill pill-good">AI 引用率↑</span></td>
+      </tr>
+      <tr>
+        <td>其餘 8 篇文章標題與 FAQ 標記補強</td>
+        <td>牙齦萎縮、多牙症、電動牙刷、牙線、根管鈣化等文章補強標題與技術標記。</td>
+        <td class="right"><span class="pill pill-info">中長期排名↑</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="subsection-header">B 類：療程頁深度補強（需補實內容，每頁 1–2 天）</div>
+
+  <div class="alert-box">
+    <strong>必須處理的原因：</strong>植牙、牙周、隱形矯正、美白、一日長城、兒童牙科這 6 個療程頁過去 6 個月零點擊。
+    其中植牙頁排名已在前 10，代表 Google 願意展示，但頁面內容單薄、留不住點擊者。<strong>光改標題救不了，必須補實質內容。</strong>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>療程頁</th><th class="right">當前曝光</th><th class="right">當前排名</th><th>處理重點</th></tr>
+    </thead>
+    <tbody>
+      <tr class="highlight"><td><strong>微創植牙 ★</strong></td><td class="right">68</td><td class="right">6.7</td><td>已在前 10、立即可進前 5，最高優先補強</td></tr>
+      <tr><td>牙周病 + 水雷射子段</td><td class="right">29</td><td class="right">6.5</td><td>需加入禾雅水雷射差異化內容</td></tr>
+      <tr><td>一日長城</td><td class="right">85</td><td class="right">22.2</td><td>已有衛教主文，療程頁需厚實</td></tr>
+      <tr><td>兒童牙科</td><td class="right">68</td><td class="right">13.0</td><td>對應「林口兒童牙醫」在地搜尋</td></tr>
+      <tr><td>隱形矯正</td><td class="right">59</td><td class="right">22.5</td><td>需從零補實內容</td></tr>
+      <tr><td>美白</td><td class="right">62</td><td class="right">31.9</td><td>排名最差，最後處理</td></tr>
+    </tbody>
+  </table>
+
+  <p style="font-size: 12.5px; color: var(--text-muted); margin: 2mm 0 4mm;">
+    每頁的補強內容含：適應症 → 費用 → 流程 → 案例 → FAQ，配合醫師具名與技術標記，符合 AI 引擎引用條件。
+  </p>
+
+  <div class="subsection-header">C 類：仍需新增的衛教文章</div>
+
+  <table>
+    <thead>
+      <tr><th>主題</th><th>目標關鍵字</th><th class="right" style="width: 18%;">優先級</th></tr>
+    </thead>
+    <tbody>
+      <tr class="highlight"><td><strong>2026 植牙一顆多少錢？費用包含哪些項目？</strong></td><td>植牙費用（月搜 5K+）、植牙價格</td><td class="right"><span class="pill pill-now">立即</span></td></tr>
+      <tr><td>牙周病水雷射治療費用多少？效果如何？</td><td>牙周病水雷射費用、牙周病治療費用</td><td class="right"><span class="pill pill-warn">高</span></td></tr>
+      <tr><td>植牙會痛嗎？麻醉、術後恢復完整解析</td><td>植牙會痛嗎、植牙術後</td><td class="right"><span class="pill pill-warn">高</span></td></tr>
+      <tr><td>根管治療會痛嗎？麻醉與術後說明</td><td>根管治療會痛嗎</td><td class="right"><span class="pill pill-info">中</span></td></tr>
+      <tr><td>林口牙醫推薦怎麼選？三家分院比較</td><td>林口牙醫推薦、林口牙醫</td><td class="right"><span class="pill pill-info">中</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">禾雅醫務 GEO 網站優化執行報告 ｜ 確認鍵智創科技 ｜ 第 6 頁</div>
+</div>
+
+
+<!-- ============================ 第五章 ============================ -->
+<div class="page">
+  <div class="chapter-banner">
+    <span>第五章　整體總建議與下一步</span>
+    <img class="chapter-banner-logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACMAIwDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAYHCAMEBQIJ/8QAPhAAAAUCAgYEDAUEAwAAAAAAAAECAwUEBgcREhghVpOUCBMx0RUXIjJBUVNUVWFx4RQ3dYGRcrGztISh0v/EABsBAQACAwEBAAAAAAAAAAAAAAADBQIEBgEH/8QAMhEAAQMCAQoFBAIDAAAAAAAAAQACAwQRIQUSFRYxQVFSkdEGExRhoVNxgZIiQjKx8P/aAAwDAQACEQMRAD8Az0AAPuC4xAAARAAARAAARAAARAAARAAARAAARAAARAAARAASrCa16e87/jbbqqp2lZrOt0nWiI1J0WlL2EeztTkI5ZWwxukfsAufwvWtLnBo2lRUBqnVdt7eeU4LYartvbzynBbFHrPk7nPQrd0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Gq7b288pwWw1nydznoU0bUcPlZWAap1Xbe3nlOC2Ipi3gNDWXYEjclJO19U9SdVotOtoJKtN1KDzMtvYrMSQ+IqCaRsbHG5Nhgd6xfQTsaXEYBUCAALxaaAAAiAAAiCZYK3HG2niZEz8ubpUVL1vWG0jSV5TS0FkX1UQho5KZh+peSxTMuPOq81DaTUo/TsIhFPE2aJ0b9hBB/KyY4tcHDaFsbWMw39rK8n9w1jMN/ayvJ/cZG8BTfwaR5ZfcHgKb+DSPLL7hzerGTeY9R2VhpKo4Dotc6xmG/tZXk/uGsZhv7WV5P7jI3gKb+DSPLL7g8BTfwaR5ZfcGrGTeY9R2TSVRwHRa51jMN/ayvJ/cNYzDf2sryf3GRvAU38GkeWX3B4Cm/g0jyy+4NWMm8x6jsmkqjgOi1zrGYb+1leT+4axmG/tZXk/uMjeApv4NI8svuDwFN/BpHll9wasZN5j1HZNJVHAdFrnWMw39rK8n9xDMbMabKu3DOVgIhyQOtqup6snabRT5LqFnmefqSYzz4Cm/g0jyy+4cdTEytMyp+pja1lpPnLcYUlJejaZkJYPDtBDK2RjjcEEYjd+Fi/KE72lpGB9l0gAB0ir0AABEAABEFldGL88Lf/5H+u4K1Hdg5aSg5RmUiKx2jrWc+reaPJScyNJ5fsZl+416uEz074htcCOoss4n5j2uO4hfo6AwV42MR98ZXih42MR98ZXijhdT6n6jfnsrvS0fKVvUBgrxsYj74yvFDxsYj74yvFDU+p+o357JpaPlK3qAwV42MR98ZXih42MR98ZXihqfU/Ub89k0tHylb1AYK8bGI++MrxQ8bGI++MrxQ1PqfqN+eyaWj5St6is+k/8AkfP/AFp/9hsZW8bGI++MrxR0p3EG9ZyLdi5e5ZCtontHrGXXM0qyMlFn9DIj/YbFH4VqIKhkpeLNIO/cfso5spxvjc0A4hRcAAd0qVAAARAAARBKsJ7XYvO/4226mqdpWqzrdJ1tJGpOi0pewj/pyEVEzwUuKNtPEyJn5dTqaKl63rDbRpK8ppaSyL6qIa1YZBTyGL/Kxt97YLOLNMjc7ZcK9NV2B3pkuAgNV2B3pkuAgSXWLw294lOTPvDWLw294lOTPvHBeo8QcHfqOyvPLoPbqo1quwO9MlwEBquwO9MlwECS6xeG3vEpyZ94axeG3vEpyZ94eo8QcHfqOyeXQe3VRrVdgd6ZLgIDVdgd6ZLgIEl1i8NveJTkz7w1i8NveJTkz7w9R4g4O/Udk8ug9uqjWq7A70yXAQGq7A70yXAQJLrF4be8SnJn3hrF4be8SnJn3h6jxBwd+o7J5dB7dVGtV2B3pkuAgRXFrAaJsuwJG5KWfrqt2k6rRacaSSVabqUbTL+rMWfrF4be8SnJn3iF4240WTduGcrARD1eqtqup6snaY0p8l1CjzPP1JMbNHPlw1EYlDs24vhuvjuUczKIRuzbXsbYrM4AA71UiAAAiAAAiDuwUbUTM3QxFGaCqa6pbpmtM8k6a1Eksz9BZmOkJLhV+aFq/rNJ/mQIpnlkbnDcCsmC7gFYOrbiJ7WE5tX/AIHl3XgVe9tW7Wzsi5EnSUbfWOk1UqUrLMi2Foln2i7OkLFYrV9wRrlgOyqKNNIZVBUlclhPWaZ9pGsszyy2ilL8jsbYq2ah+76ydTDuGlp4n5JLqFaR7CNJLPPb8hzOT8oVdSGOdNGL/wBd+3Zt2qxnp4oy4BjsN+5VYAv7DvA237swmjrpcnK2Or6g1rfW4pB07baH1JWeWiR+Ykz2qyz+Q96lwJwzuaEqSsu8airr6ctE3iqmn2yWfZppSkjIjyPIyP8AnIWEmX6ONzmuJ/ibHA2G7FQNoZXAEbxcYrN0RHV8vIsx0ZSPVdY+Zk0y0nSUs8s9hfQjHJOw0rBSKo6ZoKigq0pJSmX0GlREe0jyF1dGO1rcbvh12dll0dzxMgtikoCeQRPGlCiczSaTNWXldhl2CS9Jy2rAqKiYnq25XGbpbpG+pjiqWySvLIk+QadI8yzPtGMmWmsrxTZpIttsdpP+vdetoyYPMvj/AN8rMIC6MJ8HIyYtBd7XzNLhoLabRIUlC1pJWjpqUojJJGewiyMz/jP3ZXBSy7mtisl8LbnekamkI9OmecSsnDIs9DzUqQo/RmRkfy7Snky3SRyGMk4GxNjmg8CVg2jlc3OA/G/os9ALewJwqi8QoC4Kitq66mr6E0t0iWlpS2a1IUZaZGkzyzIuzLZmPnF/D6xrKtNhuMuspW526tDNbTpqGzShOgo1GTaS0k5KJJbTPtEulaf1HphfPvbZ+eiw9NJ5fmblUYAAsVAgAAIgAAIgkuFX5oWr+s0n+ZAjQ9G2ZRcHckZNNtJeXQVbVUltR5Es21koiM/RnkIp2l8TmjaQVkw2cCVp7pMXzflqXLF0tp1r1PTPUZuPEijbeI16Zl2qQeWwiFG3liFiTc0E5F3HXVNRHmtLi0KoG2yzSew9JKCP/sWRrRzO6cfzS+4eLfPSDlbqtKRt563KKmbrmuqU6ioUo07SPMiMvkOXydR1NM2Nj6VpI/tdt9u3ZfD7qyqJY5C4iU47sbKa0Li2uhIpTazSZ07iTMj9B1yiMv3IzIRvoVKUV7ziCUeicaRmXoMydTl/cxCm8Vq5GDh4beCKc6bQNP4vrVae1/rvNyy7dg8/CDEOrw5mqyTpI1mvVVU3UGh1w0EktIlZ7PoJjkyoNJVRZv8AJ7yRiMQSLLAVDPNidfBoAKmOHOzpcO/rkl/Z8dbpb077eL9Q8tlxLbtGwbazSeSiJOR5H9SMhXyrqkmr9evKgNNJXrkHK5sk+UlClLNRp29pbTL5kLLvPpBTF0WZXW7W29QsnWsk04+08vYeZHmSTz9XZmNh9LVRVkU8bc4ZoacbWx2+6wEsboXMcbY3Ct56Rt5vozwEjJ2+5cMTTx9IVRSsq0clISSFLPI+xKyPP+fQI/hLfUEkpB/DvCSX0T0EVa6aoTomZZmkjNass9p9nrFP4T4wXHh/TOR1OyxJRTijX+EqDMurUfaaFF5ufpLIy+WYkl49Ii4paDdiYOHo7fafSaHHWXDW6RH26B5JJOfryz9RkKt+Rahrnwhmc1zr3zyBY8WjaVsisjID72IGywv+Cp30Xa1TkdiHIsNnTqVWG8hGZH1ZmTiiLZs2DLbi1uOKccWpa1GalKUeZmZ9pmYsHCrFGssGGmIymiWK5MnlpLcdNBt5JUnZkW3zhXgvaGjkgqp5HDB2bb8Cy0ppWviY0bRe/VAABbLVQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEX//Z" alt="Enter IMC">
+  </div>
+
+  <div class="section-header"><span class="num">05 ｜</span>從半年數據導出的策略總綱</div>
+
+  <div class="diagnostic">
+    <strong>核心結論：</strong>禾雅醫務的 GEO 基礎建設已完成 80%，過去半年自然流量從 127 點擊成長到 487 點擊（+283%），且不依賴付費廣告。
+    現階段的優化重點不是「砍掉重練」，而是<strong>把已存在的成長動能轉化為可持續、可複製的引擎</strong>。
+    以下三大策略主軸，是接下來 4 週執行的方向總綱。
+  </div>
+
+  <div class="subsection-header">5.1 三大策略主軸</div>
+
+  <div class="finding">
+    <div class="finding-title">
+      <span>主軸一：把 3 月的高點變成新常態</span>
+      <span class="pill pill-info">穩定排名於前 5</span>
+    </div>
+    <div class="finding-desc">
+      3 月平均排名 4.87、4 月退回 6.33，說明禾雅有能力打進前 5、但內容深度還守不住這個位置。
+      <strong>對應動作：</strong>療程頁深度補強（B 類），把 6 個零點擊療程頁從「Google 願意展示但留不住人」修復為「進入即被閱讀」的主流入口。
+    </div>
+  </div>
+
+  <div class="finding">
+    <div class="finding-title">
+      <span>主軸二：解鎖既有資產的隱藏 ROI</span>
+      <span class="pill pill-bad">最高 ROI 機會</span>
+    </div>
+    <div class="finding-desc">
+      根管治療文章月曝光 1,124、排名 1.2，但 CTR 僅 1.14%（同位置正常應達 25%+）。代表搜尋者已看見禾雅、卻沒被吸引點進來。
+      <strong>對應動作：</strong>A 類立即修復——重寫高曝光低 CTR 頁面的標題與開頭段落，預期 2 週內可釋放 +200~300 點擊／月。
+    </div>
+  </div>
+
+  <div class="finding">
+    <div class="finding-title">
+      <span>主軸三：強化 OSAWELL 差異化護城河</span>
+      <span class="pill pill-good">擴大 AI 引用利基</span>
+    </div>
+    <div class="finding-desc">
+      OSAWELL 止鼾牙套（含台北醫學大學專利 + 邱耀賢醫師獲獎背書）是禾雅目前最強的 AI 引用訊號組合。
+      <strong>對應動作：</strong>把這套「具名醫師 + 權威認證 + 明確費用」的敘事公式，從睡眠呼吸中止症擴散到植牙、牙周、根管等其他療程，建立全站性的 E-E-A-T 訊號。
+    </div>
+  </div>
+
+  <div class="subsection-header">5.2 現階段 vs 下階段對照</div>
+
+  <p style="font-size: 12.5px; margin-bottom: 3mm;">完成 4 週優化後，禾雅在 GEO 戰略地位上的變化：</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 22%;">維度</th>
+        <th style="width: 32%;">現階段（2026/05）</th>
+        <th style="width: 32%;">下階段（2026/07 月底）</th>
+        <th class="right">預期變化</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>內容覆蓋面</strong></td>
+        <td>衛教文章為主、療程頁單薄</td>
+        <td>衛教 + 療程並重，主題群完整</td>
+        <td class="right"><span class="pill pill-good">補完</span></td>
+      </tr>
+      <tr>
+        <td><strong>AI 引擎引用情境</strong></td>
+        <td>邊緣出現（OSAWELL、根管）</td>
+        <td>主要候選來源（含植牙、牙周、林口在地）</td>
+        <td class="right"><span class="pill pill-good">+5 個議題</span></td>
+      </tr>
+      <tr class="highlight">
+        <td><strong>平均搜尋排名</strong></td>
+        <td>6.3 名</td>
+        <td><strong>4.0–4.5 名（穩定前 5）</strong></td>
+        <td class="right"><strong>↑ 進入演算法獎勵區間</strong></td>
+      </tr>
+      <tr>
+        <td><strong>商業轉換入口</strong></td>
+        <td>三分院品牌字（48% 流量）</td>
+        <td>+ 根管 / 植牙 / 在地搜尋（多元入口）</td>
+        <td class="right"><span class="pill pill-good">分散風險</span></td>
+      </tr>
+      <tr>
+        <td><strong>月自然流量</strong></td>
+        <td>487 點擊</td>
+        <td>800–950 點擊</td>
+        <td class="right"><span class="pill pill-good">+65~95%</span></td>
+      </tr>
+      <tr>
+        <td><strong>數據追蹤機制</strong></td>
+        <td>單次盤點</td>
+        <td>每週 GSC 對照 + 月度 AI 引用抽樣</td>
+        <td class="right"><span class="pill pill-good">可持續</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="geo-tip">
+    <strong>給品牌方的下一步建議：</strong>本報告的所有待修正項目（第四章 A/B/C 三類）皆已盤點完成，
+    確認鍵將於本週啟動 A 類立即修復項目（最快 2 週可見初步成效），
+    並依優先順序推進 B 類療程頁深度補強與 C 類新增衛教文章。
+    第六章為完成優化後的具體 KPI 與雙方配合事項。
+  </div>
+
+  <div class="page-footer">禾雅醫務 GEO 網站優化執行報告 ｜ 確認鍵智創科技 ｜ 第 7 頁</div>
+</div>
+
+
+<!-- ============================ 第六章 ============================ -->
+<div class="page">
+  <div class="chapter-banner">
+    <span>第六章　預期成效與 KPI</span>
+    <img class="chapter-banner-logo" src="data:image/jpeg;base64,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" alt="Enter IMC">
+  </div>
+
+  <div class="section-header"><span class="num">06 ｜</span>4 週優化完成後的預期成效（M3 / 7 月底前）</div>
+
+  <p style="font-size: 13px; margin-bottom: 5mm;">以下指標皆以 GSC 實測數據為基線，目標設定保守可達成。
+  M3 達成後，禾雅醫務在牙科 AI 問答的引用版圖將從「邊緣出現」提升至「主要候選來源」。</p>
+
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="lbl">月自然點擊</div>
+      <div class="from-to"><span class="from">487</span><span class="arrow">→</span><span class="to">800–950</span></div>
+      <div class="sub">CTR 修復 +300、療程頁修復 +100</div>
+    </div>
+    <div class="kpi-card">
+      <div class="lbl">月自然曝光</div>
+      <div class="from-to"><span class="from">27,198</span><span class="arrow">→</span><span class="to">40,000+</span></div>
+      <div class="sub">新內容 + 排名上升雙重貢獻</div>
+    </div>
+    <div class="kpi-card">
+      <div class="lbl">平均排名</div>
+      <div class="from-to"><span class="from">6.3</span><span class="arrow">→</span><span class="to">4.0–4.5</span></div>
+      <div class="sub">療程頁進前 10、根管進前 3</div>
+    </div>
+    <div class="kpi-card">
+      <div class="lbl">整體點擊率</div>
+      <div class="from-to"><span class="from">1.79%</span><span class="arrow">→</span><span class="to">2.5%</span></div>
+      <div class="sub">標題與內容收尾優化</div>
+    </div>
+    <div class="kpi-card">
+      <div class="lbl">療程頁面點擊（合計）</div>
+      <div class="from-to"><span class="from">0</span><span class="arrow">→</span><span class="to">150+</span></div>
+      <div class="sub">從零修復為主流入口</div>
+    </div>
+    <div class="kpi-card">
+      <div class="lbl">AI 引擎引用次數</div>
+      <div class="from-to"><span class="from">0</span><span class="arrow">→</span><span class="to">5+</span></div>
+      <div class="sub">ChatGPT、Perplexity 月度抽樣</div>
+    </div>
+  </div>
+
+  <div class="subsection-header">AI 引擎月度抽樣測試題庫（每月固定追蹤）</div>
+
+  <div class="info-box">
+    每月固定向 ChatGPT、Perplexity、Google AI Overview、Bing Copilot 詢問以下 10 題，
+    追蹤禾雅醫務內容被引用為答案來源的次數變化：<br><br>
+    根管治療一顆多少錢？・睡眠呼吸中止症看哪一科？・林口有推薦的牙醫嗎？・植牙費用大概多少？・止鼾牙套有用嗎？・
+    全口重建跟傳統植牙差別？・OSAWELL 是什麼？・牙周病水雷射費用？・南港有牙醫診所嗎？・植牙會痛嗎？
+  </div>
+
+  <div class="agsig">
+    <img class="agsig-logo" src="data:image/jpeg;base64,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" alt="Enter IMC">
+    <div class="agsig-text">
+      <div class="agsig-name">確認鍵智創科技股份有限公司　Enter Internet Marketing CO., LTD.</div>
+      <div class="agsig-meta">enterimc.com　｜　報告日期：2026 年 5 月 7 日　｜　本文件內容為確認鍵智創科技智慧財產，僅供客戶參考</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
