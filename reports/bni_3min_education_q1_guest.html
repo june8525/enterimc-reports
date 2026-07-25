@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BNI 3 分鐘教育培訓主題：來賓版一季規劃</title>
+  <style>
+    :root {
+      --ink: #1d2530;
+      --muted: #667085;
+      --line: #d9dee7;
+      --soft: #f6f8fb;
+      --accent: #b6222a;
+      --accent-dark: #811820;
+      --gold: #c89a3c;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f2f4f7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 32px auto;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 48px rgba(20, 30, 45, 0.08);
+    }
+
+    header {
+      padding: 34px 38px 28px;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(129, 24, 32, 0.96), rgba(182, 34, 42, 0.94)),
+        linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0;
+      opacity: 0.9;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 840px;
+      margin: 14px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 17px;
+    }
+
+    main {
+      padding: 30px 38px 42px;
+    }
+
+    section + section {
+      margin-top: 34px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 920px;
+      color: #364152;
+      font-size: 16px;
+    }
+
+    .note {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: #fff8e8;
+      border-left: 4px solid var(--gold);
+      color: #4f3b13;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    table {
+      width: 100%;
+      min-width: 980px;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th,
+    td {
+      padding: 14px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      color: var(--white);
+      background: #2f3744;
+      font-size: 14px;
+      line-height: 1.35;
+      white-space: nowrap;
+    }
+
+    tr:nth-child(even) td {
+      background: var(--soft);
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .week {
+      width: 58px;
+      color: var(--accent-dark);
+      font-weight: 800;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .topic {
+      width: 210px;
+      font-weight: 800;
+    }
+
+    .source {
+      width: 210px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .step {
+      padding: 16px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .time {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--accent-dark);
+      font-weight: 800;
+    }
+
+    .script-table {
+      margin-top: 16px;
+    }
+
+    .script-table table {
+      min-width: 860px;
+    }
+
+    .rules {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .rules li {
+      padding: 12px 14px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .sources {
+      columns: 2;
+      column-gap: 32px;
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sources li {
+      break-inside: avoid;
+      margin: 0 0 8px;
+    }
+
+    footer {
+      padding: 18px 38px 26px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      header,
+      main,
+      footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .steps,
+      .rules {
+        grid-template-columns: 1fr;
+      }
+
+      .sources {
+        columns: 1;
+      }
+    }
+
+    @media print {
+      body {
+        background: var(--white);
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      header {
+        color: var(--ink);
+        background: var(--white);
+        border-bottom: 3px solid var(--accent);
+      }
+
+      .subtitle {
+        color: #364152;
+      }
+
+      th {
+        color: var(--ink);
+        background: #e8edf3;
+      }
+
+      a {
+        color: var(--ink);
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <p class="eyebrow">整理日期：2026-07-25</p>
+      <h1>BNI 3 分鐘教育培訓主題：來賓版一季規劃</h1>
+      <p class="subtitle">13 週主題設計，聚焦讓第一次參與的企業主也能聽懂：高品質商務人脈如何產生信任、介紹與成交。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>規劃邏輯</h2>
+        <p class="lead">這一季以「讓來賓理解高品質商務人脈如何產生信任、推薦與成交」為主軸。每週教育時段控制在 3 分鐘，避免使用內部術語，改用一般企業主、業務主管、專業服務者都能立即理解的語言。</p>
+        <div class="note">表格中的 Podcast 欄位是教育協調員內部備查來源，不建議在現場逐字朗讀。</div>
+      </section>
+
+      <section>
+        <h2>13 週主題表</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>週次</th>
+                <th>給來賓聽的主題</th>
+                <th>3 分鐘教育重點</th>
+                <th>現場互動 / 提問</th>
+                <th>內部備查來源</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="week">1</td>
+                <td class="topic">為什麼人脈需要固定經營，不能只靠偶遇</td>
+                <td>真正有價值的人脈不是名片交換，而是長期、固定、可追蹤的互動。持續見面會讓彼此更了解專業能力，也更敢介紹客戶。</td>
+                <td>問來賓：你上一次因為朋友推薦而成交，是因為對方「剛認識你」還是「已經信任你」？</td>
+                <td class="source">Ep. 929；Ep. 860</td>
+              </tr>
+              <tr>
+                <td class="week">2</td>
+                <td class="topic">先幫別人，信任才會開始累積</td>
+                <td>商務關係裡，先提供幫助、資源或介紹，會比一開始就要求成交更容易建立信任。重點不是馬上回收，而是讓別人知道你值得合作。</td>
+                <td>問來賓：你最近能幫一位合作夥伴介紹誰、提供什麼資訊，或解決什麼小問題？</td>
+                <td class="source">Ep. 605；Ep. 820</td>
+              </tr>
+              <tr>
+                <td class="week">3</td>
+                <td class="topic">從認識、信任，到願意主動推薦</td>
+                <td>別人知道你，不代表會推薦你；別人相信你有能力，也不代表已經知道怎麼推薦你。要讓人願意介紹，需要時間、可信度與明確請求。</td>
+                <td>問來賓：你的客戶或朋友目前只是「知道你」，還是已經「放心把人介紹給你」？</td>
+                <td class="source">Ep. 708；Ep. 914</td>
+              </tr>
+              <tr>
+                <td class="week">4</td>
+                <td class="topic">不要只說你做什麼，要教別人怎麼介紹你</td>
+                <td>好的自我介紹不是服務清單，而是讓別人聽懂三件事：誰適合你、遇到什麼問題時需要你、該如何開口介紹你。</td>
+                <td>請大家完成一句話：「如果你身邊有人正在遇到 ___，可以介紹他來找我。」</td>
+                <td class="source">Ep. 888；Ep. 188</td>
+              </tr>
+              <tr>
+                <td class="week">5</td>
+                <td class="topic">越具體，別人越容易想到人選</td>
+                <td>「任何人都可以」聽起來市場很大，但最難被介紹。清楚說出產業、職位、情境或問題，對方腦中才會浮出具體名字。</td>
+                <td>把「我想認識有需要的人」改成「我想認識哪一類公司、哪一個職位、遇到哪個問題的人」。</td>
+                <td class="source">Ep. 416；Ep. 858</td>
+              </tr>
+              <tr>
+                <td class="week">6</td>
+                <td class="topic">用一個真實案例，讓別人記住你</td>
+                <td>人通常記不住服務列表，但會記住故事。用「客戶原本遇到什麼狀況、你怎麼協助、最後得到什麼結果」來說明，比功能介紹更容易被轉述。</td>
+                <td>請大家準備一個 30 秒案例：客戶狀況、你做了什麼、結果如何。</td>
+                <td class="source">Ep. 959</td>
+              </tr>
+              <tr>
+                <td class="week">7</td>
+                <td class="topic">教大家聽懂「客戶需要你」的訊號</td>
+                <td>好介紹常從一句抱怨開始，例如「網站沒帶來客戶」「保險變貴」「找不到好人才」。你要把這些訊號教給身邊的人。</td>
+                <td>請大家列出 2 句理想客戶常說的話，讓別人聽到時會想到你。</td>
+                <td class="source">Ep. 888；Ep. 959</td>
+              </tr>
+              <tr>
+                <td class="week">8</td>
+                <td class="topic">名單不等於介紹：什麼是高品質商機</td>
+                <td>只有姓名電話，通常只是名單。高品質介紹應該是對方有需求、知道為什麼要認識你，並願意讓你聯絡。</td>
+                <td>介紹前先確認三件事：對方有需求嗎？知道我要聯絡嗎？願意談下一步嗎？</td>
+                <td class="source">Ep. 006；Ep. 617</td>
+              </tr>
+              <tr>
+                <td class="week">9</td>
+                <td class="topic">被介紹後，最快建立信任的方法是立刻回覆</td>
+                <td>收到介紹後越快聯絡，越能保護介紹人的信用。若不適合，也要清楚回報原因，讓介紹人下次更知道怎麼幫你。</td>
+                <td>設定一個規則：收到介紹後 24 小時內聯絡對方，並回報介紹人進度。</td>
+                <td class="source">Ep. 617；Ep. 878</td>
+              </tr>
+              <tr>
+                <td class="week">10</td>
+                <td class="topic">一對一交流不是聊天，是找出合作路徑</td>
+                <td>有效的商務交流要聊目標、過去成果、興趣、人脈圈與專長。這些資訊能幫你知道對方適合認識誰，也讓對方更容易幫你。</td>
+                <td>下次約人喝咖啡時，問一題：「什麼樣的人最容易成為你的好客戶？」</td>
+                <td class="source">Ep. 907；Ep. 751；Ep. 945</td>
+              </tr>
+              <tr>
+                <td class="week">11</td>
+                <td class="topic">來賓不是旁觀者，而是新的商務連結</td>
+                <td>每位新朋友都可能帶來新觀點、新市場或新合作機會。好的聚會不只是讓來賓聽懂流程，而是讓他感受到這裡的人願意互相支持。</td>
+                <td>問來賓：今天你最想認識哪一類產業或哪一種資源？</td>
+                <td class="source">Ep. 522；Ep. 726；Ep. 727</td>
+              </tr>
+              <tr>
+                <td class="week">12</td>
+                <td class="topic">好評價要具體，才會變成信任</td>
+                <td>「他很專業」太模糊。好的推薦語要說清楚：原本的問題、對方做了什麼、結果改善了什麼。具體見證能降低陌生客戶的不信任。</td>
+                <td>請大家用 30 秒稱讚一位合作夥伴：問題、行動、結果。</td>
+                <td class="source">Ep. 800；Ep. 814</td>
+              </tr>
+              <tr>
+                <td class="week">13</td>
+                <td class="topic">小行動持續做，才會累積成交機會</td>
+                <td>每週固定學習、固定出席商務聚會、固定一對一交流、固定幫人介紹、固定邀請新朋友，長期下來會形成可衡量的商機來源。</td>
+                <td>問大家：未來 30 天，你願意固定做哪一個小行動來累積商務信任？</td>
+                <td class="source">Ep. 517；Ep. 860</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>3 分鐘執行結構</h2>
+        <p class="lead">參考簡報「3分鐘教育培訓-0624同行是對手，還是尚未合作的隊友？」後，建議改成短講型結構：先讓來賓進入情境，再用一句好記的觀念、一個做法、一個案例，最後用一句話收束。</p>
+        <div class="steps">
+          <div class="step"><span class="time">0:00-0:20</span><br>主持人開場：說明這是每週 3 分鐘商務人脈技巧分享，並介紹分享者。</div>
+          <div class="step"><span class="time">0:20-0:45</span><br>主題提問：用一個來賓也能回答的問題切入，例如「同行一定是對手嗎？」</div>
+          <div class="step"><span class="time">0:45-1:10</span><br>金句引導：引用一句容易記住的話，讓主題有情緒與記憶點。</div>
+          <div class="step"><span class="time">1:10-1:45</span><br>核心觀念：用一句話講清楚今天要帶走的商務觀念。</div>
+          <div class="step"><span class="time">1:45-2:20</span><br>具體做法：列出 3 個行動，讓現場知道回去可以怎麼做。</div>
+          <div class="step"><span class="time">2:20-2:50</span><br>案例或數字：用一個真實合作案例、成交金額或成果強化可信度。</div>
+          <div class="step"><span class="time">2:50-3:00</span><br>一句結論：用押韻、對比或短句收尾，方便來賓記住。</div>
+        </div>
+
+        <div class="table-wrap script-table">
+          <table>
+            <thead>
+              <tr>
+                <th>段落</th>
+                <th>目的</th>
+                <th>可套用句型</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="week">1</td>
+                <td class="topic">開場引介</td>
+                <td>「成功的企業主會持續學習，也會把學到的方法變成彼此合作的共識。本週 3 分鐘教育培訓，邀請 ___ 來分享 ___。」</td>
+              </tr>
+              <tr>
+                <td class="week">2</td>
+                <td class="topic">主題提問</td>
+                <td>「今天想問大家一個問題：___ 是阻礙，還是其實可能成為合作機會？」</td>
+              </tr>
+              <tr>
+                <td class="week">3</td>
+                <td class="topic">金句或觀點</td>
+                <td>「我很喜歡一句話：我能做你做不到的事，你能做我做不到的事；一起，我們就能成就大事。」</td>
+              </tr>
+              <tr>
+                <td class="week">4</td>
+                <td class="topic">核心觀念</td>
+                <td>「今天想帶給大家的觀念是：沒有絕對的對手，很多時候只是尚未找到合作方式的夥伴。」</td>
+              </tr>
+              <tr>
+                <td class="week">5</td>
+                <td class="topic">具體做法</td>
+                <td>「要幫彼此介紹生意，至少要做到三件事：找到對的人、建立信任、看見可以合作的地方。」</td>
+              </tr>
+              <tr>
+                <td class="week">6</td>
+                <td class="topic">案例成果</td>
+                <td>「例如 ___ 和 ___ 的專業不同，卻能一起服務同一位客戶，最後創造 ___ 的合作成果。」</td>
+              </tr>
+              <tr>
+                <td class="week">7</td>
+                <td class="topic">結語收束</td>
+                <td>「彼此專業不相同，攜手合作更興隆。」</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>用語原則</h2>
+        <ul class="rules">
+          <li>不說「CEU」，改說「持續學習」。</li>
+          <li>不說「VCP」，改說「從認識、信任，到願意推薦」。</li>
+          <li>不說「referral slip」或「referral」，改說「介紹」「商機」「高品質介紹」。</li>
+          <li>不說「GAINS」，改說「了解對方的目標、成果、興趣、人脈與專長」。</li>
+          <li>不說「chapter」「分會績效」，改說「這個商務社群」「這個團隊的合作成果」。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>主要來源</h2>
+        <p class="lead">以下來源供教育協調員備課，不建議在 3 分鐘現場教育中逐一朗讀。</p>
+        <ul class="sources">
+          <li><a href="https://www.bnipodcast.com/">The Official BNI Podcast</a></li>
+          <li><a href="https://www.bnipodcast.com/2026/05/06/episode-959-make-yourself-referrable/">Ep. 959 Make Yourself Referrable</a></li>
+          <li><a href="https://www.bnipodcast.com/2025/09/24/episode-929-education-coordinators-classic/">Ep. 929 Education Coordinators</a></li>
+          <li><a href="https://www.bnipodcast.com/2024/11/27/episode-888-how-to-educate-others-to-refer-you/">Ep. 888 How to Educate Others to Refer You</a></li>
+          <li><a href="https://www.bnipodcast.com/2024/05/15/episode-860-ask-ivan-ceus-testimonials-tyfcb-presentations/">Ep. 860 CEUs, Testimonials, Presentations, and TYFCB</a></li>
+          <li><a href="https://www.bnipodcast.com/2024/05/01/episode-858-the-makeover-of-your-weekly-ask/">Ep. 858 The Makeover of Your Weekly Ask</a></li>
+          <li><a href="https://www.bnipodcast.com/2023/06/21/episode-814-start-with-gain-end-with-give/">Ep. 814 Start with Gain, End with Give</a></li>
+          <li><a href="https://www.bnipodcast.com/2017/07/26/episode-517-achieving-the-power-of-1/">Ep. 517 Achieving the Power of 1</a></li>
+          <li><a href="https://www.bnipodcast.com/2021/05/26/episode-708-v-c-does-not-equal-p-classic-podcast/">Ep. 708 V + C Does Not Equal P</a></li>
+          <li><a href="https://www.bnipodcast.com/2025/06/11/episode-914-5-important-things-for-great-networking/">Ep. 914 5 Important Things for Great Networking</a></li>
+          <li><a href="https://www.bnipodcast.com/2026/01/28/episode-945-turning-personal-connections-into-relationships/">Ep. 945 Turning Personal Connections into Relationships</a></li>
+          <li><a href="https://www.bnipodcast.com/2007/05/16/episode-006-lead-vs-referral/">Ep. 006 Lead vs. Referral</a></li>
+          <li><a href="https://www.bnipodcast.com/2019/07/17/episode-617-youve-given-a-referral-now-what/">Ep. 617 You've Given a Referral. Now What?</a></li>
+          <li><a href="https://www.bnipodcast.com/2024/09/18/episode-878-failing-to-follow-through/">Ep. 878 Failing to Follow Through</a></li>
+          <li><a href="https://www.bnipodcast.com/2025/04/23/episode-907-gains-profile-updated/">Ep. 907 GAINS Profile Updated</a></li>
+          <li><a href="https://www.bnipodcast.com/2022/03/30/episode-751-an-intentional-one-to-one/">Ep. 751 An Intentional One-to-One</a></li>
+          <li><a href="https://www.bnipodcast.com/2019/04/24/episode-605-givers-gain-is-a-standard-not-a-sword-classic-podcast/">Ep. 605 Givers Gain Is a Standard, Not a Sword</a></li>
+          <li><a href="https://www.bnipodcast.com/2023/08/02/7-principles-of-givers-gain-classic/">Ep. 820 The 7 Principles of Givers Gain</a></li>
+          <li><a href="https://bniem.com/">BNI Education Moments examples</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      建議使用方式：教育協調員可先看「內部備查來源」備課，現場只使用主題表中的來賓版說法。
+    </footer>
+  </article>
+</body>
+</html>
